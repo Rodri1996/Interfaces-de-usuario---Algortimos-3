@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --color-primario:#003A64;
+    --color-secundario:#54A2D2;
+    --color-terciario:#A9CEE8;
+    --color-cuaternario:#E1ECF0;
+    --color-quinario: white;
+}
+html {
+    font-size: 10px;
+}
+footer {
+    display: flex;
+    background-color: var(--color-primario);
+    width: 100%;
+    padding: 3rem 0;
+    color: var(--color-cuaternario);
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    font-size: 2.5rem;
+}
