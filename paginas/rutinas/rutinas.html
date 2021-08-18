@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rutinas</title>
+    <link rel="stylesheet" href="./estilosRutinas.css">
+    <link rel="stylesheet" href="../../compartido/estilosGlobal.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital@1&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>    
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Georama:wght@600&family=Roboto:wght@400;500;900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <h1>RunApp</h1>
+    </header>
+    <div class="div-rutina">
+        <h4 class="div-rutina__h4">{{Nombre Rutina}}</h4>
+        <p class="div-rutina__p">{{Creador}}</p>
+    </div>
+    <form class="form">
+
+        <section class="section-flex">
+            <div>
+                <label>Nombre</label>
+                <input class="section__input" type="text">
+            </div>
+            <div>
+                <label>Descripcion</label>
+                <input class="section__input" type="text">
+            </div>
+            <div>
+                <label>Estrategia de edicion</label>
+                <select class="section__input" name="estrategia-edicion">
+                    <!--OPCIONES-->
+                </select>
+            </div>
+        </section>
+            
+        <section class="section-flex">
+            <h3>Ejercicios</h3>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <td class="table-head__fila">Minutos</td>
+                        <td class="table-head__fila">Nombre</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="table-body__fila">{{un-nombre}}</td>
+                        <td class="table-body__fila">{{un-tiempo}}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="section__div--estadistico">
+                <img id="img-corazon" src="assets/images/corazon-latido.png">
+                <p class="div__p">{{RPM}}</p>
+                <img id="img-cronometro" src="assets/images/cronometro.png">
+                <p class="div__p">{{time}}</p>
+            </div>
+        </section>
+            
+        <section class="section-flex">
+            <h4>Grupos Musculares</h4>
+            <div class="section__grupos">
+                <div class="section__grupos--card">{{Grupo_muscular}}</div>
+            </div>
+        </section>
+
+        <div class="form__button">
+            <button class="form__button--secondary">Cancelar</button>
+            <button class="form__button--primary">Guardar</button>
+        </div>
+    </form>
+    <footer>
+        <div class="footer__div">
+            <img class="footer__img" src="assets/images/fb-naranja.png" alt="">
+            RunApp / 2021
+        </div>
+    </footer>
+</body>
+</html>
