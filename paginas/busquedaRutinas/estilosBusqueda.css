@@ -34,6 +34,8 @@ body {
     justify-content: center;
     align-items: center;
     padding: 1em 1em;
+    margin-bottom:0em;
+    
 }
 .resultados{
     width: 100%;
@@ -61,7 +63,7 @@ body {
     flex-direction: column;
     align-items: left;
     background-color: var(--color-quinario);
-    margin: 2em;
+    margin: 1.5em;
     padding: 1em;
     border-radius: 0.7em;
     font-size: 2em;
