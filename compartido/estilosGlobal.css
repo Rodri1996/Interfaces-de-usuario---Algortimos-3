@@ -3,6 +3,11 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+html {
+    font-size: 10px;
+}
+
 :root{
     --color-primario:#003A64;
     --color-secundario:#54A2D2;
@@ -10,9 +15,15 @@
     --color-cuaternario:#E1ECF0;
     --color-quinario: white;
 }
-html {
-    font-size: 10px;
+
+body {
+    background:var(--color-cuaternario);
+    display: flex;
+    flex-direction: column;
+    min-height: 85vh;
+    justify-content: center;   
 }
+
 footer {
     display: flex;
     background-color: var(--color-primario);
