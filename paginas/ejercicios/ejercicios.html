@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios</title>
+    <link rel="stylesheet" href="./estilosEjercicios.css">
+    <link rel="stylesheet" href="../../compartido/estilosGlobal.css">
+
+    <!--Icono del librito-->
+    <script src="https://kit.fontawesome.com/14c6874853.js" crossorigin="anonymous"></script>
+
+
+    <!--Font-family: Lato-sanserif-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital@1&display=swap" rel="stylesheet">
+
+    <!--Font-familay: Fira Code monospace-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>    
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&display=swap" rel="stylesheet">
+
+    <!--Font-familay: Georama-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Georama:wght@600&family=Roboto:wght@400;500;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="title">
+        <h1>RunApp</h1>
+        <div class="icono"><i class="fas fa-bars"></i></div>
+    </header>
+    <div class="div-ejercicio">
+        <h4 class="div-ejercicio__h4">{{Nombre_ejercicio}}</h4>
+        <div class="div-cronometro">
+            <img class="div-cronometro__img" src="Assets/Images/relojito.jpg">
+            <p class="div-ejercicio__p">{{Duracion}}</p>
+        </div>
+    </div>
+    <form class="form">
+        <section class="section-flex">
+            <div>
+                <label>Actividad</label>
+                <select class="section__input" name="estrategia-edicion">
+                    <!--OPCIONES-->
+                </select>
+            </div>
+            <div>
+                <label>Frecuencia cardíaca base</label>
+                <input class="section__input" type="text">
+            </div>
+            <div class="div-checkbotton">
+                <input checked id="check__input" type="checkbox">Con series
+            </div>
+            <div>
+                <label>Minutos de descanso</label>
+                <input class="section__input" type="text">
+            </div>
+            <div>
+                <label>Cantidad de series</label>
+                <input class="section__input" type="text">
+            </div>
+        </section>
+
+        <div class="form__button">
+            <button class="form__button--secondary">Cancelar</button>
+            <button class="form__button--primary">Guardar</button>
+        </div>
+    </form>
+    <footer class ="footer">
+        <i class="fab fa-facebook-square"></i>
+        <div> RunApp/2021</div>
+    </footer>
+</body>
+</html>
