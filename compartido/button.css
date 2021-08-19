@@ -1,0 +1,36 @@
+button{
+    background-color:var(--color-secundario) ;
+    border: none;
+    color:var(--color-quinario);
+    padding: 1em 3em;
+    text-align: center;
+    font-size: 1em;
+    border-radius: 5px;
+    box-shadow: 0 0.5em 0.5em 0 rgba(0,0,0,0.24);
+}
+
+/* button{
+    border-radius: 0.5em;
+    height: 2em;
+} */
+
+/* .form__button{
+    justify-content:space-around;
+    padding: 1.5em 6em;
+}
+
+.form__button--primary,.form__button--secondary{
+    padding: 0.25em 0.5em;
+    /* font-family: 'Georama', sans-serif; */
+/* } */
+
+/* .form__button--secondary{
+    color: var(--button-secondary-color);
+    border-color: rgb(223, 66, 118);
+}
+
+.form__button--primary{
+    background-color: var(--color-primario);
+    color: var(--letra-primario);
+    border-color: var(--color-primario);
+}  */

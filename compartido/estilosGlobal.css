@@ -3,11 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 html {
     font-size: 10px;
 }
-
 :root{
     --color-primario:#003A64;
     --color-secundario:#54A2D2;
@@ -16,24 +14,4 @@ html {
     --color-quinario: white;
 }
 
-body {
-    background:var(--color-cuaternario);
-    display: flex;
-    flex-direction: column;
-    min-height: 85vh;
-    justify-content: center;   
-}
 
-footer {
-    display: flex;
-    background-color: var(--color-primario);
-    width: 100%;
-    padding: 3rem 0;
-    color: var(--color-cuaternario);
-    justify-content: center;
-    gap: 1rem;
-    align-items: center;
-    position: fixed;
-    bottom: 0;
-    font-size: 2.5rem;
-}

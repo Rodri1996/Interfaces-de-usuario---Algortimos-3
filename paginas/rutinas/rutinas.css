@@ -1,23 +1,21 @@
-
-/*Variables*/
+                                            /*TAG RAIZ*/
 :root{
     --button-secondary-color:rgb(223, 66, 118);
     --color-primario:orange;
+    --color-secundario:#ffaa1b;
     --height-header: 10%;
-    --height-div-ejercicio:7%;
+    --height-div-rutina:7%;
     --height-form-primary:78%;
     --height-footer:8%;
-    --color-secundario:#ffaa1b;
     --letra-primario: white;
+    --letra-subtitulo: black;
     --letra-input:grey;
     --tamaño-h1: 1.5rem;
-    --height-header: 10%;
-    --height-div-ejercicio:7%;
-    --height-form-primary:78%;
-    --height-footer:8%;
+    --tamaño-h3: 1.5em;
+    --tamaño-h4: 1.1em;
 }
-/*Selectores por tag*/
 
+                                        /*SELECTORES POR ELEMENTO*/
 body{
     display: flex;
     height: 100vh;
@@ -30,7 +28,7 @@ button{
     height: 2em;
 }
 
-footer{
+/* footer{
     display: flex;
     justify-content: center;
     background-color: var(--color-secundario);
@@ -39,9 +37,12 @@ footer{
     align-items: center;
     font-size: 1.5rem;
     font-family: 'Roboto', sans-serif;
+} */
+
+html{
+    font-size: 10px;
 }
 
-/*
 header{
     background-color: var(--color-secundario);
     color: var(--letra-primario);
@@ -52,13 +53,22 @@ header{
     align-items: center;
     padding: 2rem;    
 }
-*/
 
-header {
-    padding: 3rem;
-    font-size: 1rem;
-    background: #54A2D2;
-    color: black;
+h3{
+    font-size: var(--tamaño-h3);
+}
+
+h4{
+    font-size: var(--tamaño-h4);
+}
+
+h3{
+    margin:0.5em 0;
+}
+
+h3,h4{
+    font-family: 'Roboto', sans-serif;
+    color: var(--letra-subtitulo);
 }
 
 label{
@@ -68,59 +78,54 @@ label{
     font-family: 'Roboto';
 }
 
-#check__input{
-    margin-right: 0.3em;
-    background-color: yellow;
+td{
+    height: 2.5em;
+    font-family: 'Roboto', sans-serif;
+    padding: 0.5em;
 }
 
-/*Selectores por clase*/
-.icono{
-    font-size: 4rem;
-    padding-right: 1rem;
+table{
+    border: 0.1em solid gray;
 }
 
-.title {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-size: 2.1em;
-    font-family: 'Lato', sans-serif;
+                                            /*SELECTORES POR ID*/
+#img-corazon{
+    height: 3em;
+    width: 4em;
 }
 
-.div-cronometro{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.div-checkbotton{
-    display: flex;
-    align-items: center;
-}
-.div-cronometro__img{
+#img-cronometro{
     height: 2.5em;
     width: 2.5em;
+    margin-left: 3.5em;
 }
 
-.div-ejercicio{
+                    /*SELECTORES POR CLASE USANDO METODOLOGIA BEM (BLOQUE-ELEMENTO-MODIFICADOR*/
+.div__p{
+    font-size: 1.5em;
+    font-weight: 800;
+}
+
+.div-rutina{
     display: flex;
     justify-content: space-between;
     background-color: dimgrey;
     color: var(--letra-primario);
     font-size: 1.3rem;
-    height: var(--height-div-ejercicio);
+    height: var(--height-div-rutina);
     padding: 1rem;
     align-items: center;
 }
 
-.div-ejercicio__h4,.div-ejercicio__p{
+.div-rutina__h4,.div-rutina__p{
     display: inline-block;
     color: var(--letra-primario);
 }
 
-.footer__div,.form__button{
-    display: flex;
-    align-items: center;
+.footer__img{
+    height: 30px;
+    width: 30px;
+    margin: 8px;
 }
 
 .form{
@@ -128,14 +133,13 @@ label{
     display: flex;
     height: var(--height-form-primary);
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     font-size: 1rem;
 }
 
-.footer__img{
-    height: 30px;
-    width: 30px;
-    margin: 8px;
+.footer__div,.form__button{
+    display: flex;
+    align-items: center;
 }
 
 .form__button{
@@ -164,7 +168,7 @@ label{
     flex-direction: column;
     margin: 1em;
     justify-content: space-between;
-    height: 75%;
+    height: 35%;
     width: 94%;
 }
 
@@ -175,4 +179,39 @@ label{
     border: 0.1em solid var(--color-primario);
     border-radius: 0.5em;
     margin-bottom: 0.5em;
+}
+
+.section__div--estadistico{
+    display: flex;
+    margin-top: 0.5em;
+    align-items: center;
+}
+.section__grupos{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.section__grupos--card{
+    background-color: var(--color-primario);
+    width: fit-content;
+    height: 2em;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    font-size: 1em;
+    color: var(--letra-primario);
+    font-family: 'Roboto', sans-serif;
+    padding: 0 0.5em;
+}
+
+.table-head__fila{
+    font-weight: 700;
+    background-color:#e9ecec;
+}
+
+.table-body__fila{
+    text-align: center;
+    border-color: black;
+    background-color: #f2f4f7;
 }

@@ -1,0 +1,180 @@
+
+/* Variables */
+/*:root{
+     --button-secondary-color:rgb(223, 66, 118);
+    --color-primario:orange;
+    --height-header: 10%;
+    --height-div-ejercicio:7%;
+    --height-form-primary:78%;
+    --height-footer:8%;
+    --color-secundario:#ffaa1b; 
+    --letra-primario: black; 
+    --letra-input:grey;  
+    --tamaño-h1: 1.5rem; 
+   
+} */
+
+/* .body{
+    min-width:150vh;
+} */
+/*Selectores por tag*/
+/* body{
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: space-between;
+} */
+
+/* button{
+    border-radius: 0.5em;
+    height: 2em;
+    
+} */
+
+/* footer{
+    display: flex;
+    justify-content: center;
+    background-color: var(--color-secundario);
+    color: var(--letra-primario);
+    height: var(--height-footer);
+    align-items: center;
+    font-size: 1.5rem;
+    font-family: 'Roboto', sans-serif;
+} */
+
+/* header{
+    background-color: var(--color-secundario);
+    color: var(--letra-primario);
+    font-size: var(--tamaño-h1);
+    font-family: 'Lato', sans-serif;
+    height: var(--height-header);
+    display: flex;
+    align-items: center;
+    padding: 2rem;    
+} */
+
+
+/* header {
+    padding: 3rem;
+    font-size: 1rem;
+    background: #54A2D2;
+    color: black;
+} */
+
+label{
+    display: block;
+    margin: 0.3em 0em;
+    color: var(--letra-input);
+    font-family: 'Roboto';
+}
+
+#check__input{
+    margin-right: 0.3em;
+    background-color: yellow;
+}
+
+/*Selectores por clase*/
+/* .icono{
+    font-size: 4rem;
+    padding-right: 1rem;
+}  */
+
+/* .title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 2.1em;
+    font-family: 'Lato', sans-serif;
+}  */
+ 
+.div-cronometro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:var(--color-quinario);
+}
+
+.div-checkbotton{
+    display: flex;
+    align-items: center;
+}
+.div-cronometro__img{
+    height: 2.5em;
+    width: 2.5em;
+}
+
+.div-ejercicio{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(111, 133, 133);
+    color: var(--letra-primario);
+    font-size: 1.3rem;
+    height: var(--height-div-ejercicio);
+    padding: 1rem;
+    align-items: center;
+}
+
+.div-ejercicio__h4,.div-ejercicio__p{
+    display: inline-block;
+    color: var(--letra-primario);
+}
+
+.footer__div,.form__button{
+    display: flex;
+    align-items: center;
+}
+
+.formu{
+    /* background-color:#F6E5E9; */
+    display: flex;
+    height: var(--height-form-primary);
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    margin-top:2rem;
+}
+
+/* .footer__img{
+    height: 30px;
+    width: 30px;
+    margin: 8px;
+} */
+
+/* .form__button{
+    justify-content:space-around;
+    padding: 1.5em 6em;
+}
+
+.form__button--primary,.form__button--secondary{
+    padding: 0.25em 0.5em;
+    font-family: 'Georama', sans-serif;
+}
+
+.form__button--secondary{
+    color: var(--button-secondary-color);
+    border-color: rgb(223, 66, 118);
+}
+
+.form__button--primary{
+    background-color: var(--color-primario);
+    color: var(--letra-primario);
+    border-color: var(--color-primario);
+} */
+
+.section-flex{
+    /* display: flex;  */
+    flex-direction: column;
+    margin: 1em;
+    justify-content: space-between;
+    height: 75%;
+    width: 94%;
+}
+
+.section__input{
+    width: 100%;
+    height: 2.5em;
+    font-family: 'Fira Code', monospace;
+    border: 0.1em solid var(--color-primario);
+    border-radius: 0.5em;
+    margin-bottom: 1.5em;
+}

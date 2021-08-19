@@ -1,0 +1,6 @@
+body {
+    background:var(--color-cuaternario);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

@@ -4,10 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rutinas</title>
-    <link rel="stylesheet" href="./estilosRutinas.css">
+    <title>Rutinas - RunApp</title>
+    <!--ESTILOS GLOBALES:-->
+    <link rel="stylesheet" href="./rutinas.css">
     <link rel="stylesheet" href="../../compartido/estilosGlobal.css">
+    <link rel="stylesheet" href="../../compartido/footer.css"/>
+    <link rel="stylesheet" href="../../compartido/body.css"/>
+    <link rel="stylesheet" href="../../compartido/header.css"/>
 
+    <script src="https://kit.fontawesome.com/14c6874853.js" crossorigin="anonymous"></script> <!-- iconos FontsAwesome -->
+
+    <!--TIPOS DE LETRA:-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital@1&display=swap" rel="stylesheet">
@@ -26,9 +33,12 @@
 
 </head>
 <body>
-    <header>
+    <header class="title">
         <h1>RunApp</h1>
+        <div class="icono"><i class="fas fa-bars"></i></div>
     </header>
+
+   
     <div class="div-rutina">
         <h4 class="div-rutina__h4">{{Nombre Rutina}}</h4>
         <p class="div-rutina__p">{{Creador}}</p>
@@ -88,11 +98,9 @@
             <button class="form__button--primary">Guardar</button>
         </div>
     </form>
-    <footer>
-        <div class="footer__div">
-            <img class="footer__img" src="assets/images/fb-naranja.png" alt="">
-            RunApp / 2021
-        </div>
+    <footer class ="footer">
+        <i class="fab fa-facebook-square"></i>
+        <div> RunApp/2021</div>
     </footer>
 </body>
 </html>
