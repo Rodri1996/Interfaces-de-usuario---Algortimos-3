@@ -10,32 +10,14 @@
     --letra-primario: white;
     --letra-subtitulo: black;
     --letra-input:grey;
-    --tamaño-h1: 1.5rem;
-    --tamaño-h3: 1.5em;
-    --tamaño-h4: 1.1em;
 }
 
                                         /*SELECTORES POR ELEMENTO*/
-.cuerpo{
-    height: 100vh;    
-    justify-content: flex-start;
-}
 
 button{
     border-radius: 0.5em;
     height: 2em;
 }
-
-/* footer{
-    display: flex;
-    justify-content: center;
-    background-color: var(--color-secundario);
-    color: var(--letra-primario);
-    height: var(--height-footer);
-    align-items: center;
-    font-size: 1.5rem;
-    font-family: 'Roboto', sans-serif;
-} */
 
 html{
     font-size: 10px;
@@ -54,20 +36,7 @@ header{
 }
 
 h3{
-    font-size: var(--tamaño-h3);
-}
-
-h4{
-    font-size: var(--tamaño-h4);
-}
-
-h3{
     margin:0.5em 0;
-}
-
-h3,h4{
-    font-family: 'Roboto', sans-serif;
-    color: var(--letra-subtitulo);
 }
 
 label{
@@ -105,20 +74,26 @@ table{
     font-weight: 800;
 }
 
-.div-rutina{
+.cuerpo{
+    height: 100vh;    
+    justify-content: flex-start;
+}
+
+.rutina-creador{
     display: flex;
     justify-content: space-between;
     background-color: dimgrey;
     color: var(--letra-primario);
-    font-size: 1.3rem;
+    font-size: 1.8rem;
     height: var(--height-div-rutina);
     padding: 1rem;
     align-items: center;
 }
 
-.div-rutina__h4,.div-rutina__p{
+.rutina-creador__h4,.rutina-creador__p{
     display: inline-block;
     color: var(--letra-primario);
+    font-family: 'Roboto', sans-serif;
 }
 
 .footer__img{
