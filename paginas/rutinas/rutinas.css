@@ -16,11 +16,9 @@
 }
 
                                         /*SELECTORES POR ELEMENTO*/
-body{
-    display: flex;
-    height: 100vh;
-    flex-direction: column;
-    justify-content: space-between;
+.cuerpo{
+    height: 100vh;    
+    justify-content: flex-start;
 }
 
 button{
@@ -42,6 +40,7 @@ button{
 html{
     font-size: 10px;
 }
+
 
 header{
     background-color: var(--color-secundario);
