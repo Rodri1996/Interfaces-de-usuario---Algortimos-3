@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../../compartido/estilosGlobal.css">
     <link rel="stylesheet" href="../../compartido/footer.css"/>
     <link rel="stylesheet" href="../../compartido/body.css"/>
+    <link rel="stylesheet" href="../../compartido/button.css"/>
     <link rel="stylesheet" href="../../compartido/header.css"/>
 
     <script src="https://kit.fontawesome.com/14c6874853.js" crossorigin="anonymous"></script> <!-- iconos FontsAwesome -->
@@ -32,11 +33,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Georama:wght@600&family=Roboto:wght@400;500;900&display=swap" rel="stylesheet">
 
 </head>
-<body class="cuerpo">
+<body >
+    
     <header class="title">
         <h1>RunApp</h1>
         <div class="icono"><i class="fas fa-bars"></i></div>
     </header>
+    
 
    
     <div class="rutina-creador">
@@ -44,26 +47,26 @@
         <p class="rutina-creador__p">Por Evaristo Hurtado</p>
     </div>
     <form class="form">
-
-        <section class="section-flex--registro">
+        
+        <section>
             <div>
                 <label>Nombre</label>
-                <input class="section__input" type="text" placeholder="Ingrese el nombre de la rutina aquí">
+                <input type="text" placeholder="Ingrese el nombre de la rutina aquí">
             </div>
             <div>
                 <label>Descripcion</label>
-                <input class="section__input" type="text" placeholder="Describa la rutina aquí">
+                <input type="text" placeholder="Describa la rutina aquí">
             </div>
             <div>
                 <label>Estrategia de edicion</label>
-                <select class="section__input" name="estrategia-edicion">
+                <select name="estrategia-edicion">
                     <!--OPCIONES-->
                 </select>
             </div>
         </section>
             
-        <section class="section-flex--ejercicios">
-            <h3>Ejercicios</h3>
+        <section class="ejercicios">
+            <h3 class="form__h3">Ejercicios</h3>
             <table border="1">
                 <thead>
                     <tr>
@@ -73,31 +76,34 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td class="table-body__fila">{{un-nombre}}</td>
-                        <td class="table-body__fila">{{un-tiempo}}</td>
+                        <td class="table-body__fila">Isquiotibiales</td>
+                        <td class="table-body__fila">24</td>
                     </tr>
                 </tbody>
             </table>
-            <div class="section__div--estadistico">
-                <img id="img-corazon" src="assets/images/corazon-latido.png">
-                <p class="div__p">{{RPM}}</p>
-                <img id="img-cronometro" src="assets/images/cronometro.png">
-                <p class="div__p">{{time}}</p>
+            <div class="estadistico">
+                <img class="corazon" src="assets/images/corazon-latido.png">
+                <p class="estadistico__p">200 PPM</p>
+                <img class="cronometro" src="assets/images/cronometro.png">
+                <p class="estadistico__p">63'</p>
             </div>
         </section>
             
-        <section class="section-flex--gruposMusculares">
+        <section class="gruposMusculares">
             <h4>Grupos Musculares</h4>
-            <div class="section__grupos">
-                <div class="section__grupos--card">{{Grupo_muscular}}</div>
+            <div class="gruposMusculares__div">
+                <div class="gruposMusculares__div--card">{{Grupo_muscular}}</div>
             </div>
+            
         </section>
-
-        <div class="form__button">
-            <button class="form__button--secondary">Cancelar</button>
-            <button class="form__button--primary">Guardar</button>
+        <div class= "container__button">
+            <button class="button">Cancelar</button>
+            <button class="button">Guardar</button>
         </div>
+            
+        
     </form>
+
     <footer class ="footer">
         <i class="fab fa-facebook-square"></i>
         <div> RunApp/2021</div>
