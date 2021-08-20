@@ -44,6 +44,7 @@ label{
     margin: 0.3em 0em;
     color: var(--letra-input);
     font-family: 'Roboto';
+    font-size: 1.5em;
 }
 
 td{
@@ -139,22 +140,34 @@ table{
     border-color: var(--color-primario);
 }
 
-.section-flex{
+.section-flex--registro,.section-flex--ejercicios,.section-flex--gruposMusculares{
     display: flex; 
     flex-direction: column;
     margin: 1em;
     justify-content: space-between;
-    height: 35%;
     width: 94%;
+}
+
+.section-flex--registro{
+    margin-top: 3em;
+    height: 45%;
+}
+
+.section-flex--ejercicios{
+    height:35%
+}
+
+.section-flex--gruposMusculares{
+    height: 20%;
 }
 
 .section__input{
     width: 100%;
     height: 2.5em;
-    font-family: 'Fira Code', monospace;
     border: 0.1em solid var(--color-primario);
     border-radius: 0.5em;
     margin-bottom: 0.5em;
+    padding-left: 0.5em;
 }
 
 .section__div--estadistico{
