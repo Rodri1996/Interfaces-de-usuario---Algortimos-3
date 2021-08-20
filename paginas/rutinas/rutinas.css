@@ -77,6 +77,63 @@ table{
 
 .ejercicios,.gruposMusculares{
     margin-bottom:1em;
+    margin-top: 2rem;
+}
+
+.footer__div,.form__button{
+    display: flex;
+    align-items: center;
+}
+
+.form__button{
+    justify-content:space-around;
+    padding: 1.5em 6em;
+}
+
+.form__button--primary,.form__button--secondary{
+    padding: 0.25em 0.5em;
+    font-family: 'Georama', sans-serif;
+}
+
+.form__button--secondary{
+    color: var(--button-secondary-color);
+    border-color: rgb(223, 66, 118);
+}
+
+.form__button--primary{
+    background-color: var(--color-primario);
+    color: var(--letra-primario);
+    border-color: var(--color-primario);
+}
+
+.registro,.ejercicios,.gruposMusculares{
+    display: flex; 
+    flex-direction: column;
+    margin: 1em;
+    justify-content: space-between;
+    width: 94%;
+}
+
+.registro{
+    margin-top: 3em;
+    height: 45%;
+}
+
+.ejercicios{
+    height:35%
+}
+
+.gruposMusculares{
+    height: 20%;
+}
+
+.section__input{
+    width: 100%;
+    height: 2.5em;
+    border: 0.1em solid var(--color-primario);
+    border-radius: 0.5em;
+    margin-bottom: 0.5em;
+    padding-left: 0.5em;
 }
 
 .estadistico{
