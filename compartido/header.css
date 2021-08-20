@@ -1,7 +1,11 @@
 header {
     padding: 3rem;
-    background-color: var(--color-secundario);
+    background-color: var(--color-primario);
     color: var(--color-cuaternario);
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    font-size:1.3rem;
 }
 .title {
     display: flex;
@@ -13,6 +17,8 @@ header {
 .icono{
     font-size: 4rem;
     padding-right: 1rem;
+    color:var(--color-quinario);
+    font-size: 2rem;
 }
 /* .form{
     background-color: var(--color-terciario);
