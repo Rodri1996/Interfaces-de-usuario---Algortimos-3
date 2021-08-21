@@ -1,15 +1,18 @@
+section {
+  height: 100%;
+}
 
-  section{
-    height: 100%;
-  }
+img {
+  height: 5rem;
+  width: 5rem;
+  border-radius: 2.5rem;
+}
 
-  article{
-    
-    background-color: var(--color-secundario);
-  }
-  
-  footer {
-    
-    
-    
-  }
+.nombre {
+  font-size: 3rem;
+}
+
+.encabezado {
+  justify-content: start;
+  gap: 20px;
+}
