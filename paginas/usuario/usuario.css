@@ -13,6 +13,16 @@ img {
 }
 
 .encabezado {
-  justify-content: start;
   gap: 20px;
+}
+
+.header-informacion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header-tiempo{
+  font-size: 2rem;
 }
