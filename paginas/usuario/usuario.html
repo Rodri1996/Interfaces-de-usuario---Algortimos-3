@@ -4,18 +4,21 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Usuario</title>
-    <link rel="stylesheet" href="../../compartido/estilosGlobal.css" />
-    <link rel="stylesheet" href="../../compartido/header.css" />
-    <link rel="stylesheet" href="../../compartido/footer.css" />
-    <link rel="stylesheet" href="../../compartido/body.css" />
-    <link rel="stylesheet" href="../../compartido/card.css" />
-    <link rel="stylesheet" href="usuario.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster" />
     <script src="https://kit.fontawesome.com/14c6874853.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital@1&display=swap" rel="stylesheet">
+
+    <title>Usuario - RunApp</title>
+
+    <link rel="stylesheet" href="./usuario.css" />
+    <link rel="stylesheet" href="../../compartido/estilosGlobal.css" />
+    <link rel="stylesheet" href="../../compartido/header.css" />
+    <link rel="stylesheet" href="../../compartido/footer.css" />
+    <link rel="stylesheet" href="../../compartido/body.css" />
+    <link rel="stylesheet" href="../../compartido/card.css" />
+
 </head>
 
 <body>
@@ -41,32 +44,39 @@
             </header>
 
             <form class="form-informacion-personal">
+                
                 <h4 class="form-subtitulo">Mis datos personales</h4>
-                <label for="fname">Nombre y apellido</label>
-                <input type="text">
-                <div>
+                <label>Nombre y apellido</label>
+                <input class="nombre" type="text">
+           
+                <main>
                     <div class="form-informacion-campos">
-                        <label for="lname">User name</label>
-                        <input type="text">
-                        <label for="fname">Fecha de nacimiento</label>
-                        <input type="text">
+                        <div>
+                            <label>Username</label>
+                            <input type="text">
+                        </div>
+                        <div>
+                            <label>Fecha de nacimiento</label>
+                            <input type="text">
+                        </div>
                     </div>
                     <div class="form-informacion-campos">
-                        <label for="lname">Frec. cardiaca en reposo</label>
-                        <input type="text">
-                        <label for="lname">Porcentaje de intensidad</label>
-                        <input type="text">
-                    </div>
 
-                </div>
+                        <div>
+                            <label>Frec. cardíaca en reposo</label>
+                            <input type="text">
+                        </div>
+                        <div>
+                            <label>Porcentaje de intensidad</label>
+                            <input type="text">
+                        </div>
+                    </div>
+                </main>
 
             </form>
 
 
         </div>
-
-
-
     </section>
 
     <footer>
