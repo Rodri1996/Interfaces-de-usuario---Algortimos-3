@@ -5,19 +5,18 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 1.3rem;
+    font-size: 2rem;
 }
 
 .title {
-    font-size: 2.5rem;
+    font-size: 2em;
     font-family: 'Lato', sans-serif;
 }
 
 .icono {
-    font-size: 4rem;
     padding-right: 1rem;
     color: var(--color-quinario);
-    font-size: 2rem;
+    font-size: 2em;
 }
 
 /* .form{

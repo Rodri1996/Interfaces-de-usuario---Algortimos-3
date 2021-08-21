@@ -18,8 +18,7 @@
     <!-- iconos FontsAwesome -->
     <link rel="preconnect" href="https://fonts.googleapis.com/">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital@1&display=swap" rel="stylesheet">
-    <!-- fuente Lato -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital@1&display=swap" rel="stylesheet"> <!-- fuente Lato -->
 
 </head>
 
@@ -27,51 +26,46 @@
     
     <header>
         <h1 class="title">RunApp</h1>
-        <div class="icono"><i class="fas fa-bars"></i></div>
+        <i class="fas fa-bars icono"></i>
     </header>
-    <form class="form">
 
-        <input class="form__input" type="text" placeholder="Buscar">
+    <form class="searchbar">
+        <input class="searchbar__input" type="text" placeholder="Buscar">
         <div class="buscar">
             <i class="fas fa-search"></i>
         </div>
     </form>
     
+    <div class="resultados">Resultados</div>
 
-    <p class="resultados">Resultados</p>
-
-    <div class="container">
-        <div class="card">
-            <div class="descripcion">
-                <div class="favorito">
+    <div class="card">
+        <div class="card__contenido">
+            <div>
+                <div class="card__contenido-title">
                     <h1 class="card__title">Rutini</h1>
                     <i class="far fa-star"></i>
                 </div>
-
                 <p>55 minutos</p>
                 <p>Por Horacio Guaraní</p>
             </div>
-            <div class="card__icono--edicion">
+            <div class="card__contenido-iconos">
                 <i class="fas fa-trash-alt"></i>
                 <i class="fas fa-pen"></i>
             </div>
         </div>
-
-
     </div>
 
-    <div class="container">
-        <div class="card">
-            <div class="descripcion">
-                <div class="favorito">
+    <div class="card">
+        <div class="card__contenido">
+            <div>
+                <div class="card__contenido-title">
                     <h1 class="card__title">Pecho</h1>
                     <i class="far fa-star"></i>
                 </div>
                 <p>5 minutos</p>
                 <p>Por Gastón Rodriguez</p>
             </div>
-
-            <div class="card__icono--edicion">
+            <div class="card__contenido-iconos">
                 <i class="fas fa-trash-alt"></i>
                 <i class="fas fa-pen"></i>
             </div>
