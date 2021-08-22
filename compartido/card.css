@@ -3,12 +3,13 @@ section{
     justify-content: center;
     align-items: center;
     margin-top:5rem;
+    height: 100%;
 }
 
 .card{
     background-color: var(--color-terciario);
     width: 80%;
-    height: 50vh;
+    height: auto;
     border-radius:8px;  
     box-shadow: 0 0.5em 0.5em 0 rgba(0,0,0,0.24);  
 }

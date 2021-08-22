@@ -20,13 +20,15 @@
 
     <title>Usuario - RunApp</title>
 
-    <link rel="stylesheet" href="./usuario.css" />
+    
     <link rel="stylesheet" href="../../compartido/estilosGlobal.css" />
     <link rel="stylesheet" href="../../compartido/header.css" />
     <link rel="stylesheet" href="../../compartido/footer.css" />
     <link rel="stylesheet" href="../../compartido/body.css" />
     <link rel="stylesheet" href="../../compartido/card.css" />
     <link rel="stylesheet" href="../../compartido/inputBase.css" />
+    <link rel="stylesheet" href="../../compartido/button.css" />
+    <link rel="stylesheet" href="./usuario.css" />
   </head>
 
   <body>
@@ -34,7 +36,7 @@
       <h1 class="title">RunApp</h1>
       <i class="fas fa-bars icono"></i>
     </header>
-
+    <form>
     <section>
       <div class="card">
         <header class="encabezado">
@@ -49,7 +51,7 @@
           </div>
         </header>
 
-        <form class="form-informacion-personal">
+        <div class="form-informacion-personal">
           <h4 class="form-subtitulo">Mis datos personales</h4>
 
           <div class="inputSeparador">
@@ -59,53 +61,60 @@
           
           <div class="flexRow">
             <div class="flexColumn">
+
               <div class="inputSeparador">
                 <label class="inputLabel">Username</label>
                 <input class="inputBase" type="text" />
               </div>
+
               <div class="inputSeparador">
                 <label class="inputLabel">Fecha de nacimiento</label>
                 <input class="inputBase" type="text" />
               </div>
+
             </div>
+
             <div class="flexColumn">
+
               <div class="inputSeparador">
                 <label class="inputLabel">Frec. cardíaca en reposo</label>
                 <input class="inputBase" type="text" />
               </div>
+
               <div class="inputSeparador">
                 <label class="inputLabel">Porcentaje de intensidad</label>
                 <input class="inputBase" type="text" />
               </div>
+
             </div>
             
           </div>
-          <!-- <main>
-                    <div class="form-informacion-campos">
-                        <div>
-                            <label>Username</label>
-                            <input type="text">
-                        </div>
-                        <div>
-                            <label>Fecha de nacimiento</label>
-                            <input type="text">
-                        </div>
-                    </div>
-                    <div class="form-informacion-campos">
+          <h4 class="form-subtitulo">Grupos musculares de preferencia</h4>
+          <div class="container__button">
+            <button class="button">Piernas</button>
+            <button class="button">Hombros</button>
+            <button class="button">Brazos</button>
+            </div>
+            <div class="container__button">
+            <button class="button">Pecho</button>
+            <button class="button">Espalda</button>
+            <button class="button">Gluteos</button>
+            </div>
 
-                        <div>
-                            <label>Frec. cardíaca en reposo</label>
-                            <input type="text">
-                        </div>
-                        <div>
-                            <label>Porcentaje de intensidad</label>
-                            <input type="text">
-                        </div>
-                    </div>
-                </main> -->
-        </form>
+            <h4 class="form-subtitulo">Dias de entrenamiento</h4>
+          </div>
+         
+            
+          
+            
+            
+          
+        
+        
       </div>
     </section>
+    
+  </form>
 
     <footer>
       <i class="fab fa-facebook-square"></i>

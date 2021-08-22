@@ -34,13 +34,6 @@ img {
   
 }
 
-/* .form-informacion-campos {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-} */
-
 .form-subtitulo{
   font-size: 1.6rem;
   padding-bottom: 0.5rem;
@@ -50,7 +43,7 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  
 }
 .flexRow {
   display: flex;
@@ -58,6 +51,33 @@ img {
   justify-content: center;
   align-items: center;
   gap: 2rem;
+}
+
+.container__button{
+  gap:4rem;
+}
+
+.button{
+  padding:0.5rem 1.4rem;
+  width: 50%;
+}
+.button:hover{
+  cursor:pointer;
+}
+
+/* .button:focus,*/.button:active{ 
+  
+  background-color:var(--color-quinario);
+  border-style: solid ;
+  border-color: var(--color-secundario);
+  border-width: 0.5rem;
+  font-weight: bold;
+  color: var(--color-secundario);
+  padding:0.5rem 1.4rem;
+}
+
+footer{
+  position: relative;
 }
 
 /* ========================================================= */
@@ -75,6 +95,6 @@ img {
   }
   .encabezado {
     border-radius: 0;
-    font-size: 1rem
+    
   }
 }
