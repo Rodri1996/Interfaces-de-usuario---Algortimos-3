@@ -1,10 +1,9 @@
-                                            /*TAG RAIZ*/
+
 label{
     display: block;
     margin: 0.3em 0em;
-    color: var(--letra-input);
     font-family: 'Roboto';
-    font-size: 1.5em;
+    font-weight: 600;
 }
 
 td{
@@ -15,11 +14,15 @@ td{
 
 input,select{
     width: 100%;
-    height: 2.5em;
+    height: 3em;
     border: 0.1em solid var(--color-primario);
     border-radius: 0.5em;
     margin-bottom: 0.5em;
     padding-left: 0.5em;
+}
+
+input,label,select{
+    font-size: 1.5em;
 }
 
 table{
@@ -30,6 +33,8 @@ table{
 
 .ejercicios__h2{
     margin:0.5em 0;
+    font-family: Roboto,sans-serif;
+    font-size: 1.8em;
 }
 
                                             /*SELECTORES POR ID*/
@@ -51,8 +56,7 @@ table{
     display: flex;
     justify-content: space-between;
     background-color: dimgrey;
-    color: var(--letra-primario);
-    font-size: 1.8rem;
+    font-size: 1.8em;
     height: var(--height-div-rutina);
     padding: 1rem;
     align-items: center;
@@ -60,8 +64,15 @@ table{
 
 .rutina-creador__h4,.rutina-creador__p{
     display: inline-block;
-    color: var(--letra-primario);
     font-family: 'Roboto', sans-serif;
+}
+
+.rutina-creador__h4{
+    font-size: 1.5em;
+}
+
+.rutina-creador__p{
+    font-size: 1em;
 }
 
 .form{
@@ -70,14 +81,6 @@ table{
     height: var(--height-form-primary);
     flex-direction: column;
     justify-content: space-around;
-    font-size: 1rem;
-    /* padding:2rem; */
-    
-}
-
-.ejercicios,.gruposMusculares{
-    margin-bottom:1em;
-    margin-top: 2rem;
 }
 
 .footer__div,.form__button{
@@ -88,17 +91,19 @@ table{
 .registro,.ejercicios,.gruposMusculares{
     display: flex; 
     flex-direction: column;
-    margin: 1em;
+    margin: 0.5em 1em;
+    margin-bottom: 0.25em;
     justify-content: space-between;
     width: 94%;
 }
 
-.ejercicios{
-    height:35%
-}
-
 .gruposMusculares{
     height: 20%;
+    margin-left: 1.5em;
+}
+
+.ejercicios{
+    height:35%
 }
 
 .section__input{
@@ -118,34 +123,59 @@ table{
 
 .estadistico__p{
     margin:0.5em;
+    font-family: Roboto,sans-serif;
+    font-size: 1.3em;
+    font-weight: 600;
 }
 
 .gruposMusculares__div{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-wrap: wrap;
+    margin-top: 1em;
+    margin-bottom: 3em;
+}
+
+.gruposMusculares__h4{
+    font-size: 1.5em;
+    font-weight: 600;
+    font-family: Roboto,sans-serif;
+    margin: 0.5em 0em;
 }
 
 .gruposMusculares__div--card{
     background-color: var(--color-primario);
-    width: fit-content;
-    height: 2em;
-    border-radius: 5px;
+    height: 3em;
+    width: 10em;
+    border-radius: 5em;
     display: flex;
     align-items: center;
-    font-size: 1em;
+    justify-content: center;
+    font-size: 2em;
     color: var(--letra-primario);
     font-family: 'Roboto', sans-serif;
-    padding: 0 0.5em;
+    margin: 1em;
 }
 
 .table-head__fila{
     font-weight: 700;
     background-color:#e9ecec;
+    font-size: 1.5em;
 }
 
 .table-body__fila{
     text-align: center;
     border-color: black;
     background-color: #f2f4f7;
+    font-size: 1.3em;
+}
+
+.table-head__fila,.table-body__fila{
+    font-family:Roboto,sans-serif;
+}
+
+/*ESTO ES TEMPORAL HASTA QUE SAQUEMOS LA PROPIEDAD POSITION DEL SELECTOR FOOTER,
+ EN ESTILOS GENERALES*/
+#footer{
+    position: relative;
 }

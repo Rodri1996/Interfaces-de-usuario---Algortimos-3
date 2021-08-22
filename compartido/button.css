@@ -8,8 +8,14 @@
     border-radius: 5px;
     box-shadow: 0 0.5em 0.5em 0 rgba(0,0,0,0.24);
 }
+
+button:hover{
+    background-color: #286C96;
+}
+
 .container__button{
     display: flex;
     justify-content:center;
     gap: 3rem;
+    margin-bottom: 2em;
 }
