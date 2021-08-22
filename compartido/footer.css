@@ -7,8 +7,12 @@ footer {
     justify-content: center;
     gap: 1rem;
     align-items: center;
-    position: absolute;
+    position: absolute; /* <----- No funciona para todos */
     bottom: 0;
     font-size: 2.5rem;
+}
+#footer__relative{
+    position:relative;
+    margin-top: 3rem;
 }
 

@@ -1,84 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- fuentes e iconos -->
-    <script src="https://kit.fontawesome.com/14c6874853.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/14c6874853.js"
+      crossorigin="anonymous"
+    ></script>
     <!-- iconos FontsAwesome -->
-    <link rel="preconnect" href="https://fonts.googleapis.com/">
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital@1&display=swap" rel="stylesheet"> <!-- fuente Lato -->
+    <link rel="preconnect" href="https://fonts.googleapis.com/" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital@1&display=swap"
+      rel="stylesheet"
+    />
+    <!-- fuente Lato -->
 
     <title>Busqueda de Rutinas - RunApp</title>
 
     <!-- archivos -->
-    <link rel="stylesheet" href="./busquedaRutinas.css">
-    <link rel="stylesheet" href="../../compartido/estilosGlobal.css">
+    <link rel="stylesheet" href="./busquedaRutinas.css" />
+    <link rel="stylesheet" href="../../compartido/estilosGlobal.css" />
     <link rel="stylesheet" href="../../compartido/footer.css" />
     <link rel="stylesheet" href="../../compartido/body.css" />
     <link rel="stylesheet" href="../../compartido/header.css" />
+  </head>
 
-</head>
-
-<body>
-    
+  <body>
     <header>
-        <h1 class="title">RunApp</h1>
-        <i class="fas fa-bars icono"></i>
+      <h1 class="title">RunApp</h1>
+      <i class="fas fa-bars icono"></i>
     </header>
 
     <form class="searchbar">
-        <input class="searchbar__input" type="text" placeholder="Buscar">
-        <div class="buscar">
-            <i class="fas fa-search"></i>
-        </div>
+      <input class="searchbar__input" type="text" placeholder="Buscar" />
+      <div class="buscar">
+        <i class="fas fa-search"></i>
+      </div>
     </form>
-    
-    <div class="resultados">Resultados</div>
 
-    <div class="card">
-        <div class="card__contenido">
-            <div>
-                <div class="card__contenido-title">
-                    <h1 class="card__title">Rutini</h1>
-                    <i class="far fa-star"></i>
-                </div>
-                <p>55 minutos</p>
-                <p>Por Horacio Guaraní</p>
-            </div>
-            <div class="card__contenido-iconos">
-                <i class="fas fa-trash-alt"></i>
-                <i class="fas fa-pen"></i>
-            </div>
-        </div>
+    <div class="resultados">
+      Resultados
+      <div>
+        <i class="fas fa-search" id="iconoMini"></i>
+        Total: 5
+      </div>
     </div>
 
     <div class="card">
-        <div class="card__contenido">
-            <div>
-                <div class="card__contenido-title">
-                    <h1 class="card__title">Pecho</h1>
-                    <i class="far fa-star"></i>
-                </div>
-                <p>5 minutos</p>
-                <p>Por Gastón Rodriguez</p>
-            </div>
-            <div class="card__contenido-iconos">
-                <i class="fas fa-trash-alt"></i>
-                <i class="fas fa-pen"></i>
-            </div>
+      <div class="card__contenido">
+        <div>
+          <div class="card__contenido-title">
+            <h1 class="card__title">Isquiotibiales</h1>
+            <i class="far fa-star"></i>
+          </div>
+          <p>59 minutos</p>
+          <p>Por Eduardo Gomez</p>
         </div>
+        <div class="card__contenido-iconos">
+          <i class="fas fa-trash-alt"></i>
+          <i class="fas fa-pen"></i>
+        </div>
+      </div>
     </div>
 
-    <footer>
-        <i class="fab fa-facebook-square"></i>
-        <div> RunApp/2021</div>
+    <div class="card">
+      <div class="card__contenido">
+        <div>
+          <div class="card__contenido-title">
+            <h1 class="card__title">Rutina 2</h1>
+            <i class="far fa-star"></i>
+          </div>
+          <p>80 minutos</p>
+          <p>Por Martín Cabrera</p>
+        </div>
+        <div class="card__contenido-iconos">
+          <i class="fas fa-trash-alt"></i>
+          <i class="fas fa-pen"></i>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card__contenido">
+        <div>
+          <div class="card__contenido-title">
+            <h1 class="card__title">Mi Rutina</h1>
+            <i class="far fa-star"></i>
+          </div>
+          <p>66 minutos</p>
+          <p>Por Marco Polo</p>
+        </div>
+        <div class="card__contenido-iconos">
+          <i class="fas fa-trash-alt"></i>
+          <i class="fas fa-pen"></i>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card__contenido">
+        <div>
+          <div class="card__contenido-title">
+            <h1 class="card__title">Rutini</h1>
+            <i class="far fa-star"></i>
+          </div>
+          <p>55 minutos</p>
+          <p>Por Horacio Guaraní</p>
+        </div>
+        <div class="card__contenido-iconos">
+          <i class="fas fa-trash-alt"></i>
+          <i class="fas fa-pen"></i>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card__contenido">
+        <div>
+          <div class="card__contenido-title">
+            <h1 class="card__title">Pecho</h1>
+            <i class="far fa-star"></i>
+          </div>
+          <p>5 minutos</p>
+          <p>Por Gastón Rodriguez</p>
+        </div>
+        <div class="card__contenido-iconos">
+          <i class="fas fa-trash-alt"></i>
+          <i class="fas fa-pen"></i>
+        </div>
+      </div>
+    </div>
+
+    <footer id="footer__relative">
+      <i class="fab fa-facebook-square"></i>
+      <div>RunApp/2021</div>
     </footer>
-
-</body>
-
+  </body>
 </html>

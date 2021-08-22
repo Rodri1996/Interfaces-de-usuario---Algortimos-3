@@ -31,19 +31,17 @@ img {
   display: flex;
   flex-direction: column;
   padding: 1rem;
-  
 }
 
-.form-subtitulo{
+.form-subtitulo {
   font-size: 1.6rem;
-  padding-bottom: 0.5rem;
+  padding-bottom: 1.5rem;
 }
 
-.flexColumn{
+.flexColumn {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  
 }
 .flexRow {
   display: flex;
@@ -53,31 +51,90 @@ img {
   gap: 2rem;
 }
 
-.container__button{
-  gap:4rem;
+.container__button {
+  gap: 4rem;
+}
+.container__button input {
+  display: none;
 }
 
-.button{
-  padding:0.5rem 1.4rem;
+.button {
+  padding: 0.5rem 1.4rem;
   width: 50%;
 }
-.button:hover{
-  cursor:pointer;
-}
 
-/* .button:focus,*/.button:active{ 
-  
-  background-color:var(--color-quinario);
-  border-style: solid ;
+.checkButton {
+  display: inline-block;
+  width: 8rem;
+  text-align: center;
+  cursor: pointer;
+  background-color: var(--color-secundario);
+  border-style: solid;
   border-color: var(--color-secundario);
-  border-width: 0.5rem;
-  font-weight: bold;
-  color: var(--color-secundario);
-  padding:0.5rem 1.4rem;
+  border-width: 0.2rem;
+  border-radius: 4rem;
+  color: var(--color-quinario);
+  padding: 0.5rem 0.1rem;
+  font-size: 1.5rem;
 }
 
-footer{
-  position: relative;
+#Piernas:checked ~ label[for="Piernas"],
+#Hombros:checked ~ label[for="Hombros"],
+#Brazos:checked ~ label[for="Brazos"],
+#Pecho:checked ~ label[for="Pecho"],
+#Espalda:checked ~ label[for="Espalda"],
+#Gluteos:checked ~ label[for="Gluteos"] {
+  background-color: var(--color-quinario);
+  color: var(--color-secundario);
+  font-weight: bold;
+}
+
+#Lunes:checked ~ label[for="Lunes"],
+#Martes:checked ~ label[for="Martes"],
+#Miercoles:checked ~ label[for="Miercoles"],
+#Jueves:checked ~ label[for="Jueves"],
+#Viernes:checked ~ label[for="Viernes"],
+#Sabado:checked ~ label[for="Sabado"],
+#Domingo:checked ~ label[for="Domingo"] {
+  background-color: var(--color-quinario);
+  color: var(--color-secundario);
+  font-weight: bold;
+}
+
+.checkButton:hover {
+  cursor: pointer;
+  /* background-color: var(--color-primario); <---- Esto da problemas */
+}
+
+.semana {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.dia {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.parDia {
+  gap: 10rem;
+  display: flex;
+  flex-direction: row;
+}
+
+.tiempo-minutos {
+  flex-direction: column;
+}
+
+.amigos-lista {
+  padding: 1rem;
+  border-radius: 0.9rem;
+  background-color: var(--color-quinario);
+  border-style: solid;
+  border-color: var(--color-primario);
 }
 
 /* ========================================================= */
@@ -86,7 +143,7 @@ footer{
 
 /* ========================================================= */
 
-@media (max-width:400px) {
+@media (max-width: 400px) {
   section {
     margin-top: 0;
   }
@@ -95,6 +152,5 @@ footer{
   }
   .encabezado {
     border-radius: 0;
-    
   }
 }

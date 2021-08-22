@@ -4,6 +4,8 @@
     font-family: 'Fira Code', monospace;
     border: 0.2rem solid var(--color-primario);
     border-radius: 0.9rem;
+    background-color: var(--color-quinario);
+    padding-left: 1rem;
 }
 
 .inputSeparador{
