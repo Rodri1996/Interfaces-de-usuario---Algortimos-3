@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html lang="es">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster" />
-    <script src="https://kit.fontawesome.com/14c6874853.js" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital@1&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Lobster"
+    />
+    <script
+      src="https://kit.fontawesome.com/14c6874853.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital@1&display=swap"
+      rel="stylesheet"
+    />
 
     <title>Usuario - RunApp</title>
 
@@ -18,38 +26,61 @@
     <link rel="stylesheet" href="../../compartido/footer.css" />
     <link rel="stylesheet" href="../../compartido/body.css" />
     <link rel="stylesheet" href="../../compartido/card.css" />
+    <link rel="stylesheet" href="../../compartido/inputBase.css" />
+  </head>
 
-</head>
-
-<body>
-
+  <body>
     <header>
-        <h1 class="title">RunApp</h1>
-        <i class="fas fa-bars icono"></i>
+      <h1 class="title">RunApp</h1>
+      <i class="fas fa-bars icono"></i>
     </header>
 
     <section>
+      <div class="card">
+        <header class="encabezado">
+          <div class="header-informacion">
+            <img src="../../assets/img/usuario.jpg" />
+            <h2 class="nombre">Nazareno Peluso</h2>
+          </div>
 
-        <div class="card">
-            <header class="encabezado">
-                <div class="header-informacion">
-                    <img src="../../assets/img/usuario.jpg">
-                    <h2 class="nombre">Nazareno Peluso</h2>
-                </div>
+          <div class="header-informacion">
+            <i class="fas fa-stopwatch header-tiempo"></i>
+            <h3 class="header-tiempo">170 minutos</h3>
+          </div>
+        </header>
 
-                <div class="header-informacion">
-                    <i class="fas fa-stopwatch header-tiempo"></i>
-                    <h3 class="header-tiempo">170 minutos</h3>
-                </div>
-            </header>
+        <form class="form-informacion-personal">
+          <h4 class="form-subtitulo">Mis datos personales</h4>
 
-            <form class="form-informacion-personal">
-                
-                <h4 class="form-subtitulo">Mis datos personales</h4>
-                <label>Nombre y apellido</label>
-                <input class="nombre" type="text">
-           
-                <main>
+          <div class="inputSeparador">
+            <label class="inputLabel">Nombre y apellido</label>
+            <input class="inputBase" type="text" />
+          </div>
+          
+          <div class="flexRow">
+            <div class="flexColumn">
+              <div class="inputSeparador">
+                <label class="inputLabel">Username</label>
+                <input class="inputBase" type="text" />
+              </div>
+              <div class="inputSeparador">
+                <label class="inputLabel">Fecha de nacimiento</label>
+                <input class="inputBase" type="text" />
+              </div>
+            </div>
+            <div class="flexColumn">
+              <div class="inputSeparador">
+                <label class="inputLabel">Frec. cardíaca en reposo</label>
+                <input class="inputBase" type="text" />
+              </div>
+              <div class="inputSeparador">
+                <label class="inputLabel">Porcentaje de intensidad</label>
+                <input class="inputBase" type="text" />
+              </div>
+            </div>
+            
+          </div>
+          <!-- <main>
                     <div class="form-informacion-campos">
                         <div>
                             <label>Username</label>
@@ -71,19 +102,14 @@
                             <input type="text">
                         </div>
                     </div>
-                </main>
-
-            </form>
-
-
-        </div>
+                </main> -->
+        </form>
+      </div>
     </section>
 
     <footer>
-        <i class="fab fa-facebook-square"></i>
-        <div> RunApp/2021</div>
+      <i class="fab fa-facebook-square"></i>
+      <div>RunApp/2021</div>
     </footer>
-
-</body>
-
+  </body>
 </html>

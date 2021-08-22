@@ -1,0 +1,15 @@
+.inputBase{
+    width: 100%;
+    height: 3.5rem;
+    font-family: 'Fira Code', monospace;
+    border: 0.2rem solid var(--color-primario);
+    border-radius: 0.9rem;
+}
+
+.inputSeparador{
+    margin-bottom: 2rem;
+}
+
+.inputLabel{
+    font-size: 1.5rem;
+}

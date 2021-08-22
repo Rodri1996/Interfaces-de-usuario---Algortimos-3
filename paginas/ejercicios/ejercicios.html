@@ -17,7 +17,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>  
     <link href="https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap" rel="stylesheet">  
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&display=swap" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&display=swap" rel="stylesheet">
 
     <!--Font-familay: Georama-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -32,6 +32,7 @@
     <link rel="stylesheet" href="../../compartido/body.css"/>
     <link rel="stylesheet" href="../../compartido/header.css">
     <link rel="stylesheet" href="../../compartido/button.css"/>
+    <link rel="stylesheet" href="../../compartido/inputBase.css"/>
 
 </head>
 <body>
@@ -56,26 +57,26 @@
     
     <form class="formu">
         <section class="section-flex">
-            <div>
-                <label>Actividad</label>
-                <select class="section__input" name="estrategia-edicion">
+            <div class="inputSeparador">
+                <label class="inputLabel">Actividad</label>
+                <select class="inputBase" name="estrategia-edicion">
                     <!--OPCIONES-->
                 </select>
             </div>
-            <div>
-                <label>Frecuencia cardíaca base</label>
-                <input class="section__input" type="text">
+            <div class="inputSeparador">
+                <label class="inputLabel">Frecuencia cardíaca base</label>
+                <input class="inputBase" type="text">
             </div>
             <div class="div-checkbotton">
                 <input checked id="check__input" type="checkbox">Con series
             </div>
-            <div>
-                <label>Minutos de descanso</label>
-                <input class="section__input" type="text">
+            <div class="inputSeparador">
+                <label class="inputLabel">Minutos de descanso</label>
+                <input class="inputBase" type="text">
             </div>
-            <div>
-                <label>Cantidad de series</label>
-                <input class="section__input" type="text">
+            <div class="inputSeparador">
+                <label class="inputLabel">Cantidad de series</label>
+                <input class="inputBase" type="text">
             </div>
             
         </section>

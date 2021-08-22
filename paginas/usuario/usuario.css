@@ -34,26 +34,30 @@ img {
   
 }
 
-main {
-  height: 100vh;
-  display: grid;
-  gap: 2px;
-  grid-template: repeat(5, 100px) / repeat(3, 200px);
+/* .form-informacion-campos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+} */
+
+.form-subtitulo{
+  font-size: 1.6rem;
+  padding-bottom: 0.5rem;
 }
 
-.form-informacion-campos {
-  grid-gap: 1rem;
-  gap:1rem;
+.flexColumn{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-
-input{
-  height: 2.5rem;
-  border-radius: 8px;
-  border-width: 0;
-}
-
-.nombre{
-  width:98%;
+.flexRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
 }
 
 /* ========================================================= */
