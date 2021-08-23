@@ -175,6 +175,7 @@ table{
 
 /*ESTO ES TEMPORAL HASTA QUE SAQUEMOS LA PROPIEDAD POSITION DEL SELECTOR FOOTER,
  EN ESTILOS GENERALES*/
+
 #footer{
-    position: relative;
+    position: fixed;
 }
