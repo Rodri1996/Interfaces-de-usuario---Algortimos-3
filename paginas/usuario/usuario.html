@@ -36,12 +36,12 @@
       <i class="fas fa-bars icono"></i>
     </header>
     <form>
-      <section>
-        <div class="card">
+      <section class="card">
+        <div class="card__content">
           <header class="encabezado">
             <div class="header-informacion">
               <img src="../../assets/img/usuario.jpg" />
-              <h2 class="nombre">Nazareno Peluso</h2>
+              <h2 class="nombre">Nazareno Peloso</h2>
             </div>
 
             <div class="header-informacion">
@@ -50,7 +50,7 @@
             </div>
           </header>
 
-          <div class="form-informacion-personal">
+          <div class="form-section">
             <h4 class="form-subtitulo">Mis datos personales</h4>
 
             <div class="inputSeparador">
@@ -83,107 +83,119 @@
                 </div>
               </div>
             </div>
+          </div>
+          <div class="form-section">
             <h4 class="form-subtitulo">Grupos musculares de preferencia</h4>
             <div class="container__button">
-              <input type="checkbox" id="Piernas" />
-              <input type="checkbox" id="Hombros" />
-              <input type="checkbox" id="Brazos" />
+              <input class="button__input" type="checkbox" id="Piernas" />
               <label class="checkButton" for="Piernas">Piernas</label>
+              <input class="button__input" type="checkbox" id="Hombros" />
               <label class="checkButton" for="Hombros">Hombros</label>
+              <input class="button__input" type="checkbox" id="Brazos" />
               <label class="checkButton" for="Brazos">Brazos</label>
             </div>
             <div class="container__button">
-              <input type="checkbox" id="Pecho" />
-              <input type="checkbox" id="Espalda" />
-              <input type="checkbox" id="Gluteos" />
+              <input class="button__input" type="checkbox" id="Pecho" />
               <label class="checkButton" for="Pecho">Pecho</label>
+              <input class="button__input" type="checkbox" id="Espalda" />
               <label class="checkButton" for="Espalda">Espalda</label>
+              <input class="button__input" type="checkbox" id="Gluteos" />
               <label class="checkButton" for="Gluteos">Gluteos</label>
             </div>
+          </div>
+          <div class="form-section">
             <h4 class="form-subtitulo">Dias de entrenamiento</h4>
             <div class="container__button">
-              <input type="checkbox" id="Lunes" />
-              <input type="checkbox" id="Martes" />
-              <input type="checkbox" id="Miercoles" />
-              <input type="checkbox" id="Jueves" />
-              <input type="checkbox" id="Viernes" />
-              <input type="checkbox" id="Sabado" />
-              <input type="checkbox" id="Domingo" />
-
               <div class="semana">
                 <div class="parDia">
                   <div class="dia">
+                    <input class="button__input" type="checkbox" id="Lunes" />
                     <label class="checkButton" for="Lunes">L</label>
                     <div class="tiempo-minutos">
                       <i class="fas fa-stopwatch header-tiempo"></i>
                       <h3 class="header-tiempo">Minutos</h3>
-                      <input class="inputBase" type="text" />
                     </div>
+                    <input class="inputBase" type="text" />
                   </div>
-
                   <div class="dia">
+                    <input class="button__input" type="checkbox" id="Martes" />
                     <label class="checkButton" for="Martes">M</label>
                     <div class="tiempo-minutos">
                       <i class="fas fa-stopwatch header-tiempo"></i>
                       <h3 class="header-tiempo">Minutos</h3>
-                      <input class="inputBase" type="text" />
                     </div>
+                    <input class="inputBase" type="text" />
                   </div>
                 </div>
                 <div class="parDia">
                   <div class="dia">
+                    <input
+                      class="button__input"
+                      type="checkbox"
+                      id="Miercoles"
+                    />
                     <label class="checkButton" for="Miercoles">M</label>
                     <div class="tiempo-minutos">
                       <i class="fas fa-stopwatch header-tiempo"></i>
                       <h3 class="header-tiempo">Minutos</h3>
-                      <input class="inputBase" type="text" />
                     </div>
+                    <input class="inputBase" type="text" />
                   </div>
-
                   <div class="dia">
+                    <input class="button__input" type="checkbox" id="Jueves" />
                     <label class="checkButton" for="Jueves">J</label>
                     <div class="tiempo-minutos">
                       <i class="fas fa-stopwatch header-tiempo"></i>
                       <h3 class="header-tiempo">Minutos</h3>
-                      <input class="inputBase" type="text" />
                     </div>
+                    <input class="inputBase" type="text" />
                   </div>
                 </div>
                 <div class="parDia">
                   <div class="dia">
+                    <input class="button__input" type="checkbox" id="Viernes" />
                     <label class="checkButton" for="Viernes">V</label>
                     <div class="tiempo-minutos">
                       <i class="fas fa-stopwatch header-tiempo"></i>
                       <h3 class="header-tiempo">Minutos</h3>
-                      <input class="inputBase" type="text" />
                     </div>
+                    <input class="inputBase" type="text" />
                   </div>
                   <div class="dia">
+                    <input class="button__input" type="checkbox" id="Sabado" />
                     <label class="checkButton" for="Sabado">S</label>
                     <div class="tiempo-minutos">
                       <i class="fas fa-stopwatch header-tiempo"></i>
                       <h3 class="header-tiempo">Minutos</h3>
-                      <input class="inputBase" type="text" />
                     </div>
+                    <input class="inputBase" type="text" />
                   </div>
                 </div>
                 <div class="dia">
+                  <input class="button__input" type="checkbox" id="Domingo" />
                   <label class="checkButton" for="Domingo">D</label>
                   <div class="tiempo-minutos">
                     <i class="fas fa-stopwatch header-tiempo"></i>
                     <h3 class="header-tiempo">Minutos</h3>
-                    <input class="inputBase" type="text" />
                   </div>
+                  <input class="inputBase" type="text" />
                 </div>
               </div>
             </div>
+          </div>
+          <div class="form-section">
             <h4 class="form-subtitulo">Amigos</h4>
             <label class="inputLabel">Posibles amigos</label>
-            <div>
+            <div class="agregar-elemento">
               <select class="amigos-lista">
                 <option>Sofia Martinez</option>
                 <option>Ezequiel Zapas</option>
               </select>
+              <button class="button">Agregar</button>
+            </div>
+            <div class="header-informacion">
+              <img src="../../assets/img/usuario.jpg" />
+              
             </div>
           </div>
         </div>

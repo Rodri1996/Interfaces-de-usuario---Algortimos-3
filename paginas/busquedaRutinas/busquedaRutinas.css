@@ -10,7 +10,7 @@
   padding: 0.5rem 1rem;
   color: var(--color-quinario);
 }
-.card {
+.container {
   display: flex;
   justify-content: left;
   flex-direction: column;
@@ -21,12 +21,12 @@
   font-size: 2rem;
   border: 0.3rem solid var(--color-primario);
 }
-.card__contenido {
+.container__contenido {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.card__contenido-iconos {
+.container__contenido-iconos {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -34,12 +34,12 @@
   gap: 1em;
   font-size: 1.3em;
 }
-.card__contenido-title {
+.container__contenido-title {
   display: flex;
   justify-content: left;
   align-items: center;
 }
-.card__title {
+.container__title {
   margin-right: 0.5em;
   font-size: 3rem;
 }
@@ -86,4 +86,10 @@
   position: relative;
   left: 0.9em;
   top: 0.15em;
+}
+
+@media (min-width: 401px) {
+  .fa-trash-alt {
+    color: rgb(0, 184, 25);
+  }
 }

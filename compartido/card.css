@@ -1,4 +1,4 @@
-section{
+.card{
     display:flex;
     justify-content: center;
     align-items: center;
@@ -6,7 +6,7 @@ section{
     height: 100%;
 }
 
-.card{
+.card__content{
     background-color: var(--color-terciario);
     width: 80%;
     height: auto;
