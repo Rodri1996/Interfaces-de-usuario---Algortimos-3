@@ -172,10 +172,3 @@ table{
 .table-head__fila,.table-body__fila{
     font-family:Roboto,sans-serif;
 }
-
-/*ESTO ES TEMPORAL HASTA QUE SAQUEMOS LA PROPIEDAD POSITION DEL SELECTOR FOOTER,
- EN ESTILOS GENERALES*/
-
-#footer{
-    position: fixed;
-}

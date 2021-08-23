@@ -17,5 +17,5 @@ button:hover{
     display: flex;
     justify-content:center;
     gap: 3rem;
-    margin-bottom: 2em;
+    /* margin-bottom: 2em; */
 }
