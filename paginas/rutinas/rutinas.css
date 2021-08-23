@@ -43,6 +43,13 @@ table{
     width: 4em;
 }
 
+/*
+.navBar{
+    display: flex;
+    width: 65%;
+    justify-content: space-evenly;
+}
+*/
 .cronometro{
     height: 2.5em;
     width: 2.5em;
@@ -73,14 +80,6 @@ table{
 
 .rutina-creador__p{
     font-size: 1em;
-}
-
-.form{
-    
-    display: flex;
-    height: var(--height-form-primary);
-    flex-direction: column;
-    justify-content: space-around;
 }
 
 .footer__div,.form__button{

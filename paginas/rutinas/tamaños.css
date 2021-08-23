@@ -1,0 +1,48 @@
+
+@media (max-width:400px){
+    .navBar{
+        display: none;
+    }
+}
+
+@media(min-width:401px){
+    i.icono{
+        display: none;
+    }   
+
+    .navBar{
+        display: flex;
+        width: 55%;
+        justify-content: space-between;
+        font-family: -webkit-pictograph;
+    }
+}
+
+
+@media(min-width:584px){
+    .navBar{
+        justify-content: space-evenly;
+    }
+}
+
+@media(min-width:769px){
+
+    
+
+    section.registro{
+        width: 40%;
+        display: inline-block;
+    }
+
+    section.ejercicios,section.gruposMusculares{
+        display: inline-block;
+        width: 50%;
+    }
+
+    .gruposMusculares__div--card{
+        height: 1.5em;
+        width: 6em;
+        font-size: 1.3em;
+        color: var(--color-quinario);
+    }
+}
