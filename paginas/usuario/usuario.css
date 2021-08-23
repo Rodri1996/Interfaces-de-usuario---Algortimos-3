@@ -1,7 +1,3 @@
-section {
-  height: 100%;
-}
-
 img {
   height: 5rem;
   width: 5rem;
@@ -14,17 +10,30 @@ img {
 
 .encabezado {
   gap: 20px;
+  padding:1rem;
 }
 
-.header-informacion {
+.header-informacion, .minicard-informacion {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   gap: 1rem;
+  width:100%;
+}
+
+.minicard-informacion{
+  justify-content: space-evenly;
+  margin-top: 2rem;
+  border-style: solid;
+  border-color: var(--color-primario);
+  border-radius: 2rem;
+  background-color: var(--color-quinario);
+  padding:1rem;
 }
 
 .header-tiempo {
-  font-size: 2rem;
+  font-size: 1.8rem;
+  /* padding: 0.3rem; */
 }
 
 .form-section {
@@ -54,9 +63,6 @@ img {
 .container__button {
   gap: 4rem;
 }
-/* .container__button input {
-  display: none;
-} */
 
 .button {
   padding: 0.5rem 1.4rem;
@@ -72,30 +78,23 @@ img {
   width: 8rem;
   text-align: center;
   cursor: pointer;
-  background-color: var(--color-secundario);
+  background-color: var(--color-quinario);
   border-style: solid;
-  border-color: var(--color-secundario);
+  border-color: var(--color-primario);
   border-width: 0.2rem;
   border-radius: 4rem;
-  color: var(--color-quinario);
+  color: var(--color-primario);
   padding: 0.5rem 0.1rem;
   font-size: 1.5rem;
+  font-weight: bold;
 }
-
 
 #Piernas:checked ~ label[for="Piernas"],
 #Hombros:checked ~ label[for="Hombros"],
 #Brazos:checked ~ label[for="Brazos"],
 #Pecho:checked ~ label[for="Pecho"],
 #Espalda:checked ~ label[for="Espalda"],
-#Gluteos:checked ~ label[for="Gluteos"] {
-  background-color: var(--color-quinario);
-  color: var(--color-secundario);
-  font-weight: bold;
-}
-
-
-
+#Gluteos:checked ~ label[for="Gluteos"],
 #Lunes:checked ~ label[for="Lunes"],
 #Martes:checked ~ label[for="Martes"],
 #Miercoles:checked ~ label[for="Miercoles"],
@@ -103,8 +102,8 @@ img {
 #Viernes:checked ~ label[for="Viernes"],
 #Sabado:checked ~ label[for="Sabado"],
 #Domingo:checked ~ label[for="Domingo"] {
-  background-color: var(--color-quinario);
-  color: var(--color-secundario);
+  background-color: var(--color-primario);
+  color: var(--color-quinario);
   font-weight: bold;
 }
 
@@ -121,11 +120,9 @@ img {
   gap: 1rem;
 }
 
-/* .dia {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-} */
+.dia {
+  width: 14rem;
+}
 .parDia {
   gap: 10rem;
   display: flex;
@@ -150,6 +147,18 @@ img {
   display:flex;
   justify-content: space-between;
 }
+
+.amistad{
+  display: flex;
+  flex-direction: column;
+  font-size: 1.6rem;
+}
+
+.fa-trash-alt {
+  font-size: 1.8rem;
+  color:red;
+}
+
 
 
 /* ========================================================= */
