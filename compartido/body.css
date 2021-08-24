@@ -1,6 +1,7 @@
 body {
     background:var(--color-cuaternario);
     font-family: "Roboto";
+    justify-content: center;
     margin-bottom: 120px;
     height: 100%;
 }

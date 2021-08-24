@@ -1,10 +1,10 @@
-
+/*Para aquellos que tengan como maximo un ancho de 400px les quito en menu de navegacion*/
 @media (max-width:400px){
     .navBar{
         display: none;
     }
 }
-
+/**/
 @media(min-width:401px){
     i.icono{
         display: none;
