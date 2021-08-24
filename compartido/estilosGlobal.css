@@ -5,6 +5,8 @@
 }
 html {
     font-size: 10px;
+    min-height: 100%;
+    position: relative;
 }
 :root{
     --color-primario:#003A64;

@@ -1,0 +1,6 @@
+@media all and (min-width: 401px) and (max-width:768px) {
+    .form_div{
+        min-width: 50%;
+    }
+  
+}

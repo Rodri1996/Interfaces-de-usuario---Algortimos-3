@@ -8,10 +8,6 @@
     margin-top:14em;  
 }
 
-body{
-    background-color:var(--color-cuaternario);
-}
-
 .titulo{
     font-family: 'Yeseva One', cursive; 
     font-size: 5em;
@@ -46,20 +42,8 @@ label{
     text-align: left;
     font-size:2.2em;
 }
-
-button{
-    background-color:var(--color-secundario) ;
-    border: none;
-    color:var(--color-quinario);
-    padding: 1em 3em;
-    text-align: center;
-    font-size: 1.8em;
-    border-radius: 5px;
-    box-shadow: 0 0.5em 0.5em 0 rgba(0,0,0,0.24);
-}
-
-button:hover{
-    background-color:#286C96;   
+.icono {
+    padding-right: 1rem;
 }
 
 input{
@@ -75,4 +59,19 @@ input{
     width: 80%;     
 }
 
+
+.mostrar_contraseña{
+   display: flex;
+   justify-content: end;
+   align-items: center;
+}
+
+.campo span{
+    position:absolute;
+    right: 0.5rem;
+    top:3rem;
+    text-transform: uppercase;
+    cursor:pointer;
+
+}
 
