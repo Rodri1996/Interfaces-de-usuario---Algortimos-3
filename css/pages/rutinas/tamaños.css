@@ -1,6 +1,15 @@
-@media(max-width:400px){
-    body{
-        min-width: 360px;
+@media(min-width:401px){
+    table,div.rutina-estadisticas{
+        width: 77%;
+        margin-left: 50px;
+    }
+
+    thead>tr{
+        text-align: center;
+    }
+
+    .gruposMusculares__div{
+        padding-left: 50px;
     }
 }
 
@@ -22,7 +31,9 @@
         font-size: 1.3em;
         color: var(--color-quinario);
     }
-
+    .p-default{
+        font-size: 3.5rem;
+    }
     
     form{
         width: 80%;

@@ -11,4 +11,5 @@ footer {
     height: 88px;
     bottom: 0;
     font-size: 2.5rem;
+    min-width: 360px;
 }

@@ -36,6 +36,8 @@
     <link rel="stylesheet" href="../css/shared/button.css" />
     <link rel="stylesheet" href="../css/shared/inputBase.css" />
     <link rel="stylesheet" href="../css/shared/headerTabletWeb.css" />
+    <link rel="stylesheet" href="../css/shared/card.css" />
+    <link rel="stylesheet" href="../css/pages/rutinas/tamaños.css" />
 </head>
 
 <body>
@@ -46,58 +48,63 @@
                 <i class="fas fa-bars icono"></i>
             </button>
             <nav class="menu-contenido">
-                <a class="menu-link" href="/src/busquedaRutinas.html">Home</a>
-                <a class="menu-link" href="/src/misRutinas.html">Mis Rutinas</a>
-                <a class="menu-link" href="/src/usuario.html">Perfil</a>
-                <a class="menu-link" href="/login.html">
+                <a class="menu-link" href="/runapp-grupo3/src/busquedaRutinas.html">Home</a>
+                <a class="menu-link" href="/runapp-grupo3/src/misRutinas.html">Mis Rutinas</a>
+                <a class="menu-link" href="/runapp-grupo3/src/usuario.html">Perfil</a>
+                <a class="menu-link" href="/runapp-grupo3/login.html">
                     <i class="fas fa-sign-out-alt icono" id="logoff"></i>
                 </a>
             </nav>
             <nav class="menu-web">
-                <a class="menu-link-web" href="/src/busquedaRutinas.html">Home</a>
-                <a class="menu-link-web" href="/src/misRutinas.html">Mis Rutinas</a>
-                <a class="menu-link-web" href="/src/usuario.html">Perfil</a>
-                <a class="menu-link-web" href="/login.html">
+                <a class="menu-link-web" href="/runapp-grupo3/src/busquedaRutinas.html">Home</a>
+                <a class="menu-link-web" href="/runapp-grupo3/src/misRutinas.html">Mis Rutinas</a>
+                <a class="menu-link-web" href="/runapp-grupo3/src/usuario.html">Perfil</a>
+                <a class="menu-link-web" href="/runapp-grupo3/login.html">
                     <i id="logoff-web" class="fas fa-sign-out-alt icono"></i>
                 </a>
             </nav>
         </div>
     </header>
+    <div class="flex-container">
+        <p>Isquiotibiales <span>Abdominales</span></p>
+        <form class="ventana">
+            <div class="ventana-title">
+                <p class="p-default">Abdominales</p>
+                <div>
+                    <i class="fas fa-stopwatch"></i>
+                    <p class="subtitulo__p">24'</p>
+                </div>
+            </div>
+            <section class="registro-actividad">
+                <div class="inputSeparador">
+                    <label class="inputLabel">Actividad</label>
+                    <select class="inputBase" name="estrategia-edicion">
+                        <!--OPCIONES-->
+                    </select>
+                </div>
+                <div class="inputSeparador">
+                    <label class="inputLabel">Frecuencia cardíaca base</label>
+                    <input class="inputBase" type="text" placeholder="Ingrese el valor de la frecuencia aquí"/>
+                </div>
+                <div class="div-checkbotton">
+                    <input checked id="check__input" type="checkbox" />Con series
+                </div>
+                <div class="inputSeparador">
+                    <label class="inputLabel">Minutos de descanso</label>
+                    <input class="inputBase" type="text" placeholder="Ingrese los minutos aquí"/>
+                </div>
+                <div class="inputSeparador">
+                    <label class="inputLabel">Cantidad de series</label>
+                    <input class="inputBase" type="text" placeholder="Ingrese la cantidaad aquí"/>
+                </div>
+            </section>
 
-    <form class="formu">
-        <section class="section-flex">
-            <div class="inputSeparador">
-                <label class="inputLabel">Actividad</label>
-                <select class="inputBase" name="estrategia-edicion">
-                    <!--OPCIONES-->
-                </select>
+            <div class="posicion-botones">
+                <button class="button-cancelar">Cancelar</button>
+                <button class="button-aceptar">Guardar</button>
             </div>
-            <div class="inputSeparador">
-                <label class="inputLabel">Frecuencia cardíaca base</label>
-                <input class="inputBase" type="text" />
-            </div>
-            <div class="div-checkbotton">
-                <input checked id="check__input" type="checkbox" />Con series
-            </div>
-            <div class="inputSeparador">
-                <label class="inputLabel">Minutos de descanso</label>
-                <input class="inputBase" type="text" />
-            </div>
-            <div class="inputSeparador">
-                <label class="inputLabel">Cantidad de series</label>
-                <input class="inputBase" type="text" />
-            </div>
-        </section>
-
-        <div class="posicion-botones">
-            <button class="button-cancelar">Cancelar</button>
-            <button class="button-aceptar">Guardar</button>
-        </div>
-
-        <!-- <div class="button"> -->
-
-        <!-- </div> -->
-    </form>
+        </form>
+    </div>
     <footer class="footer">
         <i class="fab fa-facebook-square"></i>
         <div>RunApp/2021</div>

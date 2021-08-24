@@ -1,20 +1,28 @@
-.card{
-    display:flex;
-    justify-content: center;
+.ventana-title {
+    width: 100%;
+    display: flex;
     align-items: center;
-    height: 100%;
-}
+    /* position: relative; */
+    justify-content: space-between;
+    background-color: var(--color-auxiliar1);
+    font-size: 2rem;
+    padding: 0.5rem 1rem;
+    color: var(--color-quinario);
+  }
 
-.card__content{
-    background-color: var(--color-terciario);
-    width: 80%;
-    height: auto;
-    border-radius:8px;  
-    box-shadow: 0 0.5em 0.5em 0 rgba(0,0,0,0.24);  
-}
-
-.encabezado{
-    background-color: var(--color-secundario);
-    /* border-radius:8px 8px 0 0;   */ /*para agregar en moto web de la vista usuario*/
-    height:20%;
+@media (min-width: 769px){
+    .ventana {
+        margin: 2rem auto;
+        max-width: 70%;
+        background-color: var(--color-cuaternario);
+        border-radius: 1rem;
+        padding-bottom: 3rem;
+        border-style: solid;
+        border-color: var(--color-auxiliar1);
+        box-shadow: 0 0.5em 0.5em 0 rgb(0 0 0 / 24%);
+    } 
+    .ventana-title{
+        height: 6rem;
+        padding: 0 3rem;
+    }
 }

@@ -5,7 +5,7 @@
     flex-direction:column;
     align-items:center;
     gap:1.5rem;  
-    margin-top:8em;  
+    margin-top: 13em; 
 }
 
 .titulo{
@@ -72,6 +72,22 @@ input{
     top:3rem;
     text-transform: uppercase;
     cursor:pointer;
+
+}
+
+@media (min-width: 401px){
+
+    .container{
+        margin-top: 12em; 
+    }
+
+}
+
+@media (min-width: 769px){
+
+    .container{
+        margin-top: 24em; 
+    }
 
 }
 

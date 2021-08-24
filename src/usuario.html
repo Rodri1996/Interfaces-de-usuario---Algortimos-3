@@ -22,9 +22,8 @@
     <link rel="stylesheet" href="../css/shared/headerTabletWeb.css">
 
     <link rel="stylesheet" href="../css/pages/usuario/usuario.css">
-    <link rel="stylesheet" href="../css/pages/usuario/usuarioTablet.css">
 </head>
-
+<!-- HEADER -->
 <body>
     <header>
         <h1 class="title">RunApp</h1>
@@ -33,27 +32,28 @@
                 <i class="fas fa-bars icono"></i>
             </button>
             <nav class="menu-contenido">
-                <a class="menu-link" href="/src/busquedaRutinas.html">Home</a>
-                <a class="menu-link" href="/src/misRutinas.html">Mis Rutinas</a>
-                <a class="menu-link" href="/src/usuario.html">Perfil</a>
-                <a class="menu-link" href="/login.html">
+                <a class="menu-link" href="/runapp-grupo3/src/busquedaRutinas.html">Home</a>
+                <a class="menu-link" href="/runapp-grupo3/src/misRutinas.html">Mis Rutinas</a>
+                <a class="menu-link" href="/runapp-grupo3/src/usuario.html">Perfil</a>
+                <a class="menu-link" href="/runapp-grupo3/login.html">
                     <i class="fas fa-sign-out-alt icono" id="logoff"></i>
                 </a>
             </nav>
             <nav class="menu-web">
-                <a class="menu-link-web" href="/src/busquedaRutinas.html">Home</a>
-                <a class="menu-link-web" href="/src/misRutinas.html">Mis Rutinas</a>
-                <a class="menu-link-web" href="/src/usuario.html">Perfil</a>
-                <a class="menu-link-web" href="/login.html">
+                <a class="menu-link-web" href="/runapp-grupo3/src/busquedaRutinas.html">Home</a>
+                <a class="menu-link-web" href="/runapp-grupo3/src/misRutinas.html">Mis Rutinas</a>
+                <a class="menu-link-web" href="/runapp-grupo3/src/usuario.html">Perfil</a>
+                <a class="menu-link-web" href="/runapp-grupo3/login.html">
                     <i id="logoff-web" class="fas fa-sign-out-alt icono"></i>
                 </a>
             </nav>
         </div>
     </header>
-    <form>
-        <section class="card">
+        <form class="ventana">
+            
             <div class="card__content">
-                <header class="encabezado">
+                <header class="ventana-title">
+                    
                     <div class="header-informacion">
                         <img src="../assets/img/usuario.jpg">
                         <h2 class="nombre">Nazareno Peloso</h2>
@@ -63,44 +63,49 @@
                         <h3 class="header-tiempo">170 minutos</h3>
                     </div>
                 </header>
-                <div class="form-section">
-                    <div class="inputSeparador">
-                        <label class="inputLabel">Nombre y apellido</label>
-                        <input class="inputBase" type="text">
-                    </div>
-                    <div class="flexRow">
-                        <div class="flexColumn">
-                            <div class="inputSeparador">
-                                <label class="inputLabel">Username</label>
-                                <input class="inputBase" type="text">
+                <div class="super-card">
+                    <div class="mis-datos">
+                    <h4 class="form-subtitulo">Mis datos personales</h4>
+                    <div class="form-section">
+                        <div class="inputSeparador">
+                            <label class="inputLabel">Nombre y apellido</label>
+                            <input class="inputBase" type="text">
+                        </div>
+                        <div class="flexRow">
+                            <div class="flexColumn">
+                                <div class="inputSeparador">
+                                    <label class="inputLabel">Username</label>
+                                    <input class="inputBase" type="text">
+                                </div>
+                                <div class="inputSeparador">
+                                    <label class="inputLabel">Frec. cardíaca en reposo</label>
+                                    <input class="inputBase" type="text">
+                                </div>
                             </div>
-                            <div class="inputSeparador">
-                                <label class="inputLabel">Frec. cardíaca en reposo</label>
-                                <input class="inputBase" type="text">
+                            <div class="flexColumn">
+                                <div class="inputSeparador">
+                                    <label class="inputLabel">Fecha de nacimiento</label>
+                                    <input class="inputBase" type="date">
+                                </div>
+                                <div class="inputSeparador">
+                                    
+                                    <label class="inputLabel">Porcentaje de intensidad</label>
+                                    <input class="inputBase" type="text">
+                                </div>
                             </div>
                         </div>
-                        <div class="flexColumn">
-                            <div class="inputSeparador">
-                                <label class="inputLabel">Fecha de nacimiento</label>
-                                <input class="inputBase" type="date">
-                            </div>
-                            <div class="inputSeparador">
-                                <label class="inputLabel">Porcentaje de intensidad</label>
-                                <input class="inputBase" type="text">
-                            </div>
+                    </div>
+                
+                    <h4 class="form-subtitulo">Grupos musculares de preferencia</h4>
+                    <div class="form-section-grupoM">
+                        <div class="container__button">
+                            <input class="button__input" type="checkbox" id="Piernas">
+                            <label class="checkButton" for="Piernas">Piernas</label>
+                            <input class="button__input" type="checkbox" id="Hombros">
+                            <label class="checkButton" for="Hombros">Hombros</label>
+                            <input class="button__input" type="checkbox" id="Brazos">
+                            <label class="checkButton" for="Brazos">Brazos</label>
                         </div>
-                    </div>
-                </div>
-                <h4 class="form-subtitulo">Grupos musculares de preferencia</h4>
-                <div class="form-section-grupoM">
-                    <div class="container__button">
-                        <input class="button__input" type="checkbox" id="Piernas">
-                        <label class="checkButton" for="Piernas">Piernas</label>
-                        <input class="button__input" type="checkbox" id="Hombros">
-                        <label class="checkButton" for="Hombros">Hombros</label>
-                        <input class="button__input" type="checkbox" id="Brazos">
-                        <label class="checkButton" for="Brazos">Brazos</label>
-                    </div>
                     <div class="container__button">
                         <input class="button__input" type="checkbox" id="Pecho">
                         <label class="checkButton" for="Pecho">Pecho</label>
@@ -110,28 +115,30 @@
                         <label class="checkButton" for="Gluteos">Gluteos</label>
                     </div>
                 </div>
+            </div>
+            <div class="dias-de-entrenamiento">
                 <h4 class="form-subtitulo">Dias de entrenamiento</h4>
                 <div class="form-section">
-                        <div class="semana">
-                            <!-- <div class="parDia"> -->
-                                <div>
-                                    <input class="button__input" type="checkbox" id="Lunes">
-                                    <label class="checkButton" for="Lunes">L</label>
-                                    <div class="tiempo-minutos">
-                                        <i class="fas fa-stopwatch header-tiempo"></i>
-                                        <h3 class="header-tiempo">Minutos</h3>
-                                    </div>
-                                    <input class="inputBase" type="text">
+                    <div class="semana">
+                        <!-- <div class="parDia"> -->
+                            <div>
+                                <input class="button__input" type="checkbox" id="Lunes">
+                                <label class="checkButton" for="Lunes">L</label>
+                                <div class="tiempo-minutos">
+                                    <i class="fas fa-stopwatch header-tiempo"></i>
+                                    <h3 class="header-tiempo">Minutos</h3>
                                 </div>
-                                <div>
-                                    <input class="button__input" type="checkbox" id="Martes">
-                                    <label class="checkButton" for="Martes">M</label>
-                                    <div class="tiempo-minutos">
-                                        <i class="fas fa-stopwatch header-tiempo"></i>
-                                        <h3 class="header-tiempo">Minutos</h3>
-                                    </div>
-                                    <input class="inputBase" type="text">
+                                <input class="inputBase" type="text">
+                            </div>
+                            <div>
+                                <input class="button__input" type="checkbox" id="Martes">
+                                <label class="checkButton" for="Martes">M</label>
+                                <div class="tiempo-minutos">
+                                    <i class="fas fa-stopwatch header-tiempo"></i>
+                                    <h3 class="header-tiempo">Minutos</h3>
                                 </div>
+                                <input class="inputBase" type="text">
+                            </div>
                             <!-- </div> -->
                             <!-- <div class="parDia"> -->
                                 <div>
@@ -152,7 +159,7 @@
                                     </div>
                                     <input class="inputBase" type="text">
                                 </div>
-                            <!-- </div> -->
+                                <!-- </div> -->
                             <!-- <div class="parDia"> -->
                                 <div>
                                     <input class="button__input" type="checkbox" id="Viernes">
@@ -172,24 +179,25 @@
                                     </div>
                                     <input class="inputBase" type="text">
                                 </div>
-                            <!-- </div> -->
-                            <div>
-                                <input class="button__input" type="checkbox" id="Domingo">
-                                <label class="checkButton" for="Domingo">D</label>
-                                <div class="tiempo-minutos">
-                                    <i class="fas fa-stopwatch header-tiempo"></i>
-                                    <h3 class="header-tiempo">Minutos</h3>
+                                <!-- </div> -->
+                                <div>
+                                    <input class="button__input" type="checkbox" id="Domingo">
+                                    <label class="checkButton" for="Domingo">D</label>
+                                    <div class="tiempo-minutos">
+                                        <i class="fas fa-stopwatch header-tiempo"></i>
+                                        <h3 class="header-tiempo">Minutos</h3>
+                                    </div>
+                                    <input class="inputBase" type="text">
                                 </div>
-                                <input class="inputBase" type="text">
                             </div>
                         </div>
-                </div>
-                <h4 class="form-subtitulo">Amigos</h4>
-                <div class="form-section">
-                    <label class="inputLabel">Posibles amigos</label>
-                    <div class="agregar-elemento">
-                        <select class="amigos-lista">
-                            <option>Sofia Martinez</option>
+                    </div>
+                        <h4 class="form-subtitulo">Amigos</h4>
+                        <div class="form-section">
+                            <label class="inputLabel">Posibles amigos</label>
+                            <div class="agregar-elemento">
+                                <select class="amigos-lista">
+                                    <option>Sofia Martinez</option>
                             <option>Ezequiel Zapas</option>
                         </select>
                         <button class="button-agregar">Agregar</button>
@@ -226,7 +234,7 @@
                                 <img src="../assets/img/na_bong_sun.jpg">
                                 <div class="amistad">
                                     <h3>Na Bong Sun</h3>
-                                    <p>150 años / 10% de intensidad</p>
+                                    <p>34 años / 10% de intensidad</p>
                                 </div>
                                 <i class="fas fa-trash-alt"></i>
                             </section>
@@ -234,24 +242,24 @@
                                 <img src="../assets/img/shin_hye_sun.jpeg">
                                 <div class="amistad">
                                     <h3>Shin Hye Sun</h3>
-                                    <p>100 años / 70% de intensidad</p>
+                                    <p>40 años / 70% de intensidad</p>
                                 </div>
                                 <i class="fas fa-trash-alt"></i>
                             </section>
                         </div>
                     </section>
                 </div>
+            </div>
                 <div class="posicion-botones">
                     <button class="button-cancelar">Cancelar</button>
                     <button class="button-aceptar">Aceptar</button>
                 </div>
             </div>
-        </section>
-    </form>
-    <footer id="footer__relative">
-        <i class="fab fa-facebook-square"></i>
-        <div>RunApp/2021</div>
-    </footer>
-</body>
-
+        </form>
+        <footer id="footer__relative">
+            <i class="fab fa-facebook-square"></i>
+            <div>RunApp/2021</div>
+        </footer>
+    </body>
+    
 </html>

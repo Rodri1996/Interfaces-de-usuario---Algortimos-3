@@ -18,7 +18,7 @@ img {
   justify-content: flex-end;
   align-items: center;
   gap: 1rem;
-  width:100%;
+  
 }
 
 .minicard-informacion{
@@ -45,7 +45,7 @@ img {
 .form-subtitulo {
   font-size: 2.6rem;
   padding-bottom: 1.5rem;
-  padding-left: 1rem;
+  padding-left: 2rem;
 }
 
 .flexColumn {
@@ -116,22 +116,13 @@ img {
 
 .semana {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  /* align-items: center; */
-  gap: 1rem;
 }
-
-
 
 .dia {
   width: 14rem;
-}
-.parDia {
-  gap: 10rem;
-  display: flex;
-  flex-direction: row;
 }
 
 .tiempo-minutos {
@@ -191,7 +182,7 @@ img {
   }
 
   .button-aceptar,.button-cancelar{
-    padding:0.1rem 0.1rem;
+    padding:1.1rem 2.1rem;
   }
 }
 
@@ -212,6 +203,11 @@ img {
 
   .encabezado {
     border-radius: 0;
+   
+  }
+
+  .form-section{
+    padding:2rem;
   }
 
  .form-section-grupoM{
@@ -219,7 +215,7 @@ img {
    justify-content: center;
    flex-direction: row;
    align-items: center;
-   gap:4rem;
+   flex-wrap: wrap;
  }
 
  .minicard-informacion{
@@ -244,12 +240,67 @@ img {
  .semana {
   display: flex;
   flex-direction: row;
-  /* flex-wrap: nowrap; */
-  justify-content: flex-start;
-  /* align-items: center; */
-  /* gap: 1rem; */
+}
+
+.ventana_title{
+  padding:1rem;
+}
+
+.amigos-lista{
+  width: 70%;
+  font-size: 1.4rem;
+}
+
+.container__button{
+  gap:4rem;
 }
  
 }
 
+/* ========================================================= */
 
+/*                    MODO WEB */
+
+/* ========================================================= */
+
+ @media (min-width:769px){
+   
+  .container__button, .form-section-grupoM{
+    gap:0.5rem;
+    
+  }
+
+  .ventana{
+    max-width: 80rem;
+  }
+
+  /* html{
+    max-width: 100%;
+  }
+
+  .ventana{
+    max-width:80%;
+  }
+
+  .super-card{
+    display:flex;
+    flex-direction: row;
+  }
+
+  .mis-datos{
+    width: 100%;
+  }
+
+  .form-section{
+    width:50%;
+  }
+
+  .form-section-grupoM{
+    display:flex;
+    flex-direction: row;
+  } */
+
+  
+
+
+} 

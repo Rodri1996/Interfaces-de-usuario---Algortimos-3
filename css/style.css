@@ -8,6 +8,13 @@ html {
     min-height: 100%;
     position: relative;
 }
+
+@media(max-width:400px){
+    body{
+        min-width: 360px;
+    }
+}
+
 :root{
     --color-primario:#003A64;
     --color-secundario:#54A2D2;

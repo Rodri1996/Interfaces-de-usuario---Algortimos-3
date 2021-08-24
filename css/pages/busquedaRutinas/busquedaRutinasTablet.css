@@ -19,6 +19,12 @@
   .container__contenido {
     margin: 1rem;
   }
+  .container__title{
+    font-size: 2.5rem;
+  }
+  .autor-web{
+    font-size: 1.5rem;
+  }
   .container__contenido-iconos {  /*  Hace que los iconos borrar y editar estén en row  */
     flex-direction: row-reverse;
   }

@@ -36,6 +36,7 @@
     <link rel="stylesheet" href="../css/shared/button.css" />
     <link rel="stylesheet" href="../css/shared/header.css" />
     <link rel="stylesheet" href="../css/shared/headerTabletWeb.css" />
+    <link rel="stylesheet" href="../css/shared/card.css" />
 
     <!--ESTILOS PROPIOS DE RUTINAS-->
     <link rel="stylesheet" href="../css/pages/rutinas/rutinas.css" />
@@ -50,30 +51,30 @@
                 <i class="fas fa-bars icono"></i>
             </button>
             <nav class="menu-contenido">
-                <a class="menu-link" href="/src/busquedaRutinas.html">Home</a>
-                <a class="menu-link" href="/src/misRutinas.html">Mis Rutinas</a>
-                <a class="menu-link" href="/src/usuario.html">Perfil</a>
-                <a class="menu-link" href="/login.html">
+                <a class="menu-link" href="/runapp-grupo3/src/busquedaRutinas.html">Home</a>
+                <a class="menu-link" href="/runapp-grupo3/src/misRutinas.html">Mis Rutinas</a>
+                <a class="menu-link" href="/runapp-grupo3/src/usuario.html">Perfil</a>
+                <a class="menu-link" href="/runapp-grupo3/login.html">
                     <i class="fas fa-sign-out-alt icono" id="logoff"></i>
                 </a>
             </nav>
             <nav class="menu-web">
-                <a class="menu-link-web" href="/src/busquedaRutinas.html">Home</a>
-                <a class="menu-link-web" href="/src/misRutinas.html">Mis Rutinas</a>
-                <a class="menu-link-web" href="/src/usuario.html">Perfil</a>
-                <a class="menu-link-web" href="/login.html">
+                <a class="menu-link-web" href="/runapp-grupo3/src/busquedaRutinas.html">Home</a>
+                <a class="menu-link-web" href="/runapp-grupo3/src/misRutinas.html">Mis Rutinas</a>
+                <a class="menu-link-web" href="/runapp-grupo3/src/usuario.html">Perfil</a>
+                <a class="menu-link-web" href="/runapp-grupo3/login.html">
                     <i id="logoff-web" class="fas fa-sign-out-alt icono"></i>
                 </a>
             </nav>
         </div>
     </header>
 
-    <form>
-        <div class="rutina-creador">
-            <h4 class="rutina-creador__h4">Isquiotibiales</h4>
-            <p class="rutina-creador__p">Por Evaristo Hurtado</p>
+    <form class="ventana">
+        <div class="ventana-title">
+            <p class="p-default">Isquiotibiales</p>
+            <p class="rutina-subtitulo__p">Por Evaristo Hurtado</p>
         </div>
-        <section class="registro">
+        <section class="rutina-registro">
             <div>
                 <label>Nombre</label>
                 <input type="text" placeholder="Ingrese el nombre de la rutina aquí" />
@@ -90,7 +91,7 @@
             </div>
         </section>
 
-        <section class="ejercicios">
+        <section class="rutina-ejercicios">
             <h2 class="ejercicios__h2">Ejercicios</h2>
             <table border="1">
                 <thead>
@@ -101,16 +102,17 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td class="table-body__fila">Isquiotibiales</td>
+                        <td href="/runapp-grupo3/src/rutinas.html" class="table-body__fila">Isquiotibiales</td>
                         <td class="table-body__fila">24</td>
                     </tr>
                 </tbody>
             </table>
-            <div class="estadistico">
+            <div class="rutina-estadisticas">
                 <i class="fas fa-heartbeat"></i>
-                <p class="estadistico__p">200 PPM</p>
+                <p class="rutina-estadisticas__p">200 PPM</p>
                 <i class="fas fa-stopwatch"></i>
-                <p class="estadistico__p">63'</p>
+                <p class="rutina-estadisticas__p">63'</p>
+                <button>+</button>
             </div>
 
             <h4 class="gruposMusculares__h4">Grupos Musculares</h4>

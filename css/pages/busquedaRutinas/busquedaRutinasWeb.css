@@ -1,23 +1,17 @@
 @media (min-width: 769px){
-  .ventana {
-    margin: 2rem auto;
-    max-width: 70%;
-    background-color: var(--color-cuaternario);
-    border-radius: 1rem;
-    padding-bottom: 3rem;
-    border-style: solid;
-    border-color: var(--color-auxiliar1);
-  } 
-  .resultados{
-    height: 6rem;
-    padding: 0 3rem;
-  }
+
   .p-default, .p-web {  /*  Tamaño de "Resultados de busqueda"  */
     font-size: 3.5rem;
   }
   .searchbar__input{
     width: 68%;
   }
+  .container__title{
+    font-size: 3rem;
+  }
+  .autor-web{
+    font-size: 2rem;
+  } 
 }
 
   
