@@ -3,4 +3,8 @@
     color: rgb(0, 184, 25);
   }
   
+  .container__contenido-iconos {
+    flex-direction: row-reverse;
+  }
+
 }

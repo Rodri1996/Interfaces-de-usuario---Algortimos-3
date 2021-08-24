@@ -1,11 +1,10 @@
-/*Para aquellos que tengan como maximo un ancho de 400px les quito en menu de navegacion*/
-@media (max-width:400px){
-    /* .navBar{
-        display: none;
-    } */
+@media(max-width:400px){
+    body{
+        min-width: 360px;
+    }
 }
-/**/
-@media(min-width:401px){
+
+@media(min-width:401px){                /*  Quité todo esto porque conflictuaba con headerTabletWeb.css  */
 
     /* div.menu{
         display: none;
@@ -45,11 +44,5 @@
         width: 6em;
         font-size: 1.3em;
         color: var(--color-quinario);
-    }
-}
-
-@media(max-width:400px){
-    body{
-        min-width: 360px;
     }
 }
