@@ -117,7 +117,9 @@ table{
 .estadistico{
     display: flex;
     margin-top: 0.5em;
+    margin-left: 2em;
     align-items: center;
+    font-size: 1.4em;
 }
 
 .estadistico__p{

@@ -4,29 +4,6 @@
     }
 }
 
-@media(min-width:401px){                /*  Quité todo esto porque conflictuaba con headerTabletWeb.css  */
-
-    /* div.menu{
-        display: none;
-    }
-
-    h5{
-        margin-left: 8px;
-    }
-
-    .navBar{
-        display: flex;
-        width: 55%;
-        justify-content: flex-end;
-        margin-right: 20px;
-        font-family: -webkit-pictograph;
-    }
-
-    #desplegable{
-        width: auto;
-    } */
-}
-
 @media(min-width:769px){
 
     section.registro{
@@ -45,4 +22,11 @@
         font-size: 1.3em;
         color: var(--color-quinario);
     }
+
+    
+    form{
+        width: 80%;
+        margin: 1.5em auto;
+    }
+    
 }
