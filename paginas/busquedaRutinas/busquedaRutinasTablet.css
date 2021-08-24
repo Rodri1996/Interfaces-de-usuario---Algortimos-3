@@ -1,10 +1,25 @@
 @media (min-width: 401px) {
-  .fa-trash-alt {
-    color: rgb(0, 184, 25);
+  .fa-trash-alt, .fa-pen{
+    font-size: 3.5rem;
   }
-  
-  .container__contenido-iconos {
+  .fa-star {
+    font-size: 2.5rem;
+  }
+  .container__separador-web {
+    display: flex;
+    /* align-items: center; */
+  }
+  .autor-mobile, .p-mobile {
+    display: none;
+  }
+  /* .autor-web {         <------- Buscar una mejor forma de centrar los autores
+    align-items: center;
+    justify-content: center;
+  } */
+  .container__contenido {
+    margin: 1rem;
+  }
+  .container__contenido-iconos {  /*  Hace que los iconos borrar y editar estén en row  */
     flex-direction: row-reverse;
   }
-
 }

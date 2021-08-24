@@ -34,24 +34,24 @@
                     <i class="fas fa-bars icono"></i>
                 </button>
                 <nav class="menu-contenido">
-                    <a class="menu-link" href="http://127.0.0.1:5500/runapp-grupo3/paginas/busquedaRutinas/busquedaRutinas.html">Home</a>
-                    <a class="menu-link" href="http://127.0.0.1:5500/runapp-grupo3/paginas/misRutinas/misRutinas.html">Mis Rutinas</a>
-                    <a class="menu-link" href="http://127.0.0.1:5500/runapp-grupo3/paginas/usuario/usuario.html">Perfil</a>
-                    <a class="menu-link" href="http://127.0.0.1:5500/runapp-grupo3/paginas/login/login.html">
+                    <a class="menu-link" href="/paginas/busquedaRutinas/busquedaRutinas.html">Home</a>
+                    <a class="menu-link" href="/paginas/misRutinas/misRutinas.html">Mis Rutinas</a>
+                    <a class="menu-link" href="/paginas/usuario/usuario.html">Perfil</a>
+                    <a class="menu-link" href="/paginas/login/login.html">
                         <i class="fas fa-sign-out-alt icono" id="logoff"></i>
                     </a>
                 </nav>
                 <nav class="menu-web">
-                  <a class="menu-link-web" href="http://127.0.0.1:5500/runapp-grupo3/paginas/busquedaRutinas/busquedaRutinas.html">Home</a>
-                  <a class="menu-link-web" href="http://127.0.0.1:5500/runapp-grupo3/paginas/misRutinas/misRutinas.html">Mis Rutinas</a>
-                  <a class="menu-link-web" href="http://127.0.0.1:5500/runapp-grupo3/paginas/usuario/usuario.html">Perfil</a>
-                    <a class="menu-link-web" href="http://127.0.0.1:5500/runapp-grupo3/paginas/login/login.html">
+                  <a class="menu-link-web" href="/paginas/busquedaRutinas/busquedaRutinas.html">Home</a>
+                  <a class="menu-link-web" href="/paginas/misRutinas/misRutinas.html">Mis Rutinas</a>
+                  <a class="menu-link-web" href="/paginas/usuario/usuario.html">Perfil</a>
+                    <a class="menu-link-web" href="/paginas/login/login.html">
                         <i id="logoff-web" class="fas fa-sign-out-alt icono"></i>
                     </a>
                 </nav>
             </div>
         </header>
-
+        
         <!-- SEARCHBAR -->
         <form class="searchbar">
             <input class="searchbar__input" type="text" placeholder="Buscar">
@@ -59,108 +59,113 @@
                 <i class="fas fa-search"></i>
             </div>
         </form>
-        <div class="resultados">
-            Resultados
-            <div>
-                <i class="fas fa-search" id="iconoMini"></i>
-                Total: 5
-            </div>
-        </div>
-
-        <!-- RESULTADOS DE RUTINAS -->
-        <div class="container">
-            <div class="container__contenido">
+        <section class="ventana">
+            <!-- BARRA RESULTADOS -->
+            <div class="resultados">
+                <p class="p-mobile">Resultados</p>
+                <p class="p-web">Resultados de busqueda</p>
                 <div>
-                    <div class="container__contenido-title">
-                        <h1 class="container__title">Isquiotibiales</h1>
-                        <i class="far fa-star"></i>
-                    </div>
-                    <p>59 minutos</p>
-                    <p>Por Eduardo Gomez</p>
-                </div>
-                <div class="container__contenido-iconos">
-                    <i class="fas fa-trash-alt"></i>
-                    <i class="fas fa-pen"></i>
+                    <i class="fas fa-search" id="iconoMini"></i>
+                    Total: 5
                 </div>
             </div>
-        </div>
-
-        <div class="container">
-            <div class="container__contenido">
-                <div>
-                    <div class="container__contenido-title">
-                        <h1 class="container__title">Rutina 2</h1>
-                        <i class="far fa-star"></i>
+            
+            <!-- RESULTADOS DE RUTINAS -->
+            <div class="container">
+                <div class="container__contenido">
+                    <div class="container__separador-web">
+                        <div class="container__contenido-title">
+                            <h1 class="container__title">Isquiotibiales</h1>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <p>59 minutos</p>
+                        <p class="autor-mobile">Por Eduardo Gomez</p>
                     </div>
-                    <p>80 minutos</p>
-                    <p>Por Martín Cabrera</p>
-                </div>
-                <div class="container__contenido-iconos">
-                    <i class="fas fa-trash-alt"></i>
-                    <i class="fas fa-pen"></i>
+                    <p class="autor-web">Por Eduardo Gomez</p>
+                    <div class="container__contenido-iconos">
+                        <i class="fas fa-trash-alt"></i>
+                        <i class="fas fa-pen"></i>
+                    </div>
                 </div>
             </div>
-        </div>
-
-        <div class="container">
-            <div class="container__contenido">
-                <div class="container__separador-web">
-                    <div>
+            
+            <div class="container">
+                <div class="container__contenido">
+                    <div class="container__separador-web">
+                        <div class="container__contenido-title">
+                            <h1 class="container__title">Rutina 2</h1>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <p>80 minutos</p>
+                        <p class="autor-mobile">Por Martín Cabrera</p>
+                    </div>
+                    <p class="autor-web">Por Martín Cabrera</p>
+                    <div class="container__contenido-iconos">
+                        <i class="fas fa-trash-alt"></i>
+                        <i class="fas fa-pen"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="container">
+                <div class="container__contenido">
+                    <div class="container__separador-web">
                         <div class="container__contenido-title">
                             <h1 class="container__title">Mi Rutina</h1>
                             <i class="far fa-star"></i>
                         </div>
                         <p>66 minutos</p>
+                        <p class="autor-mobile">Por Marco Polo</p>
                     </div>
-                    <p>Por Marco Polo</p>
-                </div>
-                <div class="container__contenido-iconos">
-                    <i class="fas fa-trash-alt"></i>
-                    <i class="fas fa-pen"></i>
+                    <p class="autor-web">Por Marco Polo</p>
+                    <div class="container__contenido-iconos">
+                        <i class="fas fa-trash-alt"></i>
+                        <i class="fas fa-pen"></i>
+                    </div>
                 </div>
             </div>
-        </div>
-
-        <div class="container">
-            <div class="container__contenido">
-                <div class="container__separador-web">
-                    <div>
+            
+            <div class="container">
+                <div class="container__contenido">
+                    <div class="container__separador-web">
                         <div class="container__contenido-title">
                             <h1 class="container__title">Rutini</h1>
                             <i class="far fa-star"></i>
                         </div>
                         <p>55 minutos</p>
+                        <p class="autor-mobile">Por Horacio Guaraní</p>
                     </div>
-                    <p>Por Horacio Guaraní</p>
-                </div>
-                <div class="container__contenido-iconos">
-                    <i class="fas fa-trash-alt"></i>
-                    <i class="fas fa-pen"></i>
+                    <p class="autor-web">Por Horacio Guaraní</p>
+                    <div class="container__contenido-iconos">
+                        <i class="fas fa-trash-alt"></i>
+                        <i class="fas fa-pen"></i>
+                    </div>
                 </div>
             </div>
-        </div>
-
-        <div class="container">
-            <div class="container__contenido">
-                <div>
-                    <div class="container__contenido-title">
-                        <h1 class="container__title">Pecho</h1>
-                        <i class="far fa-star"></i>
+            
+            <div class="container">
+                <div class="container__contenido">
+                    <div class="container__separador-web">
+                        <div class="container__contenido-title">
+                            <h1 class="container__title">Pecho</h1>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <p>5 minutos</p>
+                        <p class="autor-mobile">Por Gastón Rodriguez</p>
                     </div>
-                    <p>5 minutos</p>
-                    <p>Por Gastón Rodriguez</p>
-                </div>
-                <div class="container__contenido-iconos">
-                    <i class="fas fa-trash-alt"></i>
-                    <i class="fas fa-pen"></i>
+                    <p class="autor-web">Por Gastón Rodriguez</p>
+                    <div class="container__contenido-iconos">
+                        <i class="fas fa-trash-alt"></i>
+                        <i class="fas fa-pen"></i>
+                    </div>
                 </div>
             </div>
-        </div>
-
-        <!-- FOOTER -->
-        <footer>
-            <i class="fab fa-facebook-square"></i>
-            <div>RunApp/2021</div>
+        </section>
+            
+            <!-- FOOTER -->
+            <footer>
+                <i class="fab fa-facebook-square"></i>
+                <div>RunApp/2021</div>
         </footer>
     </body>
 </html>

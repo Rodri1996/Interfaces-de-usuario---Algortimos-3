@@ -1,8 +1,23 @@
 @media (min-width: 769px){
-    .fa-trash-alt {
-      color: rgb(251, 255, 0);
-    }
-    
+  .ventana {
+    margin: 2rem auto;
+    max-width: 70%;
+    background-color: var(--color-cuaternario);
+    border-radius: 1rem;
+    padding-bottom: 3rem;
+    border-style: solid;
+    border-color: var(--color-auxiliar1);
+  } 
+  .resultados{
+    height: 6rem;
+    padding: 0 3rem;
   }
+  .p-web{  /*  Tamaño de "Resultados de busqueda"  */
+    font-size: 3.5rem;
+  }
+  .searchbar__input{
+    width: 68%;
+  }
+}
 
   

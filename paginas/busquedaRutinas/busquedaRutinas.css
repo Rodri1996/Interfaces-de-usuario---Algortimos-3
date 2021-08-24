@@ -5,7 +5,7 @@
   align-items: center;
   position: relative;
   justify-content: space-between;
-  background-color: rgb(111, 133, 133);
+  background-color: var(--color-auxiliar1);
   font-size: 2rem;
   padding: 0.5rem 1rem;
   color: var(--color-quinario);
@@ -25,6 +25,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.container__separador-web {
+  display: flex;
+  flex-direction: column;
 }
 .container__contenido-iconos {
   display: flex;
@@ -78,6 +82,9 @@
   font-size: 1.5rem;
 
 }
+.fa-pen{
+  color: rgb(104, 104, 104);
+}
 .fa-trash-alt {
   color: rgb(184, 0, 0);
 }
@@ -86,4 +93,11 @@
   position: relative;
   left: 0.9em;
   top: 0.15em;
+}
+
+@media (max-width:400px) {
+  .autor-web, .p-web{
+    display: none;
+  }
+  
 }
