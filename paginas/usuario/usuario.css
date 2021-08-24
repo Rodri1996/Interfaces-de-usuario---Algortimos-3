@@ -62,7 +62,10 @@ img {
 
 .container__button {
   gap: 4rem;
+   margin-bottom: 2em;
 }
+
+
 
 .button {
   padding: 0.5rem 1.4rem;
