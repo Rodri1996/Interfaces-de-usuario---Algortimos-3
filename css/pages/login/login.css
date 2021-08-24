@@ -56,7 +56,7 @@ input{
 }
 
 .form_div{
-    width: 60%;     
+    width: calc(15% + 25rem);     
 }
 
 
