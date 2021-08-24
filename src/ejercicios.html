@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--Icono del librito-->
+    <script src="https://kit.fontawesome.com/14c6874853.js" crossorigin="anonymous"></script>
+
+    <!--Font-family: Lato-sanserif-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital@1&display=swap" rel="stylesheet" />
+
+    <!--Font-familay: Fira Code monospace-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&display=swap" rel="stylesheet" />
+
+    <!--Font-familay: Georama-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Georama:wght@600&family=Roboto:wght@400;500;900&display=swap"
+        rel="stylesheet" />
+
+    <title>Ejercicios - RunApp</title>
+
+    <link rel="stylesheet" href="/css/pages/ejercicios/ejercicios.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/shared/footer.css" />
+    <link rel="stylesheet" href="/css/shared/body.css" />
+    <link rel="stylesheet" href="/css/shared/header.css" />
+    <link rel="stylesheet" href="/css/shared/button.css" />
+    <link rel="stylesheet" href="/css/shared/inputBase.css" />
+    <link rel="stylesheet" href="/css/shared/headerTabletWeb.css" />
+</head>
+
+<body>
+    <header>
+        <h1 class="title">RunApp</h1>
+        <div class="menu">
+            <button class="desplegable">
+                <i class="fas fa-bars icono"></i>
+            </button>
+            <nav class="menu-contenido">
+                <a class="menu-link" href="/src/busquedaRutinas.html">Home</a>
+                <a class="menu-link" href="/src/misRutinas.html">Mis Rutinas</a>
+                <a class="menu-link" href="/src/usuario.html">Perfil</a>
+                <a class="menu-link" href="/login.html">
+                    <i class="fas fa-sign-out-alt icono" id="logoff"></i>
+                </a>
+            </nav>
+            <nav class="menu-web">
+                <a class="menu-link-web" href="/src/busquedaRutinas.html">Home</a>
+                <a class="menu-link-web" href="/src/misRutinas.html">Mis Rutinas</a>
+                <a class="menu-link-web" href="/src/usuario.html">Perfil</a>
+                <a class="menu-link-web" href="/login.html">
+                    <i id="logoff-web" class="fas fa-sign-out-alt icono"></i>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <form class="formu">
+        <section class="section-flex">
+            <div class="inputSeparador">
+                <label class="inputLabel">Actividad</label>
+                <select class="inputBase" name="estrategia-edicion">
+                    <!--OPCIONES-->
+                </select>
+            </div>
+            <div class="inputSeparador">
+                <label class="inputLabel">Frecuencia cardíaca base</label>
+                <input class="inputBase" type="text" />
+            </div>
+            <div class="div-checkbotton">
+                <input checked id="check__input" type="checkbox" />Con series
+            </div>
+            <div class="inputSeparador">
+                <label class="inputLabel">Minutos de descanso</label>
+                <input class="inputBase" type="text" />
+            </div>
+            <div class="inputSeparador">
+                <label class="inputLabel">Cantidad de series</label>
+                <input class="inputBase" type="text" />
+            </div>
+        </section>
+
+        <div class="posicion-botones">
+            <button class="button-cancelar">Cancelar</button>
+            <button class="button-aceptar">Guardar</button>
+        </div>
+
+        <!-- <div class="button"> -->
+
+        <!-- </div> -->
+    </form>
+    <footer class="footer">
+        <i class="fab fa-facebook-square"></i>
+        <div>RunApp/2021</div>
+    </footer>
+</body>
+
+</html>

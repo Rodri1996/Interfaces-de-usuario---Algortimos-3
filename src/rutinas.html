@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://kit.fontawesome.com/14c6874853.js" crossorigin="anonymous"></script>
+    <!-- iconos FontsAwesome -->
+
+    <!--TIPOS DE LETRA:-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital@1&display=swap" rel="stylesheet" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&display=swap" rel="stylesheet" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Georama:wght@600&family=Roboto:wght@400;500;900&display=swap"
+        rel="stylesheet" />
+
+    <title>Rutinas - RunApp</title>
+
+    <!--ESTILOS PROPIOS DE RUTINAS-->
+    <link rel="stylesheet" href="/css/pages/rutinas/rutinas.css" />
+    <link rel="stylesheet" href="/css/pages/rutinas/tamaños.css" />
+    <!--ESTILOS GLOBALES DE LA APLICACION:-->
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/shared/footer.css" />
+    <link rel="stylesheet" href="/css/shared/body.css" />
+    <link rel="stylesheet" href="/css/shared/button.css" />
+    <link rel="stylesheet" href="/css/shared/header.css" />
+    <link rel="stylesheet" href="/css/shared/headerTabletWeb.css" />
+</head>
+
+<body>
+    <header>
+        <h1 class="title">RunApp</h1>
+        <div class="menu">
+            <button class="desplegable">
+                <i class="fas fa-bars icono"></i>
+            </button>
+            <nav class="menu-contenido">
+                <a class="menu-link" href="/src/busquedaRutinas.html">Home</a>
+                <a class="menu-link" href="/src/misRutinas.html">Mis Rutinas</a>
+                <a class="menu-link" href="/src/usuario.html">Perfil</a>
+                <a class="menu-link" href="/login.html">
+                    <i class="fas fa-sign-out-alt icono" id="logoff"></i>
+                </a>
+            </nav>
+            <nav class="menu-web">
+                <a class="menu-link-web" href="/src/busquedaRutinas.html">Home</a>
+                <a class="menu-link-web" href="/src/misRutinas.html">Mis Rutinas</a>
+                <a class="menu-link-web" href="/src/usuario.html">Perfil</a>
+                <a class="menu-link-web" href="/login.html">
+                    <i id="logoff-web" class="fas fa-sign-out-alt icono"></i>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="rutina-creador">
+        <h4 class="rutina-creador__h4">Isquiotibiales</h4>
+        <p class="rutina-creador__p">Por Evaristo Hurtado</p>
+    </div>
+    <form>
+        <section class="registro">
+            <div>
+                <label>Nombre</label>
+                <input type="text" placeholder="Ingrese el nombre de la rutina aquí" />
+            </div>
+            <div>
+                <label>Descripcion</label>
+                <input type="text" placeholder="Describa la rutina aquí" />
+            </div>
+            <div>
+                <label>Estrategia de edicion</label>
+                <select name="estrategia-edicion">
+                    <!--OPCIONES-->
+                </select>
+            </div>
+        </section>
+
+        <section class="ejercicios">
+            <h2 class="ejercicios__h2">Ejercicios</h2>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <td class="table-head__fila">Nombre</td>
+                        <td class="table-head__fila">Minutos</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="table-body__fila">Isquiotibiales</td>
+                        <td class="table-body__fila">24</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="estadistico">
+                <img class="corazon" src="assets/images/corazon-latido.png" />
+                <p class="estadistico__p">200 PPM</p>
+                <img class="cronometro" src="assets/images/cronometro.png" />
+                <p class="estadistico__p">63'</p>
+            </div>
+
+            <h4 class="gruposMusculares__h4">Grupos Musculares</h4>
+            <div class="gruposMusculares__div">
+                <div class="gruposMusculares__div--card">Piernas</div>
+                <div class="gruposMusculares__div--card">Espalda</div>
+                <div class="gruposMusculares__div--card">Triceps</div>
+                <div class="gruposMusculares__div--card">Pecho</div>
+            </div>
+        </section>
+        <div class="posicion-botones">
+            <button class="button-cancelar">Cancelar</button>
+            <button class="button-aceptar">Guardar</button>
+        </div>
+    </form>
+
+    <footer>
+        <i class="fab fa-facebook-square"></i>
+        <div>RunApp/2021</div>
+    </footer>
+</body>
+
+</html>
