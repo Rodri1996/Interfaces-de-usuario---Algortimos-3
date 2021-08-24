@@ -12,7 +12,7 @@
     height: 6rem;
     padding: 0 3rem;
   }
-  .p-web{  /*  Tamaño de "Resultados de busqueda"  */
+  .p-default, .p-web {  /*  Tamaño de "Resultados de busqueda"  */
     font-size: 3.5rem;
   }
   .searchbar__input{
