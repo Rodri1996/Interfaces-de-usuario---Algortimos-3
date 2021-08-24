@@ -43,8 +43,9 @@ img {
 }
 
 .form-subtitulo {
-  font-size: 1.6rem;
+  font-size: 2.6rem;
   padding-bottom: 1.5rem;
+  padding-left: 1rem;
 }
 
 .flexColumn {
@@ -64,8 +65,6 @@ img {
   gap: 4rem;
    margin-bottom: 2em;
 }
-
-
 
 .button {
   padding: 0.5rem 1.4rem;
@@ -170,6 +169,7 @@ img {
 
 /* ========================================================= */
 
+
 @media (max-width: 400px) {
   .card {
     margin-top: 0;
@@ -180,4 +180,64 @@ img {
   .encabezado {
     border-radius: 0;
   }
+
+  .form-section-grupoM {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .button-aceptar,.button-cancelar{
+    padding:0.1rem 0.1rem;
+  }
 }
+
+/* ========================================================= */
+
+/*                    MODO TABLET */
+
+/* ========================================================= */
+
+@media (min-width:401px){
+  .card{
+      margin-top: 0;
+  }
+
+  .card__content{
+    min-width: 100%;
+  }
+
+  .encabezado {
+    border-radius: 0;
+  }
+
+ .form-section-grupoM{
+   display: flex;
+   justify-content: center;
+   flex-direction: row;
+   align-items: center;
+   gap:4rem;
+ }
+
+ .minicard-informacion{
+   justify-content: start;
+ }
+
+ .amistad{
+   margin-right: 3rem;
+ }
+
+ .card2,.card1{
+   display: flex;
+   flex-direction: column;
+ }
+
+ .cards-amistad{
+   display: flex;
+   flex-direction: row;
+   gap:7rem;
+ }
+ 
+}
+
+

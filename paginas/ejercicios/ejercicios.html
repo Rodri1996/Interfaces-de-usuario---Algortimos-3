@@ -33,37 +33,34 @@
     <link rel="stylesheet" href="../../compartido/header.css">
     <link rel="stylesheet" href="../../compartido/button.css"/>
     <link rel="stylesheet" href="../../compartido/inputBase.css"/>
-
+    <link rel="stylesheet" href="../../compartido/headerTabletWeb.css"/>
 </head>
 <body>
-
-
-    <nav>
-        <header>
-            <h1 class="title">RunApp</h1>
-            <!-- <i class="fas fa-bars icono"></i> -->
-            <div class="menu">
-                <button class="desplegable"><i class="fas fa-bars icono"></i></button>
-                <div class="menu-contenido">
-                  <a class="menu-link" href="http://127.0.0.1:5500/runapp-grupo3/paginas/busquedaRutinas/busquedaRutinas.html">Home</a>
-                  <a class="menu-link" href="http://127.0.0.1:5500/runapp-grupo3/paginas/misRutinas/misRutinas.html">Mis Rutinas</a>
-                  <a class="menu-link" href="http://127.0.0.1:5500/runapp-grupo3/paginas/usuario/usuario.html">Perfil</a>
-                  <a class="menu-link" href="http://127.0.0.1:5500/runapp-grupo3/paginas/login/login.html"><i class="fas fa-sign-out-alt icono" id="logoff"></i></a>
-                </div>
-              </div>
-        </header>
-
-        <div class="div-ejercicio">
-            <h4 class="div-ejercicio__h4">{{Nombre_ejercicio}}</h4>
-            <div class="div-cronometro">
-                <i class="far fa-stopwatch"></i>
-                <p class="div-ejercicio__p">{{Duracion}}</p>
-            </div>
+    <header>
+        <h1 class="title">RunApp</h1>
+        <div class="menu">
+            <button class="desplegable">
+                <i class="fas fa-bars icono"></i>
+            </button>
+            <nav class="menu-contenido">
+                <a class="menu-link" href="http://127.0.0.1:5500/runapp-grupo3/paginas/busquedaRutinas/busquedaRutinas.html">Home</a>
+                <a class="menu-link" href="http://127.0.0.1:5500/runapp-grupo3/paginas/misRutinas/misRutinas.html">Mis Rutinas</a>
+                <a class="menu-link" href="http://127.0.0.1:5500/runapp-grupo3/paginas/usuario/usuario.html">Perfil</a>
+                <a class="menu-link" href="http://127.0.0.1:5500/runapp-grupo3/paginas/login/login.html">
+                    <i class="fas fa-sign-out-alt icono" id="logoff"></i>
+                </a>
+            </nav>
+            <nav class="menu-web">
+              <a class="menu-link-web" href="http://127.0.0.1:5500/runapp-grupo3/paginas/busquedaRutinas/busquedaRutinas.html">Home</a>
+              <a class="menu-link-web" href="http://127.0.0.1:5500/runapp-grupo3/paginas/misRutinas/misRutinas.html">Mis Rutinas</a>
+              <a class="menu-link-web" href="http://127.0.0.1:5500/runapp-grupo3/paginas/usuario/usuario.html">Perfil</a>
+                <a class="menu-link-web" href="http://127.0.0.1:5500/runapp-grupo3/paginas/login/login.html">
+                    <i id="logoff-web" class="fas fa-sign-out-alt icono"></i>
+                </a>
+            </nav>
         </div>
+    </header>
 
-    </nav>
-
-    
     <form class="formu">
         <section class="section-flex">
             <div class="inputSeparador">
@@ -90,9 +87,9 @@
             
         </section>
         
-        <div class="container__button">
-            <button class="button">Cancelar</button>
-            <button class="button">Guardar</button>
+        <div class="posicion-botones">
+            <button class="button-cancelar">Cancelar</button>
+            <button class="button-aceptar">Guardar</button>
         </div>
         
 

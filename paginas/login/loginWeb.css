@@ -1,5 +1,23 @@
 @media (max-width: 769px) {
-  .container {
-    width: 50%;
+  .fom_div {
+    width: 600px;
+    
   }
+
+  .campo{
+    font-size: 1rem;
+  }
+
+  input{
+    padding:1rem;
+  }
+
+  input{
+    width: 85%;
+    padding: 0.1em;
+    border-width: 0;
+    border-bottom-right-radius: 0.6em;
+    border-top-right-radius: 0.6em;
+    font-size: 2em;
+}
 }

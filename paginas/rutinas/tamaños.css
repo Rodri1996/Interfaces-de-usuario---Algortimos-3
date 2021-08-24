@@ -1,33 +1,34 @@
 /*Para aquellos que tengan como maximo un ancho de 400px les quito en menu de navegacion*/
 @media (max-width:400px){
-    .navBar{
+    /* .navBar{
         display: none;
-    }
+    } */
 }
 /**/
 @media(min-width:401px){
-    i.icono{
+
+    /* div.menu{
         display: none;
-    }   
+    }
+
+    h5{
+        margin-left: 8px;
+    }
 
     .navBar{
         display: flex;
         width: 55%;
-        justify-content: space-between;
+        justify-content: flex-end;
+        margin-right: 20px;
         font-family: -webkit-pictograph;
     }
-}
 
-
-@media(min-width:584px){
-    .navBar{
-        justify-content: space-evenly;
-    }
+    #desplegable{
+        width: auto;
+    } */
 }
 
 @media(min-width:769px){
-
-    
 
     section.registro{
         width: 40%;
@@ -44,5 +45,11 @@
         width: 6em;
         font-size: 1.3em;
         color: var(--color-quinario);
+    }
+}
+
+@media(max-width:400px){
+    body{
+        min-width: 360px;
     }
 }
