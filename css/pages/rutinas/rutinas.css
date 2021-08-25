@@ -2,7 +2,7 @@
 label{
     display: block;
     margin: 0.3em 0em;
-    font-family: 'Roboto';
+    /* font-family: 'Roboto'; */
     font-weight: 600;
 }
 
@@ -21,12 +21,13 @@ input,label,select{
 
 table{
     border: 0.1em solid gray;
+    border-collapse: collapse;
     width: 100%;
 }
 
 td{
     height: 2.5em;
-    font-family: 'Roboto', sans-serif;
+    /* font-family: 'Roboto', sans-serif; */
     padding: 0.5em;
 }
 
@@ -65,25 +66,26 @@ td{
     width: 100%;
 }
 
-.rutina-ejercicios__h2{
-    margin:0.5em 0;
-    font-family: Roboto,sans-serif;
+.ejercicios__h2{
+    /* margin:0.5em 0; */
+    /* font-family: Roboto,sans-serif; */
     font-size: 1.8em;
 }
 
 .rutina-estadisticas{
     display: flex;
+    justify-content: space-around;
     margin-top: 0.5em;
-    margin-left: 2em;
     align-items: center;
     font-size: 1.4em;
 }
 
 .rutina-estadisticas__p{
     margin:0.5em;
-    font-family: Roboto,sans-serif;
-    font-size: 1.3em;
+    /* font-family: Roboto,sans-serif; */
+    font-size: 1.2em;
     font-weight: 600;
+    width: 35%;
 }
 
 .gruposMusculares__div{
@@ -116,7 +118,8 @@ td{
 
 .table-head__fila{
     font-weight: 700;
-    background-color:#e9ecec;
+    background-color: var(--color-primario);
+    color: var(--color-quinario);
     font-size: 1.5em;
 }
 
@@ -132,9 +135,14 @@ td{
 }
 
 .fa-heartbeat, .fa-stopwatch{
-    font-size: 2rem;
+    font-size: 2.5rem;
 }
 
 .fa-heartbeat{
     color: rgb(184, 0, 0);
+}
+
+.button-mas{
+    font-size: 1rem;
+    border-radius: 1rem;
 }

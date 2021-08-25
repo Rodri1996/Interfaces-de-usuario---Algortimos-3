@@ -1,8 +1,4 @@
 @media(min-width:401px){
-    table,div.rutina-estadisticas{
-        width: 77%;
-        margin-left: 50px;
-    }
 
     thead>tr{
         text-align: center;
