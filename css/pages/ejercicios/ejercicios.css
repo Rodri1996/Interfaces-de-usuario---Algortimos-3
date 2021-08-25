@@ -1,3 +1,17 @@
+/*VER SI PODEMOS ARREGLAR ESTO*/
+
+@media (max-width: 768px){
+    #grupo-ejercicio{
+        display: none;
+    }    
+}
+
+@media (min-width:769px){
+    .card-ejercicios{
+        margin: 20px 200px;
+        max-width: 96%;
+    }
+}
 
 label{
     display: block;
@@ -15,6 +29,17 @@ p>span{
     font-weight: 600;
 }
 
+#grupo-ejercicio{
+    margin-left: 20rem; 
+    margin-top: 5px;
+}
+
+.check__input{
+    height: 20px;
+    width: 30px;
+    background-color: #eee;
+}
+
 .flex-container{
     display: flex;
     flex-direction: column;
@@ -25,18 +50,14 @@ p>span{
 .div-checkbotton{
     display: flex;
     align-items: center;
-    font-size: 1.5em;
-    font-weight: 600;
+    font-size: 2em;
     margin: 1em 0;
     gap: 0.5rem;
 }
 
-@media (min-width:401) and (max-width:768px){
-    .formu{
-        margin-top: 10px;
-        margin-bottom: 50px;
-        margin-left: 20px;
-        margin-right: 20px;
+@media (min-width: 401px){
+    .registro-actividad {
+        width: 60%;
     }
 }
 
@@ -70,3 +91,5 @@ p>span{
 .subtitulo__p{
     font-size: 1em;
 }
+
+

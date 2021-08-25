@@ -40,12 +40,13 @@ img {
   display: flex;
   flex-direction: column;
   padding: 1rem;
+  justify-content: center;
 }
 
 .form-subtitulo {
-  font-size: 2.6rem;
   padding-bottom: 1.5rem;
   padding-left: 2rem;
+  margin-top:1rem;
 }
 
 .flexColumn {
@@ -71,32 +72,8 @@ img {
   width: 35%;
 }
 
-.button__input{
-  display: none;
-}
 
-.checkButton {
-  display: inline-block;
-  width: 8rem;
-  text-align: center;
-  cursor: pointer;
-  background-color: var(--color-quinario);
-  border-style: solid;
-  border-color: var(--color-primario);
-  border-width: 0.2rem;
-  border-radius: 4rem;
-  color: var(--color-primario);
-  padding: 0.5rem 0.1rem;
-  font-size: 1.5rem;
-  font-weight: bold;
-}
 
-#Piernas:checked ~ label[for="Piernas"],
-#Hombros:checked ~ label[for="Hombros"],
-#Brazos:checked ~ label[for="Brazos"],
-#Pecho:checked ~ label[for="Pecho"],
-#Espalda:checked ~ label[for="Espalda"],
-#Gluteos:checked ~ label[for="Gluteos"],
 #Lunes:checked ~ label[for="Lunes"],
 #Martes:checked ~ label[for="Martes"],
 #Miercoles:checked ~ label[for="Miercoles"],
@@ -118,16 +95,20 @@ img {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
+  row-gap: 1rem;
+  justify-content: center;
+  
 }
 
 .dia {
-  width: 14rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 50%;
 }
 
 .tiempo-minutos {
   display: flex;
-  flex-direction: row;
 }
 
 .amigos-lista {
@@ -136,7 +117,15 @@ img {
   background-color: var(--color-quinario);
   border-style: solid;
   border-color: var(--color-primario);
-  width: 50%;
+  
+}
+
+.input-minutos{
+  width: 70%;
+}
+
+.input-amigos{
+  width:60%
 }
 
 .agregar-elemento{
@@ -154,6 +143,12 @@ img {
   font-size: 1.8rem;
   color:red;
 }
+
+.form-section-grupoM{
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
 
 
 
@@ -173,12 +168,6 @@ img {
   }
   .encabezado {
     border-radius: 0;
-  }
-
-  .form-section-grupoM {
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
   }
 
   .button-aceptar,.button-cancelar{
@@ -209,14 +198,6 @@ img {
   .form-section{
     padding:2rem;
   }
-
- .form-section-grupoM{
-   display: flex;
-   justify-content: center;
-   flex-direction: row;
-   align-items: center;
-   flex-wrap: wrap;
- }
 
  .minicard-informacion{
    justify-content: start;
@@ -273,34 +254,5 @@ img {
   .ventana{
     max-width: 80rem;
   }
-
-  /* html{
-    max-width: 100%;
-  }
-
-  .ventana{
-    max-width:80%;
-  }
-
-  .super-card{
-    display:flex;
-    flex-direction: row;
-  }
-
-  .mis-datos{
-    width: 100%;
-  }
-
-  .form-section{
-    width:50%;
-  }
-
-  .form-section-grupoM{
-    display:flex;
-    flex-direction: row;
-  } */
-
-  
-
 
 } 

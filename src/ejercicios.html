@@ -28,7 +28,7 @@
 
     <title>Ejercicios - RunApp</title>
 
-    <link rel="stylesheet" href="../css/pages/ejercicios/ejercicios.css" />
+   
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/shared/footer.css" />
     <link rel="stylesheet" href="../css/shared/body.css" />
@@ -37,6 +37,8 @@
     <link rel="stylesheet" href="../css/shared/inputBase.css" />
     <link rel="stylesheet" href="../css/shared/headerTabletWeb.css" />
     <link rel="stylesheet" href="../css/shared/card.css" />
+    <link rel="stylesheet" href="../css/shared/fuentes.css" />
+    <link rel="stylesheet" href="../css/pages/ejercicios/ejercicios.css" />
     <link rel="stylesheet" href="../css/pages/rutinas/tamaños.css" />
 </head>
 
@@ -66,8 +68,8 @@
         </div>
     </header>
     <div class="flex-container">
-        <p>Isquiotibiales <span>Abdominales</span></p>
-        <form class="ventana">
+        <p id="grupo-ejercicio">Isquiotibiales <span>Abdominales</span></p>
+        <form class="ventana card-ejercicios">
             <div class="ventana-title">
                 <p class="p-default">Abdominales</p>
                 <div>
@@ -79,7 +81,8 @@
                 <div class="inputSeparador">
                     <label class="inputLabel">Actividad</label>
                     <select class="inputBase" name="estrategia-edicion">
-                        <!--OPCIONES-->
+                        <option value="abdominales">Abdominales</option>
+                        <option value="piernas">Piernas</option>
                     </select>
                 </div>
                 <div class="inputSeparador">
@@ -87,7 +90,7 @@
                     <input class="inputBase" type="text" placeholder="Ingrese el valor de la frecuencia aquí"/>
                 </div>
                 <div class="div-checkbotton">
-                    <input checked id="check__input" type="checkbox" />Con series
+                    <input class="check__input" checked type="checkbox" />Con series
                 </div>
                 <div class="inputSeparador">
                     <label class="inputLabel">Minutos de descanso</label>
@@ -101,10 +104,10 @@
 
             <div class="posicion-botones">
                 <button class="button-cancelar">
-                    <a class="boton-sin-decoracion" href="./src/misRutinas.html">Cancelar</a>
+                    <a class="boton-sin-decoracion-cancelar" href="./src/misRutinas.html">Cancelar</a>
                     </button>
                 <button class="button-guardar">
-                    <a class="boton-sin-decoracion" href="./src/misRutinas.html">Guardar</a>
+                    <a class="boton-sin-decoracion-guardar" href="./src/misRutinas.html">Guardar</a>
                 </button>
             </div>
         </form>

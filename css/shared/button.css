@@ -22,10 +22,15 @@
     color: var(--color-primario);
     border-style: solid;
     border-width: 0.2rem;
+    
+}
+
+.boton-sin-decoracion-cancelar{
     text-decoration: none;
 }
 
-.button-guardar{
+.button-guardar,
+.boton-sin-decoracion-guardar{
     font-weight: bold;
     color: var(--color-quinario);
     text-decoration: none;
@@ -45,9 +50,10 @@
     margin-bottom: 4rem;
 }
 
-.boton-sin-decoracion{
+/* .boton-sin-decoracion{
     text-decoration: none;
-}
+    color:var(--color-quinario)
+} */
 
 
 button:hover{
