@@ -1,13 +1,3 @@
-@media(min-width:401px){
-
-    thead>tr{
-        text-align: center;
-    }
-
-    .gruposMusculares__div{
-        padding-left: 50px;
-    }
-}
 
 @media(min-width:769px){
 

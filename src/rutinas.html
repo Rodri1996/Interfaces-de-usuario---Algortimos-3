@@ -86,7 +86,10 @@
             <div>
                 <label>Estrategia de edicion</label>
                 <select name="estrategia-edicion">
-                    <!--OPCIONES-->
+                    <option value="estrategia_1">Estrategia 1</option>
+                    <option value="estrategia_2">Estrategia 2</option>
+                    <option value="estrategia_3">Estrategia 3</option>
+                    <option value="estrategia_4">Estrategia 4</option>
                 </select>
             </div>
         </section>
@@ -103,7 +106,11 @@
                 <tbody>
                     <tr>
                         <td href="/runapp-grupo3/src/rutinas.html" class="table-body__fila">Isquiotibiales</td>
-                        <td class="table-body__fila">24</td>
+                        <td class="table-body__fila">
+                            <div class="contenedor-tiempo">
+                                <p id="minutos">24</p> <i class="fas fa-trash-alt"></i>
+                            </div>
+                         </td>
                     </tr>
                 </tbody>
             </table>
@@ -112,15 +119,16 @@
                 <p class="rutina-estadisticas__p">200 PPM</p>
                 <i class="fas fa-stopwatch"></i>
                 <p class="rutina-estadisticas__p">63'</p>
-                <div class="rutina-estadisticas"><button class="button-mas">+</button></div>
+                <div class="button-mas-container"><button class="button-mas"><i>+</i></button></div>
             </div>
-
-            <h4 class="gruposMusculares__h4">Grupos Musculares</h4>
-            <div class="gruposMusculares__div">
-                <div class="gruposMusculares__div--card">Piernas</div>
-                <div class="gruposMusculares__div--card">Espalda</div>
-                <div class="gruposMusculares__div--card">Triceps</div>
-                <div class="gruposMusculares__div--card">Pecho</div>
+            <div class="grupos-flex">
+                <h4 class="gruposMusculares__h4">Grupos Musculares</h4>
+                <div class="gruposMusculares__div">
+                    <div class="gruposMusculares__div--card">Piernas</div>
+                    <div class="gruposMusculares__div--card">Espalda</div>
+                    <div class="gruposMusculares__div--card">Triceps</div>
+                    <div class="gruposMusculares__div--card">Pecho</div>
+                </div>
             </div>
         </section>
         <div class="posicion-botones">

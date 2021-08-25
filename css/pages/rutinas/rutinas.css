@@ -3,7 +3,6 @@ label{
     display: block;
     margin: 0.3em 0em;
     /* font-family: 'Roboto'; */
-    font-weight: 600;
 }
 
 input,select{
@@ -16,19 +15,33 @@ input,select{
 }
 
 input,label,select{
-    font-size: 1.5em;
+    font-size: 2.2em;
 }
 
 table{
     border: 0.1em solid gray;
     border-collapse: collapse;
     width: 100%;
+    font-size: 13px;
+    text-align: center;
 }
 
 td{
     height: 2.5em;
-    /* font-family: 'Roboto', sans-serif; */
     padding: 0.5em;
+}
+
+.button-mas>i{
+    font-size: 20px;
+}
+
+#minutos{
+    margin-left: 30px;
+}
+
+.contenedor-tiempo{
+    display: flex;
+    justify-content:space-around ;
 }
 
 .rutina-subtitulo{
@@ -67,19 +80,20 @@ td{
 }
 
 .ejercicios__h2{
-    /* margin:0.5em 0; */
-    /* font-family: Roboto,sans-serif; */
     font-size: 1.8em;
+    margin-bottom: 8px;
 }
 
-.rutina-estadisticas{
+.rutina-estadisticas,.button-mas-container{
     display: flex;
     justify-content: space-around;
-    margin-top: 0.5em;
     align-items: center;
     font-size: 1.4em;
 }
 
+.rutina-estadisticas{
+    margin-top: 0.5em;
+}
 .rutina-estadisticas__p{
     margin:0.5em;
     /* font-family: Roboto,sans-serif; */
@@ -88,19 +102,25 @@ td{
     width: 35%;
 }
 
+.grupos-flex{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
 .gruposMusculares__div{
     display: flex;
     flex-wrap: wrap;
     column-gap: 3rem;
     row-gap: 2rem;
-    margin-top: 1em;
+    margin-right: 9em;
 }
 
 .gruposMusculares__h4{
-    font-size: 1.5em;
+    font-size: 1.8em;
     font-weight: 600;
     font-family: Roboto,sans-serif;
-    margin: 0.5em 0em;
+    margin-right: 30px;
 }
 
 .gruposMusculares__div--card{
@@ -145,4 +165,5 @@ td{
 .button-mas{
     font-size: 1rem;
     border-radius: 1rem;
+
 }
