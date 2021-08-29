@@ -6,10 +6,18 @@
     }    
 }
 
-@media (min-width:769px){
-    .card-ejercicios{
-        margin: 20px 200px;
-        max-width: 96%;
+@media (min-width: 401px){
+    .registro-actividad {
+        width: 60%;
+    }
+
+    .ventana{
+        margin-top: 30px;
+        width: 90%;
+    }
+
+    div.flex-container{
+        margin-bottom: 250px;
     }
 }
 
@@ -30,8 +38,10 @@ p>span{
 }
 
 #grupo-ejercicio{
-    margin-left: 20rem; 
-    margin-top: 5px;
+    margin-left: 130px;
+    margin-top: 20px;
+    font-size: 1.3em;
+    color: var(--color-auxiliar1);
 }
 
 .check__input{
@@ -40,10 +50,50 @@ p>span{
     background-color: #eee;
 }
 
+.checkbox-container{
+    display: flex;
+    align-items: center;
+}
+
+.form-content{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.form-column{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin-top: 1em;
+}
+
+@media (min-width: 769px){
+    .ventana{
+        width: 70%;
+    }
+
+    .form-content{
+        padding: 20px 50px;
+    }
+
+    .form-column{
+        width: 45%;
+    }
+
+    .form-column:first-child{
+        justify-content: flex-end;
+    }
+
+    input.inputBase,select.inputBase{
+        font-size: 1.1em;
+    }
+}
+
 .flex-container{
     display: flex;
     flex-direction: column;
-   
+    align-items: center;
     justify-content: center;
 }
 
@@ -53,12 +103,6 @@ p>span{
     font-size: 2em;
     margin: 1em 0;
     gap: 0.5rem;
-}
-
-@media (min-width: 401px){
-    .registro-actividad {
-        width: 60%;
-    }
 }
 
 .registro-actividad{
