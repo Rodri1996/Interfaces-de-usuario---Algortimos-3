@@ -140,7 +140,7 @@ img {
 }
 
 .fa-trash-alt {
-  font-size: 1.8rem;
+  font-size: 2.8rem;
   color:red;
 }
 
@@ -252,7 +252,68 @@ img {
   }
 
   .ventana{
-    max-width: 80rem;
+    max-width: 90%;
+    max-height: 50%;
   }
+
+  .super-card{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .form-section-grupoM{
+    justify-content: flex-start;
+    margin-left: 2rem;
+  }
+
+  .semana{
+    display: flex;
+    justify-content: space-between; 
+  }
+
+  .dias-de-entrenamiento{
+    justify-content: center;
+    width: 60%;
+    padding:2rem;
+  }
+
+  .seccion{
+    width: 35%;
+  }
+
+  .seccion-amigos{
+    width: 40%;
+  }
+
+  .cards-amistad{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:0;
+    overflow: scroll;
+    overflow-x: hidden;
+    height: 35vh;
+    margin-top: 2rem;
+  }
+
+  .card1, .card2{
+    width: 100%;
+  }
+  
+  .minicard-informacion{
+    justify-content: center;
+  }
+
+  .dia{
+    row-gap: 0.5rem;
+  }
+
+  .posicion-botones{
+    justify-content: flex-end;
+    margin-right: 4rem;
+  }
+
+
+  
 
 } 

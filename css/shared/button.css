@@ -27,6 +27,7 @@
 
 .boton-sin-decoracion-cancelar{
     text-decoration: none;
+    color: var(--color-primario);
 }
 
 .button-guardar,
