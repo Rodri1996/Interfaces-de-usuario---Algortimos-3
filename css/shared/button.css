@@ -53,7 +53,10 @@ button:active{
     transform: scale(0.9);
 }
 
-.button-guardar:hover{
+.button-guardar:hover,
+.button-agregar:hover,
+.button-ingresar:hover,
+.button-mas:hover{
     background-color: #286C96;
 }
 
