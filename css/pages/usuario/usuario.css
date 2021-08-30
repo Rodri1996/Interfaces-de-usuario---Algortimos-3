@@ -237,11 +237,10 @@ img {
 
 /* ========================================================= */
 
- @media (min-width:769px){
+@media (min-width:769px){
    
   .container__button, .form-section-grupoM{
-    gap:0.5rem;
-    
+    gap:0.5rem;  
   }
 
   .ventana{
