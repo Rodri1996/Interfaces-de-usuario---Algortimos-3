@@ -1,93 +1,99 @@
-
-.container{
-    display:flex;
-    justify-content:center;
-    flex-direction:column;
-    align-items:center;
-    gap:1.5rem;  
-    margin-top: 13em; 
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 13em;
 }
 
-.titulo{
-    font-family: 'Yeseva One', cursive; 
-    font-size: 5em;
-    color:var(--color-primario);   
+.titulo {
+  font-family: "Yeseva One", cursive;
+  font-size: 5em;
+  color: var(--color-primario);
 }
 
-.campo{
-    display: flex;
-    justify-content:center;
-    border-style: solid;
-    border-width:0.8em;
-    border-color:var(--color-primario) ;
-    border-radius: 1.7em;
-    margin-top:1.5em;
-    margin-bottom:1.5em;
-    background-color:var(--color-primario); 
+.campo {
+  display: flex;
+  justify-content: center;
+  border-style: solid;
+  border-width: 0.8em;
+  border-color: var(--color-primario);
+  border-radius: 1.7em;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+  background-color: var(--color-primario);
 }
 
-.fas.fa-user,.fas.fa-key{
-    width:20%;
-    height: auto;
-    font-size:2.5em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-color:var(--color-primario);
-    color:var(--color-quinario); 
-    border-left: 0.8em;       
+.fas.fa-user,
+.fas.fa-key {
+  width: 20%;
+  height: auto;
+  font-size: 2.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-color: var(--color-primario);
+  color: var(--color-quinario);
+  border-left: 0.8em;
 }
 
-label{
-    text-align: left;
-    font-size:2.2em;
+label {
+  text-align: left;
+  font-size: 2.2em;
 }
 .icono {
-    padding-right: 1rem;
+  padding-right: 1rem;
 }
 
-input{
-    width: 85%;
-    padding: 0.5em;
-    border-width: 0;
-    border-bottom-right-radius: 0.6em;
-    border-top-right-radius: 0.6em;
-    font-size: 2em;
+input {
+  width: 85%;
+  padding: 0.5em;
+  border-width: 0;
+  border-bottom-right-radius: 0.6em;
+  border-top-right-radius: 0.6em;
+  font-size: 2em;
 }
 
-.form_div{
-    width: calc(15% + 25rem);     
+.form_div {
+  width: calc(15% + 25rem);
 }
 
-
-.mostrar_contraseña{
-   display: flex;
-   justify-content: end;
-   align-items: center;
+.mostrar_contraseña {
+  display: flex;
+  justify-content: end;
+  align-items: center;
 }
 
-.campo span{
-    position:absolute;
-    right: 0.5rem;
-    top:3rem;
-    text-transform: uppercase;
-    cursor:pointer;
-
+.campo span {
+  position: absolute;
+  right: 0.5rem;
+  top: 3rem;
+  text-transform: uppercase;
+  cursor: pointer;
 }
 
-@media (min-width: 401px){
-
-    .container{
-        margin-top: 12em; 
-    }
-
+.login-card {
+  justify-content: space-evenly;
+  border-style: solid;
+  border-color: var(--color-primario);
+  border-radius: 2rem;
+  background-color: var(--color-quinario);
+  padding: 5rem 1rem;
+  font-size: 1rem;
+  width: 40% ;
+  margin: auto;
+  margin-top: 19em;
 }
 
-@media (min-width: 769px){
-
-    .container{
-        margin-top: 24em; 
-    }
-
+@media (min-width: 401px) {
+  .container {
+    margin-top: 12em;
+  }
 }
 
+@media (min-width: 769px) {
+  .container {
+    margin-top: 24em;
+  }
+}

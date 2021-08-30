@@ -1,0 +1,10 @@
+.fa-trash-alt {
+    color: rgb(184, 0, 0);
+    cursor: pointer;
+    transition: transform 200ms linear;
+  }
+
+.fa-trash-alt:hover{
+    color: rgb(228, 93, 93);
+    transform: scale(1.1);
+}

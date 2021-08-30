@@ -86,9 +86,7 @@
 .fa-pen{
   color: rgb(104, 104, 104);
 }
-.fa-trash-alt {
-  color: rgb(184, 0, 0);
-}
+
 ::placeholder {
   font-size: 2.2rem;
   position: relative;

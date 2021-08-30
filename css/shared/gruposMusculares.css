@@ -4,8 +4,6 @@
     flex-wrap: wrap;
     width: 100%;
     gap:3rem;
-    
-    
   }
 
 #Piernas:checked ~ label[for="Piernas"],
@@ -25,9 +23,10 @@
   }
   
   .checkButton {
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 8rem;
-    text-align: center;
     cursor: pointer;
     background-color: var(--color-quinario);
     border-style: solid;
@@ -38,4 +37,10 @@
     padding: 0.5rem 0.1rem;
     font-size: 1.5rem;
     font-weight: bold;
+    transition: transform 200ms linear;
   }
+
+.checkButton:hover{
+  transform: scale(1.1);
+  
+}

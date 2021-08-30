@@ -1,3 +1,8 @@
+a{
+    text-decoration: none;
+    color: var(--color-quinario);
+    font-weight: bold;
+}
 
 .button-guardar,
 .button-cancelar,
@@ -15,14 +20,11 @@
     font-family: "Roboto",sans-serif;
 }
 
-
-
 .button-cancelar{
     background-color: var(--color-quinario);
     color: var(--color-primario);
     border-style: solid;
-    border-width: 0.2rem;
-    
+    border-width: 0.2rem;    
 }
 
 .boton-sin-decoracion-cancelar{
@@ -30,16 +32,12 @@
     color: var(--color-primario);
 }
 
-.button-guardar,
-.boton-sin-decoracion-guardar{
-    font-weight: bold;
-    color: var(--color-quinario);
-    text-decoration: none;
-    
-}
-
 .button-ingresar{
     background-color: var(--color-secundario);
+}
+
+.button-cancelar:hover{
+    background-color: rgb(209, 202, 202);
 }
 
 .posicion-botones{
@@ -51,13 +49,11 @@
     margin-bottom: 4rem;
 }
 
-/* .boton-sin-decoracion{
-    text-decoration: none;
-    color:var(--color-quinario)
-} */
+button:active{
+    transform: scale(0.9);
+}
 
-
-button:hover{
+.button-guardar:hover{
     background-color: #286C96;
 }
 
@@ -65,5 +61,4 @@ button:hover{
     display: flex;
     justify-content:center;
     gap: 3rem;
-    /* margin-bottom: 2em; */
 }
