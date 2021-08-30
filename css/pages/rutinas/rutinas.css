@@ -27,7 +27,7 @@ td{
 
 .contenedor-tiempo{
     display: flex;
-    justify-content:space-around ;
+    justify-content:flex-end ;
 }
 
 .rutina-subtitulo{
@@ -163,4 +163,41 @@ td{
     row-gap:0.5rem;
     gap:0.3rem;
 }
+
+/* ========================================================= */
+
+/*                    MODO MOBILE */
+
+/* ========================================================= */
+
+@media (max-width:400px){
+    .fa-trash-alt{
+    margin-left: 35%;
+    }
+}
+
+/* ========================================================= */
+
+/*                    MODO TABLET */
+
+/* ========================================================= */
+
+@media (min-width:401px){
+    .fa-trash-alt{
+    margin-left: 40%;
+    }
+}
+
+/* ========================================================= */
+
+/*                    MODO WEB */
+
+/* ========================================================= */
+
+@media (min-width:1500px){
+    .fa-trash-alt{
+    margin-left: 45%;
+    }
+}
+
 
