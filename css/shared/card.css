@@ -2,7 +2,6 @@
     width: 100%;
     display: flex;
     align-items: center;
-    /* position: relative; */
     justify-content: space-between;
     background-color: var(--color-auxiliar1);
     font-size: 2rem;
@@ -24,5 +23,10 @@
     .ventana-title{
         height: 6rem;
         padding: 0 3rem;
+    }
+
+    .p-default{
+        font-size: 3rem;
+        font-weight: bold;
     }
 }

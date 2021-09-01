@@ -124,7 +124,7 @@ img {
 }
 
 .input-amigos{
-  width:60%
+  width:60%;
 }
 
 .agregar-elemento{
@@ -260,7 +260,7 @@ img {
 
   .semana{
     display: flex;
-    justify-content: space-between; 
+    justify-content: flex-start; 
   }
 
   .dias-de-entrenamiento{
@@ -298,6 +298,7 @@ img {
 
   .dia{
     row-gap: 0.5rem;
+    width: calc(100px + 15%);
   }
 
   .posicion-botones{

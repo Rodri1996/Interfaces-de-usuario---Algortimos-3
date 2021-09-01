@@ -198,6 +198,10 @@ td{
     .fa-trash-alt{
     margin-left: 45%;
     }
+
+    .inputLabel{
+        font-size: 2.2rem;
+    }
 }
 
 

@@ -18,33 +18,40 @@
     <link rel="stylesheet" href="./css/shared/button.css" />
     <link rel="stylesheet" href="./css/shared/body.css" />
     <link rel="stylesheet" href="./css/shared/card.css" />
+    <link rel="stylesheet" href="./css/shared/inputBase.css" />
 
     <link rel="stylesheet" href="./css/pages/login/login.css" />
     
 </head>
 
 <body>
+    
     <form>
-        <section class="container login-card">
-            <h1 class="titulo">RunApp</h1>
+        <section class="container">
+            <div class="inicio">
+                <img src="./assets/img/Logo.svg" alt="logo" id="logo">
+                <h1 class="titulo">RunApp</h1>
+            </div>
+            
             <div class="form_div">
-                <label>Usuario</label>
+                <label class="inputLabel">Usuario</label>
                 <div class="campo">
                     <i class="fas fa-user"></i>
                     <input type="text" placeholder="Usuario" />
                 </div>
 
-                <label>Contraseña</label>
+                <label class="inputLabel">Contraseña</label>
                 <div class="campo">
                     <i class="fas fa-key"></i>
                     <input type="password" placeholder="Contraseña" />
                 </div>
             </div>
             <button class="button-ingresar">
-                <a href="./src/misRutinas.html">Ingresar</a>
+                <a href="./src/busquedaRutinas.html">Ingresar</a>
             </button>
         </section>
     </form>
+
     <footer class="footer">
         <i class="fab fa-facebook-square"></i>
         <div>RunApp/2021</div>
