@@ -71,8 +71,6 @@ img {
   width: 35%;
 }
 
-
-
 #Lunes:checked ~ label[for="Lunes"],
 #Martes:checked ~ label[for="Martes"],
 #Miercoles:checked ~ label[for="Miercoles"],
@@ -130,6 +128,7 @@ img {
 .agregar-elemento{
   display:flex;
   justify-content: space-between;
+  align-items: baseline;
 }
 
 .amistad{
@@ -145,6 +144,10 @@ img {
 .form-section-grupoM{
   justify-content: center;
   margin-bottom: 2rem;
+}
+
+.inputBase{
+  height:2.5em;
 }
 /* ========================================================= */
 
@@ -266,7 +269,6 @@ img {
   .dias-de-entrenamiento{
     justify-content: center;
     width: 60%;
-    padding:2rem;
   }
 
   .seccion{
@@ -284,7 +286,7 @@ img {
     gap:0;
     overflow: scroll;
     overflow-x: hidden;
-    height: 35vh;
+    height: 30vh;
     margin-top: 2rem;
   }
 
@@ -304,5 +306,7 @@ img {
   .posicion-botones{
     justify-content: flex-end;
     margin-right: 4rem;
+    margin-top: 0;
+    margin-bottom: 0;
   }
 } 
