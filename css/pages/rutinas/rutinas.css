@@ -1,4 +1,8 @@
 
+form{
+    max-width: 769px;
+}
+
 label{
     display: block;
     margin: 0.3em 0em;
@@ -36,6 +40,12 @@ td{
     justify-content:flex-end ;
 }
 
+.form__section--principal{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .rutina-subtitulo{
     display: flex;
     justify-content: space-between;
@@ -69,6 +79,7 @@ td{
     flex-direction: column;
     padding: 1.5rem;
     width: 100%;
+    max-width: calc(769px/2);
 }
 
 .ejercicios__h2{
