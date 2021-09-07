@@ -32,7 +32,7 @@ export class Rutina{
     }
 
     esEditable(unUsuario:Usuario){
-        this.creador == unUsuario || this.unCriterioDeEdicion.rutinaPuedeSerEditadaPor(unUsuario, this);
+        return this.creador == unUsuario || this.unCriterioDeEdicion.rutinaPuedeSerEditadaPor(unUsuario, this);
     }
 
 }
