@@ -1,9 +1,9 @@
 import { GruposMusculares } from "../Grupos Musculares/gruposMusculares";
 
 export class Actividad{
-    constructor(public gruposMuscularesQueEntrena:GruposMusculares[]=[]){}
+    constructor(public gruposMuscularesQueEntrena:Set<GruposMusculares>=new Set()){}
 
     agregarGrupoMuscular(unGrupoMuscular:GruposMusculares):void{
-        this.gruposMuscularesQueEntrena.push(unGrupoMuscular)
+        this.gruposMuscularesQueEntrena.add(unGrupoMuscular)
     }
 }

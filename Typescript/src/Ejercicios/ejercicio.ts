@@ -8,7 +8,7 @@ export abstract class Ejercicio{
     abstract duracion():number;
 
     
-    gruposMuscularesQueEntrena():GruposMusculares[]{
+    gruposMuscularesQueEntrena():Set<GruposMusculares>{
         return this.unaActividad.gruposMuscularesQueEntrena
     }
 }

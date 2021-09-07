@@ -5,7 +5,7 @@ import { EjercicioCompuesto, EjercicioSimple } from "./ejercicio"
 describe('Dado un ejercicio', () => {
 
     const frecuenciaCardiacaBase:number = 90;
-    const unaActividad=new Actividad([GruposMusculares.piernas,GruposMusculares.abdomen,GruposMusculares.pecho]);
+    const unaActividad=new Actividad(new Set([GruposMusculares.piernas,GruposMusculares.abdomen,GruposMusculares.pecho]));
     let minutosDeDescanso:number = 10;
     const actividadSinGrupoMuscular=new Actividad();
 
@@ -22,13 +22,13 @@ describe('Dado un ejercicio', () => {
         })
 
         test('se puede obtener los grupos musculares que entrena', () => {
-            expect(ejercicioSimple.gruposMuscularesQueEntrena()).toStrictEqual([GruposMusculares.piernas,GruposMusculares.abdomen,GruposMusculares.pecho]);
+            expect(ejercicioSimple.gruposMuscularesQueEntrena()).toStrictEqual(new Set([GruposMusculares.piernas,GruposMusculares.abdomen,GruposMusculares.pecho]));
         })
 
         test('si la actividad no entrena ningun grupo muscular, devuelve una lista vacia', () => {
             const ejercicioSimpleSinGrupoMuscular=new EjercicioSimple(minutosDeTrabajo,frecuenciaCardiacaBase,minutosDeDescanso,actividadSinGrupoMuscular);
 
-            expect(ejercicioSimpleSinGrupoMuscular.gruposMuscularesQueEntrena()).toStrictEqual([]);
+            expect(ejercicioSimpleSinGrupoMuscular.gruposMuscularesQueEntrena()).toStrictEqual(new Set());
         })
     })
     describe('si es compuesto', () => {
@@ -44,13 +44,13 @@ describe('Dado un ejercicio', () => {
         })
 
         test('se puede obtener los grupos musculares que entrena', () => {
-            expect(ejercicioCompuesto.gruposMuscularesQueEntrena()).toStrictEqual([GruposMusculares.piernas,GruposMusculares.abdomen,GruposMusculares.pecho]);
+            expect(ejercicioCompuesto.gruposMuscularesQueEntrena()).toStrictEqual(new Set([GruposMusculares.piernas,GruposMusculares.abdomen,GruposMusculares.pecho]));
         })
 
         test('si la actividad no entrena ningun grupo muscular, devuelve una lista vacia', () => {
             const ejercicioCompuestoSinGrupoMuscular=new EjercicioCompuesto(serie,frecuenciaCardiacaBase,minutosDeDescanso,actividadSinGrupoMuscular);
 
-            expect(ejercicioCompuestoSinGrupoMuscular.gruposMuscularesQueEntrena()).toStrictEqual([]);
+            expect(ejercicioCompuestoSinGrupoMuscular.gruposMuscularesQueEntrena()).toStrictEqual(new Set());
         })
     })
   })
