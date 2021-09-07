@@ -6,7 +6,7 @@ export interface CriterioDeEdicion{
     rutinaPuedeSerEditadaPor(unUsuario:Usuario , unaRutina:Rutina):boolean;
 }
 
-export class Amistoso implements CriterioDeEdicion{
+export class Amistoso {
 
     rutinaPuedeSerEditadaPor(unUsuario:Usuario , unaRutina:Rutina):boolean{
         return this.amigosDelCreador(unaRutina).includes(unUsuario);
@@ -21,7 +21,7 @@ export class Amistoso implements CriterioDeEdicion{
     }
 }
 
-export class Social implements CriterioDeEdicion{
+export class Social {
     rutinaPuedeSerEditadaPor(unUsuario:Usuario , unaRutina:Rutina):boolean{
         return this.seguidoresDeLaRutina(unaRutina).includes(unUsuario);
     }
@@ -31,7 +31,7 @@ export class Social implements CriterioDeEdicion{
     }
 }
 
-export class Free implements CriterioDeEdicion{
+export class Free {
     rutinaPuedeSerEditadaPor(unUsuario:Usuario , unaRutina:Rutina):boolean{
         return true
     }
