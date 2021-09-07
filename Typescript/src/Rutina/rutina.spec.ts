@@ -36,6 +36,7 @@ describe('Dada una Rutina', () => {
     expect(() => unaRutinaSinEjercicios.frecuenciaCardiacaBase()).toThrowError();
   })
 
+
   test('tiene grupos musculares asociados a ella', () => {
     expect(unaRutina.gruposMuscularesQueEntrena()).toStrictEqual(new Set([GruposMusculares.piernas, GruposMusculares.abdomen, GruposMusculares.pecho]));
   })
@@ -44,6 +45,7 @@ describe('Dada una Rutina', () => {
     expect(unaRutina.gruposMuscularesQueEntrena().size).toBe(3);
 })
 
+
   describe('se puede editar si', () => {
   const unaRutinaFree = new Rutina([ejercicioSimple1, ejercicioSimple2, ejercicioCompuesto1, ejercicioCompuesto2], creador, criterioFree, [seguidor1])
   const unaRutinaAmistosa = new Rutina([ejercicioSimple1, ejercicioSimple2, ejercicioCompuesto1, ejercicioCompuesto2], creador, criterioAmistoso, [seguidor1])
@@ -51,12 +53,17 @@ describe('Dada una Rutina', () => {
   const noEsAmigo = new Usuario()
   const amigo = new Usuario([creador])
 
+
     test('es Free cuando no es seguidor', () => {
       expect(unaRutinaFree.esEditable(seguidor2)).toBe(true);
     })
 
     test('es Free cuando es un seguidor', () => {
       expect(unaRutinaFree.esEditable(seguidor1)).toBe(true);
+    })
+
+    test('si es el creador', () => {
+      expect(unaRutinaAmistosa.esEditable(creador)).toBe(true)
     })
 
     test('si es Amistoso, cuando es amigo del creador', () => {
