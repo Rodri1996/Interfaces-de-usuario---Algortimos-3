@@ -23,54 +23,54 @@ Una vez que queda sin correcciones, el docente aprueba el pull request, mergeand
 
 #### 1. Login
 
-1.1 Versión web
+![1.1 Versión web](./assets/img/pantallas/login-version-web.PNG)
 
-![extension installation](./assets/img/pantallas/login-version-web.png)
+![1.2 Versión tablet](./assets/img/pantallas/login-tablet.PNG)
 
-1.2 Versión tablet
-
-1.3 Versión mobile
+![1.3 Versión mobile](./assets/img/pantallas/login-movil.PNG)
 
 #### 2. Main: Búsqueda de Rutinas
 A partir de esta pantalla en adelante, aparece un header que se mantiene anclado al margen superior de la vista. El footer, en cambio, queda al pie de la página pudiendo estar visible o no si el largo del contenido lo permite mediante la navegación con la scrollbar.
 
-2.1 Versión web
+![2.1 Versión web](./assets/img/pantallas/busquedaRutinas-web.PNG)
 
-2.2 Versión tablet
+![2.2 Versión tablet](./assets/img/pantallas/busquedaRutinas-tablet.PNG)
 
-2.3 Versión mobile
+![2.3 Versión mobile](./assets/img/pantallas/busquedaRutinas-Movil.PNG)
 
 #### 3. Rutinas
 
-3.1 Versión web
+![3.1 Versión web](./assets/img/pantallas/rutinas-web.PNG)
 
 3.2 Versión tablet
+![3.2 Versión tablet](./assets/img/pantallas/rutinas-tablet.PNG)
 
-3.3 Versión mobile
+3.3 Versión Web
+![3.3 Versión tablet](./assets/img/pantallas/rutinas-movil.PNG)
 
 #### 4. Ejercicios
 
-4.1 Versión web
+![4.1 Version web](./assets/img/pantallas/Ejericicios-Web.PNG)
 
-4.2 Versión tablet
+![4.2 Version tablet](./assets/img/pantallas/Ejercicios-tablet.PNG)
 
-4.3 Versión mobile
+![4.3 Version mobile](./assets/img/pantallas/Ejercicios-Movil.PNG)
 
 #### 5. Mis rutinas
 
-5.1 Versión web
+![5.1 Version web](./assets/img/pantallas/MisRutinas-web.PNG)
 
-5.2 Versión tablet
+![5.2 Version tablet](./assets/img/pantallas/Ejercicios-tablet.PNG)
 
-5.3 Versión mobile
-
+![5.3 Version mobile](./assets/img/pantallas/Ejercicios-Movil.PNG)
 #### 6. Perfil de Usuario
 
-6.1 Versión web
+![6.1 Version web](./assets/img/pantallas/Usuarios-web.PNG)
 
-6.2 Versión tablet
+![6.2 Version tablet](./assets/img/pantallas/Usuarios-Tablet.PNG)
 
-6.3 Versión mobile
+![6.3 Version mobile](./assets/img/pantallas/Usuarios-Movil-Parte-1.PNG)
+![](./assets/img/pantallas/Usuarios-Movil-Parte-2.PNG)
 
 ## Se Pide
     1. Maquetar en HTML y CSS.
