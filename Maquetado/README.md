@@ -1,21 +1,18 @@
 
-## Algoritmos III
+## Algoritmos III - Trabajo práctico 2021
 
-## Trabajo práctico 2021
-
-## Entrega 1
+### Entrega 1
 
 ### Dominio general
 
-Como dominio contaremos con una de las implementaciones del trabajo práctico RunApp de la cursada de la materia Algoritmos II del año 2021. Si el grupo está formado por integrantes de diferentes grupos, deben ponerse de acuerdo sobre qué implementación van a trabajar. Para quienes no pertenecían al grupo de la materia anterior, deberán solicitar permiso al tutor para que les brinde acceso al repositorio de algoritmos II. Los grupos son formados como máximo por 3 integrantes.
-El assignment para el trabajo es en el siguiente link:
+> Como dominio contaremos con una de las implementaciones del trabajo práctico RunApp de la cursada de la materia Algoritmos II del año 2021. Si el grupo está formado por integrantes de diferentes grupos, deben ponerse de acuerdo sobre qué implementación van a trabajar. Para quienes no pertenecían al grupo de la materia anterior, deberán solicitar permiso al tutor para que les brinde acceso al repositorio de algoritmos II. Los grupos son formados como máximo por 3 integrantes.
+Para visualizar el assignment haga [Click Aqui](https://classroom.github.com/g/MvS8D0EC)
 
-(https://classroom.github.com/g/MvS8D0EC)
-
-Recuerden que el primero en aceptarlo crea el grupo y el resto de los integrantes seleccionan al grupo que se van a sumar. Ante cualquier duda pueden consultar con el equipo de docentes.
+> Recuerden que el primero en aceptarlo crea el grupo y el resto de los integrantes seleccionan al grupo que se van a sumar. Ante cualquier duda pueden consultar con el equipo de docentes.
 
 ### Repositorios
-Trabajaremos como acostumbramos en otras materias con Github. Por lo tanto deberán crear un repositorio para el frontend que vamos a modelar. El proyecto constará con dos ramas (branch) mínimo: **master** y **development**. Trabajarán desarrollando cada entrega en el branch development y para el día de la entrega se realizará un TAG entregaX, dónde X es el nro. de TP (en este caso 1) sumado a un pull request a master. 
+
+> Trabajaremos como acostumbramos en otras materias con Github. Por lo tanto deberán crear un repositorio para el frontend que vamos a modelar. El proyecto constará con dos ramas (branch) mínimo: **master** y **development**. Trabajarán desarrollando cada entrega en el branch development y para el día de la entrega se realizará un TAG entregaX, dónde X es el nro. de TP (en este caso 1) sumado a un pull request a master. 
 Una vez realizada la corrección por parte de los tutores, se crearán tickets informando los cambios solicitados que deberán cerrarse. Al momento de cerrar los mismos, siempre trabajando sobre el branch development, avisan al docente para realizar la revisión correspondiente.
 Una vez que queda sin correcciones, el docente aprueba el pull request, mergeando la rama a master. Antes de continuar con el desarrollo de su siguiente entrega, el grupo debe crear un TAG sobre master con la denominación RunApp0.X, donde X es el nro de entrega.
 
