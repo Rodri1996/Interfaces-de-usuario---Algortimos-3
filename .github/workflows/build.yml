@@ -30,6 +30,7 @@ jobs:
 
       - name: Run tests & linter
         run: |
+          cd Angular
           npm ci
           npm run test:prod
           npm run lint
