@@ -9,6 +9,13 @@ header {
     font-size: 2rem;
   }
 
+  .menu-link-web{
+    color: var(--color-cuaternario);
+    padding: 0.5rem;
+    text-decoration: none;
+    font-size: 2rem;
+  }
+
   .title {  /*  Titulo del header  */
     font-size: 2em;
     font-family: "Lato", sans-serif;
@@ -42,6 +49,7 @@ header {
   .menu {
     position: relative;
     display: inline-block;
+    height: 105px;
   }
   
   .menu-contenido {  /*  El menu desplegable  */
@@ -67,8 +75,15 @@ header {
   .menu:hover .menu-contenido {
     display: block;
   }
-  
-  /*----------VISTA MOBILE----------*/
+
+  .menu-web {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 15px;
+    font-weight: bold;
+  }
+
+  /*MEDIA QUERIS*/
   
   @media (max-width: 400px) {
     .menu-web {  /*  Para que las opciones de la vista tablet/web no se vean  */
