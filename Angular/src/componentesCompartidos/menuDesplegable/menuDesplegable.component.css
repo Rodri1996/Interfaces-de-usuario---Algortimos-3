@@ -16,3 +16,10 @@ option{
 .inputBase:focus{
     outline: none;
 }
+
+.campo{
+    border-style: solid;
+    border-width: 0.25em;
+    border-color: var(--color-primario);
+    border-radius: 1.3em;
+}
