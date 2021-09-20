@@ -1,3 +1,5 @@
+import { ButtonComponent } from './../componentesCompartidos/button/button.component'
+import { LoginComponent } from './../componentesPadres/login/login.component'
 import { NgModule } from '@angular/core'
 import { FormsModule } from '@angular/forms'
 import { BrowserModule } from '@angular/platform-browser'
@@ -15,6 +17,8 @@ import { CardComponent } from 'src/componentesCompartidos/card/card.component'
     NavbarComponent,
     MenuDesplegableComponent,
     CardComponent,
+    ButtonComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
