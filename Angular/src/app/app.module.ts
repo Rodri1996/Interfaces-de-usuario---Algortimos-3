@@ -6,6 +6,7 @@ import { AppComponent } from './app.component'
 import { FooterComponent } from '../componentesCompartidos/footer/footer.component'
 import { NavbarComponent } from 'src/componentesCompartidos/navbar/navbar.component'
 import { MenuDesplegableComponent } from 'src/componentesCompartidos/menuDesplegable/menuDesplegable.component'
+import { CardComponent } from 'src/componentesCompartidos/card/card.component'
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { MenuDesplegableComponent } from 'src/componentesCompartidos/menuDespleg
     FooterComponent,
     NavbarComponent,
     MenuDesplegableComponent,
+    CardComponent,
   ],
   imports: [
     BrowserModule,
