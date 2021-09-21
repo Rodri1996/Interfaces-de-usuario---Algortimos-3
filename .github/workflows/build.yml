@@ -37,5 +37,5 @@ jobs:
       - name: Coverage badge
         uses: demyanets/angular-coverage-badges-action@v1
         with:
-          coverage-summary-path: coverage/runapp-grupo3/Angular/coverage-summary.json
+          coverage-summary-path: /home/runner/work/Runapp-gr3/runapp-grupo3/Angular/coverage/Angular/coverage-summary.json
           github_token: ${{ secrets.GITHUB_TOKEN }}

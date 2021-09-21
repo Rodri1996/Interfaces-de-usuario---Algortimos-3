@@ -1,6 +1,6 @@
 # Angular
 
-![Coverage](./badges/Angular/coverage.svg)
+![Coverage](../badges/Angular/coverage.svg)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.5.
 
