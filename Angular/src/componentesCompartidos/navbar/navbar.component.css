@@ -82,14 +82,13 @@ header {
     padding-left: 15px;
     font-weight: bold;
   }
-
-  /*MEDIA QUERIS*/
   
   @media (max-width: 400px) {
-    .menu-web {  /*  Para que las opciones de la vista tablet/web no se vean  */
+    .menu-web {  
       display: none;
     }
-    .menu-contenido .menu-link{  /*  Lo movi acá para que pueda ser sobreescrito por las otras vistas  */
+    .menu-contenido .menu-link{ 
       display:block;
     }
   }
+  

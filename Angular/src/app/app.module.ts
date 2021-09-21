@@ -9,6 +9,7 @@ import { FooterComponent } from '../componentesCompartidos/footer/footer.compone
 import { NavbarComponent } from 'src/componentesCompartidos/navbar/navbar.component'
 import { MenuDesplegableComponent } from 'src/componentesCompartidos/menuDesplegable/menuDesplegable.component'
 import { CardComponent } from 'src/componentesCompartidos/card/card.component'
+import { AppRoutingModule } from './app-routing/app-routing.module'
 
 @NgModule({
   declarations: [
@@ -18,11 +19,12 @@ import { CardComponent } from 'src/componentesCompartidos/card/card.component'
     MenuDesplegableComponent,
     CardComponent,
     ButtonComponent,
-    LoginComponent
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
