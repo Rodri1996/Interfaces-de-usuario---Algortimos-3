@@ -9,7 +9,7 @@ import { RutinaComponent } from 'src/componentesPadres/rutina/rutina.component';
 import { EjercicioComponent } from 'src/componentesPadres/ejercicio/ejercicio.component';
 
 
-export const routes:Routes =[
+export const routes:Routes =[ 
   {
     path:'login', component:LoginComponent
   },
