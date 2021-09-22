@@ -9,8 +9,10 @@ export class ButtonComponent  {
 
   @Input() placeholder!:string 
   @Input() estilo!:string
-
-  saludo(){
-    console.log("hola")
-  }
+ 
 }
+
+export class AgregarAmigos{}
+
+export class ListaDeAmigos{}
+
