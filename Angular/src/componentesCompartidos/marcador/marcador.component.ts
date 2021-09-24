@@ -1,15 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-marcador',
   templateUrl: './marcador.component.html',
   styleUrls: ['./marcador.component.css']
 })
-export class MarcadorComponent implements OnInit {
+export class MarcadorComponent {
 
-  constructor() { }
+  @Input() nombreMarcador!:String
 
-  ngOnInit() {
-  }
+
+  // constructor() { }
+
+  // ngOnInit() {
+  // }
 
 }

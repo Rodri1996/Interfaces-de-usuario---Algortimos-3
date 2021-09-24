@@ -1,3 +1,4 @@
+import { MarcadorComponent } from './../componentesCompartidos/marcador/marcador.component';
 import { UsuarioComponent } from 'src/componentesPadres/usuario/usuario.component'
 import { ButtonComponent } from 'src/componentesCompartidos/button/button.component'
 import { LoginComponent } from 'src/componentesPadres/login/login.component'
@@ -21,7 +22,8 @@ import { AppRoutingModule } from './app-routing/app-routing.module'
     CardComponent,
     ButtonComponent,
     LoginComponent,
-    UsuarioComponent
+    UsuarioComponent,
+    MarcadorComponent
   ],
   imports: [
     BrowserModule,
