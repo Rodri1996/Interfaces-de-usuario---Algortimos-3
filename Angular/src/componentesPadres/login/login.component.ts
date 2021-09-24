@@ -12,7 +12,7 @@ export class LoginComponent {
 
   redirigir(){
     console.log(this.router)
-    this.router.navigate(['./home'])
+    this.router.navigate(['home'])
   }
 
 }
