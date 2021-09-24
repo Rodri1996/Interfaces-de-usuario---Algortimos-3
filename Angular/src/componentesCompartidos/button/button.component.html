@@ -1,14 +1,15 @@
-<button [ngClass]="estilo">
-  <a routerLink="../home">{{placeholder}}</a>
+<button [ngClass]="estilo" (click)="onClick()">
+  <!--<a routerLink="../home">{{placeholder}}</a>-->
+  {{placeholder}}
 </button>
 
-<!-- <button class="button-primario">
+<!-- <button class="button-primario" >
   Agregar
-</button>
+</button> -->
 
-<button class="button-secundario">
+<!-- <button class="button-secundario" [ngClass]="estilo">
   <a routerLink="../perfil">Cancelar</a>
 </button>
-<button class="button-primario">
+<button class="button-primario" [ngClass]="estilo">
   <a routerLink="../perfil">Guardar</a>
 </button> -->

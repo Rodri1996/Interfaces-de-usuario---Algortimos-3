@@ -1,5 +1,6 @@
-import { ButtonComponent } from './../componentesCompartidos/button/button.component'
-import { LoginComponent } from './../componentesPadres/login/login.component'
+import { UsuarioComponent } from 'src/componentesPadres/usuario/usuario.component'
+import { ButtonComponent } from 'src/componentesCompartidos/button/button.component'
+import { LoginComponent } from 'src/componentesPadres/login/login.component'
 import { NgModule } from '@angular/core'
 import { FormsModule } from '@angular/forms'
 import { BrowserModule } from '@angular/platform-browser'
@@ -20,6 +21,7 @@ import { AppRoutingModule } from './app-routing/app-routing.module'
     CardComponent,
     ButtonComponent,
     LoginComponent,
+    UsuarioComponent
   ],
   imports: [
     BrowserModule,

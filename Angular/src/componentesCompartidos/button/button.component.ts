@@ -1,5 +1,7 @@
 import { Component, Input } from '@angular/core'
 
+
+
 @Component({
   selector: 'app-button',
   templateUrl: './button.component.html',
@@ -9,10 +11,11 @@ export class ButtonComponent  {
 
   @Input() placeholder!:string 
   @Input() estilo!:string
- 
+  @Input() onClick!:() => void
+  
 }
 
-export class AgregarAmigos{}
 
-export class ListaDeAmigos{}
+
+
 
