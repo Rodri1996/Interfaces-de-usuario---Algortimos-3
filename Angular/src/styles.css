@@ -30,6 +30,20 @@ body {
     min-width: 385px;
 }
 
+.subtitulo__p{
+    display: inline-block;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+}
+
+.card {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 769px;
+    align-self: center;
+    /*margin-top: 10%;*/
+}
+
 .card-title {
     background-color: gray;
     height: 50px;
@@ -40,4 +54,23 @@ body {
     padding: 0 1em;
     color: var(--color-quinario);
     font-weight: 600;
+}
+
+.box-container {
+    min-width: calc(769px/2);
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-grow: 1;
+    flex-direction: column;
+    background-color: var(--color-cuaternario);
+}
+
+@media(min-width:769px){
+    .card{
+        border-radius: 1rem;
+        border-style: solid;
+        border-color: var(--color-auxiliar1);
+        box-shadow: 0 0.5em 0.5em 0 rgb(0 0 0 / 24%);
+    }
 }
