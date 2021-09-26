@@ -12,9 +12,10 @@
             <div class="form_div">
                
             </div>
-            <app-button placeholder="Ingresar" estilo="button-login" 
-            (onClick)="redirigir"></app-button>
+            <button placeholder="Ingresar" estilo="button-login" 
+            (click)="redirigir()"></button>
         </section>
+        <a [routerLink]="['/rutina2']">Heroes</a>
     </form>
 </body>
 

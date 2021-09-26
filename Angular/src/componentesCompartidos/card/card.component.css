@@ -27,6 +27,7 @@ div>p {
     flex-wrap: wrap;
     max-width: 769px;
     align-self: center;
+    margin-top: 10%;
 }
 
 .card-title {

@@ -8,11 +8,13 @@ import { Router } from '@angular/router'
 })
 export class LoginComponent {
 
-  constructor(private router:Router){}
+  constructor(private router:Router){
+    console.log('Test: ' + this.router)
+  }
 
   redirigir(){
-    console.log(this.router)
-    this.router.navigate(['home'])
+    console.log('La ruta es: ' + this.router)
+    this.router.navigate(['/rutinas2'])
   }
 
 }
