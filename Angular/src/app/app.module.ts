@@ -14,7 +14,8 @@ import { NavbarComponent } from 'src/componentesCompartidos/navbar/navbar.compon
 import { MenuDesplegableComponent } from 'src/componentesCompartidos/menuDesplegable/menuDesplegable.component'
 import { CardComponent } from 'src/componentesCompartidos/card/card.component'
 import { RutinaComponent } from 'src/componentesPadres/rutina/rutina.component'
-import { InputComponent } from 'src/componentesCompartidos/input/input.component'
+import { InputComponent } from 'src/componentesCompartidos/input/input.component';
+
 
 @NgModule({
   declarations: [
@@ -28,7 +29,7 @@ import { InputComponent } from 'src/componentesCompartidos/input/input.component
     UsuarioComponent,
     MarcadorComponent,
     RutinaComponent,
-    InputComponent
+    InputComponent,
   ],
   imports: [
     BrowserModule,
