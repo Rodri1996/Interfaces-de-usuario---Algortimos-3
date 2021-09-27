@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RutinaComponent implements OnInit {
 
+  nombreRutina!:String 
+  creadorRutina:String = "Por "
+
   constructor() { 
     console.log('Rutina Test')
   }
