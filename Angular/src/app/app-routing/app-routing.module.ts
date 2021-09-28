@@ -10,13 +10,13 @@ import { RutinaComponent } from 'src/componentesPadres/rutina/rutina.component'
 import { EjercicioComponent } from 'src/componentesPadres/ejercicio/ejercicio.component'
 
 export const routes: Routes = [
-  { path: 'login2', component: LoginComponent },
-  { path: 'home2', component: BusquedaRutinasComponent },
-  { path: 'misRutinas2', component: MisRutinasComponent },
-  { path: 'perfil2', component: UsuarioComponent },
-  { path: 'rutina2', component: RutinaComponent },
-  { path: 'ejercicio2', component: EjercicioComponent },
-  { path: '**', redirectTo: 'rutina2' }
+  { path: 'login', component: LoginComponent },
+  { path: 'busquedaRutinas', component: BusquedaRutinasComponent },
+  { path: 'misRutinas', component: MisRutinasComponent },
+  { path: 'perfil', component: UsuarioComponent },
+  { path: 'rutina', component: RutinaComponent },
+  { path: 'ejercicio', component: EjercicioComponent },
+  { path: '**', redirectTo: 'misRutinas' }
 ]
 
 @NgModule({
