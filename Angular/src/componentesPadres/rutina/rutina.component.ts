@@ -7,8 +7,6 @@ import { Component, Input, OnInit } from '@angular/core'
 })
 export class RutinaComponent {
 
-  @Input() placeholder!:string
-
   nombreRutina!:string 
   creadorRutina!:string 
 
@@ -16,10 +14,6 @@ export class RutinaComponent {
     console.log('Rutina Test')
   }
 
-  placeholderInput(nombre:string){
-    this.placeholder=nombre
+    
   }
 
-  
-
-}
