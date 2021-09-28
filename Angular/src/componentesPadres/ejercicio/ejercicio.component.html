@@ -1,6 +1,32 @@
-<section class="form-content">
-    <label class="inputLabel">Frecuencia cardíaca base</label>
-    <app-input></app-input>              
-</section>
-
-<h1>Estoy en ejercicio!</h1>
+<body>
+    <section class="card">
+      <div class="card-title">
+        <p class="p-default">Abdominales</p>
+        <div>
+          <i class="fas fa-stopwatch"></i>
+          <p class="subtitulo__p">24 Minutos</p>
+        </div>
+      </div>
+      <div class="box-container box-container--left">
+        <label class="inputLabel">Actividad</label>
+        <app-input></app-input>
+        <label class="inputLabel">Frecuencia cardiaca base</label>
+        <app-input></app-input>
+      </div>
+      <div class="box-container">
+        <div class="checkbox-container">
+            <input class="check__input" checked type="checkbox" />
+            <h3>Con series</h3>
+        </div>
+        <label class="inputLabel">Minutos de descanso</label>
+        <app-input></app-input>
+        <label class="inputLabel">Cantidad de series</label>
+        <app-input></app-input>
+      </div>
+      <div class="posicion-botones">
+        <button>Aceptar</button>
+        <button>Cancelar</button>
+      </div>
+    </section>
+  </body>
+  
