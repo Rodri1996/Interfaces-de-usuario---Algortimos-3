@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Actividad } from 'src/domain/Actividad/actividad';
+import { GruposMusculares } from 'src/domain/Grupos Musculares/gruposMusculares';
 
 @Component({
   selector: 'app-menuDesplegable',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuDesplegableComponent implements OnInit {
 
-  constructor() { }
+  @Input() actividad!:Actividad
+
+  constructor() { 
+    
+  }
 
   ngOnInit() {
+    
   }
 
 }

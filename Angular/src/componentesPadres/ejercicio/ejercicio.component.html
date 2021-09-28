@@ -9,8 +9,10 @@
       </div>
       <div class="box-container box-container--left">
         <label class="inputLabel">Actividad</label>
-        <app-input></app-input>
-        <label class="inputLabel">Frecuencia cardiaca base</label>
+        <div *ngFor="let actividad of actividades">
+          <app-menuDesplegable [actividad]="actividad"></app-menuDesplegable>
+        </div>
+          <label class="inputLabel">Frecuencia cardiaca base</label>
         <app-input></app-input>
       </div>
       <div class="box-container">

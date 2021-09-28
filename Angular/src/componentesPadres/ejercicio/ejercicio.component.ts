@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Actividad } from 'src/domain/Actividad/actividad';
 
 @Component({
   selector: 'app-ejercicio',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EjercicioComponent implements OnInit {
 
+  actividades!:Actividad[]
+
   constructor() { }
 
   ngOnInit() {
+    this.actividades=[(new Actividad(new Set(),"Piernas"))]
   }
 
 }
