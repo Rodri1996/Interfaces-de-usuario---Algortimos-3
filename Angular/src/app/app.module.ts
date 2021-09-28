@@ -1,3 +1,4 @@
+import { MinicardComponent } from './../componentesCompartidos/minicard/minicard.component';
 
 
 import { NgModule } from '@angular/core'
@@ -34,7 +35,8 @@ import { IconoComponent } from 'src/componentesCompartidos/icono/icono.component
     RutinaComponent,
     InputComponent,
     EjercicioComponent,
-    IconoComponent
+    IconoComponent,
+    MinicardComponent
   ],
   imports: [
     BrowserModule,
