@@ -18,7 +18,7 @@ export class ButtonComponent  {
 
   redirigir(){
     console.log('La ruta es: ' + this.router)
-    this.router.navigate(['/busquedaRutina2'])
+    this.router.navigate(['/home2'])
   }
   
 }
