@@ -1,7 +1,5 @@
 import { Component, Input } from '@angular/core'
 
-
-
 @Component({
   selector: 'app-button',
   templateUrl: './button.component.html',
@@ -14,6 +12,8 @@ export class ButtonComponent  {
   @Input() onClick!:() => void
   
 }
+
+/*Lo del boton no entendi eso de que el padre redirija*/
 
 
 
