@@ -13,11 +13,10 @@ export class ButtonComponent  {
   @Input() onClick!:() => void
 
   constructor(private router:Router){
-    console.log('Test: ' + this.router)
+    
   }
 
   redirigir(){
-    console.log('La ruta es: ' + this.router)
     this.router.navigate(['/home2'])
   }
   
