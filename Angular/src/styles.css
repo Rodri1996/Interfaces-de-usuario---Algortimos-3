@@ -58,6 +58,7 @@ div>p {
     padding: 0 1em;
     color: var(--color-quinario);
     font-weight: 600;
+    font-size: 2rem;
 }
 
 .box-container {
