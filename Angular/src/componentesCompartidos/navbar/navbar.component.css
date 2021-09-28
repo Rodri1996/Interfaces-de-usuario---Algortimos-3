@@ -49,7 +49,6 @@ header {
   .menu {
     position: relative;
     display: inline-block;
-    height: 105px;
   }
   
   .menu-contenido {  /*  El menu desplegable  */
@@ -89,6 +88,12 @@ header {
     }
     .menu-contenido .menu-link{ 
       display:block;
+    }
+  }
+
+  @media(min-width: 401px){
+    .desplegable{
+      display: none;
     }
   }
   

@@ -30,6 +30,10 @@ body {
     min-width: 385px;
 }
 
+div>p {
+    font-size: 2rem;
+}
+
 .subtitulo__p{
     display: inline-block;
     font-family: 'Roboto', sans-serif;

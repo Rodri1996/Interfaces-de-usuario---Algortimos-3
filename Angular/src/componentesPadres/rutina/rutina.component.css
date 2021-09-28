@@ -8,11 +8,6 @@
     }
 }
 
-div>p {
-    font-size: 2rem;
-    margin-top: 5px;
-}
-
 table{
     border: 0.1em solid gray;
     border-collapse: collapse;
@@ -30,11 +25,27 @@ table,.rutina-estadisticas{
 td{
     height: 2.5em;
     padding: 0.5em;
+    font-size: 1.3em;
 }
 
+/*
 .contenedor-tiempo{
     display: flex;
     justify-content:flex-end ;
+}
+*/
+
+.contenedor-tiempo{
+    display: flex;
+    justify-content: space-evenly;
+    width: 50px;
+}
+
+.table__fila--flex{
+    display: flex;
+    margin: 15px;
+    justify-content: end;
+    border: none;
 }
 
 .form-subtitulo {
@@ -99,11 +110,4 @@ td{
     background-color: var(--color-primario);
     color: var(--color-quinario);
     font-size: 1.5em;
-}
-
-.table-body__fila{
-    text-align: center;
-    border-color: black;
-    background-color: #f2f4f7;
-    font-size: 1.3em;
 }
