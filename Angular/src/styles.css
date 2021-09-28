@@ -45,7 +45,7 @@ div>p {
     flex-wrap: wrap;
     max-width: 769px;
     align-self: center;
-    /*margin-top: 10%;*/
+    /*    margin-top: 7%;*/
 }
 
 .card-title {
@@ -61,13 +61,14 @@ div>p {
 }
 
 .box-container {
-    min-width: calc(769px/2);
+    min-width: calc(759px/2);
     display: flex;
     align-content: center;
     justify-content: center;
     flex-grow: 1;
     flex-direction: column;
     background-color: var(--color-cuaternario);
+    padding: 20px;
 }
 
 @media(min-width:769px){

@@ -1,12 +1,4 @@
 
-@media(min-width:769px){
-    .card{
-        border-radius: 1rem;
-        border-style: solid;
-        border-color: var(--color-auxiliar1);
-        box-shadow: 0 0.5em 0.5em 0 rgb(0 0 0 / 24%);
-    }
-}
 
 table{
     border: 0.1em solid gray;
@@ -28,13 +20,6 @@ td{
     font-size: 1.3em;
 }
 
-/*
-.contenedor-tiempo{
-    display: flex;
-    justify-content:flex-end ;
-}
-*/
-
 .contenedor-tiempo{
     display: flex;
     justify-content: space-evenly;
@@ -54,26 +39,6 @@ td{
     margin-top:1rem;
     font-family: 'Roboto', sans-serif;
     font-weight: 600;
-}
-
-.card {
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 769px;
-    align-self: center;
-    /*    margin-top: 7%;*/
-}
-
-
-.box-container {
-    min-width: calc(759px/2);
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    flex-grow: 1;
-    flex-direction: column;
-    background-color: var(--color-cuaternario);
-    padding: 20px;
 }
 
 .inputLabel{
