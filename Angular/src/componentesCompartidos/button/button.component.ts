@@ -7,7 +7,7 @@ import { Component, Input } from '@angular/core'
 })
 export class ButtonComponent  {
 
-  @Input() placeholder!:string 
+  @Input() nombreBoton!:string 
   @Input() estilo!:string
   @Input() onClick!:() => void
   

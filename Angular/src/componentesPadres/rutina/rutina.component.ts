@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core'
+import { Component, Input, OnInit } from '@angular/core'
 
 @Component({
   selector: 'app-rutina',
@@ -7,8 +7,10 @@ import { Component, OnInit } from '@angular/core'
 })
 export class RutinaComponent {
 
-  nombreRutina!:String 
-  creadorRutina:String = "Por "
+  @Input() placeholder!:string
+
+  nombreRutina!:string 
+  creadorRutina!:string 
 
   constructor() { 
     console.log('Rutina Test')
