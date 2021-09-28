@@ -13,3 +13,7 @@ footer {
     font-size: 2.5rem;
     min-width: 385px;
 }
+
+.fa-facebook-square{
+    color:var(--color-quinario)
+}

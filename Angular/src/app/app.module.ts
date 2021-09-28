@@ -18,7 +18,7 @@ import { NavbarComponent } from 'src/componentesCompartidos/navbar/navbar.compon
 import { MenuDesplegableComponent } from 'src/componentesCompartidos/menuDesplegable/menuDesplegable.component'
 import { CardComponent } from 'src/componentesCompartidos/card/card.component'
 import { InputComponent } from 'src/componentesCompartidos/input/input.component'
-
+import { IconoComponent } from 'src/componentesCompartidos/icono/icono.component'
 
 @NgModule({
   declarations: [
@@ -33,7 +33,8 @@ import { InputComponent } from 'src/componentesCompartidos/input/input.component
     MarcadorComponent,
     RutinaComponent,
     InputComponent,
-    EjercicioComponent
+    EjercicioComponent,
+    IconoComponent
   ],
   imports: [
     BrowserModule,

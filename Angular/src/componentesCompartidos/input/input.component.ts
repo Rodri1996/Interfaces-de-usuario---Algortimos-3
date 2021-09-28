@@ -8,6 +8,7 @@ import { Component, Input, OnInit } from '@angular/core'
 export class InputComponent {
 
   @Input() placeholder!:string
+  
   placeholderInput(nombre:string){
     this.placeholder=nombre
 }
