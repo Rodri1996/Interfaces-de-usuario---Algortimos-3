@@ -1,6 +1,6 @@
-import { GruposMusculares } from './../../../../Typescript/src/Grupos Musculares/gruposMusculares';
-import { Component, Input, OnInit } from '@angular/core'
-import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
+import { GruposMusculares } from './../../../../Typescript/src/Grupos Musculares/gruposMusculares'
+import { Component } from '@angular/core'
+
 
 @Component({
   selector: 'app-rutina',
@@ -15,7 +15,14 @@ export class RutinaComponent {
 
   constructor() { 
     // console.log('Rutina Test')
-    this.gruposMusculares=[GruposMusculares.abdomen]
+    this.gruposMusculares=[GruposMusculares.abdomen, 
+                            GruposMusculares.pecho, 
+                            GruposMusculares.gluteos, 
+                            GruposMusculares.piernas, 
+                            GruposMusculares.hombros, 
+                            GruposMusculares.brazos, 
+                            GruposMusculares.espalda]
+    
   }
 
     

@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core'
 
 @Component({
   selector: 'app-marcador',
@@ -7,7 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class MarcadorComponent {
 
-  @Input() nombreMarcador!:String
+  @Input() nombreMarcador!:string
 
 
   // constructor() { }

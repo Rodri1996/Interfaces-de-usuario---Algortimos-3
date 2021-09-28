@@ -49,7 +49,7 @@
       <p class="form-subtitulo">Grupos Musculares</p>
       <div class="grupos-flex">
         <div *ngFor="let grupoM of gruposMusculares" class="form-section-grupoM">
-          <app-marcador nombreMarcador="grupoM"></app-marcador>
+          <app-marcador [nombreMarcador]="grupoM"></app-marcador>
         </div>
       </div>
 
