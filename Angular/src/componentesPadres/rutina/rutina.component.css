@@ -79,6 +79,6 @@ td{
 
 .grupos-flex{
     display: flex;
-    justify-content: space-between;
-    margin: 10px 0;
+    flex-wrap: wrap;
+    justify-content: space-evenly;    
 }
