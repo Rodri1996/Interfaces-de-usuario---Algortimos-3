@@ -16,6 +16,10 @@ export class RutinaComponent {
     console.log('Rutina Test')
   }
 
+  placeholderInput(nombre:string){
+    this.placeholder=nombre
+  }
+
   
 
 }
