@@ -19,13 +19,10 @@ export class ButtonComponent  {
 
   redirigirFN(){
     this.router.navigate([this.redirigir])
-  }
+
+  /*redirigir(){
+    this.router.navigate(['/home'])
+  }*/
   
 }
-
-/*Lo del boton no entendi eso de que el padre redirija*/
-
-
-
-
-
+}
