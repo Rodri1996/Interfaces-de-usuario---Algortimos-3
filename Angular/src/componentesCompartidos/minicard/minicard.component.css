@@ -1,6 +1,6 @@
 .minicard-informacion{
     justify-content: space-evenly;
-    margin-top: 2rem;
+    
     border-style: solid;
     border-color: var(--color-primario);
     border-radius: 2rem;
@@ -32,4 +32,7 @@
       color: rgb(228, 93, 93);    
   }
   
+  .chino{
+    height: 50px;
+  }
   

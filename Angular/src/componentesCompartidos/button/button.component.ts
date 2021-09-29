@@ -11,13 +11,14 @@ export class ButtonComponent  {
   @Input() nombreBoton!:string 
   @Input() estilo!:string
   @Input() onClick!:() => void
+  @Input() redirigir!:string
 
   constructor(private router:Router){
     
   }
 
-  redirigir(){
-    this.router.navigate(['/home2'])
+  redirigirFN(){
+    this.router.navigate([this.redirigir])
   }
   
 }

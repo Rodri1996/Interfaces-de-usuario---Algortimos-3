@@ -8,7 +8,10 @@ html {
     font-size: 10px;
     min-height: 100%;
     position: relative;
+    margin: 0;
+    height: 100%;
 }
+
 
 :root{
     --color-primario:#003A64;
@@ -20,14 +23,11 @@ html {
 }
 
 body {
-    background:var(--color-cuaternario);
-    font-family: "Roboto",sans-serif;
-    height: 100%;
+    background-color: var(--color-quinario);
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-content: center;
-    min-width: 385px;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
 }
 
 div>p {

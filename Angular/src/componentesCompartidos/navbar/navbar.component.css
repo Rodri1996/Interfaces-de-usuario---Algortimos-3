@@ -1,4 +1,4 @@
-header {
+.my-header {
     padding: 3rem 0;
     height: 124px;
     background-color: var(--color-primario);
@@ -7,6 +7,10 @@ header {
     justify-content: space-between;
     align-items: center;
     font-size: 2rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
   }
 
   .menu-link-web{
