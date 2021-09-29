@@ -3,16 +3,14 @@
     background-color: var(--color-primario);
     width: 100%;
     padding: 3rem 0;
-    color: var(--color-cuaternario);
+    height: 88px;
+    font-size: 2.5rem;
     justify-content: center;
     gap: 1rem;
-    align-items: center;
+    color: var(--color-cuaternario);
     position: absolute;
-    height: 88px;
     left: 0;
     bottom: 0;
-    font-size: 2.5rem;
-    min-width: 385px;
 }
 
 .fa-facebook-square{
