@@ -15,7 +15,6 @@
 
   .desplegable {  
     background-color: var(--color-primario);
-    color: var(--color-cuaternario);
     padding: 1.6rem;
     font-size: 1.6rem;
     border: none;
@@ -27,13 +26,20 @@
     font-size: 2em;
   }
 
-  .menu-contenido {  
+  .menu-web {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 15px;
+    font-weight: bold;
+  }
+
+  /* .menu-contenido {  
     display: none;
     position: absolute;
     background-color: var(--color-primario);
     right: 0;
     z-index: 1;
-  }
+  } */
 
   /* .menu {
     position: relative;
@@ -87,12 +93,7 @@
     display: block;
   }
 
-  .menu-web {
-    display: flex;
-    flex-wrap: wrap;
-    padding-left: 15px;
-    font-weight: bold;
-  } */
+   */
   
 
   
