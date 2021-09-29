@@ -1,5 +1,4 @@
 .my-header {
-    padding: 3rem 0;
     height: 124px;
     background-color: var(--color-primario);
     color: var(--color-cuaternario);
@@ -13,35 +12,35 @@
     width: 100%;
   }
 
-  .menu-link-web{
+  /* .menu-link-web{
     color: var(--color-cuaternario);
     padding: 0.5rem;
     text-decoration: none;
     font-size: 2rem;
   }
 
-  .title {  /*  Titulo del header  */
+  .title { 
     font-size: 2em;
     font-family: "Lato", sans-serif;
     margin-left: 3rem;
   }
   
-  .icono {  /*  Icono del menu desplegable  */
+  .icono { 
     color: var(--color-cuaternario);
     font-size: 2em;
   }
-  #logoff {  /*  Icono para salir a Login  */
+  #logoff {  
     font-size: 1.1em;
   }
   
-  #logoff-web {  /*  Icono para salir a Login en vista Tablet y Web  */
+  #logoff-web {  
     font-size: 1.1em;
   }
   .menu-link {
     width: 100%;
   }
   
-  .desplegable {  /*  Boton para abrir el menu desplegable  */
+  .desplegable {  
     background-color: var(--color-primario);
     color: var(--color-cuaternario);
     padding: 1.6rem;
@@ -55,7 +54,7 @@
     display: inline-block;
   }
   
-  .menu-contenido {  /*  El menu desplegable  */
+  .menu-contenido {  
     display: none;
     position: absolute;
     background-color: var(--color-primario);
@@ -67,11 +66,11 @@
     color: var(--color-cuaternario);
     padding: 1.2rem 1.42rem;
     text-decoration: none;
-    /* display: block; */
+    
   }
   
   .menu-contenido .menu-link:hover,
-  .menu:hover .desplegable {  /*  Esto hace que las opciones del menu desplegable cambien de color al seleccionarlas  */
+  .menu:hover .desplegable {  
     background-color: #012c4b;
   }
   
@@ -84,20 +83,7 @@
     flex-wrap: wrap;
     padding-left: 15px;
     font-weight: bold;
-  }
+  } */
   
-  @media (max-width: 400px) {
-    .menu-web {  
-      display: none;
-    }
-    .menu-contenido .menu-link{ 
-      display:block;
-    }
-  }
 
-  @media(min-width: 401px){
-    .desplegable{
-      display: none;
-    }
-  }
   
