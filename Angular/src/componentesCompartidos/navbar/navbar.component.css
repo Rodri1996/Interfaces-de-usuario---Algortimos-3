@@ -33,19 +33,27 @@
     font-weight: bold;
   }
 
-  /* .menu-contenido {  
+  .menu {
+    position: relative;
+    display: inline-block;
+  }
+
+  .menu-contenido {  
     display: none;
     position: absolute;
     background-color: var(--color-primario);
     right: 0;
     z-index: 1;
-  } */
+  }
 
-  /* .menu {
-    position: relative;
-    display: inline-block;
-  } */
+  @media (min-width: 401px) {
+    
+    .desplegable {
+      display: none;
+    }
+  }
 
+  
   /* .menu-link-web{
     color: var(--color-cuaternario);
     padding: 0.5rem;
