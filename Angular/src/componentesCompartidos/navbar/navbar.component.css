@@ -55,12 +55,17 @@
   }
 
   @media (max-width: 400px) {
+    .menu-web{
+      display: none;
+    }
+    /*
     .desplegable,
     .menu-contenido,
     .menu-link {
       display: none;
      
     }
+    */
   }
 
   
