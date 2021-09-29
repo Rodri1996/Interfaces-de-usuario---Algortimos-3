@@ -1,4 +1,4 @@
-import { MinicardComponent } from './../componentesCompartidos/minicard/minicard.component';
+import { MinicardComponent } from './../componentesCompartidos/minicard/minicard.component'
 
 
 import { NgModule } from '@angular/core'
@@ -19,7 +19,7 @@ import { NavbarComponent } from 'src/componentesCompartidos/navbar/navbar.compon
 import { MenuDesplegableComponent } from 'src/componentesCompartidos/menuDesplegable/menuDesplegable.component'
 import { CardComponent } from 'src/componentesCompartidos/card/card.component'
 import { InputComponent } from 'src/componentesCompartidos/input/input.component'
-import { IconoComponent } from 'src/componentesCompartidos/icono/icono.component'
+
 
 @NgModule({
   declarations: [
@@ -35,7 +35,6 @@ import { IconoComponent } from 'src/componentesCompartidos/icono/icono.component
     RutinaComponent,
     InputComponent,
     EjercicioComponent,
-    IconoComponent,
     MinicardComponent
   ],
   imports: [

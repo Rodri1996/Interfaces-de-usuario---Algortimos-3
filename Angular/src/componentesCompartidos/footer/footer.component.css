@@ -1,4 +1,4 @@
-footer {
+.footer {
     display: flex;
     background-color: var(--color-primario);
     width: 100%;
