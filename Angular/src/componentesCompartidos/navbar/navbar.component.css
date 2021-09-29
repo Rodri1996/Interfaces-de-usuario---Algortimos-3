@@ -54,17 +54,12 @@
     font-size: 2.3rem;
   }
 
-  #logoff {  
-    font-size: 1.1em;
-  }
-  
-  #logoff-web {  
-    font-size: 1.1em;
-  }
-
   @media (min-width: 401px) {
-    .desplegable {
+    .desplegable,
+    .menu-contenido,
+    .menu-link {
       display: none;
+     
     }
   }
 
