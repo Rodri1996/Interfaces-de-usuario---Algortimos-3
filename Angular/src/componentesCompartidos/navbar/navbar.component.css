@@ -46,20 +46,21 @@
     z-index: 1;
   }
 
+  .menu-link-web{
+    color: var(--color-cuaternario);
+    padding: 0.5rem;
+    text-decoration: none;
+    font-size: 2rem;
+  }
+
   @media (min-width: 401px) {
-    
     .desplegable {
       display: none;
     }
   }
 
   
-  /* .menu-link-web{
-    color: var(--color-cuaternario);
-    padding: 0.5rem;
-    text-decoration: none;
-    font-size: 2rem;
-  }
+  /* 
 
   .title { 
     font-size: 2em;
