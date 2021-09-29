@@ -13,10 +13,19 @@
     width: 100%;
   }
 
-  .menu {
+  .desplegable {  
+    background-color: var(--color-primario);
+    color: var(--color-cuaternario);
+    padding: 1.6rem;
+    font-size: 1.6rem;
+    border: none;
+    margin-right: 2rem;
+  }
+
+  /* .menu {
     position: relative;
     display: inline-block;
-  }
+  } */
 
   /* .menu-link-web{
     color: var(--color-cuaternario);
@@ -46,14 +55,7 @@
     width: 100%;
   }
   
-  .desplegable {  
-    background-color: var(--color-primario);
-    color: var(--color-cuaternario);
-    padding: 1.6rem;
-    font-size: 1.6rem;
-    border: none;
-    margin-right: 2rem;
-  }
+  
   
  
   
