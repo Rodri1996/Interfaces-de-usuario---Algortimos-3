@@ -58,17 +58,14 @@
     .menu-web{
       display: none;
     }
-    /*
-    .desplegable,
-    .menu-contenido,
-    .menu-link {
-      display: none;
-     
-    }
-    */
   }
 
-  
+  @media (min-width: 401px) {
+    .desplegable{
+      display: none;
+    }
+  }
+
   /* 
   
   .menu-link {
