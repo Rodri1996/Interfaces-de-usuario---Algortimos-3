@@ -65,6 +65,14 @@
     background-color: #012c4b;
   }
 
+  .menu:hover .menu-contenido {
+    display: block;
+  }
+
+  .menu-link {
+    width: 100%;
+  }
+
   @media (max-width: 400px) {
     .menu-web{
       display: none;
@@ -76,22 +84,3 @@
       display: none;
     }
   }
-
-  /* 
-  
-  .menu-link {
-    width: 100%;
-  }
-  
-  
-  
- 
-  
-  .menu:hover .menu-contenido {
-    display: block;
-  }
-
-   */
-  
-
-  
