@@ -22,6 +22,19 @@
     margin-right: 2rem;
   }
 
+  .icono { 
+    color: var(--color-cuaternario);
+    font-size: 2em;
+  }
+
+  .menu-contenido {  
+    display: none;
+    position: absolute;
+    background-color: var(--color-primario);
+    right: 0;
+    z-index: 1;
+  }
+
   /* .menu {
     position: relative;
     display: inline-block;
@@ -40,10 +53,7 @@
     margin-left: 3rem;
   }
   
-  .icono { 
-    color: var(--color-cuaternario);
-    font-size: 2em;
-  }
+  
   #logoff {  
     font-size: 1.1em;
   }
@@ -59,13 +69,7 @@
   
  
   
-  .menu-contenido {  
-    display: none;
-    position: absolute;
-    background-color: var(--color-primario);
-    right: 0;
-    z-index: 1;
-  }
+  
   
   .menu-contenido .menu-link {
     color: var(--color-cuaternario);
