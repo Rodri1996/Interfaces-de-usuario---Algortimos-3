@@ -54,6 +54,17 @@
     font-size: 2.3rem;
   }
 
+  .menu-contenido .menu-link {
+    color: var(--color-cuaternario);
+    padding: 1.2rem 1.42rem;
+    text-decoration: none; 
+  }
+
+  .menu-contenido .menu-link:hover,
+  .menu:hover .desplegable {  
+    background-color: #012c4b;
+  }
+
   @media (max-width: 400px) {
     .menu-web{
       display: none;
@@ -72,17 +83,9 @@
     width: 100%;
   }
   
-  .menu-contenido .menu-link {
-    color: var(--color-cuaternario);
-    padding: 1.2rem 1.42rem;
-    text-decoration: none;
-    
-  }
   
-  .menu-contenido .menu-link:hover,
-  .menu:hover .desplegable {  
-    background-color: #012c4b;
-  }
+  
+ 
   
   .menu:hover .menu-contenido {
     display: block;
