@@ -34,11 +34,6 @@
     align-items: center;
   }
 
-  .menu {
-    position: relative;
-    display: inline-block;
-  }
-
   .menu-contenido {  
     display: none;
     position: absolute;
@@ -66,11 +61,9 @@
   }
 
   .menu:hover .menu-contenido {
-    display: block;
-  }
-
-  .menu-link {
-    width: 100%;
+    /* display: block; */
+    display:flex;
+    flex-direction: column;
   }
 
   @media (max-width: 400px) {
@@ -80,7 +73,7 @@
   }
 
   @media (min-width: 401px) {
-    .desplegable{
+    .desplegable,.menu-contenido{
       display: none;
     }
   }
