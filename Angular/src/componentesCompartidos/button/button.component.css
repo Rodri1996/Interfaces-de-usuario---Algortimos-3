@@ -1,0 +1,55 @@
+
+.button-primario,
+.button-secundario,
+.button-login,
+.button-mas{
+    background-color:var(--color-primario) ;
+    border: none;
+    color:var(--color-quinario);
+    padding: 1em 1.4em;
+    text-align: center;
+    font-size: 1.8em;
+    border-radius: 5rem;
+    box-shadow: 0 0.5em 0.5em 0 rgba(0,0,0,0.24);
+    font-family: "Roboto",sans-serif;
+}
+
+.button-secundario{
+    background-color: var(--color-quinario);
+    color: var(--color-primario);
+    border-style: solid;
+    border-width: 0.2rem;    
+}
+
+.button-secundario > a{
+    text-decoration: none;
+    color: var(--color-primario);
+}
+
+.button-login{
+    background-color: var(--color-secundario);
+}
+
+.button-secundario:hover{
+    background-color: rgb(209, 202, 202);
+}
+
+.posicion-botones{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:5rem;
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+}
+
+button:active{
+    transform: scale(0.9);
+}
+
+.button-primario:hover,
+.button-login:hover,
+.button-mas:hover{
+    background-color: #286C96;
+}
+

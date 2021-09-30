@@ -8,6 +8,11 @@ label{
     margin: 0.3em 0em;
 }
 
+div>p {
+    font-size: 2rem;
+    margin-top: 5px;
+}
+
 .iconos-corazon-tacho{
     width:45%;
 }

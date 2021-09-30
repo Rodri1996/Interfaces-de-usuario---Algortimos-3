@@ -1,0 +1,84 @@
+
+
+table{
+    border: 0.1em solid gray;
+    border-collapse: collapse;
+    flex-grow: 1;
+    font-size: 13px;
+    text-align: center;
+}
+
+table,.rutina-estadisticas{
+    align-self: center;
+    width: 100%;
+    max-width: 500px;
+}
+
+td{
+    height: 2.5em;
+    padding: 0.5em;
+    font-size: 1.3em;
+}
+
+.contenedor-tiempo{
+    display: flex;
+    justify-content: space-evenly;
+    width: 50px;
+}
+
+.table__fila--flex{
+    display: flex;
+    margin: 15px;
+    justify-content: end;
+    border: none;
+}
+
+.form-subtitulo {
+    padding-bottom: 1.5rem;
+    padding-left: 2rem;
+    margin-top:1rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+}
+
+.inputLabel{
+    font-size: 2rem;
+    margin-bottom: 5px;
+}
+
+.posicion-botones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+    width: 100%;
+}
+.rutina-estadisticas{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.1em;
+    margin-top: 0.5em;
+}
+
+.rutina-estadisticas__p{
+    margin:0.5em;
+    font-size: 1.2em;
+    font-weight: 600;
+    width: 35%;
+}
+
+.table-head__fila{
+    font-weight: 700;
+    background-color: var(--color-primario);
+    color: var(--color-quinario);
+    font-size: 1.5em;
+}
+
+.grupos-flex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;    
+}

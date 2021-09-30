@@ -1,0 +1,62 @@
+<body>
+  <section class="card">
+    <div class="card-title">
+      <p class="p-default">{{nombreRutina}}</p>
+      <div>
+        <i class="fas fa-stopwatch"></i>
+        <p class="subtitulo__p">{{creadorRutina}}</p>
+      </div>
+    </div>
+    <div class="box-container">
+      <label class="inputLabel">Nombre</label>
+      <app-input placeholder="Ingrese nombre"></app-input>
+      <label class="inputLabel">Descripcion</label>
+      <app-input placeholder="Ingrese descripcion"></app-input>
+      <label class="inputLabel">Estrategias de edicion</label>
+      <app-input placeholder="Ingrese estrategia de edicion"></app-input>
+    </div>
+    <div class="box-container">
+        
+          <p class="form-subtitulo">Ejercicios</p>
+          <table border="1">
+            <thead>
+                <tr>
+                    <td class="table-head__fila">Nombre</td>
+                    <td class="table-head__fila">Minutos</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td href="/runapp-grupo3/src/rutinas.html" class="table-body__fila">Isquiotibiales</td>
+                    <td class="table__fila--flex">
+                        <div class="contenedor-tiempo">
+                            <p id="minutos">24</p> 
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+      
+
+      <div class="rutina-estadisticas">
+        <i class="fas fa-heartbeat"></i>
+        <p class="rutina-estadisticas__p">200 PPM</p>
+        <i class="fas fa-stopwatch"></i>
+        <p class="rutina-estadisticas__p">63'</p>
+        <div class="button-mas-container"><button class="button-mas">+</button></div>
+      </div>
+
+      <p class="form-subtitulo">Grupos Musculares</p>
+      <div class="grupos-flex">
+        <div *ngFor="let grupoM of gruposMusculares" class="form-section-grupoM">
+          <app-marcador [nombreMarcador]="grupoM"></app-marcador>
+        </div>
+      </div>
+
+    </div>
+    <div class="posicion-botones">
+      <button>Aceptar</button>
+      <button>Cancelar</button>
+    </div>
+  </section>
+</body>

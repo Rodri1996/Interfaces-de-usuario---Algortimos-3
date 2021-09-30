@@ -1,0 +1,38 @@
+.box-container--left{
+    padding-bottom: 0;
+    margin-top: 10px;
+}
+
+.checkbox-container{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    
+}
+
+.check__input{
+    height: 20px;
+    width: 30px;
+    background-color: var(--color-primario);
+    
+}
+
+.inputLabel{
+    font-size: 2rem;
+    margin-bottom: 5px;
+}
+
+.posicion-botones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+    width: 100%;
+}
+
+.subtitulo__p{
+    font-size: 2rem;
+    margin-left: 5px;
+}
