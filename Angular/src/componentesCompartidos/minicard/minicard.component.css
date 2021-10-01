@@ -1,3 +1,14 @@
+.minicard-informacion{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-style: solid;
+  border-color: var(--color-primario);
+  border-radius: 2rem;
+  background-color: red;
+}
+
+
 /* .minicard-informacion{
     justify-content: space-evenly;
     
