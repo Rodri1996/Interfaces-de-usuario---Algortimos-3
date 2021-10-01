@@ -5,11 +5,12 @@
     gap:1rem;
     font-size: 2rem;
     height:88px;
-    position: absolute;
+    position: relative;
     left:0;
     bottom:0;
     width:100%;
     background-color: var(--color-primario);
     color:var(--color-quinario); 
+    
 }
 
