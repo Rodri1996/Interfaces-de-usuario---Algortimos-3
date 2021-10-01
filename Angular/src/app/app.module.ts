@@ -17,7 +17,7 @@ import { ButtonComponent } from 'src/componentesCompartidos/button/button.compon
 import { FooterComponent } from '../componentesCompartidos/footer/footer.component'
 import { NavbarComponent } from 'src/componentesCompartidos/navbar/navbar.component'
 import { MenuDesplegableComponent } from 'src/componentesCompartidos/menuDesplegable/menuDesplegable.component'
-import { CardComponent } from 'src/componentesCompartidos/card/card.component'
+
 import { InputComponent } from 'src/componentesCompartidos/input/input.component'
 import { MisRutinasComponent } from 'src/componentesPadres/misRutinas/misRutinas.component'
 import { BusquedaRutinasComponent } from 'src/componentesPadres/busquedaRutinas/busquedaRutinas.component'
@@ -29,7 +29,6 @@ import { BusquedaRutinasComponent } from 'src/componentesPadres/busquedaRutinas/
     FooterComponent,
     NavbarComponent,
     MenuDesplegableComponent,
-    CardComponent,
     ButtonComponent,
     LoginComponent,
     UsuarioComponent,
