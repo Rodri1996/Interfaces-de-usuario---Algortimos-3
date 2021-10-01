@@ -1,6 +1,9 @@
 .footer{
     display:flex;
     justify-content: center;
+    align-items: center;
+    gap:1rem;
+    font-size: 2rem;
     height:88px;
     position: absolute;
     left:0;
@@ -10,22 +13,3 @@
 
 }
 
-
-/* .footer {
-    display: flex;
-    background-color: var(--color-primario);
-    width: 100%;
-    padding: 3rem 0;
-    height: 88px;
-    font-size: 2.5rem;
-    justify-content: center;
-    gap: 1rem;
-    color: var(--color-cuaternario);
-    position: absolute;
-    left: 0;
-    bottom: 0;
-}
-
-.fa-facebook-square{
-    color:var(--color-quinario)
-} */
