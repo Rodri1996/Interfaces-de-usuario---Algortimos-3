@@ -1,4 +1,4 @@
-
+/*
 .button-primario,
 .button-secundario,
 .button-login,
@@ -15,7 +15,6 @@
 }
 
 .button-secundario{
-    background-color: var(--color-quinario);
     color: var(--color-primario);
     border-style: solid;
     border-width: 0.2rem;    
@@ -53,3 +52,4 @@ button:active{
     background-color: #286C96;
 }
 
+*/
