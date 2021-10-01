@@ -10,7 +10,6 @@
     bottom:0;
     width:100%;
     background-color: var(--color-primario);
-    color:var(--color-quinario);
-    
+    color:var(--color-quinario); 
 }
 
