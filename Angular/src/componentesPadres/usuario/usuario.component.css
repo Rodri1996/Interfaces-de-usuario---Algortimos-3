@@ -1,16 +1,4 @@
 
-.contenedor{
-   /* margin-top: 124px; */
-    height: 100%;
-    border-color: grey;
-    border-style: solid;
-    background-color: var(--color-cuaternario);
-    min-width: 280px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
 
 .contenido-flex{
     display: flex;
@@ -43,6 +31,7 @@
 .box-container{
     min-width: calc( 769px/3 );
     flex-grow: 1;
+    height: 100%;
 }
 
 .box-container:nth-child(4){

@@ -1,0 +1,12 @@
+.contenedor{
+    /* margin-top: 124px; */
+     height: 100%;
+     border-color: grey;
+     border-style: solid;
+     background-color: var(--color-cuaternario);
+     min-width: 280px;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+ }
