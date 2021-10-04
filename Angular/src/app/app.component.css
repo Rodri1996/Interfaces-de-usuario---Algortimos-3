@@ -4,9 +4,10 @@
      border-color: grey;
      border-style: solid;
      background-color: var(--color-cuaternario);
+     max-width: 769px;
      min-width: 280px;
      display: flex;
      flex-direction: column;
-     justify-content: center;
+     /* justify-content: center; */
      align-items: center;
  }

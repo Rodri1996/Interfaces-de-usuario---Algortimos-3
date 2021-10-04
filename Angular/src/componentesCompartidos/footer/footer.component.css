@@ -5,6 +5,7 @@
     gap:1rem;
     font-size: 2rem;
     height:88px;
+    min-width: 280px;
     position: absolute;
     left:0;
     bottom:0;
