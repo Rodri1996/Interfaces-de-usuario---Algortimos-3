@@ -21,6 +21,7 @@ import { MenuDesplegableComponent } from 'src/componentesCompartidos/menuDespleg
 import { InputComponent } from 'src/componentesCompartidos/input/input.component'
 import { MisRutinasComponent } from 'src/componentesPadres/misRutinas/misRutinas.component'
 import { BusquedaRutinasComponent } from 'src/componentesPadres/busquedaRutinas/busquedaRutinas.component'
+import { CardComponent } from 'src/componentesCompartidos/card/card.component'
 
 
 @NgModule({
@@ -38,7 +39,8 @@ import { BusquedaRutinasComponent } from 'src/componentesPadres/busquedaRutinas/
     EjercicioComponent,
     MinicardComponent,
     MisRutinasComponent,
-    BusquedaRutinasComponent
+    BusquedaRutinasComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
