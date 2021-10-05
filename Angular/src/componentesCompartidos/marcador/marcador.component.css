@@ -1,4 +1,4 @@
-/* #Lunes:checked ~ label[for="Lunes"],
+#Lunes:checked ~ label[for="Lunes"],
 #Martes:checked ~ label[for="Martes"],
 #Miercoles:checked ~ label[for="Miercoles"],
 #Jueves:checked ~ label[for="Jueves"],
@@ -47,4 +47,4 @@
 .checkButton:hover{
   transform: scale(1.1);
   
-} */
+}

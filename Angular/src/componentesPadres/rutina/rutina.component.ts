@@ -9,12 +9,13 @@ import { Component } from '@angular/core'
 })
 export class RutinaComponent {
 
-  nombreRutina!:string 
-  creadorRutina!:string 
+  nombreRutina:string 
+  creadorRutina:string = "Por " 
   gruposMusculares!:GruposMusculares[]
 
-  constructor() { 
-    // console.log('Rutina Test')
+  constructor() {
+    this.nombreRutina = "Brazos"
+    this.creadorRutina += "Juan Perez" 
     this.gruposMusculares=[GruposMusculares.abdomen, 
                             GruposMusculares.pecho, 
                             GruposMusculares.gluteos, 
