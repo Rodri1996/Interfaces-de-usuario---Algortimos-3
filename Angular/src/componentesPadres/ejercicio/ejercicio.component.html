@@ -11,15 +11,16 @@
   </header>
   <app-card> 
   <div class="box-container">
-    <div>
+    <div class="box-container__actividad">
       <label class="palabra">Actividad</label>
       <app-input placeholder="Ingrese actividad"></app-input>
     </div>
-    <div>
+    <div class="box-container__frecuencia">
       <label class="palabra">Frecuencia cardíaca base</label>
       <app-input placeholder="Ingrese frecuencia cardíaca"></app-input>
     </div>
   </div>
+
   <div class="box-container">
     <div class="checkbox-container">
       <input class="check__input" checked type="checkbox" />
@@ -33,6 +34,11 @@
       <label class="palabra">Cantidad de series</label>
       <app-input placeholder="Ingrese series"></app-input>
     </div>
+  </div>
+
+  <div class="posicion-botones">
+    <app-button nombreBoton="Cancelar" estilo="button-secundario"></app-button>
+    <app-button nombreBoton="Guardar" estilo="button-primario"></app-button>
   </div>
 </app-card>
 </section>
