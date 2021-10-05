@@ -19,6 +19,7 @@
     width: 100%;
     height: fit-content;
     padding: 5px;
+    min-width:280px;
 }
 
 .header-informacion{
@@ -33,9 +34,12 @@
     min-width: calc( 769px/3 );
     flex-grow: 1;
     height: 500px;
+    display: flex;
+    max-width: 769px;
+
 }
 
-.box-container:nth-child(4){
+.box-container:nth-child(1){
     background-color: blue;
 }
 
@@ -45,5 +49,3 @@
 .box-container:nth-child(3){
     background-color: green;
 }
-
-

@@ -1,13 +1,10 @@
 .card{
-    /* margin-top: 124px; */
      border-color: grey;
      border-style: solid;
      background-color: var(--color-cuaternario);
      width: 100%;
      min-width: 280px;
+     flex-wrap: wrap;
      display: flex;
-     flex-direction: column;
-     /* justify-content: center; */
-     align-items: center;
      height: 100%;
  }
