@@ -31,7 +31,7 @@
 }
 
 .box-container{
-    min-width: calc( 769px/3 );
+    min-width: calc( 769px/2 );
     flex-grow: 1;
     height: 301px;
     display: flex;
