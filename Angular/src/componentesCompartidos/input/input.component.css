@@ -1,6 +1,4 @@
-/* El menuDesplegable y el input comun pueden ir juntos en un mismo componente? */
-/* El inputSeparador va en este input compartido o en los padres que lo usan? */
-/*
+
 .inputBase{
     width: 100%;
     height: 3em;
@@ -32,4 +30,4 @@
     border-color: var(--color-primario);
     border-radius: 1.3em;
 }
-*/
+ 
