@@ -3,10 +3,11 @@
      border-color: grey;
      border-style: solid;
      background-color: var(--color-cuaternario);
-     max-width: 769px;
+     width: 100%;
      min-width: 280px;
      display: flex;
      flex-direction: column;
      /* justify-content: center; */
      align-items: center;
+     height: 100%;
  }
