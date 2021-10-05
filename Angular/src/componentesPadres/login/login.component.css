@@ -2,3 +2,43 @@
     height: 6rem;
     width: 6rem;
 }
+
+.form_div{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2rem;
+    border-style: solid;
+    border-color: var(--color-primario);
+    padding:2rem;
+}
+
+.container{
+    display:flex;
+    
+}
+
+.titulo{
+    font-size: 3rem;
+    color: var(--color-primario)
+}
+
+.inicio{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom:2rem ;
+}
+
+.label{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.palabra{
+    font-size: 1.5rem;
+    margin-left: 7px;
+    margin-bottom: 5px;
+}
