@@ -7,4 +7,5 @@
      flex-wrap: wrap;
      display: flex;
      height: 100%;
+     max-width: 800px;
  }

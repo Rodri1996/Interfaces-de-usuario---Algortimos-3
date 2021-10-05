@@ -3,4 +3,6 @@
     min-height: 100%;
     padding-top: 124px;
     padding-bottom: 88px;
+    display:flex;
+    justify-content: center;
  }
