@@ -15,6 +15,7 @@
 }
 
 .button-secundario{
+    background-color:var(--color-quinario);
     color: var(--color-primario);
     border-style: solid;
     border-width: 0.2rem;    
