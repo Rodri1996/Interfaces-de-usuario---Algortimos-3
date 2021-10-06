@@ -4,6 +4,7 @@ import { RutinaService } from 'src/services/rutina/rutina.service'
 import { Ejercicio, EjercicioSimple } from 'src/domain/Ejercicios/ejercicio'
 import { EjercicioService } from 'src/services/ejercicio/ejercicio.service'
 import { Actividad } from 'src/domain/Actividad/actividad'
+import { Router } from '@angular/router'
 
 
 @Component({
@@ -16,11 +17,11 @@ export class RutinaComponent {
   nombreRutina:string 
   descripcionRutina!:string
   estrategiaDeEdicion!:string
-  creadorRutina:string = "Por " 
+  creadorRutina = "Por " 
   ejercicios!:Ejercicio[]
   gruposMusculares!:GruposMusculares[]
 
-  constructor(private rutinaService:RutinaService,private ejercicioService:EjercicioService) {
+  constructor(private rutinaService:RutinaService,private ejercicioService:EjercicioService,private router:Router) {
     // this.ejercicios = this.ejercicioService.traerEjercicios()
     this.nombreRutina = "Brazos"
     this.creadorRutina += "Juan Perez" 
@@ -36,6 +37,14 @@ export class RutinaComponent {
 
   agregarRutina(){
     const unaRutina = this.rutinaService.crearRutina(this.nombreRutina,this.descripcionRutina,this.estrategiaDeEdicion)
+  }
+
+  
+  redirigirGuardar(){
+    this.router.navigate(['/rutina'])
+  }
+  redirigirCancelar(){
+    this.router.navigate(['/rutina'])
   }
   
 }

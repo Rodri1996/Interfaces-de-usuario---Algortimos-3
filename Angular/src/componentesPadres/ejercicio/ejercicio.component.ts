@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { Actividad } from 'src/domain/Actividad/actividad';
-import { Ejercicio, EjercicioSimple } from 'src/domain/Ejercicios/ejercicio';
+import { Component, OnInit } from '@angular/core'
+import { Router } from '@angular/router'
 
 @Component({
   selector: 'app-ejercicio',
@@ -9,6 +8,13 @@ import { Ejercicio, EjercicioSimple } from 'src/domain/Ejercicios/ejercicio';
 })
 export class EjercicioComponent{
 
-  constructor() { }
+  constructor(private router:Router){}
+
+  redirigirGuardar(){
+    this.router.navigate(['/rutina'])
+  }
+  redirigirCancelar(){
+    this.router.navigate(['/rutina'])
+  }
 
 }

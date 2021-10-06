@@ -52,7 +52,6 @@
           <div class="button-mas-container">
             <button class="button-mas">+</button>
           </div>
-          <!-- <app-button nombreBoton="+" estilo="button-mas"></app-button> -->
         </div>
       </div>
       <p class="form-subtitulo">Grupos Musculares</p>
@@ -64,16 +63,8 @@
     </div>
 
     <div class="posicion-botones">
-      <!-- <app-button nombreBoton="Cancelar" estilo="button-secundario"></app-button>
-          <app-button nombreBoton="Guardar" estilo="button-primario"></app-button> -->
-      <button class="button-cancelar">
-        <a class="boton-sin-decoracion-cancelar">Cancelar</a>
-      </button>
-      <button class="button-guardar">
-        <a class="boton-sin-decoracion-guardar" (click)="agregarRutina()"
-          >Guardar</a
-        >
-      </button>
+      <button class="button-secundario" (click)="redirigirCancelar">Cancelar</button>
+      <button class="button-primario" (click)="redirigirGuardar">Guardar</button>
     </div>
   </app-card>
 </section>

@@ -12,7 +12,7 @@
   <div class="box-container">
     <div class="box-container__actividad">
       <label class="palabra">Actividad</label>
-      <app-menuDesplegable (emisorDeEventos)="getMessage($event)" [coleccionRecibida]="actividades"></app-menuDesplegable>
+      <!-- <app-menuDesplegable (emisorDeEventos)="getMessage($event)" [coleccionRecibida]="actividades"></app-menuDesplegable> -->
       <!-- <p>Actividad elegida {{actividadElegida}}</p> -->
     </div>
     <div class="box-container__frecuencia">
@@ -37,14 +37,8 @@
   </div>
 
   <div class="posicion-botones">
-    <!-- <app-button nombreBoton="Cancelar" estilo="button-secundario"></app-button>
-    <app-button nombreBoton="Guardar" estilo="button-primario"></app-button> -->
-    <button class="button-cancelar">
-      <a class="boton-sin-decoracion-cancelar">Cancelar</a>
-    </button>
-    <button class="button-guardar">
-        <a class="boton-sin-decoracion-guardar">Guardar</a>
-    </button>
+    <button class="button-secundario" (click)="redirigirGuardar()">Cancelar</button>
+    <button class="button-primario" (click)="redirigirCancelar()">Guardar</button>
   </div>
 </app-card>
 </section>
