@@ -1,4 +1,4 @@
 
 <select class="inputBase campo" name="estrategia-edicion">
-  <option>{{actividad}}</option>
+  <option *ngFor="let actividad of actividades">{{actividad.nombre}}</option>
 </select>

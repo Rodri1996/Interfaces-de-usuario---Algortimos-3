@@ -9,8 +9,14 @@ import { GruposMusculares } from 'src/domain/Grupos Musculares/gruposMusculares'
 })
 export class MenuDesplegableComponent {
 
-  @Input() actividad!:Actividad
+  actividades!:Actividad[]
 
-
+  constructor() {
+    this.actividades=[
+      (new Actividad(new Set(),"Abdominales")),
+      (new Actividad(new Set(),"Flexiones de brazos")),
+      (new Actividad(new Set(),"Correr"))
+    ]
+  }
 
 }
