@@ -13,7 +13,6 @@ import { RutinaComponent } from 'src/componentesPadres/rutina/rutina.component'
 import { LoginComponent } from 'src/componentesPadres/login/login.component'
 
 import { MarcadorComponent } from './../componentesCompartidos/marcador/marcador.component'
-import { ButtonComponent } from 'src/componentesCompartidos/button/button.component'
 import { FooterComponent } from '../componentesCompartidos/footer/footer.component'
 import { NavbarComponent } from 'src/componentesCompartidos/navbar/navbar.component'
 import { MenuDesplegableComponent } from 'src/componentesCompartidos/menuDesplegable/menuDesplegable.component'
@@ -30,7 +29,6 @@ import { CardComponent } from 'src/componentesCompartidos/card/card.component'
     FooterComponent,
     NavbarComponent,
     MenuDesplegableComponent,
-    ButtonComponent,
     LoginComponent,
     UsuarioComponent,
     MarcadorComponent,

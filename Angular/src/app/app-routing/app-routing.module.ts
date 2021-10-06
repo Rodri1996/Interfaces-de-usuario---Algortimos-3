@@ -13,10 +13,10 @@ export const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'busquedaRutinas', component: BusquedaRutinasComponent },
   { path: 'misRutinas', component: MisRutinasComponent },
-  { path: 'perfil', component: UsuarioComponent },
+  { path: 'usuario', component: UsuarioComponent },
   { path: 'rutina', component: RutinaComponent },
   { path: 'ejercicio', component: EjercicioComponent },
-  { path: '**', redirectTo: 'misRutinas' }
+  { path: '**', redirectTo: 'login' }
 ]
 
 @NgModule({
