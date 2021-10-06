@@ -1,81 +1,83 @@
 <section class="contenido-flex">
   <header class="ventana-title">
-      <div class="header-informacion">
-          <h2 class="nombre">{{nombreRutina}}</h2>
-      </div>
-      <div class="header-informacion">
-          <h3 class="nombre">{{creadorRutina}}</h3>
-      </div>
+    <div class="header-informacion">
+      <h2 class="nombre">{{ nombreRutina }}</h2>
+    </div>
+    <div class="header-informacion">
+      <h3 class="nombre">{{ creadorRutina }}</h3>
+    </div>
   </header>
-  <app-card> 
-  
-  <div class="box-container">
-    <div>
-      <label class="palabra">Nombre</label>
-      <app-input placeholder="Ingrese nombre"></app-input>
+  <app-card>
+    <div class="box-container">
+      <div>
+        <label class="palabra">Nombre</label>
+        <app-input placeholder="Ingrese nombre"></app-input>
+      </div>
+      <div>
+        <label class="palabra">Descripcion</label>
+        <app-input placeholder="Ingrese descripcion"></app-input>
+      </div>
+      <div>
+        <label class="palabra">Estrategia de edicion</label>
+        <app-menuDesplegable></app-menuDesplegable>
+      </div>
     </div>
-    <div>  
-      <label class="palabra">Descripcion</label>
-      <app-input placeholder="Ingrese descripcion"></app-input>
-    </div>
-    <div>
-      <label class="palabra">Estrategia de edicion</label>
-      <app-menuDesplegable></app-menuDesplegable> 
-    </div>
-  </div>
 
-  <div class="box-container">
-    <p class="form-subtitulo">Ejercicios</p>
-    <table class="table" border="1">
-      <thead>
+    <div class="box-container">
+      <p class="form-subtitulo">Ejercicios</p>
+      <table class="table" border="1">
+        <thead>
           <tr class="table__tr">
-              <td class="table-head__fila">Nombre</td>
-              <td class="table-head__fila">Minutos</td>
+            <td class="table-head__fila">Nombre</td>
+            <td class="table-head__fila">Minutos</td>
           </tr>
-      </thead>
-      <tbody>
-          <tr class="table__tr">
-              <td href="/runapp-grupo3/src/rutinas.html" class="table__td">Isquiotibiales</td>
-              <td class="table__td">
-                  <div class="contenedor-tiempo">
-                    <p id="minutos">24</p> 
-                  </div>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <div class="rutina-estadisticas">
-            <i class="fas fa-heartbeat"></i>
-            <p class="rutina-estadisticas__p">200 PPM</p>
-            <i class="fas fa-stopwatch"></i>
-            <p class="rutina-estadisticas__p">63'</p>
-            <div>
-              <div class="button-mas-container"><button class="button-mas">+</button></div>
-              <!-- <app-button nombreBoton="+" estilo="button-mas"></app-button> -->
-            </div>
+        </thead>
+        <tbody>
+          <tr *ngFor="let ejercicio of ejercicios" class="table__tr">
+            <td href="/runapp-grupo3/src/rutinas.html" class="table__td">{{ejercicio.nombre}}</td>
+            <td class="table__td">
+              <div class="contenedor-tiempo">
+                <p id="minutos">{{ejercicio.minutosDeDescanso}}</p>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="rutina-estadisticas">
+        <i class="fas fa-heartbeat"></i>
+        <p class="rutina-estadisticas__p">200 PPM</p>
+        <i class="fas fa-stopwatch"></i>
+        <p class="rutina-estadisticas__p">63'</p>
+        <div>
+          <div class="button-mas-container">
+            <button class="button-mas">+</button>
           </div>
-          <p class="form-subtitulo">Grupos Musculares</p>
-          <div class="grupos-flex">
-            <div class="form-section-grupoM">
-              <app-marcador></app-marcador>
-            </div>
-          </div>
+          <!-- <app-button nombreBoton="+" estilo="button-mas"></app-button> -->
         </div>
-        
-        <div class="posicion-botones">
-          <!-- <app-button nombreBoton="Cancelar" estilo="button-secundario"></app-button>
+      </div>
+      <p class="form-subtitulo">Grupos Musculares</p>
+      <div class="grupos-flex">
+        <div class="form-section-grupoM">
+          <app-marcador></app-marcador>
+        </div>
+      </div>
+    </div>
+
+    <div class="posicion-botones">
+      <!-- <app-button nombreBoton="Cancelar" estilo="button-secundario"></app-button>
           <app-button nombreBoton="Guardar" estilo="button-primario"></app-button> -->
-          <button class="button-cancelar">
-            <a class="boton-sin-decoracion-cancelar">Cancelar</a>
-          </button>
-          <button class="button-guardar">
-              <a class="boton-sin-decoracion-guardar" (click)="agregarRutina()">Guardar</a>
-          </button>
-        </div>
-      </app-card>
-    </section>
-    
-    
+      <button class="button-cancelar">
+        <a class="boton-sin-decoracion-cancelar">Cancelar</a>
+      </button>
+      <button class="button-guardar">
+        <a class="boton-sin-decoracion-guardar" (click)="agregarRutina()"
+          >Guardar</a
+        >
+      </button>
+    </div>
+  </app-card>
+</section>
+
 <!-- <body>
   <section class="card">
     <div class="card-title">

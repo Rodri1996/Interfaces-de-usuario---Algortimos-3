@@ -1,6 +1,7 @@
 import { GruposMusculares } from './../../../../Typescript/src/Grupos Musculares/gruposMusculares'
 import { Component } from '@angular/core'
 import { RutinaService } from 'src/services/rutina/rutina.service'
+import { Ejercicio } from 'src/domain/Ejercicios/ejercicio'
 
 
 @Component({
@@ -14,6 +15,7 @@ export class RutinaComponent {
   descripcionRutina!:string
   estrategiaDeEdicion!:string
   creadorRutina:string = "Por " 
+  ejercicios!:Ejercicio[]
   gruposMusculares!:GruposMusculares[]
 
   constructor(private rutinaService:RutinaService) {
