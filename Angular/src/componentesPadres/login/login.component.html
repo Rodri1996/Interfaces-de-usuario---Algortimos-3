@@ -1,25 +1,24 @@
 <form>
     <section class="container">
-        <div class="form_div">
+        
             <div class="inicio">
                 <img src="../../assets/images/Logo.svg" alt="logo" id="logo">
                 <h1 class="titulo">RunApp</h1>
             </div>
-            <div class="label">
-                <label class="palabra">Usuario</label>
+            <div class="form_div">
+                <label class="inputLabel">Usuario</label>
                 <div class="campo">
                     <i class="fas fa-user"></i>
                     <app-input placeholder="Usuario"></app-input>
                 </div>
-            </div>
-            <div class="label">
-                <label class="palabra">Contraseña</label>
+            
+                <label class="inputLabel">Contraseña</label>
                 <div class="campo">
                     <i class="fas fa-key"></i>
                     <app-input placeholder="Contraseña"></app-input>
                 </div>
-            </div>
-            <app-button nombreBoton="Ingresar" estilo="button-login" redirigir="home"></app-button>
+            
+            <app-button style="align-self:center" nombreBoton="Ingresar" estilo="button-login" redirigir="home"></app-button>
         </div>
     </section>
 </form>
