@@ -11,7 +11,9 @@ export class UsuarioComponent implements OnInit{
 
   usuario!:Usuario[]
 
-  constructor(public usuarioService:UsuarioService){}
+  //constructor(public usuarioService:UsuarioService){}
+
+
 
   @Input() amigos!:Usuario
   listaDeAmigos=new ListaAmigos()
