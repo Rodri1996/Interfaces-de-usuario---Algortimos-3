@@ -1,32 +1,21 @@
-// import { Injectable } from "@angular/core"
-// import { Usuario } from "src/domain/Usuario/usuario"
+import { Injectable } from "@angular/core"
+import { Usuario } from "src/domain/Usuario/usuario"
 
-// @Injectable({
-//     providedIn: 'root'
-// })
+ @Injectable({
+     providedIn: 'root'
+ })
  export class UsuarioService{
 
-//     private usuario:Usuario[]
-//     private usuarioLogin:Usuario
+    private usuarios:Usuario[] =[
+        new Usuario(1,'hola','damebola'),
+        new Usuario(2,'chau','nosvemos')
+    ]
 
-//     constructor(){
-//         this.usuario = [
-//             this.crearUsuario ('joaquin')
-//         ]
-//     }
-
-//     crearUsuario(nombre:string, apellido:string){
-//         const usuario = new Usuario(nombre , apellido)
-
-//     }
-
-
-//     getUsuario():Usuario[]{
-//         return this.usuario
-//     }
-
-//     usuarioLogueado(): Usuario {
-//         this.usuarioLogin = this.getUsuario(0)
-//         return this.usuarioLogin
-//       }
-}
+    loguearUsuario(username:string, password:string):Promise<Usuario>{
+        return new Promise((resolve) => {
+       const usuarioBuscado=this.usuarios.filter((usuario:Usuario) => username === usuario.username && password === usuario.password)[0]
+       if(!usuarioBuscado) throw Error("Usuario y/o contraseña es invalido") 
+       resolve(usuarioBuscado)
+       })
+    }
+ }

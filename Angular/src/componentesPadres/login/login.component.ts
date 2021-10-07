@@ -1,5 +1,6 @@
 import { Component } from '@angular/core'
 import { Router } from '@angular/router'
+import { UsuarioService } from 'src/service/usuario.service'
 import swal from 'sweetalert2'
 
 
@@ -13,15 +14,14 @@ export class LoginComponent {
   usuario=""
   password= ""
 
-  constructor(private router:Router){}
+  constructor(private router:Router, public usuarioService:UsuarioService){}
 
-  redirigir(){
+ async redirigir(){
     try{
       this.validarCampos()
+      const usuarioLogueado=await this.usuarioService.loguearUsuario(this.usuario,this.password)
       this.router.navigate(['/busquedaRutinas'])
-    }catch(error:any)
-    {
-      
+    }catch(error:any){
       swal.fire('Oops...',error.message,'error')
     } 
   }
@@ -32,5 +32,5 @@ export class LoginComponent {
     }else if (this.password === ""){
       throw Error("La contraseña es obligatoria")
     }
-  }
+  } 
 }

@@ -17,7 +17,6 @@ import { FooterComponent } from '../componentesCompartidos/footer/footer.compone
 import { NavbarComponent } from 'src/componentesCompartidos/navbar/navbar.component'
 import { MenuDesplegableComponent } from 'src/componentesCompartidos/menuDesplegable/menuDesplegable.component'
 
-import { InputComponent } from 'src/componentesCompartidos/input/input.component'
 import { MisRutinasComponent } from 'src/componentesPadres/misRutinas/misRutinas.component'
 import { BusquedaRutinasComponent } from 'src/componentesPadres/busquedaRutinas/busquedaRutinas.component'
 import { CardComponent } from 'src/componentesCompartidos/card/card.component'
@@ -35,7 +34,6 @@ import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2'
     UsuarioComponent,
     MarcadorComponent,
     RutinaComponent,
-    InputComponent,
     EjercicioComponent,
     MinicardComponent,
     MisRutinasComponent,
