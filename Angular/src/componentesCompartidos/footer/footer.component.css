@@ -4,7 +4,7 @@
     align-items: center;
     gap:1rem;
     font-size: 2rem;
-    height:88px;
+    height:var(--footer-height);
     min-width: 280px;
     position: absolute;
     left:0;

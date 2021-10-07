@@ -1,4 +1,4 @@
-<form>
+<form class="login-form">
     <section class="container">
         
             <div class="inicio">
@@ -9,13 +9,13 @@
                 <label class="inputLabel">Usuario</label>
                 <div class="campo">
                     <i class="fas fa-user"></i>
-                    <app-input placeholder="Usuario"></app-input>
+                    <input type="text" [(ngModel)]="usuario" name="usuario" class="inputBase" placeholder="Usuario" required="required" />
                 </div>
             
                 <label class="inputLabel">Contraseña</label>
                 <div class="campo">
                     <i class="fas fa-key"></i>
-                    <app-input placeholder="Contraseña"></app-input>
+                    <input type="password" [(ngModel)]="password" name="password" class="inputBase" placeholder="contraseña" required="required" />
                 </div>
             
             <button style="align-self:center" class="button-login" (click)="redirigir()">Ingresar</button>
