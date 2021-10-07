@@ -14,10 +14,19 @@ export class LoginComponent {
   constructor(private router:Router){}
 
   redirigir(){
-    this.router.navigate(['/busquedaRutinas'])
+    try{
+      this.validarCampos()
+      this.router.navigate(['/busquedaRutinas'])
+    }catch(error:any){
+      alert(error.message)
+    } 
   }
 
-
-
-
+  validarCampos():void{
+    if(this.usuario === "") {
+      throw Error("El usuario es obligatorio") 
+    }else if (this.password === ""){
+      throw Error("La contraseña es obligatoria")
+    }
+  }
 }
