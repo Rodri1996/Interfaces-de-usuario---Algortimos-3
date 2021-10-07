@@ -21,6 +21,8 @@ import { InputComponent } from 'src/componentesCompartidos/input/input.component
 import { MisRutinasComponent } from 'src/componentesPadres/misRutinas/misRutinas.component'
 import { BusquedaRutinasComponent } from 'src/componentesPadres/busquedaRutinas/busquedaRutinas.component'
 import { CardComponent } from 'src/componentesCompartidos/card/card.component'
+import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2'
+
 
 
 @NgModule({
@@ -44,6 +46,7 @@ import { CardComponent } from 'src/componentesCompartidos/card/card.component'
     BrowserModule,
     FormsModule,
     AppRoutingModule,
+    SweetAlert2Module
   ],
   providers: [],
   bootstrap: [AppComponent]

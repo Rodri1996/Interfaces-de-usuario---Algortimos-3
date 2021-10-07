@@ -1,5 +1,7 @@
 import { Component } from '@angular/core'
 import { Router } from '@angular/router'
+import swal from 'sweetalert2'
+
 
 @Component({
   selector: 'app-login',
@@ -17,8 +19,10 @@ export class LoginComponent {
     try{
       this.validarCampos()
       this.router.navigate(['/busquedaRutinas'])
-    }catch(error:any){
-      alert(error.message)
+    }catch(error:any)
+    {
+      
+      swal.fire('Oops...',error.message,'error')
     } 
   }
 
