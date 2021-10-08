@@ -7,7 +7,7 @@ export class Rutina{
 
     ejercicios!:Ejercicio[]
 
-    constructor(public creador:Usuario, nombreRutina:string) {};
+    constructor(public creador:Usuario, public nombreRutina:string) {};
 
     duracion():number{
         return this.ejercicios.reduce((acum,ejercicio) => acum + ejercicio.duracion(),0);
@@ -22,18 +22,20 @@ export class Rutina{
         return this.ejercicios.length > 0;
     }
 
-    gruposMuscularesQueEntrena():Set<GruposMusculares>{
-        return new Set(this.ejercicios.flatMap(unEjercicio => Array.from(unEjercicio.gruposMuscularesQueEntrena())));
-    }    
+    // gruposMuscularesQueEntrena():Set<GruposMusculares>{
+    //     return new Set(this.ejercicios.flatMap(unEjercicio => Array.from(unEjercicio.gruposMuscularesQueEntrena())));
+    // }    
     
     agregarEjercicio(unEjercicio:Ejercicio):void{
         this.ejercicios.push(unEjercicio);
     }
 
-    esEditable(unUsuario:Usuario){
-        return this.creador == unUsuario || this.unCriterioDeEdicion.rutinaPuedeSerEditadaPor(unUsuario, this);
-    }
+    // esEditable(unUsuario:Usuario){
+    //     return this.creador == unUsuario || this.unCriterioDeEdicion.rutinaPuedeSerEditadaPor(unUsuario, this);
+    // }
 
 }
 
-const RUTINA = new Rutina(USUARIO_CREADOR,"Isquitibiales")
+const unNombre = "Isquitibiales"
+
+export const RUTINA = new Rutina(USUARIO_CREADOR,unNombre)

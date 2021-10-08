@@ -1,21 +1,21 @@
 <section class="contenido-flex">
   <header class="ventana-title">
     <div class="header-informacion">
-      <h2 class="nombre"></h2>
+      <h2 class="nombre">{{rutina.nombreRutina}}</h2>
     </div>
     <div class="header-informacion">
-      <h3 class="nombre"></h3>
+      <h3 class="nombre">Por {{rutina.creador.nombre}} {{rutina.creador.apellido}}</h3>
     </div>
   </header>
   <app-card>
     <div class="box-container">
       <div>
         <label class="palabra">Nombre</label>
-        <input type="text" name="nombre" class="inputBase" placeholder="Ingrese nombre" required="required" />
+        <input type="text" name="nombre" class="inputBase" placeholder="Ingrese nombre" required="required" [(ngModel)]="nombreRutina" />
       </div>
       <div>
         <label class="palabra">Descripcion</label>
-        <input type="text" name="descripcion" class="inputBase" placeholder="Ingrese descripcion" required="required" />
+        <input type="text" name="descripcion" class="inputBase" placeholder="Ingrese descripcion" required="required" [(ngModel)]="descripcionRutina"/>
       </div>
       <div>
         <label class="palabra">Estrategia de edicion</label>

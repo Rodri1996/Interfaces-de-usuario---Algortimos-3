@@ -5,6 +5,7 @@ import { Ejercicio, EjercicioSimple } from 'src/domain/Ejercicios/ejercicio'
 import { EjercicioService } from 'src/services/ejercicio/ejercicio.service'
 import { Actividad } from 'src/domain/Actividad/actividad'
 import { Router } from '@angular/router'
+import { RUTINA, Rutina } from 'src/domain/Rutina/rutina'
 
 
 @Component({
@@ -17,8 +18,10 @@ export class RutinaComponent {
   descripcionRutina!:string
   estrategiaDeEdicion!:string
 
-  constructor(private rutinaService:RutinaService,private ejercicioService:EjercicioService,private router:Router) {
-    
+  rutina!:Rutina 
+
+  constructor(private rutinaService:RutinaService,private router:Router) {
+    this.rutina = RUTINA
   }
   
   redirigirGuardar(){

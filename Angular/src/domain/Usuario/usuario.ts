@@ -12,4 +12,7 @@ export class Usuario{
     }
 }
 
+
 export const USUARIO_CREADOR = new Usuario()
+USUARIO_CREADOR.nombre = 'Evaristo'
+USUARIO_CREADOR.apellido = 'Hurtado'
