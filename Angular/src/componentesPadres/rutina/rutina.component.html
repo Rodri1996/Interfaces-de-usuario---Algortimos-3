@@ -56,8 +56,8 @@
       </div>
       <p class="form-subtitulo">Grupos Musculares</p>
       <div class="grupos-flex">
-        <div class="form-section-grupoM">
-          <app-marcador></app-marcador>
+        <div class="form-section-grupoM" *ngFor="let grupoMuscular of gruposMusculares">
+          <app-marcador nombreMarcador="{{grupoMuscular}}"></app-marcador>
         </div>
       </div>
     </div>
