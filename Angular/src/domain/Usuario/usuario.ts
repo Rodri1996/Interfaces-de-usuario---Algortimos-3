@@ -1,5 +1,8 @@
 export class Usuario{
 
+    nombre!:string
+    apellido!:string
+
     constructor(public id?:number,public username?:string, public password?:string, public amigos:Usuario[]=[]){
         
     }
@@ -8,3 +11,5 @@ export class Usuario{
         this.amigos.push(seguidor1)
     }
 }
+
+export const USUARIO_CREADOR = new Usuario()

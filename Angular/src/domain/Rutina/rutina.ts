@@ -1,10 +1,13 @@
 import { CriterioDeEdicion } from "../CriterioDeEdicion/criterioDeEdicion";
 import { Ejercicio } from "../Ejercicios/ejercicio";
 import { GruposMusculares } from "../Grupos Musculares/gruposMusculares";
-import { Usuario } from "../Usuario/usuario";
+import { Usuario, USUARIO_CREADOR } from "../Usuario/usuario";
 
 export class Rutina{
-    constructor(public ejercicios:Ejercicio[]=[], public creador:Usuario, public unCriterioDeEdicion:CriterioDeEdicion, public seguidores:Usuario[]=[]) {};
+
+    ejercicios!:Ejercicio[]
+
+    constructor(public creador:Usuario, nombreRutina:string) {};
 
     duracion():number{
         return this.ejercicios.reduce((acum,ejercicio) => acum + ejercicio.duracion(),0);
@@ -32,3 +35,5 @@ export class Rutina{
     }
 
 }
+
+const RUTINA = new Rutina(USUARIO_CREADOR,"Isquitibiales")

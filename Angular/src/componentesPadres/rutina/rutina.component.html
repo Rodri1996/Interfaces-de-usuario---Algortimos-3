@@ -1,10 +1,10 @@
 <section class="contenido-flex">
   <header class="ventana-title">
     <div class="header-informacion">
-      <h2 class="nombre">{{ nombreRutina }}</h2>
+      <h2 class="nombre"></h2>
     </div>
     <div class="header-informacion">
-      <h3 class="nombre">{{ creadorRutina }}</h3>
+      <h3 class="nombre"></h3>
     </div>
   </header>
   <app-card>
@@ -33,11 +33,11 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let ejercicio of ejercicios" class="table__tr">
-            <td href="/runapp-grupo3/src/rutinas.html" class="table__td">{{ejercicio.nombre}}</td>
+          <tr class="table__tr">
+            <td href="/runapp-grupo3/src/rutinas.html" class="table__td"></td>
             <td class="table__td">
               <div class="contenedor-tiempo">
-                <p id="minutos">{{ejercicio.minutosDeDescanso}}</p>
+                <p id="minutos"></p>
               </div>
             </td>
           </tr>
@@ -56,8 +56,8 @@
       </div>
       <p class="form-subtitulo">Grupos Musculares</p>
       <div class="grupos-flex">
-        <div class="form-section-grupoM" *ngFor="let grupoMuscular of gruposMusculares">
-          <app-marcador nombreMarcador="{{grupoMuscular}}"></app-marcador>
+        <div class="form-section-grupoM">
+          <app-marcador></app-marcador>
         </div>
       </div>
     </div>
@@ -69,48 +69,3 @@
   </app-card>
 </section>
 
-<!-- <body>
-  <section class="card">
-    <div class="card-title">
-      <p class="p-default">{{nombreRutina}}</p>
-      <div>
-        <i class="fas fa-stopwatch"></i>
-        <p class="subtitulo__p">{{creadorRutina}}</p>
-      </div>
-    </div>
-    <div class="box-container">
-      <label class="inputLabel">Nombre</label>
-      <app-input placeholder="Ingrese nombre"></app-input>
-      <label class="inputLabel">Descripcion</label>
-      <app-input placeholder="Ingrese descripcion"></app-input>
-      <label class="inputLabel">Estrategias de edicion</label>
-      <app-input placeholder="Ingrese estrategia de edicion"></app-input>
-    </div>
-    <div class="box-container">
-        
-          <p class="form-subtitulo">Ejercicios</p>
-          <table border="1">
-            <thead>
-                <tr>
-                    <td class="table-head__fila">Nombre</td>
-                    <td class="table-head__fila">Minutos</td>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td href="/runapp-grupo3/src/rutinas.html" class="table-body__fila">Isquiotibiales</td>
-                    <td class="table__fila--flex">
-                        <div class="contenedor-tiempo">
-                            <p id="minutos">24</p> 
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-      
-
-
-
-    </div>
-  </section>
-</body> -->
