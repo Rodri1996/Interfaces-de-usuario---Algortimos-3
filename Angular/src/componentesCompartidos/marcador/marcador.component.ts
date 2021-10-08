@@ -9,10 +9,4 @@ export class MarcadorComponent {
 
   @Input() nombreMarcador!:string
 
-
-  // constructor() { }
-
-  // ngOnInit() {
-  // }
-
 }
