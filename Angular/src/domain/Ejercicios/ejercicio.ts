@@ -1,9 +1,7 @@
-import { Actividad } from "../Actividad/actividad";
+import { ABDOMINALES, Actividad, GLUTEOS, PIERNAS } from "../Actividad/actividad";
 import { GruposMusculares } from "../Grupos Musculares/gruposMusculares";
 
 export abstract class Ejercicio{
-
-    nombre!:string
 
     constructor(public frecuenciaCardiacaBase:number,public minutosDeDescanso:number,public unaActividad:Actividad){}
 
@@ -12,6 +10,10 @@ export abstract class Ejercicio{
     
     gruposMuscularesQueEntrena():Set<GruposMusculares>{
         return this.unaActividad.gruposMuscularesQueEntrena
+    }
+
+    nombre():string{
+        return this.unaActividad.nombre
     }
 }
 
@@ -38,3 +40,7 @@ export class EjercicioCompuesto extends Ejercicio{
     }
 
 }
+
+export const EJERCICIO_1 = new EjercicioSimple(10,63,5,ABDOMINALES)
+export const EJERCICIO_2 = new EjercicioSimple(30,100,10,PIERNAS)
+export const EJERCICIO_3 = new EjercicioSimple(40,80,8,GLUTEOS)

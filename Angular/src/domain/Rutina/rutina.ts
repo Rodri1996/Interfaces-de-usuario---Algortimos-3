@@ -1,5 +1,6 @@
+import { GLUTEOS } from "../Actividad/actividad";
 import { CriterioDeEdicion, FREE,  } from "../CriterioDeEdicion/criterioDeEdicion";
-import { Ejercicio } from "../Ejercicios/ejercicio";
+import { Ejercicio, EJERCICIO_1, EJERCICIO_2, EJERCICIO_3 } from "../Ejercicios/ejercicio";
 import { GruposMusculares } from "../Grupos Musculares/gruposMusculares";
 import { Usuario, USUARIO_CREADOR } from "../Usuario/usuario";
 
@@ -40,3 +41,7 @@ export class Rutina{
 const unNombre = "Isquitibiales"
 
 export const RUTINA = new Rutina(USUARIO_CREADOR,unNombre)
+RUTINA.ejercicios = [EJERCICIO_1,EJERCICIO_2,EJERCICIO_3]
+// RUTINA.agregarEjercicio(EJERCICIO_1)
+// RUTINA.agregarEjercicio(EJERCICIO_2)
+// RUTINA.agregarEjercicio(EJERCICIO_3)
