@@ -36,3 +36,14 @@ export class Free {
         return true
     }
 }
+
+export const AMISTOSO = new Amistoso
+export const FREE = new Free
+
+export const CRITERIOS_EDICION:string[]=[
+    "Free",
+    "Social",
+    "Amistoso",
+    "Responsable",
+    "Fortuito"
+]

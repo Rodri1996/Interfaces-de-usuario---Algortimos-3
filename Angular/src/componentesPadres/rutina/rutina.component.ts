@@ -6,6 +6,7 @@ import { EjercicioService } from 'src/services/ejercicio/ejercicio.service'
 import { Actividad } from 'src/domain/Actividad/actividad'
 import { Router } from '@angular/router'
 import { RUTINA, Rutina } from 'src/domain/Rutina/rutina'
+import {CRITERIOS_EDICION} from 'src/domain/CriterioDeEdicion/criterioDeEdicion'
 
 
 @Component({
@@ -17,7 +18,8 @@ export class RutinaComponent {
   nombreRutina!:string
   descripcionRutina!:string
   estrategiaDeEdicion!:string
-
+ 
+  criteriosDeEdicion = CRITERIOS_EDICION
   rutina!:Rutina 
 
   constructor(private rutinaService:RutinaService,private router:Router) {

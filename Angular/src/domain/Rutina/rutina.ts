@@ -1,4 +1,4 @@
-import { CriterioDeEdicion } from "../CriterioDeEdicion/criterioDeEdicion";
+import { CriterioDeEdicion, FREE,  } from "../CriterioDeEdicion/criterioDeEdicion";
 import { Ejercicio } from "../Ejercicios/ejercicio";
 import { GruposMusculares } from "../Grupos Musculares/gruposMusculares";
 import { Usuario, USUARIO_CREADOR } from "../Usuario/usuario";
@@ -6,6 +6,7 @@ import { Usuario, USUARIO_CREADOR } from "../Usuario/usuario";
 export class Rutina{
 
     ejercicios!:Ejercicio[]
+    criterioDeEdicion:CriterioDeEdicion = FREE
 
     constructor(public creador:Usuario, public nombreRutina:string) {};
 

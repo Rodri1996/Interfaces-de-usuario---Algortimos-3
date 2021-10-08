@@ -18,8 +18,10 @@
         <input type="text" name="descripcion" class="inputBase" placeholder="Ingrese descripcion" required="required" [(ngModel)]="descripcionRutina"/>
       </div>
       <div>
-        <label class="palabra">Estrategia de edicion</label>
-        <app-menuDesplegable></app-menuDesplegable>
+        <label class="palabra">Estrategia de edicion</label>        
+        <select class="inputBase campo" name="estrategia-edicion" [(ngModel)]="estrategiaDeEdicion">
+          <option *ngFor="let criterio of criteriosDeEdicion" [ngValue]="criterio">{{criterio}}</option>
+        </select>
       </div>
     </div>
 
