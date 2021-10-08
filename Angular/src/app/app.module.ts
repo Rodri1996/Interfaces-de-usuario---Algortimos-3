@@ -15,7 +15,7 @@ import { LoginComponent } from 'src/componentesPadres/login/login.component'
 import { MarcadorComponent } from './../componentesCompartidos/marcador/marcador.component'
 import { FooterComponent } from '../componentesCompartidos/footer/footer.component'
 import { NavbarComponent } from 'src/componentesCompartidos/navbar/navbar.component'
-import { MenuDesplegableComponent } from 'src/componentesCompartidos/menuDesplegable/menuDesplegable.component'
+
 
 import { MisRutinasComponent } from 'src/componentesPadres/misRutinas/misRutinas.component'
 import { BusquedaRutinasComponent } from 'src/componentesPadres/busquedaRutinas/busquedaRutinas.component'
@@ -29,7 +29,6 @@ import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2'
     AppComponent,
     FooterComponent,
     NavbarComponent,
-    MenuDesplegableComponent,
     LoginComponent,
     UsuarioComponent,
     MarcadorComponent,
