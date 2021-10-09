@@ -9,7 +9,5 @@ export class EjercicioService {
 
 constructor() { }
 
-  traerEjercicios(){
-    return new EjercicioSimple(1,1,1,new Actividad(new Set(),"unaActividad"))
-  }
+  
 }

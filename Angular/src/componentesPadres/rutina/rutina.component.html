@@ -59,7 +59,10 @@
       <p class="form-subtitulo">Grupos Musculares</p>
       <div class="grupos-flex">
         <div class="form-section-grupoM">
-          <app-marcador></app-marcador>
+          <div>
+            <input class="button__input" type="checkbox" id="marcador">
+            <label *ngFor="let grupo of rutina.gruposMuscularesQueEntrena()" class="checkButton" for="marcador">{{grupo}}</label>
+          </div>
         </div>
       </div>
     </div>
