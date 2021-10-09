@@ -32,6 +32,9 @@ export class RutinaComponent {
   redirigirCancelar(){
     this.router.navigate(['/rutina'])
   }
-  
+
+  sumarEjercicio(){
+    this.router.navigate(['/ejercicio'])
+  }
 }
 
