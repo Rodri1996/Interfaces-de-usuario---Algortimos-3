@@ -21,6 +21,7 @@ export class RutinaComponent {
  
   criteriosDeEdicion = CRITERIOS_EDICION
   rutina!:Rutina 
+  rutinasConocidas!:Rutina[]
 
   constructor(private rutinaService:RutinaService,private router:Router) {
     this.rutina = RUTINA
@@ -34,7 +35,11 @@ export class RutinaComponent {
   }
 
   sumarEjercicio(){
-    this.router.navigate(['/ejercicio'])
+    
+  }
+
+  editarEjercicio(){
+    this.router.navigate(['/ejercicio',this.rutina.id])
   }
 }
 

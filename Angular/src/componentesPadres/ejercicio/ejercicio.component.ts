@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core'
-import { Router } from '@angular/router'
+import { ActivatedRoute, Router } from '@angular/router'
 import { Actividad, ACTIVIDADES } from 'src/domain/Actividad/actividad'
+import { Rutina } from 'src/domain/Rutina/rutina'
 import { ActividadesService } from 'src/service/actividades.service'
+import { RutinaService } from 'src/services/rutina/rutina.service'
 
 @Component({
   selector: 'app-ejercicio',
@@ -16,7 +18,12 @@ export class EjercicioComponent implements OnInit{
   frecuenciaCardBase!:number
   cantidadDeSeries!:number
 
-  constructor(private router:Router,private actividadesService:ActividadesService){
+  rutina!:Rutina
+
+  constructor(private rutinaService:RutinaService,private router:Router,private actividadesService:ActividadesService,private route:ActivatedRoute){
+    this.route.params.subscribe(params=>{
+      this.rutina = this.rutinaService.trearRutina(params['id'])
+    })
   }
 
   ngOnInit():void{

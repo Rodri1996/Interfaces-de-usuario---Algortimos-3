@@ -1,13 +1,18 @@
-import { Injectable } from '@angular/core';
+import { Injectable, OnInit } from '@angular/core';
+import { RUTINA, Rutina } from 'src/domain/Rutina/rutina';
 
 @Injectable({
   providedIn: 'root'
 })
-export class RutinaService {
+export class RutinaService{
   
-  constructor() { }
-  
-  crearRutina(nombreRutina: string, descripcionRutina: string, estrategiaDeEdicion: string) {
-    
+  rutinas:Rutina[] 
+
+  trearRutina(unId:number):Rutina{
+    return this.rutinas[0]
+  }
+
+  constructor(){
+    this.rutinas = [RUTINA]
   }
 }

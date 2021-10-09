@@ -8,6 +8,7 @@ export class Rutina{
 
     ejercicios!:Ejercicio[]
     criterioDeEdicion:CriterioDeEdicion = FREE
+    id:number = 0
 
     constructor(public creador:Usuario, public nombreRutina:string) {};
 
