@@ -25,8 +25,12 @@ export class Rutina{
     }
 
     // gruposMuscularesQueEntrena():Set<GruposMusculares>{
-    //     return new Set(this.ejercicios.flatMap(unEjercicio => Array.from(unEjercicio.gruposMuscularesQueEntrena())));
+    //     return new Set(this.ejercicios.map(unEjercicio => unEjercicio.gruposMuscularesQueEntrena()));
     // }    
+
+    gruposMuscularesQueEntrena():string[]{
+        return ['Piernas','Brazos','Hombros']
+    }
     
     agregarEjercicio(unEjercicio:Ejercicio):void{
         this.ejercicios.push(unEjercicio);
