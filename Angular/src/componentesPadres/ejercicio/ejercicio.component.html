@@ -12,13 +12,13 @@
   <div class="box-container">
     <div class="box-container__actividad">
       <label class="palabra">Actividad</label>
-      <input type="text" name="actividad" class="inputBase" placeholder="Ingrese actividad" required="required" />
-      <!-- <app-menuDesplegable (emisorDeEventos)="getMessage($event)" [coleccionRecibida]="actividades"></app-menuDesplegable> -->
-      <!-- <p>Actividad elegida {{actividadElegida}}</p> -->
+      <select class="inputBase campo" name="actividad" [(ngModel)]="actividadElegida">
+        <option *ngFor="let actividad of actividadesConocidas" [ngValue]="actividad">{{actividad.nombre}}</option>
+      </select>
     </div>
     <div class="box-container__frecuencia">
       <label class="palabra">Frecuencia cardíaca base</label>
-      <input type="text" name="frecuencia" class="inputBase" placeholder="Ingrese frecuencia cardiaca" required="required" />
+      <input [(ngModel)]="frecuenciaCardBase" type="text" name="frecuencia" class="inputBase" placeholder="Ingrese frecuencia cardiaca" required="required" />
     </div>
   </div>
 
@@ -29,11 +29,11 @@
     </div>
     <div>
       <label class="palabra">Minutos de descanso</label>
-      <input type="text" name="minutos" class="inputBase" placeholder="Ingrese minutos" required="required" />
+      <input [(ngModel)]="minutosDeDescanso" type="text" name="minutos" class="inputBase" placeholder="Ingrese minutos" required="required" />
     </div>
     <div>
       <label class="palabra">Cantidad de series</label>
-      <input type="text" name="series" class="inputBase" placeholder="Ingrese series" required="required" />
+      <input [(ngModel)]="cantidadDeSeries" type="text" name="series" class="inputBase" placeholder="Ingrese series" required="required" />
     </div>
   </div>
 

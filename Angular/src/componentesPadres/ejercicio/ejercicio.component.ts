@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core'
 import { Router } from '@angular/router'
+import { Actividad, ACTIVIDADES } from 'src/domain/Actividad/actividad'
 
 @Component({
   selector: 'app-ejercicio',
@@ -8,7 +9,15 @@ import { Router } from '@angular/router'
 })
 export class EjercicioComponent{
 
-  constructor(private router:Router){}
+  actividadesConocidas!:Actividad[]
+  actividadElegida!:Actividad
+  minutosDeDescanso!:number
+  frecuenciaCardBase!:number
+  cantidadDeSeries!:number
+
+  constructor(private router:Router){
+    this.actividadesConocidas = ACTIVIDADES
+  }
 
   redirigirGuardar(){
     this.router.navigate(['/rutina'])
