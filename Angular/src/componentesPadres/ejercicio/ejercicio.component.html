@@ -1,11 +1,11 @@
 <section class="contenido-flex">
   <header class="ventana-title">
     <div class="header-informacion">
-          <h2 class="nombre">{{ejercicio.nombre}}</h2>
+          <h2 class="nombre"></h2>
       </div>
       <div class="header-informacion">
           <i class="fas fa-stopwatch header-tiempo"></i>
-          <h3 class="header-tiempo">{{ejercicio.duracion()}}</h3>
+          <h3 class="header-tiempo"></h3>
       </div>
   </header>
   <app-card> 
@@ -38,8 +38,8 @@
   </div>
 
   <div class="posicion-botones">
-    <button class="button-secundario" (click)="redirigirGuardar()">Cancelar</button>
-    <button class="button-primario" (click)="redirigirCancelar()">Guardar</button>
+    <button class="button-secundario" (click)="redirigirCancelar()">Cancelar</button>
+    <button class="button-primario" (click)="guardarEjercicio()">Guardar</button>
   </div>
 </app-card>
 </section>

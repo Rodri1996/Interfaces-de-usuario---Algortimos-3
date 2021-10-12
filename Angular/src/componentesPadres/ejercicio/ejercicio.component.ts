@@ -4,6 +4,7 @@ import { Actividad, ACTIVIDADES } from 'src/domain/Actividad/actividad'
 import { Ejercicio } from 'src/domain/Ejercicios/ejercicio'
 import { Rutina } from 'src/domain/Rutina/rutina'
 import { ActividadesService } from 'src/service/actividades.service'
+import { EjercicioService } from 'src/services/ejercicio/ejercicio.service'
 import { RutinaService } from 'src/services/rutina/rutina.service'
 
 @Component({
@@ -22,7 +23,7 @@ export class EjercicioComponent implements OnInit{
 
   rutina!:Rutina
 
-  constructor(private rutinaService:RutinaService,private router:Router,private actividadesService:ActividadesService,private rutaRecibida:ActivatedRoute){
+  constructor(private rutinaService:RutinaService,private router:Router,private actividadesService:ActividadesService,private rutaRecibida:ActivatedRoute,private ejercicioService:EjercicioService){
     this.rutaRecibida.params.subscribe(params=>{
       this.rutina = this.rutinaService.trearRutina(params['id']) as Rutina
     })
@@ -32,8 +33,17 @@ export class EjercicioComponent implements OnInit{
     this.actividadesConocidas = this.actividadesService.actividades
   }
 
-  redirigirGuardar(){
-    this.router.navigate(['/rutina'])
+  guardarEjercicio(){
+    const ejercicioSimple = this.ejercicioService.crearEjercicio(this.actividadElegida,this.minutosDeDescanso,this.frecuenciaCardBase,this.cantidadDeSeries)
+    this.ejercicioService.agregarEjercicio(ejercicioSimple)
+    // this.inicializarCampos()
+    this.router.navigate(['/rutina/:'+ this.rutina.id])
+  }
+
+  inicializarCampos() {
+    this.minutosDeDescanso = 0
+    this.frecuenciaCardBase = 0
+    this.cantidadDeSeries = 0
   }
   redirigirCancelar(){
     this.router.navigate(['/rutina'])

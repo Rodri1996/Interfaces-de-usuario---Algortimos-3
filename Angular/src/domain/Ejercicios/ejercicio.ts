@@ -3,6 +3,8 @@ import { GruposMusculares } from "../Grupos Musculares/gruposMusculares";
 
 export abstract class Ejercicio{
 
+    id!:number
+
     constructor(public frecuenciaCardiacaBase:number,public minutosDeDescanso:number,public unaActividad:Actividad){}
 
     abstract duracion():number;

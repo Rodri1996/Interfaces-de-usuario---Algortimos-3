@@ -6,8 +6,23 @@ import { Ejercicio, EjercicioSimple } from 'src/domain/Ejercicios/ejercicio';
   providedIn: 'root'
 })
 export class EjercicioService {
-
-constructor() { }
-
   
+  unId:number = 0
+  ejercicios:Ejercicio[]=[]
+  
+  constructor() { }
+  
+  crearEjercicio(actividadElegida: Actividad, minutosDeDescanso: number, frecuenciaCardBase: number, cantidadDeSeries: number) {
+    const ejercicioSimple = new EjercicioSimple(10,frecuenciaCardBase,minutosDeDescanso,actividadElegida)
+    this.asignarIdentificador(ejercicioSimple)
+    return ejercicioSimple
+  }
+  
+  asignarIdentificador(ejercicio:EjercicioSimple){
+    ejercicio.id = this.unId
+  }
+
+  agregarEjercicio(ejercicio: EjercicioSimple) {
+    this.ejercicios.push(ejercicio)
+  }
 }
