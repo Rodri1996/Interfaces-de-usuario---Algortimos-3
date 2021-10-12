@@ -1,12 +1,16 @@
-
-
+.main{
+    /* padding-top: 124px; */
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
 .contenido-flex{
     display: flex;
+    /* padding-top: 80px; */
     width: 100%;
     flex-wrap: wrap;
     justify-content: center;
     align-self: center;
-    height: 100%;
     max-width: 800px;
 }
 
