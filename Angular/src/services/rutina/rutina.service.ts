@@ -11,7 +11,7 @@ export class RutinaService{
 
   trearRutina(unId:number){
     return this.rutinas.find((rutina)=>{
-      return rutina.id === unId
+      return rutina.id === 0
     })
   }
 

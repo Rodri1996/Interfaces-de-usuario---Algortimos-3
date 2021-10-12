@@ -38,10 +38,6 @@ export class RutinaComponent {
   }
 
   sumarEjercicio(){
-    
-  }
-
-  editarEjercicio(){
     this.router.navigate(['/ejercicio',this.rutina.id])
   }
 }

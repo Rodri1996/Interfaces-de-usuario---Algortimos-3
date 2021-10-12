@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core'
 import { ActivatedRoute, Router } from '@angular/router'
 import { Actividad, ACTIVIDADES } from 'src/domain/Actividad/actividad'
+import { Ejercicio } from 'src/domain/Ejercicios/ejercicio'
 import { Rutina } from 'src/domain/Rutina/rutina'
 import { ActividadesService } from 'src/service/actividades.service'
 import { RutinaService } from 'src/services/rutina/rutina.service'
@@ -17,11 +18,12 @@ export class EjercicioComponent implements OnInit{
   minutosDeDescanso!:number
   frecuenciaCardBase!:number
   cantidadDeSeries!:number
+  ejercicio!:Ejercicio
 
   rutina!:Rutina
 
-  constructor(private rutinaService:RutinaService,private router:Router,private actividadesService:ActividadesService,private route:ActivatedRoute){
-    this.route.params.subscribe(params=>{
+  constructor(private rutinaService:RutinaService,private router:Router,private actividadesService:ActividadesService,private rutaRecibida:ActivatedRoute){
+    this.rutaRecibida.params.subscribe(params=>{
       this.rutina = this.rutinaService.trearRutina(params['id']) as Rutina
     })
   }
