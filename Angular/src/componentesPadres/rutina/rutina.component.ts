@@ -33,9 +33,11 @@ export class RutinaComponent {
   
   editarRutina(){
       this.validarRutina()
-      // this.rutina.nombreRutina = this.nombreRutina
-      // this.rutina.descripcion = this.descripcionRutina 
-      // this.rutina.criterioDeEdicion = this.estrategiaDeEdicion 
+      if(this.mensajesErroneos.length <= 0){
+        this.rutina.nombreRutina = this.nombreRutina
+        this.rutina.descripcion = this.descripcionRutina 
+        this.rutina.criterioDeEdicion = this.estrategiaDeEdicion 
+      }
   }
 
   validarRutina(){
@@ -45,6 +47,9 @@ export class RutinaComponent {
     }
     if(!this.descripcionRutina){
       this.añadirError('campoDescripcion','Debe ingresar una descripcion')
+    }
+    if(!this.estrategiaDeEdicion){
+      this.añadirError('campoCriterioEdicion','Debe ingresar una descripcion')
     }
   }
 

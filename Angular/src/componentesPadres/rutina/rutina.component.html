@@ -28,6 +28,9 @@
         <select class="inputBase campo" name="estrategia-edicion" [(ngModel)]="estrategiaDeEdicion">
           <option *ngFor="let criterio of criteriosDeEdicion" [ngValue]="criterio">{{criterio}}</option>
         </select>
+        <div *ngIf="tieneMensajesErroneos('campoCriterioEdicion')" class="mensajeErroneo">
+          {{erroresSobre('campoCriterioEdicion')}}
+        </div>
       </div>
     </div>
 
