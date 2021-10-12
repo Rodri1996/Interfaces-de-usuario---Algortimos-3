@@ -7,12 +7,16 @@ import { RUTINA, Rutina } from 'src/domain/Rutina/rutina';
 export class RutinaService{
   
   rutinas:Rutina[] 
+  miId!:number
 
-  trearRutina(unId:number):Rutina{
-    return this.rutinas[0]
+  trearRutina(unId:number){
+    return this.rutinas.find((rutina)=>{
+      return rutina.id === unId
+    })
   }
 
   constructor(){
+    RUTINA.id = 0 
     this.rutinas = [RUTINA]
   }
 }

@@ -14,7 +14,7 @@ export const routes: Routes = [
   { path: 'busquedaRutinas', component: BusquedaRutinasComponent },
   { path: 'misRutinas', component: MisRutinasComponent },
   { path: 'usuario', component: UsuarioComponent },
-  { path: 'rutina', component: RutinaComponent },
+  { path: 'rutina/:id', component: RutinaComponent },
   { path: 'ejercicio/: id_rutina', component: EjercicioComponent },
   { path: '**', redirectTo: 'login' }
 ]

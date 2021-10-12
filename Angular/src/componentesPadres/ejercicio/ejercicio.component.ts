@@ -22,7 +22,7 @@ export class EjercicioComponent implements OnInit{
 
   constructor(private rutinaService:RutinaService,private router:Router,private actividadesService:ActividadesService,private route:ActivatedRoute){
     this.route.params.subscribe(params=>{
-      this.rutina = this.rutinaService.trearRutina(params['id'])
+      this.rutina = this.rutinaService.trearRutina(params['id']) as Rutina
     })
   }
 
