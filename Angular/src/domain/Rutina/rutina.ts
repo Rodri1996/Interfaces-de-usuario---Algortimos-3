@@ -3,7 +3,6 @@ import { CriterioDeEdicion, FREE,  } from "../CriterioDeEdicion/criterioDeEdicio
 import { Ejercicio, EJERCICIO_1, EJERCICIO_2, EJERCICIO_3 } from "../Ejercicios/ejercicio";
 import { GruposMusculares } from "../Grupos Musculares/gruposMusculares";
 import { Usuario, USUARIO_CREADOR } from "../Usuario/usuario";
-
 export class Rutina{
 
     ejercicios:Ejercicio[] = []

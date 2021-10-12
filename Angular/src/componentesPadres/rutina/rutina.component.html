@@ -12,10 +12,16 @@
       <div>
         <label class="palabra">Nombre</label>
         <input type="text" name="nombre" class="inputBase" placeholder="Ingrese nombre" required="required" [(ngModel)]="nombreRutina" />
+        <div *ngIf="tieneMensajesErroneos('campoNombre')" class="mensajeErroneo">
+          {{erroresSobre('campoNombre')}}
+        </div>
       </div>
       <div>
         <label class="palabra">Descripcion</label>
         <input type="text" name="descripcion" class="inputBase" placeholder="Ingrese descripcion" required="required" [(ngModel)]="descripcionRutina"/>
+        <div *ngIf="tieneMensajesErroneos('campoDescripcion')" class="mensajeErroneo">
+          {{erroresSobre('campoDescripcion')}}
+        </div>
       </div>
       <div>
         <label class="palabra">Estrategia de edicion</label>        
@@ -47,9 +53,9 @@
       </table>
       <div class="rutina-estadisticas">
         <i class="fas fa-heartbeat"></i>
-        <p class="rutina-estadisticas__p">{{rutina.frecuenciaCardiacaBase()}}</p>
+        <p class="rutina-estadisticas__p">{{rutina.frecuenciaCardiacaBase()}} PPM</p>
         <i class="fas fa-stopwatch"></i>
-        <p class="rutina-estadisticas__p">{{rutina.duracion()}}</p>
+        <p class="rutina-estadisticas__p">{{rutina.duracion()}} '</p>
         <div>
           <div class="button-mas-container">
             <button (click)="sumarEjercicio()" class="button-mas">+</button>
@@ -69,7 +75,7 @@
 
     <div class="posicion-botones">
       <button class="button-secundario" (click)="redirigirCancelar">Cancelar</button>
-      <button class="button-primario" (click)="redirigirGuardar">Guardar</button>
+      <button class="button-primario" (click)="editarRutina()">Guardar</button>
     </div>
   </app-card>
 </section>

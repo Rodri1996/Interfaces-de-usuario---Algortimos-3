@@ -6,7 +6,7 @@ import { EjercicioService } from 'src/services/ejercicio/ejercicio.service'
 import { Actividad } from 'src/domain/Actividad/actividad'
 import { ActivatedRoute, Router } from '@angular/router'
 import { RUTINA, Rutina } from 'src/domain/Rutina/rutina'
-import {CRITERIOS_EDICION} from 'src/domain/CriterioDeEdicion/criterioDeEdicion'
+import {CriterioDeEdicion, CRITERIOS_EDICION, FREE} from 'src/domain/CriterioDeEdicion/criterioDeEdicion'
 
 
 @Component({
@@ -17,28 +17,61 @@ import {CRITERIOS_EDICION} from 'src/domain/CriterioDeEdicion/criterioDeEdicion'
 export class RutinaComponent {
   nombreRutina!:string
   descripcionRutina!:string
-  estrategiaDeEdicion!:string
+  estrategiaDeEdicion!:CriterioDeEdicion
  
   criteriosDeEdicion = CRITERIOS_EDICION
   rutina!:Rutina 
   rutinasConocidas!:Rutina[]
+  
+  mensajesErroneos:MensajeErroneo[]=[]
 
   constructor(private rutinaService:RutinaService,private router:Router,private rutaEnviada:ActivatedRoute) {
-    console.log( this.rutaEnviada.params.subscribe(parametro=>{
-      console.log('Valor encontrado: '+ parametro['id'])
+    this.rutaEnviada.params.subscribe(parametro=>{
       this.rutina = this.rutinaService.trearRutina(parametro['id']) as Rutina
-    }))
+    })
   }
   
-  redirigirGuardar(){
-    this.router.navigate(['/rutina'])
+  editarRutina(){
+      this.validarRutina()
+      // this.rutina.nombreRutina = this.nombreRutina
+      // this.rutina.descripcion = this.descripcionRutina 
+      // this.rutina.criterioDeEdicion = this.estrategiaDeEdicion 
   }
+
+  validarRutina(){
+    this.mensajesErroneos.length = 0
+    if(!this.nombreRutina){
+      this.añadirError('campoNombre','Debe ingresar un nombre para la rutina')
+    }
+    if(!this.descripcionRutina){
+      this.añadirError('campoDescripcion','Debe ingresar una descripcion')
+    }
+  }
+
+  añadirError(campo:string,mensaje:string) {
+    this.mensajesErroneos.push(new MensajeErroneo(campo,mensaje))
+  }
+
+  tieneMensajesErroneos(campo:string):boolean{
+    return this.mensajesErroneos.some((error)=>error.campo == campo)
+  }
+
+  erroresSobre(campo:string){
+    return this.mensajesErroneos.filter((error)=> error.campo == campo).map((error)=>error.mensaje).join(". ")
+  }
+
   redirigirCancelar(){
-    this.router.navigate(['/rutina'])
+    // this.router.navigate(['/rutina'])
   }
 
   sumarEjercicio(){
-    this.router.navigate(['/ejercicio',this.rutina.id])
+    this.router.navigate(['/ejercicio/:'+ this.rutina.id])
   }
 }
 
+class MensajeErroneo{
+
+  constructor(public campo:string,public mensaje:string){
+
+  }
+}
