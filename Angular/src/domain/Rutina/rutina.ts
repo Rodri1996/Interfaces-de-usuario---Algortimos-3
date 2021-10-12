@@ -6,8 +6,9 @@ import { Usuario, USUARIO_CREADOR } from "../Usuario/usuario";
 
 export class Rutina{
 
-    ejercicios!:Ejercicio[]
+    ejercicios:Ejercicio[] = []
     criterioDeEdicion:CriterioDeEdicion = FREE
+    descripcion!:string
     id:number = 0
 
     constructor(public creador:Usuario, public nombreRutina:string) {};

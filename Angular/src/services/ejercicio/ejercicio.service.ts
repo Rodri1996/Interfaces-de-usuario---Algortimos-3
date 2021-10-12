@@ -13,16 +13,17 @@ export class EjercicioService {
   constructor() { }
   
   crearEjercicio(actividadElegida: Actividad, minutosDeDescanso: number, frecuenciaCardBase: number, cantidadDeSeries: number) {
-    const ejercicioSimple = new EjercicioSimple(10,frecuenciaCardBase,minutosDeDescanso,actividadElegida)
+    const ejercicioSimple = new EjercicioSimple(1,frecuenciaCardBase,minutosDeDescanso,actividadElegida)
     this.asignarIdentificador(ejercicioSimple)
     return ejercicioSimple
   }
   
   asignarIdentificador(ejercicio:EjercicioSimple){
     ejercicio.id = this.unId
+    this.unId +=1
   }
 
-  agregarEjercicio(ejercicio: EjercicioSimple) {
-    this.ejercicios.push(ejercicio)
-  }
+  // agregarEjercicio(ejercicio: EjercicioSimple) {
+  //   this.ejercicios.push(ejercicio)
+  // }
 }

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core'
 import { ActivatedRoute, Router } from '@angular/router'
 import { Actividad, ACTIVIDADES } from 'src/domain/Actividad/actividad'
-import { Ejercicio } from 'src/domain/Ejercicios/ejercicio'
+import { Ejercicio, EJERCICIO_3 } from 'src/domain/Ejercicios/ejercicio'
 import { Rutina } from 'src/domain/Rutina/rutina'
 import { ActividadesService } from 'src/service/actividades.service'
 import { EjercicioService } from 'src/services/ejercicio/ejercicio.service'
@@ -33,10 +33,12 @@ export class EjercicioComponent implements OnInit{
     this.actividadesConocidas = this.actividadesService.actividades
   }
 
-  guardarEjercicio(){
+  crearEjercicio(){
     const ejercicioSimple = this.ejercicioService.crearEjercicio(this.actividadElegida,this.minutosDeDescanso,this.frecuenciaCardBase,this.cantidadDeSeries)
-    this.ejercicioService.agregarEjercicio(ejercicioSimple)
+    // this.ejercicioService.agregarEjercicio(ejercicioSimple)
     // this.inicializarCampos()
+    // this.rutina.agregarEjercicio(ejercicioSimple)
+    this.rutina.agregarEjercicio(ejercicioSimple)
     this.router.navigate(['/rutina/:'+ this.rutina.id])
   }
 
@@ -45,8 +47,9 @@ export class EjercicioComponent implements OnInit{
     this.frecuenciaCardBase = 0
     this.cantidadDeSeries = 0
   }
+
   redirigirCancelar(){
-    this.router.navigate(['/rutina'])
+    this.router.navigate(['/rutina/:' + this.rutina.id])
   }
 
 }
