@@ -15,54 +15,20 @@ import {CriterioDeEdicion, CRITERIOS_EDICION, FREE} from 'src/domain/CriterioDeE
   styleUrls: ['./rutina.component.css']
 })
 export class RutinaComponent {
-  nombreRutina!:string
-  descripcionRutina!:string
-  estrategiaDeEdicion!:CriterioDeEdicion
  
   criteriosDeEdicion = CRITERIOS_EDICION
   rutina!:Rutina 
   rutinasConocidas!:Rutina[]
-  
-  mensajesErroneos:MensajeErroneo[]=[]
 
   constructor(private rutinaService:RutinaService,private router:Router,private rutaEnviada:ActivatedRoute) {
     this.rutaEnviada.params.subscribe(parametro=>{
-      this.rutina = this.rutinaService.trearRutina(parametro['id']) as Rutina
+      const idNumerico = parametro['id'] as number
+      this.rutina = this.rutinaService.trearRutina(idNumerico) as Rutina
     })
   }
   
-  editarRutina(){
-      this.validarRutina()
-      if(this.mensajesErroneos.length <= 0){
-        this.rutina.nombreRutina = this.nombreRutina
-        this.rutina.descripcion = this.descripcionRutina 
-        this.rutina.criterioDeEdicion = this.estrategiaDeEdicion 
-      }
-  }
-
   validarRutina(){
-    this.mensajesErroneos.length = 0
-    if(!this.nombreRutina){
-      this.añadirError('campoNombre','Debe ingresar un nombre para la rutina')
-    }
-    if(!this.descripcionRutina){
-      this.añadirError('campoDescripcion','Debe ingresar una descripcion')
-    }
-    if(!this.estrategiaDeEdicion){
-      this.añadirError('campoCriterioEdicion','Debe ingresar una descripcion')
-    }
-  }
-
-  añadirError(campo:string,mensaje:string) {
-    this.mensajesErroneos.push(new MensajeErroneo(campo,mensaje))
-  }
-
-  tieneMensajesErroneos(campo:string):boolean{
-    return this.mensajesErroneos.some((error)=>error.campo == campo)
-  }
-
-  erroresSobre(campo:string){
-    return this.mensajesErroneos.filter((error)=> error.campo == campo).map((error)=>error.mensaje).join(". ")
+      this.rutina.validarCampos()
   }
 
   redirigirCancelar(){
@@ -74,9 +40,3 @@ export class RutinaComponent {
   }
 }
 
-class MensajeErroneo{
-
-  constructor(public campo:string,public mensaje:string){
-
-  }
-}

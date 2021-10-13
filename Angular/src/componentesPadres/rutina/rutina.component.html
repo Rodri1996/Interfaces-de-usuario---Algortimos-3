@@ -11,25 +11,25 @@
     <div class="box-container">
       <div>
         <label class="palabra">Nombre</label>
-        <input type="text" name="nombre" class="inputBase" placeholder="Ingrese nombre" required="required" [(ngModel)]="nombreRutina" />
-        <div *ngIf="tieneMensajesErroneos('campoNombre')" class="mensajeErroneo">
-          {{erroresSobre('campoNombre')}}
+        <input type="text" name="nombre" class="inputBase" placeholder="Ingrese nombre" required="required" [(ngModel)]="rutina.nombreRutina" />
+        <div *ngIf="rutina.tieneMensajesErroneos('campoNombre')" class="mensajeErroneo">
+          {{rutina.erroresSobre('campoNombre')}}
         </div>
       </div>
       <div>
         <label class="palabra">Descripcion</label>
-        <input type="text" name="descripcion" class="inputBase" placeholder="Ingrese descripcion" required="required" [(ngModel)]="descripcionRutina"/>
-        <div *ngIf="tieneMensajesErroneos('campoDescripcion')" class="mensajeErroneo">
-          {{erroresSobre('campoDescripcion')}}
+        <input type="text" name="descripcion" class="inputBase" placeholder="Ingrese descripcion" required="required" [(ngModel)]="rutina.descripcion"/>
+        <div *ngIf="rutina.tieneMensajesErroneos('campoDescripcion')" class="mensajeErroneo">
+          {{rutina.erroresSobre('campoDescripcion')}}
         </div>
       </div>
       <div>
         <label class="palabra">Estrategia de edicion</label>        
-        <select class="inputBase campo" name="estrategia-edicion" [(ngModel)]="estrategiaDeEdicion">
+        <select class="inputBase campo" name="estrategia-edicion" [(ngModel)]="rutina.criterioDeEdicion">
           <option *ngFor="let criterio of criteriosDeEdicion" [ngValue]="criterio">{{criterio}}</option>
         </select>
-        <div *ngIf="tieneMensajesErroneos('campoCriterioEdicion')" class="mensajeErroneo">
-          {{erroresSobre('campoCriterioEdicion')}}
+        <div *ngIf="rutina.tieneMensajesErroneos('campoCriterioEdicion')" class="mensajeErroneo">
+          {{rutina.erroresSobre('campoCriterioEdicion')}}
         </div>
       </div>
     </div>
@@ -78,7 +78,7 @@
 
     <div class="posicion-botones">
       <button class="button-secundario" (click)="redirigirCancelar">Cancelar</button>
-      <button class="button-primario" (click)="editarRutina()">Guardar</button>
+      <button class="button-primario" (click)="validarRutina()">Guardar</button>
     </div>
   </app-card>
 </section>
