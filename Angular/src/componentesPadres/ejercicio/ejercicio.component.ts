@@ -21,6 +21,8 @@ export class EjercicioComponent implements OnInit{
   cantidadDeSeries!:number
   ejercicio!:Ejercicio
 
+  checkMarcado:boolean = false
+
   rutina!:Rutina
 
   constructor(private rutinaService:RutinaService,private router:Router,private actividadesService:ActividadesService,private rutaRecibida:ActivatedRoute,private ejercicioService:EjercicioService){
