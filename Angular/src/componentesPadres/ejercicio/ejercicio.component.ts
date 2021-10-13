@@ -3,9 +3,9 @@ import { ActivatedRoute, Router } from '@angular/router'
 import { Actividad, ACTIVIDADES } from 'src/domain/Actividad/actividad'
 import { Ejercicio, EJERCICIO_3 } from 'src/domain/Ejercicios/ejercicio'
 import { Rutina } from 'src/domain/Rutina/rutina'
-import { ActividadesService } from 'src/service/actividades.service'
-import { EjercicioService } from 'src/services/ejercicio/ejercicio.service'
-import { RutinaService } from 'src/services/rutina/rutina.service'
+import { ActividadesService } from '../../app/services/actividadService/actividades.service'
+import { EjercicioService } from '../../app/services/ejercicioService/ejercicio.service'
+import { RutinaService } from '../../app/services/rutinaService/rutina.service'
 
 @Component({
   selector: 'app-ejercicio',

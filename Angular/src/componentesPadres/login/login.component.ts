@@ -1,6 +1,6 @@
 import { Component } from '@angular/core'
 import { Router } from '@angular/router'
-import { UsuarioService } from 'src/service/usuario.service'
+import { UsuarioService } from '../../app/services/usuarioService/usuario.service'
 import swal from 'sweetalert2'
 
 
