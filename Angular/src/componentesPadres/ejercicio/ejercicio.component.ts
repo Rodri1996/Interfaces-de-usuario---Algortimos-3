@@ -36,13 +36,27 @@ export class EjercicioComponent implements OnInit{
     this.actividadesConocidas = this.actividadesService.actividades
   }
 
-  crearEjercicio(){
-    const ejercicioSimple = this.ejercicioService.crearEjercicio(this.actividadElegida,this.minutosDeDescanso,this.frecuenciaCardBase,this.cantidadDeSeries)
-    // this.ejercicioService.agregarEjercicio(ejercicioSimple)
-    // this.inicializarCampos()
-    // this.rutina.agregarEjercicio(ejercicioSimple)
-    this.rutina.agregarEjercicio(ejercicioSimple)
+  agregarEjercicio(){
+    if(this.checkMarcado){
+      const ejercicioCompuesto=this.crearEjercicioCompuesto()
+      this.agregarEjercicioAlArray(ejercicioCompuesto)
+    }else{
+      const ejercicioSimple = this.crearEjercicioSimple()
+      this.agregarEjercicioAlArray(ejercicioSimple)
+    }
     this.router.navigate(['/rutina/:'+ this.rutina.id])
+  }
+  
+  crearEjercicioCompuesto(){
+    return this.ejercicioService.crearEjercicioCompuesto(this.cantidadDeSeries,this.frecuenciaCardBase,this.minutosDeDescanso,this.actividadElegida)
+  }
+  
+  crearEjercicioSimple(){
+    return this.ejercicioService.crearEjercicioSimple(this.actividadElegida,this.minutosDeDescanso,this.frecuenciaCardBase,this.minutosDeTrabajo)
+  }
+
+  agregarEjercicioAlArray(unEjercicio:Ejercicio){
+    this.rutina.agregarEjercicio(unEjercicio)
   }
 
   inicializarCampos() {

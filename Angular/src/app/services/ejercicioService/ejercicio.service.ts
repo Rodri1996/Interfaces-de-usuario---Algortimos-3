@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Actividad } from 'src/domain/Actividad/actividad';
-import { Ejercicio, EjercicioSimple } from 'src/domain/Ejercicios/ejercicio';
+import { Ejercicio, EjercicioCompuesto, EjercicioSimple } from 'src/domain/Ejercicios/ejercicio';
 
 @Injectable({
   providedIn: 'root'
@@ -12,18 +12,22 @@ export class EjercicioService {
   
   constructor() { }
   
-  crearEjercicio(actividadElegida: Actividad, minutosDeDescanso: number, frecuenciaCardBase: number, cantidadDeSeries: number) {
-    const ejercicioSimple = new EjercicioSimple(1,frecuenciaCardBase,minutosDeDescanso,actividadElegida)
+  crearEjercicioSimple(actividadElegida: Actividad, minutosDeDescanso: number, frecuenciaCardBase: number, minutosDeTrabajo: number) {
+    const ejercicioSimple = new EjercicioSimple(minutosDeTrabajo,frecuenciaCardBase,minutosDeDescanso,actividadElegida)
     this.asignarIdentificador(ejercicioSimple)
     return ejercicioSimple
   }
   
-  asignarIdentificador(ejercicio:EjercicioSimple){
+  // (private serie:number,frecuenciaCardiacaBase:number,minutosDeDescanso:number,unaActividad:Actividad){
+  //   super(frecuenciaCardiacaBase,minutosDeDescanso,unaActividad)
+  crearEjercicioCompuesto(cantidadDeSeries: number, frecuenciaCardBase: number, minutosDeDescanso: number, actividadElegida: Actividad) {
+      const ejercicioCompuesto = new EjercicioCompuesto(cantidadDeSeries,frecuenciaCardBase,minutosDeDescanso,actividadElegida)
+      this.asignarIdentificador(ejercicioCompuesto)
+      return ejercicioCompuesto
+  }
+
+  asignarIdentificador(ejercicio:Ejercicio){
     ejercicio.id = this.unId
     this.unId +=1
   }
-
-  // agregarEjercicio(ejercicio: EjercicioSimple) {
-  //   this.ejercicios.push(ejercicio)
-  // }
 }
