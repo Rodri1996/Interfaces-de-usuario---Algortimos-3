@@ -19,6 +19,7 @@ export class EjercicioComponent implements OnInit{
   minutosDeDescanso!:number
   frecuenciaCardBase!:number
   cantidadDeSeries!:number
+  minutosDeTrabajo!:number
   ejercicio!:Ejercicio
 
   checkMarcado:boolean = false
@@ -53,5 +54,4 @@ export class EjercicioComponent implements OnInit{
   redirigirCancelar(){
     this.router.navigate(['/rutina/:' + this.rutina.id])
   }
-
 }

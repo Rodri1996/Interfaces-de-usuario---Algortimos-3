@@ -23,17 +23,25 @@
   </div>
 
   <div class="box-container">
+
     <div class="checkbox-container">
       <input class="check__input" checked type="checkbox" [(ngModel)]="checkMarcado"/>
       <h3>Con series</h3>
     </div>
+
     <div>
       <label class="palabra">Minutos de descanso</label>
       <input [(ngModel)]="minutosDeDescanso" type="number" name="minutos" class="inputBase" placeholder="Ingrese minutos" required="required" />
     </div>
-    <div>
+
+    <div *ngIf="checkMarcado">
       <label class="palabra">Cantidad de series</label>
       <input [(ngModel)]="cantidadDeSeries" type="number" name="series" class="inputBase" placeholder="Ingrese series" required="required" />
+    </div>
+
+    <div *ngIf="!checkMarcado">
+      <label class="palabra">Minutos de trabajo</label>
+      <input [(ngModel)]="minutosDeTrabajo" type="number" class="inputBase" placeholder="Ingrese minutos de trabajo" required="required" />
     </div>
   </div>
 
