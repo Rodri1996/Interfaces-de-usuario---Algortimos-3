@@ -1,5 +1,5 @@
 import { Location } from '@angular/common'
-import { Component} from '@angular/core'
+import { Component, HostListener} from '@angular/core'
 
 
 @Component({
@@ -11,6 +11,11 @@ import { Component} from '@angular/core'
 export class NavbarComponent {
 
   noEsLogin = () => this.location.path() !== '/login'
+
+  @HostListener('window:resize')
+  pantallaMobile(){
+    return window.innerWidth < 401 
+  }
 
   constructor(private location:Location){}
 
