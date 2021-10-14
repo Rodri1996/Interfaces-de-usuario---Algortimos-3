@@ -21,49 +21,54 @@ export class Rutina {
   descripcion!: string
   id: number = 0
   mensajesErroneos:MensajeErroneo[]=[]
-
+  
   constructor(public creador: Usuario, public nombreRutina: string) {}
-
+  
   duracion(): number {
     return this.ejercicios.reduce(
       (acum, ejercicio) => acum + ejercicio.duracion(),
       0
-    )
-  }
-
+      )
+    }
+    
   frecuenciaCardiacaBase(): number {
     if (!this.hayEjercicios())
-      throw Error(
-        'No se puede calcular frecuencia cardiaca base porque no tengo ejercicios'
+    throw Error(
+      'No se puede calcular frecuencia cardiaca base porque no tengo ejercicios'
       )
-    return (
-      this.ejercicios.reduce(
-        (acum, ejercicio) => acum + ejercicio.frecuenciaCardiacaBase,
-        0
-      ) / this.ejercicios.length
-    )
+      return (
+        this.ejercicios.reduce(
+          (acum, ejercicio) => acum + ejercicio.frecuenciaCardiacaBase,
+          0
+          ) / this.ejercicios.length
+          )
+        }
+        
+        hayEjercicios(): boolean {
+          return this.ejercicios.length > 0
   }
-
-  hayEjercicios(): boolean {
-    return this.ejercicios.length > 0
-  }
-
+  
   // gruposMuscularesQueEntrena():Set<GruposMusculares>{
-  //     return new Set(this.ejercicios.map(unEjercicio => unEjercicio.gruposMuscularesQueEntrena()));
-  // }
+    //     return new Set(this.ejercicios.map(unEjercicio => unEjercicio.gruposMuscularesQueEntrena()));
+    // }
+    
+    gruposMuscularesQueEntrena(): string[] {
+      return ['Piernas', 'Brazos', 'Hombros']
+    }
+    
+    agregarEjercicio(unEjercicio: Ejercicio): void {
+      this.ejercicios.push(unEjercicio)
+    }
+    
+    eliminarEjercicio(unEjercicio: Ejercicio) {
+      console.log(unEjercicio)
+      console.log(this.ejercicios.filter((ejercicio) => ejercicio.id==unEjercicio.id))
+    }
 
-  gruposMuscularesQueEntrena(): string[] {
-    return ['Piernas', 'Brazos', 'Hombros']
-  }
-
-  agregarEjercicio(unEjercicio: Ejercicio): void {
-    this.ejercicios.push(unEjercicio)
-  }
-
-  // esEditable(unUsuario:Usuario){
-  //     return this.creador == unUsuario || this.unCriterioDeEdicion.rutinaPuedeSerEditadaPor(unUsuario, this);
-  // }
-
+    // esEditable(unUsuario:Usuario){
+      //     return this.creador == unUsuario || this.unCriterioDeEdicion.rutinaPuedeSerEditadaPor(unUsuario, this);
+      // }
+      
   validarCampos() {
     this.mensajesErroneos.length = 0
     if (!this.nombreRutina) {
@@ -90,7 +95,7 @@ export class Rutina {
 const unNombre = 'Isquitibiales'
 
 export const RUTINA = new Rutina(USUARIO_CREADOR, unNombre)
-RUTINA.ejercicios = [EJERCICIO_1, EJERCICIO_2, EJERCICIO_3]
+// RUTINA.ejercicios = [EJERCICIO_1, EJERCICIO_2, EJERCICIO_3]
 RUTINA.descripcion = 'Esta es una rutina sabrosa'
 // RUTINA.agregarEjercicio(EJERCICIO_1)
 // RUTINA.agregarEjercicio(EJERCICIO_2)

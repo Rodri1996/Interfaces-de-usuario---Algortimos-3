@@ -20,11 +20,13 @@ export class RutinaComponent {
   rutina!:Rutina 
   rutinasConocidas!:Rutina[]
 
-  constructor(private rutinaService:RutinaService,private router:Router,private rutaEnviada:ActivatedRoute) {
+  constructor(private rutinaService:RutinaService,private router:Router,private rutaEnviada:ActivatedRoute,
+    private ejercicioService:EjercicioService) {
     this.rutaEnviada.params.subscribe(parametro=>{
       const idNumerico = parametro['id'] as number
       this.rutina = this.rutinaService.trearRutina(idNumerico) as Rutina
     })
+    this.rutina.ejercicios = this.ejercicioService.ejerciciosTraidos
   }
   
   validarRutina(){
@@ -32,11 +34,16 @@ export class RutinaComponent {
   }
 
   redirigirCancelar(){
-    // this.router.navigate(['/rutina'])
+    
   }
 
   sumarEjercicio(){
     this.router.navigate(['/ejercicio/:'+ this.rutina.id])
   }
+
+  eliminarEjercicio(unEjercicio:Ejercicio){
+    this.rutina.eliminarEjercicio(unEjercicio)
+  }
+
 }
 

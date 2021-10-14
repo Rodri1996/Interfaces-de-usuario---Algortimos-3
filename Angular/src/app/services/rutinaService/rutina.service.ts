@@ -10,8 +10,9 @@ export class RutinaService{
   miId!:number
 
   trearRutina(unId:number){
+    console.log("El id pasado vale: "+unId)
     return this.rutinas.find((rutina)=>{
-      return rutina.id === 0
+      return rutina.id == 0
     })
   }
 
