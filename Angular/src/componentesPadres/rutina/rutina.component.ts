@@ -1,12 +1,12 @@
-import { GruposMusculares } from './../../../../Typescript/src/Grupos Musculares/gruposMusculares'
+
 import { Component } from '@angular/core'
 import { RutinaService } from '../../app/services/rutinaService/rutina.service'
-import { Ejercicio, EjercicioSimple } from 'src/domain/Ejercicios/ejercicio'
+import { Ejercicio } from 'src/domain/Ejercicios/ejercicio'
 import { EjercicioService } from '../../app/services/ejercicioService/ejercicio.service'
-import { Actividad } from 'src/domain/Actividad/actividad'
+
 import { ActivatedRoute, Router } from '@angular/router'
-import { RUTINA, Rutina } from 'src/domain/Rutina/rutina'
-import {CriterioDeEdicion, CRITERIOS_EDICION, FREE} from 'src/domain/CriterioDeEdicion/criterioDeEdicion'
+import { Rutina } from 'src/domain/Rutina/rutina'
+import {CRITERIOS_EDICION} from 'src/domain/CriterioDeEdicion/criterioDeEdicion'
 
 
 @Component({
@@ -26,7 +26,6 @@ export class RutinaComponent {
       const idNumerico = parametro['id'] as number
       this.rutina = this.rutinaService.trearRutina(idNumerico) as Rutina
     })
-    this.rutina.ejercicios = this.ejercicioService.ejerciciosTraidos
   }
   
   validarRutina(){

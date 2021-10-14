@@ -60,9 +60,10 @@ export class Rutina {
       this.ejercicios.push(unEjercicio)
     }
     
-    eliminarEjercicio(unEjercicio: Ejercicio) {
-      console.log(unEjercicio)
-      console.log(this.ejercicios.filter((ejercicio) => ejercicio.id==unEjercicio.id))
+    eliminarEjercicio(ejercicioAEliminar: Ejercicio) {
+      console.log(ejercicioAEliminar)
+      const ejerciciosFiltrados = this.ejercicios.filter((ejercicio) => ejercicio.id!==ejercicioAEliminar.id)
+      this.ejercicios = ejerciciosFiltrados
     }
 
     // esEditable(unUsuario:Usuario){

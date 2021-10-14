@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Actividad, PIERNAS } from 'src/domain/Actividad/actividad';
+import { Actividad } from 'src/domain/Actividad/actividad';
 import { Ejercicio, EjercicioCompuesto, EjercicioSimple } from 'src/domain/Ejercicios/ejercicio';
-import { RUTINA } from 'src/domain/Rutina/rutina';
 
 @Injectable({
   providedIn: 'root'
@@ -12,9 +11,7 @@ export class EjercicioService {
   ejerciciosTraidos:Ejercicio[]=[]
   
   constructor() {
-    const piernas = this.crearEjercicioSimple(PIERNAS,5,80,10)
-    this.ejerciciosTraidos.push(piernas)
-    RUTINA.ejercicios = this.ejerciciosTraidos
+    
   }
   
   crearEjercicioSimple(actividadElegida: Actividad, minutosDeDescanso: number, frecuenciaCardBase: number, minutosDeTrabajo: number) {
