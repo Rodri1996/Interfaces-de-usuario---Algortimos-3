@@ -7,8 +7,8 @@ import { Usuario } from "src/domain/Usuario/usuario"
  export class UsuarioService{
 
     private usuarios:Usuario[] =[
-        new Usuario(1,'hola','damebola'),
-        new Usuario(2,'chau','nosvemos')
+        new Usuario(1,'pepe','123'),
+        new Usuario(2,'pedro','321')
     ]
 
     loguearUsuario(username:string, password:string):Promise<Usuario>{
