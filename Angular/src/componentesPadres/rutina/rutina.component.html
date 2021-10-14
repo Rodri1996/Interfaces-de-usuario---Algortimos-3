@@ -49,7 +49,7 @@
             <td class="table__td">
               <div class="contenedor-tiempo">
                 <p id="minutos">{{ejercicio.duracion()}}</p>
-                <i class="fas fa-trash-alt" id="contenedor"></i>
+                <i class="fas fa-trash-alt" id="contenedor" (click)="eliminarEjercicio(ejercicio)"></i>
               </div>
             </td>
           </tr>
@@ -57,7 +57,7 @@
       </table>
       <div class="rutina-estadisticas">
         <i class="fas fa-heartbeat"></i>
-        <p class="rutina-estadisticas__p">{{rutina.frecuenciaCardiacaBase()}} PPM</p>
+        <p class="rutina-estadisticas__p">{{rutina.frecuenciaCardiacaBase() | number: '1.0-2'}} PPM</p>
         <i class="fas fa-stopwatch"></i>
         <p class="rutina-estadisticas__p">{{rutina.duracion()}} '</p>
         <div>
@@ -78,7 +78,7 @@
     </div>
 
     <div class="posicion-botones">
-      <button class="button-secundario" (click)="redirigirCancelar">Cancelar</button>
+      <button class="button-secundario" (click)="redirigirCancelar()">Cancelar</button>
       <button class="button-primario" (click)="validarRutina()">Guardar</button>
     </div>
   </app-card>
