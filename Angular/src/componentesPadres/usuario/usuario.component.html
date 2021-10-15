@@ -2,26 +2,52 @@
 <app-button placeholder="Agregar" estilo="button-primario"></app-button>
 <app-marcador nombreMarcador="L"></app-marcador>
 -->
-        <div class="main">
-            <section class="contenido-flex">
-                <header class="ventana-title">
-                    <div class="header-informacion">
-                        <img src="../assets/img/usuario.jpg">
-                        <h2 class="nombre">Nazareno Peloso</h2>
+<div class="main">
+    <section class="contenido-flex">
+        <header class="ventana-title">
+            <div class="header-informacion">
+                <img src="../assets/img/usuario.jpg">
+                <h2 class="nombre">Nazareno Peloso</h2>
+            </div>
+            <div class="header-informacion">
+                <i class="fas fa-stopwatch header-tiempo"></i>
+                <h3 class="header-tiempo">170 minutos</h3>
+            </div>
+        </header>
+        <app-card>
+            <div class="mis-datos">
+            <h4 class="form-subtitulo">Mis datos personales</h4>
+            <div class="form-section">
+                <div class="inputSeparador">
+                    <label class="inputLabel">Nombre y apellido</label>
+                    <input class="inputBase campo" type="text" [(ngModel)]="datos" name="datos" placeholder="Ingrese nombre y apellido" required="required">
+                </div>
+            </div>
+            <div class="flexRow">
+                <div class="flexColumn">
+                    <div class="inputSeparador">
+                        <label class="inputLabel">Nombre de usuario</label>
+                        <input class="inputBase campo" type="text" [(ngModel)]="username" name="username" placeholder="Ingrese nombre de usuario" required="required">
                     </div>
-                    <div class="header-informacion">
-                        <i class="fas fa-stopwatch header-tiempo"></i>
-                        <h3 class="header-tiempo">170 minutos</h3>
+                    <div class="inputSeparador">
+                        <label class="inputLabel">Frec. cardíaca en reposo</label>
+                        <input class="inputBase campo" type="text" [(ngModel)]="frecuencia" name="frecuencia" placeholder="Ingrese frecuencia" required="required">
                     </div>
-                </header>
-                <app-card> 
-                    <div class="box-container"></div>
-                    <div class="box-container"></div>
-                    <div class="box-container"></div>
-                </app-card>
-            </section>
+                </div>
+                <div class="flexColumn">
+                    <div class="inputSeparador">
+                        <label class="inputLabel">Fecha de nacimiento</label>
+                        <input class="inputBase campo" type="date" [(ngModel)]="fecha" name="fecha" required="required">
+                    </div>
+                    <div class="inputSeparador">
+                        <label class="inputLabel">Porcentaje de intensidad</label>
+                        <input class="inputBase campo" type="text" [(ngModel)]="porcentaje" name="porcentaje" placeholder="Ingrese porcentaje" required="required">
+                    </div>
+                </div>
+            </div>
         </div>
-    
-    
-
-
+            <div class="box-container"></div>
+            <div class="box-container"></div>
+        </app-card>
+    </section>
+</div>
