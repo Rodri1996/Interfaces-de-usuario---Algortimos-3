@@ -10,6 +10,13 @@ html {
     position:relative
 }
 
+.main {
+    /* padding-top: 124px; */
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
 :root{
     --color-primario:#003A64;
     --color-secundario:#54A2D2;
