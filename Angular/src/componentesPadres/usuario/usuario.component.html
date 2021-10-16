@@ -21,18 +21,18 @@
                 <div class="form-section">
                     <div class="inputSeparador">
                         <label class="inputLabel">Nombre y apellido</label>
-                        <input class="inputBase campo" type="text" [(ngModel)]="datos" name="datos" placeholder="Ingrese nombre y apellido" required="required">
+                        <input class="inputBase campo" type="text" [(ngModel)]="usuario.datos" name="datos" placeholder="Ingrese nombre y apellido" required="required">
                     </div>
                 </div>
                 <div class="flexRow">
                     <div class="flexColumn">
                         <div class="inputSeparador">
                             <label class="inputLabel">Nombre de usuario</label>
-                            <input class="inputBase campo" type="text" [(ngModel)]="username" name="username" placeholder="Ingrese nombre de usuario" required="required">
+                            <input class="inputBase campo" type="text" [(ngModel)]="usuario.username" name="username" placeholder="Ingrese nombre de usuario" required="required">
                         </div>
                         <div class="inputSeparador">
                             <label class="inputLabel">Frec. cardíaca en reposo</label>
-                            <input class="inputBase campo" type="text" [(ngModel)]="frecuencia" name="frecuencia" placeholder="Ingrese frecuencia" required="required">
+                            <input class="inputBase campo" type="text" [(ngModel)]="usuario.frecuencia" name="frecuencia" placeholder="Ingrese frecuencia" required="required">
                         </div>
                     </div>
                     <div class="flexColumn">
@@ -42,13 +42,13 @@
                         </div>
                         <div class="inputSeparador">
                             <label class="inputLabel">Porcentaje de intensidad</label>
-                            <input class="inputBase campo" type="text" [(ngModel)]="porcentaje" name="porcentaje" placeholder="Ingrese porcentaje" required="required">
+                            <input class="inputBase campo" type="text" [(ngModel)]="usuario.porcentaje" name="porcentaje" placeholder="Ingrese porcentaje" required="required">
                         </div>
                     </div>
                 </div>
                 <h4 class="form-subtitulo">Grupos Musculares de preferencia</h4>
-                <div *ngFor="let grupo of gruposMusculares">
-                    <app-marcador nombreMarcador="{{grupo}}"></app-marcador>
+                <div class="posicion-marcadores">
+                    <app-marcador *ngFor="let grupo of gruposMusculares" nombreMarcador="{{grupo}}"></app-marcador>
                 </div>
             </div>
             <div class="box-container"></div>

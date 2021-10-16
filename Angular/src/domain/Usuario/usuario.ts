@@ -1,9 +1,10 @@
+import { GruposMusculares } from 'src/domain/Grupos Musculares/gruposMusculares'
 export class Usuario{
 
     nombre!:string
     apellido!:string
 
-    constructor(public id?:number,public username?:string, public password?:string, public amigos:Usuario[]=[]){
+    constructor(public id?:number,public username="", public password?:string,public gruposMuscularesDePreferencia:GruposMusculares[]=[], public amigos:Usuario[]=[],public datos="",public frecuencia="", public fecha?:Date,public porcentaje=""){
         
     }
 

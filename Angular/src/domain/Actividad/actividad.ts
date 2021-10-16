@@ -1,4 +1,4 @@
-import { GruposMusculares } from "../Grupos Musculares/gruposMusculares";
+import { GruposMusculares } from "../Grupos Musculares/gruposMusculares"
 
 export class Actividad{
 

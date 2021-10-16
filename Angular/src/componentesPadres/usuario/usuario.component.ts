@@ -9,12 +9,9 @@ import { GruposMusculares } from 'src/domain/Grupos Musculares/gruposMusculares'
 })
 export class UsuarioComponent implements OnInit{
 
-  usuario!:Usuario[]
-  datos=""
-  username=""
-  frecuencia=""
+  usuario=new Usuario()
   fecha=""
-  porcentaje=""
+  
 
   gruposMusculares=[
     GruposMusculares.abdomen, 
@@ -27,15 +24,15 @@ export class UsuarioComponent implements OnInit{
   ]
 
   validarcampos():void{
-    if(this.datos === "") {
+    if(this.usuario.datos === "") {
       throw Error("El campo nombre y apellido es obligatorio") 
-    }else if (this.username === ""){
+    }else if (this.usuario.username === ""){
       throw Error("El campo username es obligatorio")
-    }else if (this.frecuencia === ""){
+    }else if (this.usuario.frecuencia === ""){
       throw Error("El campo frecuencia cardíaca en reposo es obligatorio")
-    }else if (this.fecha === ""){
+    }else if (!this.fecha){
       throw Error("El campo fecha de nacimiento es obligatorio")
-    } else if (this.porcentaje == ""){
+    } else if (this.usuario.porcentaje == ""){
       throw Error ("El campo porcentaje de intensidad es obligatorio")
     }
   }
