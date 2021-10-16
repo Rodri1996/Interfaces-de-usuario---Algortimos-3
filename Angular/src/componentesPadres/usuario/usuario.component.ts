@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core'
 import { Usuario } from 'src/domain/Usuario/usuario'
-import { UsuarioService } from '../../app/services/usuarioService/usuario.service'
+import { GruposMusculares } from 'src/domain/Grupos Musculares/gruposMusculares'
 
 @Component({
   selector: 'app-usuario',
@@ -15,6 +15,16 @@ export class UsuarioComponent implements OnInit{
   frecuencia=""
   fecha=""
   porcentaje=""
+
+  gruposMusculares=[
+    GruposMusculares.abdomen, 
+    GruposMusculares.brazos, 
+    GruposMusculares.espalda, 
+    GruposMusculares.gluteos, 
+    GruposMusculares.hombros, 
+    GruposMusculares.pecho, 
+    GruposMusculares.piernas
+  ]
 
   validarcampos():void{
     if(this.datos === "") {

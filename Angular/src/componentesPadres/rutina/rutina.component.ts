@@ -32,9 +32,9 @@ export class RutinaComponent {
       this.rutina.validarCampos()
   }
 
-  redirigirCancelar(){
+  // redirigirCancelar(){
     
-  }
+  // }
 
   sumarEjercicio(){
     this.router.navigate(['/ejercicio/:'+ this.rutina.id])
