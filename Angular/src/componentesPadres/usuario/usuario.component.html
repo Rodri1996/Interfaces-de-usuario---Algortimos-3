@@ -16,7 +16,7 @@
         </header>
         <app-card>
 
-            <div class="mis-datos">
+            <div class="box-container mis-datos">
                 <h4 class="form-subtitulo">Mis datos personales</h4>
                 <div class="form-section">
                     <div class="inputSeparador">
@@ -50,8 +50,19 @@
                 <div class="posicion-marcadores">
                     <app-marcador *ngFor="let grupo of gruposMusculares" nombreMarcador="{{grupo}}"></app-marcador>
                 </div>
+
             </div>
-            <div class="box-container"></div>
+            <div class="box-container">
+                <h4 class="form-subtitulo">Dias de entrenamiento</h4>
+                <div class="dias-de-entrenamiento">
+                    <app-marcador *ngFor="let dia of dias" nombreMarcador="{{dia}}"></app-marcador>
+                </div>
+                <div class="tiempo-minutos">
+                    <i class="fas fa-stopwatch header-tiempo"></i>
+                    <h3 class="header-tiempo">Minutos</h3>
+                </div>
+                <input class="inputBase input-minutos campo" type="number">
+            </div>
             <div class="box-container"></div>
         </app-card>
     </section>

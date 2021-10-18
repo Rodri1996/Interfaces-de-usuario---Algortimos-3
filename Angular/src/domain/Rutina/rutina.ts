@@ -13,13 +13,13 @@ class MensajeErroneo {
   constructor(public campo: string, public mensaje: string) {}
 }
 export class Rutina {
-  ejercicios: Ejercicio[] = []
+  //ejercicios: Ejercicio[] = []
   criterioDeEdicion: CriterioDeEdicion = FREE
   descripcion!: string
   id: number = 0
   mensajesErroneos: MensajeErroneo[] = []
 
-  constructor(public creador: Usuario, public nombreRutina: string) {}
+  constructor(public creador: Usuario, public nombreRutina: string, public ejercicios:Ejercicio[]=[]) {}
 
   duracion(): number {
     return this.ejercicios.reduce(
@@ -45,11 +45,11 @@ export class Rutina {
     return this.ejercicios.length > 0
   }
 
-  // gruposMuscularesQueEntrena():Set<GruposMusculares>{
-  //     return new Set(this.ejercicios.map(unEjercicio => unEjercicio.gruposMuscularesQueEntrena()));
-  // }
+     gruposMuscularesQueEntrena():Set<GruposMusculares>{
+       return new Set(this.ejercicios.flatMap (unEjercicio => Array.from(unEjercicio.gruposMuscularesQueEntrena())))
+   }
 
-  gruposMuscularesQueEntrena(): string[] {
+  gruposMuscularesQueEntrena1(): string[] {
     return ['Piernas', 'Brazos', 'Hombros']
   }
 

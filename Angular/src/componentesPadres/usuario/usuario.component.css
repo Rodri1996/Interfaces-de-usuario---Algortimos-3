@@ -75,6 +75,7 @@
 .flexRow {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 2rem;
@@ -124,9 +125,20 @@
     transform: scale(1.1);
 }
 
-.posicion-marcadores {
+.posicion-marcadores,
+.dias-de-entrenamiento {
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
     padding-top: 1rem;
     padding-bottom: 1rem;
+}
+
+.form-section {
+    width: 87%;
+    align-self: center;
+}
+
+.dias-de-entrenamiento {
+    flex-direction: column;
 }

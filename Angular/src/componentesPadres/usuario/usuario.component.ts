@@ -11,8 +11,8 @@ export class UsuarioComponent implements OnInit{
 
   usuario=new Usuario()
   fecha=""
+  @Input() diasDeSemana!:string
   
-
   gruposMusculares=[
     GruposMusculares.abdomen, 
     GruposMusculares.brazos, 
@@ -22,6 +22,16 @@ export class UsuarioComponent implements OnInit{
     GruposMusculares.pecho, 
     GruposMusculares.piernas
   ]
+
+  dias=[
+    Dias.lunes,
+    Dias.martes,
+    Dias.miercoles,
+    Dias.jueves,
+    Dias.viernes,
+    Dias.sabado,
+    Dias.domingo
+]
 
   validarcampos():void{
     if(this.usuario.datos === "") {
@@ -37,10 +47,6 @@ export class UsuarioComponent implements OnInit{
     }
   }
 
-  //constructor(public usuarioService:UsuarioService){}
-
-
-
   @Input() amigos!:Usuario
   listaDeAmigos=new ListaAmigos()
 
@@ -49,6 +55,16 @@ export class UsuarioComponent implements OnInit{
   }
   
 
+}
+
+export enum Dias{
+  lunes="L",
+  martes="M",
+  miercoles="M",
+  jueves="J",
+  viernes="V",
+  sabado="S",
+  domingo="D"
 }
 
 export class ListaAmigos{
