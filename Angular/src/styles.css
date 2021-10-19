@@ -4,19 +4,6 @@
     box-sizing: border-box;
 }
 
-html {
-    font-size: 10px;
-    min-height: 100%;
-    position:relative
-}
-
-.main {
-    /* padding-top: 124px; */
-    display: flex;
-    justify-content: center;
-    width: 100%;
-}
-
 :root{
     --color-primario:#003A64;
     --color-secundario:#54A2D2;
@@ -27,19 +14,69 @@ html {
     --footer-height:88px;
 }
 
-body {
-    background-color: var(--color-quinario);
-    height: 100%;
-    margin-bottom: 88px;
-    margin-top: 124px;
-    /* min-height: 100vh; */
-    /* width:100%; */
-    
+html {
+    font-size: 10px;
+    min-height: 100%;
+    position:relative;
+    background-color: var(--color-cuaternario);
 }
 
-app-card{
+.main {
+    display: flex;
+    justify-content: center;
     width: 100%;
+    margin-bottom: 88px;
+    margin-top: 124px;
+    background-color: var(--color-cuaternario);
 }
+
+/* Ventana "Card" ------------------------------------------------- */
+
+.card {
+    display: flex;
+    flex-direction: column;
+    border-color: grey;
+    border-style: solid;
+    border-radius: 1rem;
+    background-color: var(--color-cuaternario);
+    width: 100%;
+    min-width: 280px;
+    max-width: 1300px;
+    margin: 2.5rem;
+}
+
+.card-barra{
+    display: flex;
+    background-color: gray;
+    padding: 1rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-barra-right{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.card-barra-texto1{
+    font-size: 3.5rem;
+}
+
+.card-barra-texto2{
+    font-size: 2rem;
+}
+
+.card-barra-icono{
+    font-size: 3rem;
+}
+
+.card-contenido{
+    display: flex;
+    padding: 2.5rem;
+}
+
+/* ---------------------------------------------------------------- */
 
 /*botones*/
 
@@ -117,6 +154,8 @@ button:active{
 
 .inputSeparador{
     margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
 }
 
 .campo{

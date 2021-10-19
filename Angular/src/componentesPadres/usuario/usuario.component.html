@@ -3,19 +3,18 @@
 <app-marcador nombreMarcador="L"></app-marcador>
 -->
 <div class="main">
-    <section class="contenido-flex">
-        <header class="ventana-title">
+    <section class="card">
+        <header class="card-barra">
             <div class="header-informacion">
                 <img src="../assets/img/usuario.jpg">
-                <h2 class="nombre">Nazareno Peloso</h2>
+                <h1 class="card-barra-texto1">Nazareno Peloso</h1>
             </div>
             <div class="header-informacion">
-                <i class="fas fa-stopwatch header-tiempo"></i>
-                <h3 class="header-tiempo">170 minutos</h3>
+                <i class="fas fa-stopwatch card-barra-icono"></i>
+                <h1 class="card-barra-texto2">170 minutos</h1>
             </div>
         </header>
-        <app-card>
-
+        <div class="card-contenido card-contenido-usuario">
             <div class="box-container mis-datos">
                 <h4 class="form-subtitulo">Mis datos personales</h4>
                 <div class="form-section">
@@ -50,9 +49,9 @@
                 <div class="posicion-marcadores">
                     <app-marcador *ngFor="let grupo of gruposMusculares" nombreMarcador="{{grupo}}"></app-marcador>
                 </div>
-
+                
             </div>
-            <div class="box-container">
+            <div class="box-container dias-de-entrenamiento">
                 <h4 class="form-subtitulo">Dias de entrenamiento</h4>
                 <div class="dias-de-entrenamiento">
                     <app-marcador *ngFor="let dia of dias" nombreMarcador="{{dia}}"></app-marcador>
@@ -63,7 +62,10 @@
                 </div>
                 <input class="inputBase input-minutos campo" type="number">
             </div>
-            <div class="box-container"></div>
-        </app-card>
+            <div class="box-container">
+                <h4 class="form-subtitulo">Hola buenas tardes</h4>
+            </div>
+            
+        </div>
     </section>
 </div>
