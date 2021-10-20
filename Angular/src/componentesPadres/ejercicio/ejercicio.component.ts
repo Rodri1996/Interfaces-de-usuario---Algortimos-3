@@ -25,14 +25,16 @@ export class EjercicioComponent implements OnInit{
   checkMarcado:boolean = false
 
   rutina!:Rutina
+  idRutina!:number
 
   constructor(private rutinaService:RutinaService,private router:Router,private actividadesService:ActividadesService,private rutaRecibida:ActivatedRoute,private ejercicioService:EjercicioService){
-    this.rutaRecibida.params.subscribe(params=>{
-      this.rutina = this.rutinaService.trearRutina(params['id']) as Rutina
+    this.rutaRecibida.params.subscribe(params => {
+      this.idRutina = params['id']
     })
   }
-
-  ngOnInit():void{
+  
+  async ngOnInit(){
+    this.rutina = await this.rutinaService.trearRutina(this.idRutina)
     this.actividadesConocidas = this.actividadesService.actividades
   }
 
@@ -44,7 +46,7 @@ export class EjercicioComponent implements OnInit{
       const ejercicioSimple = this.crearEjercicioSimple()
       this.agregarEjercicioAlArray(ejercicioSimple)
     }
-    this.router.navigate(['/rutina/:'+ this.rutina.id])
+    this.router.navigate(['/rutina/:'+ this.idRutina])
   }
   
   crearEjercicioCompuesto(){
@@ -66,6 +68,6 @@ export class EjercicioComponent implements OnInit{
   }
 
   redirigirCancelar(){
-    this.router.navigate(['/rutina/:' + this.rutina.id])
+    this.router.navigate(['/rutina/:' + this.idRutina])
   }
 }

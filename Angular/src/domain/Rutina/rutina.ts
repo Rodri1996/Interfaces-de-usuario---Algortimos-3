@@ -1,3 +1,4 @@
+import { RutinaJSON } from 'src/app/services/rutinaService/rutina.service'
 import { GLUTEOS } from '../Actividad/actividad'
 import { CriterioDeEdicion, FREE } from '../CriterioDeEdicion/criterioDeEdicion'
 import {
@@ -18,8 +19,20 @@ export class Rutina {
   descripcion!: string
   id: number = 0
   mensajesErroneos: MensajeErroneo[] = []
-
+  
   constructor(public creador: Usuario, public nombreRutina: string, public ejercicios:Ejercicio[]=[]) {}
+  
+
+  static fromJson(rutinaJson:RutinaJSON): Rutina{
+    const rutina = new Rutina(
+      new Usuario(),
+      rutinaJson.nombreRutina,
+      rutinaJson.ejercicios = [EJERCICIO_1]
+    )
+    rutina.descripcion = rutinaJson.descripcion
+    rutina.criterioDeEdicion = rutinaJson.criterioDeEdicion
+    return rutina
+  }
 
   duracion(): number {
     return this.ejercicios.reduce(
@@ -54,6 +67,7 @@ export class Rutina {
   }
 
   agregarEjercicio(unEjercicio: Ejercicio): void {
+    console.info(unEjercicio)
     this.ejercicios.push(unEjercicio)
   }
 
