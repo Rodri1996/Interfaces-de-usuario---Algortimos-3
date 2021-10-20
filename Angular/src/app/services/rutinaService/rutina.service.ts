@@ -4,7 +4,7 @@ import { CriterioDeEdicion } from 'src/domain/CriterioDeEdicion/criterioDeEdicio
 import { Ejercicio } from 'src/domain/Ejercicios/ejercicio';
 import { RUTINA, Rutina } from 'src/domain/Rutina/rutina';
 
-export type RutinaJSON = {
+export type RutinaJson = {
   id:number
   ejercicios:Ejercicio[]
   nombreRutina:string
@@ -17,27 +17,32 @@ export type RutinaJSON = {
   providedIn: 'root'
 })
 
+
 export class RutinaService{
   
-  constructor(private http:HttpClient){}
+  // rutinas:Rutina[] 
   
-  async trearRutina(unId:number){
-    let rutinasDTO = await this.http.get<RutinaJSON>("http://localhost:8080/rutina/0").toPromise()
-    return Rutina.fromJson(rutinasDTO)
+  
+  constructor(private http:HttpClient){
+    
   }
   
-  // rutinas:Rutina[] 
-  // miId!:number
+  async traerRutina(idRutina:number):Promise<Rutina>{
+    console.log('Id de la rutina que llega al servicio rutinas: '+idRutina)
+    const rutinaJson = await this.http.get<RutinaJson>('http://localhost:8080/rutina/'+idRutina).toPromise()
+    console.info(rutinaJson)
+    return Rutina.fromJson(rutinaJson)
+  }
   
-  // trearRutina(unId:number){
-    //   console.log("El id pasado vale: "+unId)
-    //   return this.rutinas.find((rutina)=>{
-      //     return rutina.id == 0
-      //   })
-      // }
-      
-      // constructor(){
-        //   RUTINA.id = 0 
-        //   this.rutinas = [RUTINA]
+  // constructor(){
+    //   RUTINA.id = 0 
+    //   this.rutinas = [RUTINA]
+    // }
+    
+    // trearRutina(unId:number){
+      //     console.log("El id pasado vale: "+unId)
+      //     return this.rutinas.find((rutina)=>{
+        //         return rutina.id == 0
+        //       })
         // }
-}
+      }

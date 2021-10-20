@@ -10,7 +10,7 @@ export abstract class Ejercicio{
     abstract duracion():number;
 
     
-    gruposMuscularesQueEntrena():Set<GruposMusculares>{
+    gruposMuscularesQueEntrena():Set<string>{
         return this.unaActividad.gruposMuscularesQueEntrena
     }
 

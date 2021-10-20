@@ -34,8 +34,12 @@ export class EjercicioComponent implements OnInit{
   }
   
   async ngOnInit(){
-    this.rutina = await this.rutinaService.trearRutina(this.idRutina)
+    console.log('Estoy en el componente ejercicio y el id de la rutina vale: '+this.idRutina)
+    this.idRutina=0 
+    console.log('Luego de forzar el valor de idRutina ahora vale: '+this.idRutina)
     this.actividadesConocidas = this.actividadesService.actividades
+    this.rutina = await this.rutinaService.traerRutina(this.idRutina)
+    console.log('Estoy en el componente ejercicio y la desc de la rutina traida es: '+this.rutina.descripcion)
   }
 
   agregarEjercicio(){
@@ -46,7 +50,7 @@ export class EjercicioComponent implements OnInit{
       const ejercicioSimple = this.crearEjercicioSimple()
       this.agregarEjercicioAlArray(ejercicioSimple)
     }
-    this.router.navigate(['/rutina/:'+ this.idRutina])
+    this.router.navigate(['/rutina/'+ this.rutina.id])
   }
   
   crearEjercicioCompuesto(){
@@ -58,6 +62,7 @@ export class EjercicioComponent implements OnInit{
   }
 
   agregarEjercicioAlArray(unEjercicio:Ejercicio){
+    console.info(this.rutina)
     this.rutina.agregarEjercicio(unEjercicio)
   }
 
@@ -68,6 +73,6 @@ export class EjercicioComponent implements OnInit{
   }
 
   redirigirCancelar(){
-    this.router.navigate(['/rutina/:' + this.idRutina])
+    this.router.navigate(['/rutina/:' + this.rutina.id])
   }
 }

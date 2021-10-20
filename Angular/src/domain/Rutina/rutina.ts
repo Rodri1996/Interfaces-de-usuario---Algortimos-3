@@ -1,4 +1,4 @@
-import { RutinaJSON } from 'src/app/services/rutinaService/rutina.service'
+import { RutinaJson } from 'src/app/services/rutinaService/rutina.service'
 import { GLUTEOS } from '../Actividad/actividad'
 import { CriterioDeEdicion, FREE } from '../CriterioDeEdicion/criterioDeEdicion'
 import {
@@ -14,7 +14,7 @@ class MensajeErroneo {
   constructor(public campo: string, public mensaje: string) {}
 }
 export class Rutina {
-  //ejercicios: Ejercicio[] = []
+
   criterioDeEdicion: CriterioDeEdicion = FREE
   descripcion!: string
   id: number = 0
@@ -23,7 +23,7 @@ export class Rutina {
   constructor(public creador: Usuario, public nombreRutina: string, public ejercicios:Ejercicio[]=[]) {}
   
 
-  static fromJson(rutinaJson:RutinaJSON): Rutina{
+  static fromJson(rutinaJson:RutinaJson): Rutina{
     const rutina = new Rutina(
       new Usuario(),
       rutinaJson.nombreRutina,
@@ -58,16 +58,17 @@ export class Rutina {
     return this.ejercicios.length > 0
   }
 
-     gruposMuscularesQueEntrena():Set<GruposMusculares>{
-       return new Set(this.ejercicios.flatMap (unEjercicio => Array.from(unEjercicio.gruposMuscularesQueEntrena())))
-   }
-
-  gruposMuscularesQueEntrena1(): string[] {
-    return ['Piernas', 'Brazos', 'Hombros']
+  gruposMuscularesQueEntrena():Set<string>{
+     let grupos = new Set(this.ejercicios.flatMap (unEjercicio => Array.from(unEjercicio.gruposMuscularesQueEntrena())))
+     return grupos
   }
 
+  // gruposMuscularesQueEntrena1(): string[] {
+  //   return ['Piernas', 'Brazos', 'Hombros']
+  // }
+
   agregarEjercicio(unEjercicio: Ejercicio): void {
-    console.info(unEjercicio)
+    console.log('Nombre del ejercicio a agregar: '+ unEjercicio.nombre())
     this.ejercicios.push(unEjercicio)
   }
 

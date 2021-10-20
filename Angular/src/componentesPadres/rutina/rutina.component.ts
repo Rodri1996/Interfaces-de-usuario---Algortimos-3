@@ -24,17 +24,15 @@ export class RutinaComponent implements OnInit{
   constructor(private rutinaService:RutinaService,private router:Router,private rutaEnviada:ActivatedRoute,
     private ejercicioService:EjercicioService) {
       this.rutaEnviada.params.subscribe(parametro=>{
-        this.idRutina = parametro['id'] as number
-        console.log('IdRutina vale: '+this.idRutina)
+        this.idRutina = parametro['id']
       })
     }
-    
-    async ngOnInit(){
-      // this.rutina = this.rutinaService.trearRutina(idNumerico) as Rutina
-      console.log('El id de la rutina antes de entrar al servicio: '+this.idRutina)
-      this.rutina = await this.rutinaService.trearRutina(this.idRutina)
-      console.log(this.rutina.descripcion)
-    }
+
+  async ngOnInit(){
+    this.rutina = await this.rutinaService.traerRutina(this.idRutina)
+    console.info('Desccripcion de la rutina traida del backend: '+this.rutina.descripcion)
+    console.log('nombre de la rutina: '+this.rutina.nombreRutina)
+  }
   
   validarRutina(){
       this.rutina.validarCampos()
