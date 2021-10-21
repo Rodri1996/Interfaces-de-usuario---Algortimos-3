@@ -17,7 +17,7 @@ import {CRITERIOS_EDICION} from 'src/domain/CriterioDeEdicion/criterioDeEdicion'
 export class RutinaComponent implements OnInit{
  
   criteriosDeEdicion = CRITERIOS_EDICION
-  rutina!:Rutina
+  rutina!:Rutina 
   rutinasConocidas!:Rutina[]
   idRutina!:number
 
@@ -34,8 +34,9 @@ export class RutinaComponent implements OnInit{
     console.log('nombre de la rutina: '+this.rutina.nombreRutina)
   }
   
-  validarRutina(){
+  async guardarRutina(){
       this.rutina.validarCampos()
+      await this.rutinaService.actualizarRutina(this.rutina)
   }
 
   // redirigirCancelar(){

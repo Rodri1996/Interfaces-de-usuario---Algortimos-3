@@ -1,4 +1,3 @@
-import { RutinaJson } from 'src/app/services/rutinaService/rutina.service'
 import { GLUTEOS } from '../Actividad/actividad'
 import { CriterioDeEdicion, FREE } from '../CriterioDeEdicion/criterioDeEdicion'
 import {
@@ -9,6 +8,17 @@ import {
 } from '../Ejercicios/ejercicio'
 import { GruposMusculares } from '../Grupos Musculares/gruposMusculares'
 import { Usuario, USUARIO_CREADOR } from '../Usuario/usuario'
+
+
+export type RutinaJson = {
+  id:number
+  ejercicios:Ejercicio[]
+  nombreRutina:string
+  nombreCreador:string
+  apellidoCreador:string
+  descripcion:string
+  criterioDeEdicion:CriterioDeEdicion
+}
 
 class MensajeErroneo {
   constructor(public campo: string, public mensaje: string) {}
@@ -32,6 +42,18 @@ export class Rutina {
     rutina.descripcion = rutinaJson.descripcion
     rutina.criterioDeEdicion = rutinaJson.criterioDeEdicion
     return rutina
+  }
+
+  toJson():RutinaJson{
+    return {
+      id:this.id,
+      ejercicios:this.ejercicios,
+      nombreRutina:this.nombreRutina,
+      nombreCreador:this.creador.nombre,
+      apellidoCreador:this.creador.apellido,
+      descripcion:this.descripcion,
+      criterioDeEdicion:this.criterioDeEdicion
+    }
   }
 
   duracion(): number {
