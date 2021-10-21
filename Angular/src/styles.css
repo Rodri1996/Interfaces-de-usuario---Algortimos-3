@@ -29,9 +29,8 @@ html {
     margin-top: 124px;
     background-color: var(--color-cuaternario);
 }
-
-
-/* Ventana "Card" ------------------------------------------------- */
+/* ---------------------------------------------------------------- */
+/* Ventana "Card" */
 
 .card {
     display: flex;
@@ -79,8 +78,29 @@ html {
 
 
 /* ---------------------------------------------------------------- */
+/* BusquedaRutinas & MisRutinas */
 
+.card-contenido-rutinas{
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
 
+.info-rutina{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+    width: 85%;
+    padding: 10px;
+    font-size: 30px;
+    background-color: var(--color-terciario);
+    border-radius: 10px;
+    border-color: var(--color-primario);
+    border-style: solid;
+}
+
+/* ---------------------------------------------------------------- */
 /*botones*/
 
 .button-primario,
@@ -161,6 +181,7 @@ button:active {
     margin-bottom: 2rem;
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 .campo {

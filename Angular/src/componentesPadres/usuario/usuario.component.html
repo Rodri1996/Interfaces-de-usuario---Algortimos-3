@@ -17,31 +17,33 @@
         <div class="card-contenido card-contenido-usuario">
             <div class="box-container mis-datos">
                 <h4 class="form-subtitulo">Mis datos personales</h4>
-                <div class="form-section">
-                    <div class="inputSeparador">
-                        <label class="inputLabel">Nombre y apellido</label>
-                        <input class="inputBase campo" type="text" [(ngModel)]="usuario.datos" name="datos" placeholder="Ingrese nombre y apellido" required="required">
-                    </div>
-                </div>
-                <div class="flexRow">
-                    <div class="flexColumn">
+                <div class="form-content-misDatos">
+                    <div class="form-section">
                         <div class="inputSeparador">
-                            <label class="inputLabel">Nombre de usuario</label>
-                            <input class="inputBase campo" type="text" [(ngModel)]="usuario.username" name="username" placeholder="Ingrese nombre de usuario" required="required">
-                        </div>
-                        <div class="inputSeparador">
-                            <label class="inputLabel">Frec. cardíaca en reposo</label>
-                            <input class="inputBase campo" type="text" [(ngModel)]="usuario.frecuencia" name="frecuencia" placeholder="Ingrese frecuencia" required="required">
+                            <label class="inputLabel">Nombre y apellido</label>
+                            <input class="inputBase campo" type="text" [(ngModel)]="usuario.datos" name="datos" placeholder="Ingrese nombre y apellido" required="required">
                         </div>
                     </div>
-                    <div class="flexColumn">
-                        <div class="inputSeparador">
-                            <label class="inputLabel">Fecha de nacimiento</label>
-                            <input class="inputBase campo" type="date" [(ngModel)]="fecha" name="fecha" required="required">
+                    <div class="flexRow">
+                        <div class="flexColumn">
+                            <div class="inputSeparador">
+                                <label class="inputLabel">Nombre de usuario</label>
+                                <input class="inputBase campo" type="text" [(ngModel)]="usuario.username" name="username" placeholder="Ingrese nombre de usuario" required="required">
+                            </div>
+                            <div class="inputSeparador">
+                                <label class="inputLabel">Frec. cardíaca en reposo</label>
+                                <input class="inputBase campo" type="text" [(ngModel)]="usuario.frecuencia" name="frecuencia" placeholder="Ingrese frecuencia" required="required">
+                            </div>
                         </div>
-                        <div class="inputSeparador">
-                            <label class="inputLabel">Porcentaje de intensidad</label>
-                            <input class="inputBase campo" type="text" [(ngModel)]="usuario.porcentaje" name="porcentaje" placeholder="Ingrese porcentaje" required="required">
+                        <div class="flexColumn">
+                            <div class="inputSeparador">
+                                <label class="inputLabel">Fecha de nacimiento</label>
+                                <input class="inputBase campo" type="date" [(ngModel)]="fecha" name="fecha" required="required">
+                            </div>
+                            <div class="inputSeparador">
+                                <label class="inputLabel">Porcentaje de intensidad</label>
+                                <input class="inputBase campo" type="text" [(ngModel)]="usuario.porcentaje" name="porcentaje" placeholder="Ingrese porcentaje" required="required">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -51,24 +53,24 @@
                 </div>
 
             </div>
-            <div class="box-container dias-de-entrenamiento">
+            <div class="box-container">
                 <h4 class="form-subtitulo">Dias de entrenamiento</h4>
-                <div class="dias-de-entrenamiento">
-                    <div class="tamaño-marcador">
-                        <app-marcador *ngFor="let dia of dias" nombreMarcador="{{dia}}">
+                <div class="dias-de-entrenamiento-content">
+                    <app-marcador *ngFor="let dia of dias" nombreMarcador="{{dia}}">
+                        <div class="tamaño-marcador">
                             <div class="tiempo-minutos">
                                 <i class="fas fa-stopwatch header-tiempo"></i>
                                 <h3 class="header-tiempo">Minutos</h3>
                             </div>
                             <input class="inputBase campo tamaño-input" type="number">
-                        </app-marcador>
-                    </div>
+                        </div>
+                    </app-marcador>
                 </div>
             </div>
             <div class="box-container">
                 <h4 class="form-subtitulo">Amigos</h4>
+                <label class="inputLabel">Posibles amigos</label>
                 <div class="form-section">
-                    <label class="inputLabel">Posibles amigos</label>
                     <div class="agregar-elemento">
                         <select class="inputBase input-amigos campo">
                             <option>Sofia Martinez</option>
