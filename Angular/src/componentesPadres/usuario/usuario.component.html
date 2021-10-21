@@ -49,23 +49,39 @@
                 <div class="posicion-marcadores">
                     <app-marcador *ngFor="let grupo of gruposMusculares" nombreMarcador="{{grupo}}"></app-marcador>
                 </div>
-                
+
             </div>
             <div class="box-container dias-de-entrenamiento">
                 <h4 class="form-subtitulo">Dias de entrenamiento</h4>
                 <div class="dias-de-entrenamiento">
-                    <app-marcador *ngFor="let dia of dias" nombreMarcador="{{dia}}"></app-marcador>
+                    <div class="tamaño-marcador">
+                        <app-marcador *ngFor="let dia of dias" nombreMarcador="{{dia}}">
+                            <div class="tiempo-minutos">
+                                <i class="fas fa-stopwatch header-tiempo"></i>
+                                <h3 class="header-tiempo">Minutos</h3>
+                            </div>
+                            <input class="inputBase campo tamaño-input" type="number">
+                        </app-marcador>
+                    </div>
                 </div>
-                <div class="tiempo-minutos">
-                    <i class="fas fa-stopwatch header-tiempo"></i>
-                    <h3 class="header-tiempo">Minutos</h3>
-                </div>
-                <input class="inputBase input-minutos campo" type="number">
             </div>
             <div class="box-container">
-                <h4 class="form-subtitulo">Hola buenas tardes</h4>
+                <h4 class="form-subtitulo">Amigos</h4>
+                <div class="form-section">
+                    <label class="inputLabel">Posibles amigos</label>
+                    <div class="agregar-elemento">
+                        <select class="inputBase input-amigos campo">
+                            <option>Sofia Martinez</option>
+                            <option>Ezequiel Zapas</option>
+                        </select>
+                        <button class="button-agregar">
+                            Agregar
+                        </button>
+                    </div>
+                </div>
             </div>
-            
+
+
         </div>
     </section>
 </div>

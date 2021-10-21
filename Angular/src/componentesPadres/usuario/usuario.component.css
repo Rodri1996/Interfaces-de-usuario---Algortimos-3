@@ -1,11 +1,9 @@
 .contenido-flex {
     display: flex;
-    /* padding-top: 80px; */
     width: 80%;
     flex-wrap: wrap;
     justify-content: center;
     align-self: center;
-    /* max-width: 800px; */
 }
 
 .ventana-title {
@@ -30,20 +28,16 @@
     gap: 1.5rem;
 }
 
-.card-contenido-usuario{
+.card-contenido-usuario {
     flex-wrap: wrap;
     justify-content: center;
     gap: 2rem;
 }
 
 .box-container {
-    /* min-width: calc(769px / 3); */
     padding: 1rem;
-    /* flex-grow: 1; */
-    /* height: 500px; */
     display: flex;
-    /* max-width: 769px;
-    width:100%; */
+    flex-direction: column;
 }
 
 .box-container:nth-child(1) {
@@ -60,14 +54,12 @@
 
 .form-subtitulo {
     font-size: 1.8rem;
-    /* margin-top: 1.5rem; */
 }
 
 .mis-datos {
     display: flex;
     flex-direction: column;
 }
-
 
 .inputLabel {
     font-size: 1.5rem;
@@ -134,8 +126,7 @@
     transform: scale(1.1);
 }
 
-.posicion-marcadores,
-.dias-de-entrenamiento {
+.posicion-marcadores {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
@@ -143,11 +134,33 @@
     padding-bottom: 1rem;
 }
 
+.dias-de-entrenamiento {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .form-section {
-    width: 87%;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
     align-self: center;
 }
 
-.dias-de-entrenamiento {
-    flex-direction: column;
+.tiempo-minutos {
+    display: flex;
+    justify-content: center;
+}
+
+.agregar-elemento {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tamaño-input {
+    width: 100%;
+}
+
+.tamaño-marcador {
+    max-width: 80px;
+    gap: 20rem;
 }
