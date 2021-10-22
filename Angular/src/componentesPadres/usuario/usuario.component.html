@@ -48,8 +48,19 @@
                     </div>
                 </div>
                 <h4 class="form-subtitulo">Grupos Musculares de preferencia</h4>
-                <div class="posicion-marcadores">
-                    <app-marcador *ngFor="let grupo of gruposMusculares" nombreMarcador="{{grupo}}"></app-marcador>
+                <div class="form-section-grupoM">
+                    <input (change)="agregarGrupoPreferido('Piernas')" class="button__input" type="checkbox" id="Piernas">
+                    <label class="checkButton" for="Piernas">Piernas</label>
+                    <input (change)="agregarGrupoPreferido('Hombros')" class="button__input" type="checkbox" id="Hombros">
+                    <label class="checkButton" for="Hombros">Hombros</label>
+                    <input (change)="agregarGrupoPreferido('Brazos')" class="button__input" type="checkbox" id="Brazos">
+                    <label class="checkButton" for="Brazos">Brazos</label>
+                    <input (change)="agregarGrupoPreferido('Pecho')" class="button__input" type="checkbox" id="Pecho">
+                    <label class="checkButton" for="Pecho">Pecho</label>
+                    <input (change)="agregarGrupoPreferido('Espalda')" class="button__input" type="checkbox" id="Espalda">
+                    <label class="checkButton" for="Espalda">Espalda</label>
+                    <input (change)="agregarGrupoPreferido('Gluteos')" class="button__input" type="checkbox" id="Gluteos">
+                    <label class="checkButton" for="Gluteos">Gluteos</label>
                 </div>
 
             </div>

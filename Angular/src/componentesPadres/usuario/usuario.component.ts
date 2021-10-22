@@ -11,6 +11,7 @@ export class UsuarioComponent implements OnInit{
 
   usuario=new Usuario()
   fecha=""
+  gruposMuscularesPreferencia:GruposMusculares[]= []
   @Input() diasDeSemana!:string
   
   gruposMusculares=[
@@ -47,14 +48,22 @@ export class UsuarioComponent implements OnInit{
     }
   }
 
+  agregarGrupoPreferido(grupo:string){ 
+    if(this.gruposMuscularesPreferencia.includes(grupo as GruposMusculares)){
+      this.gruposMuscularesPreferencia.splice(this.gruposMuscularesPreferencia.indexOf(grupo as GruposMusculares), 1)
+    }else{
+      this.gruposMuscularesPreferencia.push(grupo as GruposMusculares)
+      console.log("hola", this.gruposMuscularesPreferencia)
+    }
+    
+  }
+
   @Input() amigos!:Usuario
   listaDeAmigos=new ListaAmigos()
 
   ngOnInit(){
-    //this.usuario = this.usuarioService.getUsuario()
+   //
   }
-  
-
 }
 
 export enum Dias{
