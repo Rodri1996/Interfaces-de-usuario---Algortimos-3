@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core'
-import { Usuario } from 'src/domain/Usuario/usuario'
+import { Dias, Usuario } from 'src/domain/Usuario/usuario'
 import { GruposMusculares } from 'src/domain/Grupos Musculares/gruposMusculares'
 
 @Component({
@@ -12,6 +12,7 @@ export class UsuarioComponent implements OnInit{
   usuario=new Usuario()
   fecha=""
   gruposMuscularesPreferencia:GruposMusculares[]= []
+  diasDeLaSemana:Dias[]= []
   @Input() diasDeSemana!:string
   
   gruposMusculares=[
@@ -58,6 +59,15 @@ export class UsuarioComponent implements OnInit{
     
   }
 
+  agregarDia(dia:string){
+    if(this.diasDeLaSemana.includes(dia as Dias)){
+      this.diasDeLaSemana.splice(this.diasDeLaSemana.indexOf(dia as Dias), 1)
+    }else{
+      this.diasDeLaSemana.push(dia as Dias)
+      console.log("hola", this.diasDeLaSemana)
+    }
+  }
+
   @Input() amigos!:Usuario
   listaDeAmigos=new ListaAmigos()
 
@@ -66,15 +76,7 @@ export class UsuarioComponent implements OnInit{
   }
 }
 
-export enum Dias{
-  lunes="L",
-  martes="M",
-  miercoles="M",
-  jueves="J",
-  viernes="V",
-  sabado="S",
-  domingo="D"
-}
+
 
 export class ListaAmigos{
   

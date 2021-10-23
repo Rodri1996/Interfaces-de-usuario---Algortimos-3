@@ -127,3 +127,29 @@
     max-width: 80px;
     gap: 20rem;
 }
+
+.dia {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 20%;
+}
+
+.semana {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 1rem;
+}
+
+#Lunes:checked~label[for="Lunes"],
+#Martes:checked~label[for="Martes"],
+#Miercoles:checked~label[for="Miercoles"],
+#Jueves:checked~label[for="Jueves"],
+#Viernes:checked~label[for="Viernes"],
+#Sabado:checked~label[for="Sabado"],
+#Domingo:checked~label[for="Domingo"] {
+    background-color: var(--color-primario);
+    color: var(--color-quinario);
+    font-weight: bold;
+}

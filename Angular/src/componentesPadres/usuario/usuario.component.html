@@ -1,7 +1,3 @@
-<!--
-<app-button placeholder="Agregar" estilo="button-primario"></app-button>
-<app-marcador nombreMarcador="L"></app-marcador>
--->
 <div class="main">
     <section class="card">
         <header class="card-barra">
@@ -66,16 +62,70 @@
             </div>
             <div class="box-container">
                 <h4 class="form-subtitulo">Dias de entrenamiento</h4>
-                <div class="dias-de-entrenamiento-content">
-                    <app-marcador *ngFor="let dia of dias" nombreMarcador="{{dia}}">
-                        <div class="tamaño-marcador">
-                            <div class="tiempo-minutos">
-                                <i class="fas fa-stopwatch header-tiempo"></i>
-                                <h3 class="header-tiempo">Minutos</h3>
-                            </div>
-                            <input class="inputBase campo tamaño-input" type="number">
+                <div class="dias-de-entrenamiento-content semana">
+                    <article class="dia">
+                        <input (change)="agregarDia('Lunes')" class="button__input" type="checkbox" id="Lunes">
+                        <label class="checkButton" for="Lunes">L</label>
+                        <div class="tiempo-minutos">
+                            <i class="fas fa-stopwatch header-tiempo"></i>
+                            <h3 class="header-tiempo">Minutos</h3>
                         </div>
-                    </app-marcador>
+                        <input class="inputBase campo tamaño-input" type="number">
+                    </article>
+                    <article class="dia">
+                        <input (change)="agregarDia('Martes')" class="button__input" type="checkbox" id="Martes">
+                        <label class="checkButton" for="Martes">M</label>
+                        <div class="tiempo-minutos">
+                            <i class="fas fa-stopwatch header-tiempo"></i>
+                            <h3 class="header-tiempo">Minutos</h3>
+                        </div>
+                        <input class="inputBase campo tamaño-input" type="number">
+                    </article>
+                    <article class="dia">
+                        <input (change)="agregarDia('Miercoles')" class="button__input" type="checkbox" id="Miercoles">
+                        <label class="checkButton" for="Miercoles">M</label>
+                        <div class="tiempo-minutos">
+                            <i class="fas fa-stopwatch header-tiempo"></i>
+                            <h3 class="header-tiempo">Minutos</h3>
+                        </div>
+                        <input class="inputBase campo tamaño-input" type="number">
+                    </article>
+                    <article class="dia">
+                        <input (change)="agregarDia('Jueves')" class="button__input" type="checkbox" id="Jueves">
+                        <label class="checkButton" for="Jueves">J</label>
+                        <div class="tiempo-minutos">
+                            <i class="fas fa-stopwatch header-tiempo"></i>
+                            <h3 class="header-tiempo">Minutos</h3>
+                        </div>
+                        <input class="inputBase campo tamaño-input" type="number">
+                    </article>
+                    <article class="dia">
+                        <input (change)="agregarDia('Viernes')" class="button__input" type="checkbox" id="Viernes">
+                        <label class="checkButton" for="Viernes">V</label>
+                        <div class="tiempo-minutos">
+                            <i class="fas fa-stopwatch header-tiempo"></i>
+                            <h3 class="header-tiempo">Minutos</h3>
+                        </div>
+                        <input class="inputBase campo tamaño-input" type="number">
+                    </article>
+                    <article class="dia">
+                        <input (change)="agregarDia('Sabado')" class="button__input" type="checkbox" id="Sabado">
+                        <label class="checkButton" for="Sabado">S</label>
+                        <div class="tiempo-minutos">
+                            <i class="fas fa-stopwatch header-tiempo"></i>
+                            <h3 class="header-tiempo">Minutos</h3>
+                        </div>
+                        <input class="inputBase campo tamaño-input" type="number">
+                    </article>
+                    <article class="dia">
+                        <input (change)="agregarDia('Domingo')" class="button__input" type="checkbox" id="Domingo">
+                        <label class="checkButton" for="Domingo">D</label>
+                        <div class="tiempo-minutos">
+                            <i class="fas fa-stopwatch header-tiempo"></i>
+                            <h3 class="header-tiempo">Minutos</h3>
+                        </div>
+                        <input class="inputBase campo tamaño-input" type="number">
+                    </article>
                 </div>
             </div>
             <div class="box-container">
@@ -93,8 +143,6 @@
                     </div>
                 </div>
             </div>
-
-
         </div>
     </section>
 </div>
