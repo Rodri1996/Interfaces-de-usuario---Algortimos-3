@@ -4,7 +4,16 @@ export class Usuario{
     nombre!:string
     apellido!:string
 
-    constructor(public id?:number,public username="", public password?:string,public gruposMuscularesDePreferencia:GruposMusculares[]=[], public diasDeLaSemana:Dias[]=[], public amigos:Usuario[]=[],public datos="",public frecuencia="", public fecha?:Date,public porcentaje=""){
+    constructor(public id?:number,public username="", 
+    public password?:string,
+    public gruposMuscularesDePreferencia:GruposMusculares[]=[], 
+    public diasDeLaSemana:Dias[]=[], 
+    public amigos:Usuario[]=[],
+    public datos="",
+    public frecuencia="", 
+    public fecha?:Date,
+    public porcentaje="", 
+    public minutos=Number){
         
     }
 
