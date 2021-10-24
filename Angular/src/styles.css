@@ -106,6 +106,7 @@ html {
     border-style: solid;
 }
 
+
 /* ---------------------------------------------------------------- */
 
 
@@ -209,9 +210,8 @@ button:active {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 100%;
-    column-gap: 3rem;
-    row-gap: 1rem;
+    width: 80%;
+    gap: 3rem;
 }
 
 #Piernas:checked~label[for="Piernas"],
@@ -247,7 +247,7 @@ button:active {
     transition: transform 200ms linear;
 }
 
-.checkButton-dia{
+.checkButton-dia {
     width: 100%;
 }
 

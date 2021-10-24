@@ -101,6 +101,7 @@
     flex-wrap: wrap;
     width: 100%;
     align-self: center;
+    flex-direction: column;
 }
 
 .form-content-misDatos {
@@ -168,4 +169,15 @@
     display: flex;
     flex-direction: row;
     gap: 7rem;
+}
+
+.minicard-informacion {
+    justify-content: space-evenly;
+    border-radius: 2rem;
+    background-color: var(--color-quinario);
+}
+
+.info-rutina {
+    font-size: 1.5rem;
+    height: 7rem;
 }
