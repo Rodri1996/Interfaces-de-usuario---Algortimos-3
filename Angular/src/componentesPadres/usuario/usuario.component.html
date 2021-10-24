@@ -64,67 +64,67 @@
                 <h4 class="form-subtitulo">Dias de entrenamiento</h4>
                 <div class="dias-de-entrenamiento-content semana">
                     <article class="dia">
-                        <input (change)="agregarDia('Lunes')" class="button__input" type="checkbox" id="Lunes">
+                        <input class="button__input" type="checkbox" id="Lunes">
                         <label class="checkButton checkButton-dia" for="Lunes">L</label>
                         <div class="tiempo-minutos">
                             <i class="fas fa-stopwatch header-tiempo"></i>
                             <h3 class="header-tiempo">Minutos</h3>
                         </div>
-                        <input class="inputBase campo tamaño-input" [(ngModel)]="usuario.minutos" name="minutos" type="number">
+                        <input class="inputBase campo tamaño-input" [(ngModel)]="usuario.diasDeEntrenamiento[0].minutosDeEntrenamiento" name="minutos" type="number">
                     </article>
                     <article class="dia">
-                        <input (change)="agregarDia('Martes')" class="button__input" type="checkbox" id="Martes">
+                        <input class="button__input" type="checkbox" id="Martes">
                         <label class="checkButton checkButton-dia" for="Martes">M</label>
                         <div class="tiempo-minutos">
                             <i class="fas fa-stopwatch header-tiempo"></i>
                             <h3 class="header-tiempo">Minutos</h3>
                         </div>
-                        <input class="inputBase campo tamaño-input" [(ngModel)]="usuario.minutos" name="minutos" type="number">
+                        <input class="inputBase campo tamaño-input" [(ngModel)]="usuario.diasDeEntrenamiento[1].minutosDeEntrenamiento" name="minutos" type="number">
                     </article>
                     <article class="dia">
-                        <input (change)="agregarDia('Miercoles')" class="button__input" type="checkbox" id="Miercoles">
+                        <input class="button__input" type="checkbox" id="Miercoles">
                         <label class="checkButton checkButton-dia" for="Miercoles">M</label>
                         <div class="tiempo-minutos">
                             <i class="fas fa-stopwatch header-tiempo"></i>
                             <h3 class="header-tiempo">Minutos</h3>
                         </div>
-                        <input class="inputBase campo tamaño-input" [(ngModel)]="usuario.minutos" name="minutos" type="number">
+                        <input class="inputBase campo tamaño-input" [(ngModel)]="usuario.diasDeEntrenamiento[2].minutosDeEntrenamiento" name="minutos" type="number">
                     </article>
                     <article class="dia">
-                        <input (change)="agregarDia('Jueves')" class="button__input" type="checkbox" id="Jueves">
+                        <input class="button__input" type="checkbox" id="Jueves">
                         <label class="checkButton checkButton-dia" for="Jueves">J</label>
                         <div class="tiempo-minutos">
                             <i class="fas fa-stopwatch header-tiempo"></i>
                             <h3 class="header-tiempo">Minutos</h3>
                         </div>
-                        <input class="inputBase campo tamaño-input" [(ngModel)]="usuario.minutos" name="minutos" type="number">
+                        <input class="inputBase campo tamaño-input" [(ngModel)]="usuario.diasDeEntrenamiento[3].minutosDeEntrenamiento" name="minutos" type="number">
                     </article>
                     <article class="dia">
-                        <input (change)="agregarDia('Viernes')" class="button__input" type="checkbox" id="Viernes">
+                        <input class="button__input" type="checkbox" id="Viernes">
                         <label class="checkButton checkButton-dia" for="Viernes">V</label>
                         <div class="tiempo-minutos">
                             <i class="fas fa-stopwatch header-tiempo"></i>
                             <h3 class="header-tiempo">Minutos</h3>
                         </div>
-                        <input class="inputBase campo tamaño-input" [(ngModel)]="usuario.minutos" name="minutos" type="number">
+                        <input class="inputBase campo tamaño-input" [(ngModel)]="usuario.diasDeEntrenamiento[4].minutosDeEntrenamiento" name="minutos" type="number">
                     </article>
                     <article class="dia">
-                        <input (change)="agregarDia('Sabado')" class="button__input" type="checkbox" id="Sabado">
+                        <input class="button__input" type="checkbox" id="Sabado">
                         <label class="checkButton checkButton-dia" for="Sabado">S</label>
                         <div class="tiempo-minutos">
                             <i class="fas fa-stopwatch header-tiempo"></i>
                             <h3 class="header-tiempo">Minutos</h3>
                         </div>
-                        <input class="inputBase campo tamaño-input" [(ngModel)]="usuario.minutos" name="minutos" type="number">
+                        <input class="inputBase campo tamaño-input" [(ngModel)]="usuario.diasDeEntrenamiento[5].minutosDeEntrenamiento" name="minutos" type="number">
                     </article>
                     <article class="dia">
-                        <input (change)="agregarDia('Domingo')" class="button__input" type="checkbox" id="Domingo">
+                        <input class="button__input" type="checkbox" id="Domingo">
                         <label class="checkButton checkButton-dia" for="Domingo">D</label>
                         <div class="tiempo-minutos">
                             <i class="fas fa-stopwatch header-tiempo"></i>
                             <h3 class="header-tiempo">Minutos</h3>
                         </div>
-                        <input class="inputBase campo tamaño-input" [(ngModel)]="usuario.minutos" name="minutos" type="number">
+                        <input class="inputBase campo tamaño-input" [(ngModel)]="usuario.diasDeEntrenamiento[6].minutosDeEntrenamiento" name="minutos" type="number">
                     </article>
                 </div>
             </div>
@@ -142,10 +142,50 @@
                         </button>
                     </div>
                     <section class="card-amistad">
-                        <div class="info-rutinas"></div>
+                        <div class="info-rutina minicard-informacion">
+                            <img src="../assets/img/jo_jung_suk.jpg">
+                            <div class="amistad">
+                                <h3>Jo Jung Suk</h3>
+                                <p>25 años / 50% de intensidad</p>
+                            </div>
+                            <i class="fas fa-trash-alt icono-animado"></i>
+                        </div>
+                        <div class="info-rutina minicard-informacion">
+                            <img src="../assets/img/kin_seul_gi.jpg">
+                            <div class="amistad">
+                                <h3>Kin Seul Gi</h3>
+                                <p>23 años / 70% de intensidad</p>
+                            </div>
+                            <i class="fas fa-trash-alt icono-animado"></i>
+                        </div>
+                        <div class="info-rutina minicard-informacion">
+                            <img src="../assets/img/lim_ju_hwan.jpg">
+                            <div class="amistad">
+                                <h3>Lim Ju Hwan</h3>
+                                <p>27 años / 80% de intensidad</p>
+                            </div>
+                            <i class="fas fa-trash-alt icono-animado"></i>
+                        </div>
+                        <div class="info-rutina minicard-informacion">
+                            <img src="../assets/img/na_bong_sun.jpg">
+                            <div class="amistad">
+                                <h3>Na Bong Sun</h3>
+                                <p>34 años / 10% de intensidad</p>
+                            </div>
+                            <i class="fas fa-trash-alt icono-animado"></i>
+                        </div>
+                        <div class="info-rutina minicard-informacion">
+                            <img src="../assets/img/shin_hye_sun.jpeg">
+                            <div class="amistad">
+                                <h3>Shin Hye Sun</h3>
+                                <p>40 años / 70% de intensidad</p>
+                            </div>
+                            <i class="fas fa-trash-alt icono-animado"></i>
+                        </div>
                     </section>
                 </div>
             </div>
+
         </div>
     </section>
 </div>

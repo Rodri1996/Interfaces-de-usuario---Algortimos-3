@@ -11,30 +11,8 @@ export class UsuarioComponent implements OnInit{
 
   usuario=new Usuario()
   fecha=""
-  gruposMuscularesPreferencia:GruposMusculares[]= []
-  diasDeLaSemana:Dias[]= []
   @Input() diasDeSemana!:string
   
-  gruposMusculares=[
-    GruposMusculares.abdomen, 
-    GruposMusculares.brazos, 
-    GruposMusculares.espalda, 
-    GruposMusculares.gluteos, 
-    GruposMusculares.hombros, 
-    GruposMusculares.pecho, 
-    GruposMusculares.piernas
-  ]
-
-  dias=[
-    Dias.lunes,
-    Dias.martes,
-    Dias.miercoles,
-    Dias.jueves,
-    Dias.viernes,
-    Dias.sabado,
-    Dias.domingo
-]
-
   validarcampos():void{
     if(this.usuario.datos === "") {
       throw Error("El campo nombre y apellido es obligatorio") 
@@ -50,29 +28,27 @@ export class UsuarioComponent implements OnInit{
   }
 
   agregarGrupoPreferido(grupo:string){ 
-    if(this.gruposMuscularesPreferencia.includes(grupo as GruposMusculares)){
-      this.gruposMuscularesPreferencia.splice(this.gruposMuscularesPreferencia.indexOf(grupo as GruposMusculares), 1)
+    if(this.usuario.gruposMuscularesDePreferencia.includes(grupo as GruposMusculares)){
+      this.usuario.gruposMuscularesDePreferencia.splice(this.usuario.gruposMuscularesDePreferencia.indexOf(grupo as GruposMusculares), 1)
     }else{
-      this.gruposMuscularesPreferencia.push(grupo as GruposMusculares)
-      console.log("hola", this.gruposMuscularesPreferencia)
+      this.usuario.gruposMuscularesDePreferencia.push(grupo as GruposMusculares)
     }
-    
-  }
-
-  agregarDia(dia:string){
-    if(this.diasDeLaSemana.includes(dia as Dias)){
-      this.diasDeLaSemana.splice(this.diasDeLaSemana.indexOf(dia as Dias), 1)
-    }else{
-      this.diasDeLaSemana.push(dia as Dias)
-      console.log("hola", this.diasDeLaSemana)
-    }
+    console.log(this.usuario)
   }
 
   @Input() amigos!:Usuario
   listaDeAmigos=new ListaAmigos()
 
   ngOnInit(){
-   //
+    this.usuario.diasDeEntrenamiento = [
+      {nombre:Dias.lunes,minutosDeEntrenamiento:0},
+      {nombre:Dias.martes,minutosDeEntrenamiento:0},
+      {nombre:Dias.miercoles,minutosDeEntrenamiento:0},
+      {nombre:Dias.jueves,minutosDeEntrenamiento:0},
+      {nombre:Dias.viernes,minutosDeEntrenamiento:0},
+      {nombre:Dias.sabado,minutosDeEntrenamiento:0},
+      {nombre:Dias.domingo,minutosDeEntrenamiento:0}
+    ]
   }
 }
 

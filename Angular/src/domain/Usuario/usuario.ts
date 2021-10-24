@@ -1,4 +1,9 @@
 import { GruposMusculares } from 'src/domain/Grupos Musculares/gruposMusculares'
+
+type DiaDeEntrenamiento = {
+	nombre:Dias,
+	minutosDeEntrenamiento:number	
+}
 export class Usuario{
 
     nombre!:string
@@ -7,13 +12,13 @@ export class Usuario{
     constructor(public id?:number,public username="", 
     public password?:string,
     public gruposMuscularesDePreferencia:GruposMusculares[]=[], 
-    public diasDeLaSemana:Dias[]=[], 
+    //public diasDeLaSemana:Dias[]=[], 
     public amigos:Usuario[]=[],
     public datos="",
     public frecuencia="", 
     public fecha?:Date,
     public porcentaje="", 
-    public minutos=Number){
+    public diasDeEntrenamiento:DiaDeEntrenamiento[]=[]){
         
     }
 
@@ -21,7 +26,6 @@ export class Usuario{
         this.amigos.push(seguidor1)
     }
 }
-
 
 export const USUARIO_CREADOR = new Usuario()
 USUARIO_CREADOR.nombre = 'Evaristo'
