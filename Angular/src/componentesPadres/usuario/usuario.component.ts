@@ -1,6 +1,22 @@
 import { Component, Input, OnInit } from '@angular/core'
 import { Dias, Usuario } from 'src/domain/Usuario/usuario'
 import { GruposMusculares } from 'src/domain/Grupos Musculares/gruposMusculares'
+// const usuario1 = new Usuario(1)
+// const usuario2 = new Usuario(2)
+// const usuario3 = new Usuario(3)
+// const usuario4 = new Usuario(4)
+// const usuario5 = new Usuario(5)
+// usuario1.nombre = "Ruperta"
+// usuario1.apellido = "Siniestra"
+// usuario2.nombre = "Pancracio"
+// usuario2.apellido = "Gelatina"
+// usuario3.nombre = "Romulo"
+// usuario3.apellido = "Colmena"
+// usuario4.nombre = "Clementino"
+// usuario4.apellido = "Coraje"
+// usuario5.nombre = "Evaristo"
+// usuario5.apellido = "Demente"
+ 
 
 @Component({
   selector: 'app-usuario',
@@ -11,6 +27,9 @@ export class UsuarioComponent implements OnInit{
 
   usuario=new Usuario()
   fecha=""
+  listaDeAmigos:Usuario[]=[]
+  posiblesAmigos:Usuario[]=[]
+  posibleAmigoSeleccionado!:Usuario
   @Input() diasDeSemana!:string
   
   validarcampos():void{
@@ -36,9 +55,6 @@ export class UsuarioComponent implements OnInit{
     console.log(this.usuario)
   }
 
-  @Input() amigos!:Usuario
-  listaDeAmigos=new ListaAmigos()
-
   ngOnInit(){
     this.usuario.diasDeEntrenamiento = [
       {nombre:Dias.lunes,minutosDeEntrenamiento:0},
@@ -50,14 +66,15 @@ export class UsuarioComponent implements OnInit{
       {nombre:Dias.domingo,minutosDeEntrenamiento:0}
     ]
   }
-}
 
+  agregarAmigo(){
+    this.usuario.posiblesAmigos=this.usuario.posiblesAmigos.filter(itemAmigo => itemAmigo !== this.posibleAmigoSeleccionado)
+    this.usuario.listaDeAmigos.push(this.posibleAmigoSeleccionado)
+  }
 
-
-export class ListaAmigos{
-  
-  listaDeAmigos:Usuario[]=[]
-  agregarLista(amigos:Usuario){
-    this.listaDeAmigos.push(amigos)
+  eliminarAmigo(amigo:Usuario){
+    this.usuario.listaDeAmigos = this.usuario.listaDeAmigos.filter(itemAmigo => itemAmigo !== amigo)
+    this.usuario.posiblesAmigos.push(amigo)
   }
 }
+
