@@ -27,7 +27,7 @@ export class Rutina {
 
   criterioDeEdicion: CriterioDeEdicion = FREE
   descripcion!: string
-  id: number = 0
+  //id: number = 0
   mensajesErroneos: MensajeErroneo[] = []
   
   constructor(public creador: Usuario, public nombreRutina: string, public ejercicios:Ejercicio[]=[]) {}
@@ -50,7 +50,7 @@ export class Rutina {
       id:this.id,
       ejercicios:this.ejercicios,
       nombreRutina:this.nombreRutina,
-      nombreCreador:this.creador.nombre,
+      nombreCreador:this.creador.nombreUsuario,
       apellidoCreador:this.creador.apellido,
       descripcion:this.descripcion,
       criterioDeEdicion:this.criterioDeEdicion
@@ -82,7 +82,7 @@ export class Rutina {
   }
 
   gruposMuscularesQueEntrena():Set<string>{
-     let grupos = new Set(this.ejercicios.flatMap (unEjercicio => Array.from(unEjercicio.gruposMuscularesQueEntrena())))
+     const grupos = new Set(this.ejercicios.flatMap (unEjercicio => Array.from(unEjercicio.gruposMuscularesQueEntrena())))
      return grupos
   }
 

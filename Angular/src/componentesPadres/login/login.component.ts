@@ -20,10 +20,11 @@ export class LoginComponent {
     try{
       this.validarCampos()
       const usuarioLogueado=await this.usuarioService.loguearUsuario(this.usuario,this.password)
+      localStorage.setItem("id",usuarioLogueado.id.toString())
       this.router.navigate(['/busquedaRutinas'])
     }catch(error:any){
       swal.fire('Oops...',error.error.message,'error')
-      console.log(error)
+      //console.log(error)
     } 
   }
 

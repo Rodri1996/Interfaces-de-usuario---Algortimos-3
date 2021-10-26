@@ -1,6 +1,8 @@
+import { ListaDeAmigosServiceService } from './../../app/services/listaDeAmigosService/listaDeAmigosService.service'
 import { Component, Input, OnInit } from '@angular/core'
 import { Dias, Usuario } from 'src/domain/Usuario/usuario'
 import { GruposMusculares } from 'src/domain/Grupos Musculares/gruposMusculares'
+import { Router } from '@angular/router'
 // const usuario1 = new Usuario(1)
 // const usuario2 = new Usuario(2)
 // const usuario3 = new Usuario(3)
@@ -31,17 +33,20 @@ export class UsuarioComponent implements OnInit{
   posiblesAmigos:Usuario[]=[]
   posibleAmigoSeleccionado!:Usuario
   @Input() diasDeSemana!:string
+
+
+  constructor(private listaDeAmigosService:ListaDeAmigosServiceService, public router:Router){}
   
   validarcampos():void{
     if(this.usuario.datos === "") {
       throw Error("El campo nombre y apellido es obligatorio") 
     }else if (this.usuario.username === ""){
       throw Error("El campo username es obligatorio")
-    }else if (this.usuario.frecuencia === ""){
+    }else if (this.usuario.frecuenciaCardiacaReposo === ""){
       throw Error("El campo frecuencia cardíaca en reposo es obligatorio")
     }else if (!this.fecha){
       throw Error("El campo fecha de nacimiento es obligatorio")
-    } else if (this.usuario.porcentaje == ""){
+    } else if (this.usuario.porcentajeDeIntensidadDeEntrenamiento == ""){
       throw Error ("El campo porcentaje de intensidad es obligatorio")
     }
   }
@@ -55,7 +60,7 @@ export class UsuarioComponent implements OnInit{
     console.log(this.usuario)
   }
 
-  ngOnInit(){
+  async ngOnInit(){
     this.usuario.diasDeEntrenamiento = [
       {nombre:Dias.lunes,minutosDeEntrenamiento:0},
       {nombre:Dias.martes,minutosDeEntrenamiento:0},
@@ -65,11 +70,20 @@ export class UsuarioComponent implements OnInit{
       {nombre:Dias.sabado,minutosDeEntrenamiento:0},
       {nombre:Dias.domingo,minutosDeEntrenamiento:0}
     ]
+    const id = localStorage.getItem("id")
+    if(id !== null){
+      console.log("usuario del back")
+      this.usuario = await this.listaDeAmigosService.traerUsuarioPorId(id)
+      console.log(this.usuario)
+    }else{
+      this.router.navigate(['/login'])
+    }
+    
   }
 
   agregarAmigo(){
-    this.usuario.posiblesAmigos=this.usuario.posiblesAmigos.filter(itemAmigo => itemAmigo !== this.posibleAmigoSeleccionado)
-    this.usuario.listaDeAmigos.push(this.posibleAmigoSeleccionado)
+    this.posiblesAmigos=this.posiblesAmigos.filter(itemAmigo => itemAmigo !== this.posibleAmigoSeleccionado)
+    this.listaDeAmigos.push(this.posibleAmigoSeleccionado)
   }
 
   eliminarAmigo(amigo:Usuario){

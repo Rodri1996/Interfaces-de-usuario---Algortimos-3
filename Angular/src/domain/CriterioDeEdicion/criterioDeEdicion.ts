@@ -1,5 +1,5 @@
-import { Rutina } from "../Rutina/rutina";
-import { Usuario } from "../Usuario/usuario";
+import { Rutina } from "../Rutina/rutina"
+import { Usuario } from "../Usuario/usuario"
 
 
 export interface CriterioDeEdicion{
@@ -9,15 +9,16 @@ export interface CriterioDeEdicion{
 export class Amistoso {
 
     rutinaPuedeSerEditadaPor(unUsuario:Usuario , unaRutina:Rutina):boolean{
-        return this.amigosDelCreador(unaRutina).includes(unUsuario);
+        return this.amigosDelCreador(unaRutina).includes(unUsuario)
     }
 
     amigosDelCreador(rutina:Rutina):Usuario[]{
-        return this.creadorDeLaRutina(rutina).listaDeAmigos;
+        return this.creadorDeLaRutina(rutina).listaDeAmigos
+
     }
 
     creadorDeLaRutina(rutina:Rutina):Usuario{
-        return rutina.creador;
+        return rutina.creador
     }
 }
 

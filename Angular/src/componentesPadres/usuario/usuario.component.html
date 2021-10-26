@@ -17,7 +17,7 @@
                     <div class="form-section">
                         <div class="inputSeparador">
                             <label class="inputLabel">Nombre y apellido</label>
-                            <input class="inputBase campo" type="text" [(ngModel)]="usuario.datos" name="datos" placeholder="Ingrese nombre y apellido" required="required">
+                            <input class="inputBase campo" type="text" [(ngModel)]="usuario.nombreApellido" name="datos" placeholder="Ingrese nombre y apellido" required="required">
                         </div>
                     </div>
                     <div class="flexRow">
@@ -28,7 +28,7 @@
                             </div>
                             <div class="inputSeparador">
                                 <label class="inputLabel">Frec. cardíaca en reposo</label>
-                                <input class="inputBase campo" type="text" [(ngModel)]="usuario.frecuencia" name="frecuencia" placeholder="Ingrese frecuencia" required="required">
+                                <input class="inputBase campo" type="text" [(ngModel)]="usuario.frecuenciaCardiacaReposo" name="frecuencia" placeholder="Ingrese frecuencia" required="required">
                             </div>
                         </div>
                         <div class="flexColumn">
@@ -38,7 +38,7 @@
                             </div>
                             <div class="inputSeparador">
                                 <label class="inputLabel">Porcentaje de intensidad</label>
-                                <input class="inputBase campo" type="text" [(ngModel)]="usuario.porcentaje" name="porcentaje" placeholder="Ingrese porcentaje" required="required">
+                                <input class="inputBase campo" type="text" [(ngModel)]="usuario.porcentajeDeIntensidadDeEntrenamiento" name="porcentaje" placeholder="Ingrese porcentaje" required="required">
                             </div>
                         </div>
                     </div>
@@ -134,7 +134,7 @@
                 <div class="form-section">
                     <div class="agregar-elemento">
                         <select [(ngModel)]="posibleAmigoSeleccionado" name="posibleAmigoSeleccionado" class="inputBase input-amigos campo">
-                            <option *ngFor="let amigo of posiblesAmigos" [ngValue]="amigo">{{amigo.nombre}} {{amigo.apellido}}</option>
+                            <option *ngFor="let amigo of posiblesAmigos" [ngValue]="amigo">{{amigo.nombreUsuario}} {{amigo.apellido}}</option>
                         </select>
                         <button (click)="agregarAmigo()" class="button-agregar">
                             Agregar
@@ -144,7 +144,7 @@
                         <div class="info-rutina minicard-informacion">
                             <img src="../assets/img/jo_jung_suk.jpg">
                             <div class="amistad">
-                                <h3>{{amigo.nombre}} {{amigo.apellido}}</h3>
+                                <h3>{{amigo.nombreUsuario}} {{amigo.apellido}}</h3>
                                 <p>25 años / 50% de intensidad</p>
                             </div>
                             <i (click)="eliminarAmigo(amigo)" class="fas fa-trash-alt icono-animado"></i>
