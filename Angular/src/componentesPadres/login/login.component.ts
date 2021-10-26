@@ -22,7 +22,8 @@ export class LoginComponent {
       const usuarioLogueado=await this.usuarioService.loguearUsuario(this.usuario,this.password)
       this.router.navigate(['/busquedaRutinas'])
     }catch(error:any){
-      swal.fire('Oops...',error.message,'error')
+      swal.fire('Oops...',error.error.message,'error')
+      console.log(error)
     } 
   }
 

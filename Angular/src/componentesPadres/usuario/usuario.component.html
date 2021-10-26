@@ -133,54 +133,21 @@
                 <label class="inputLabel">Posibles amigos</label>
                 <div class="form-section">
                     <div class="agregar-elemento">
-                        <select class="inputBase input-amigos campo">
-                            <option>Sofia Martinez</option>
-                            <option>Ezequiel Zapas</option>
+                        <select [(ngModel)]="posibleAmigoSeleccionado" name="posibleAmigoSeleccionado" class="inputBase input-amigos campo">
+                            <option *ngFor="let amigo of posiblesAmigos" [ngValue]="amigo">{{amigo.nombre}} {{amigo.apellido}}</option>
                         </select>
-                        <button class="button-agregar">
+                        <button (click)="agregarAmigo()" class="button-agregar">
                             Agregar
                         </button>
                     </div>
-                    <section class="card-amistad">
+                    <section *ngFor="let amigo of listaDeAmigos" class="card-amistad">
                         <div class="info-rutina minicard-informacion">
                             <img src="../assets/img/jo_jung_suk.jpg">
                             <div class="amistad">
-                                <h3>Jo Jung Suk</h3>
+                                <h3>{{amigo.nombre}} {{amigo.apellido}}</h3>
                                 <p>25 años / 50% de intensidad</p>
                             </div>
-                            <i class="fas fa-trash-alt icono-animado"></i>
-                        </div>
-                        <div class="info-rutina minicard-informacion">
-                            <img src="../assets/img/kin_seul_gi.jpg">
-                            <div class="amistad">
-                                <h3>Kin Seul Gi</h3>
-                                <p>23 años / 70% de intensidad</p>
-                            </div>
-                            <i class="fas fa-trash-alt icono-animado"></i>
-                        </div>
-                        <div class="info-rutina minicard-informacion">
-                            <img src="../assets/img/lim_ju_hwan.jpg">
-                            <div class="amistad">
-                                <h3>Lim Ju Hwan</h3>
-                                <p>27 años / 80% de intensidad</p>
-                            </div>
-                            <i class="fas fa-trash-alt icono-animado"></i>
-                        </div>
-                        <div class="info-rutina minicard-informacion">
-                            <img src="../assets/img/na_bong_sun.jpg">
-                            <div class="amistad">
-                                <h3>Na Bong Sun</h3>
-                                <p>34 años / 10% de intensidad</p>
-                            </div>
-                            <i class="fas fa-trash-alt icono-animado"></i>
-                        </div>
-                        <div class="info-rutina minicard-informacion">
-                            <img src="../assets/img/shin_hye_sun.jpeg">
-                            <div class="amistad">
-                                <h3>Shin Hye Sun</h3>
-                                <p>40 años / 70% de intensidad</p>
-                            </div>
-                            <i class="fas fa-trash-alt icono-animado"></i>
+                            <i (click)="eliminarAmigo(amigo)" class="fas fa-trash-alt icono-animado"></i>
                         </div>
                     </section>
                 </div>

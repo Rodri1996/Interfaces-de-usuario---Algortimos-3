@@ -9,7 +9,8 @@ import { Usuario } from 'src/domain/Usuario/usuario'
 export class UsuarioService {
     constructor(public http: HttpClient) { }
 
-         loguearUsuario(username: string, password: string) {
-        return this.http.post<Usuario>('localhost:8080' + '/login', {username, password}).toPromise()
+        async loguearUsuario(username: string, password: string) {
+        const usuarioEncontrado = await this.http.post<Usuario>('http://localhost:8080' + '/login', {username, password}).toPromise()
+        console.log(usuarioEncontrado)
     }
 }
