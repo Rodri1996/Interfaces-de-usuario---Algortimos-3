@@ -35,10 +35,11 @@ export class Rutina {
 
   static fromJson(rutinaJson:RutinaJson): Rutina{
     const rutina = new Rutina(
-      new Usuario(),
+      Usuario.fromJson(rutinaJson),
       rutinaJson.nombreRutina,
-      rutinaJson.ejercicios = [EJERCICIO_1]
+      rutinaJson.ejercicios
     )
+
     rutina.descripcion = rutinaJson.descripcion
     rutina.criterioDeEdicion = rutinaJson.criterioDeEdicion
     return rutina

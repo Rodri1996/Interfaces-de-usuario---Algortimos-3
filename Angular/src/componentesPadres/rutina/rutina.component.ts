@@ -30,8 +30,7 @@ export class RutinaComponent implements OnInit{
 
   async ngOnInit(){
     this.rutina = await this.rutinaService.traerRutina(this.idRutina)
-    console.info('Desccripcion de la rutina traida del backend: '+this.rutina.descripcion)
-    console.log('nombre de la rutina: '+this.rutina.nombreRutina)
+    console.info('Nombre de la rutina en el ngOnInit: '+this.rutina.nombreRutina)
   }
   
   async guardarRutina(){

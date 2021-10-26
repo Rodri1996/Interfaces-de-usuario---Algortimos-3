@@ -1,4 +1,5 @@
 import { GruposMusculares } from 'src/domain/Grupos Musculares/gruposMusculares'
+import { RutinaJson } from '../Rutina/rutina'
 
 type DiaDeEntrenamiento = {
 	nombre:Dias,
@@ -19,6 +20,13 @@ export class Usuario{
     public porcentaje="", 
     public diasDeEntrenamiento:DiaDeEntrenamiento[]=[]){
         
+    }
+
+    static fromJson(rutinaJson:RutinaJson):Usuario{
+        const usuario = new Usuario()
+        usuario.nombre = rutinaJson.nombreCreador
+        usuario.apellido = rutinaJson.apellidoCreador
+        return usuario
     }
 
 }
