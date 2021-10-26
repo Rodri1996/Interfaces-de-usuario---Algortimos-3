@@ -13,7 +13,7 @@ export class Amistoso {
     }
 
     amigosDelCreador(rutina:Rutina):Usuario[]{
-        return this.creadorDeLaRutina(rutina).amigos;
+        return this.creadorDeLaRutina(rutina).listaDeAmigos;
     }
 
     creadorDeLaRutina(rutina:Rutina):Usuario{
