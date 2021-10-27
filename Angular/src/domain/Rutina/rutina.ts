@@ -7,7 +7,7 @@ import {
   EJERCICIO_3
 } from '../Ejercicios/ejercicio'
 import { GruposMusculares } from '../Grupos Musculares/gruposMusculares'
-import { Usuario, USUARIO_CREADOR } from '../Usuario/usuario'
+import { Usuario} from '../Usuario/usuario'
 
 
 export type RutinaJson = {
@@ -24,22 +24,25 @@ class MensajeErroneo {
   constructor(public campo: string, public mensaje: string) {}
 }
 export class Rutina {
-
+  nombreCreador: string = ""
+  apellidoCreador: string = ""
   criterioDeEdicion: CriterioDeEdicion = FREE
   descripcion!: string
-  //id: number = 0
+  id: number = 1 
   mensajesErroneos: MensajeErroneo[] = []
   
   constructor(public creador: Usuario, public nombreRutina: string, public ejercicios:Ejercicio[]=[]) {}
   
 
-  static fromJson(rutinaJson:RutinaJson): Rutina{
+  static fromJson(rutinaJson:any): Rutina{
     const rutina = new Rutina(
       Usuario.fromJson(rutinaJson),
       rutinaJson.nombreRutina,
       rutinaJson.ejercicios
     )
-
+    rutina.duracion = rutinaJson.duracion
+    rutina.nombreCreador = rutinaJson.nombreCreador
+    rutina.apellidoCreador = rutinaJson.apellidoCreador
     rutina.descripcion = rutinaJson.descripcion
     rutina.criterioDeEdicion = rutinaJson.criterioDeEdicion
     return rutina
@@ -135,9 +138,13 @@ export class Rutina {
 
 const unNombre = 'Isquitibiales'
 
-export const RUTINA = new Rutina(USUARIO_CREADOR, unNombre)
+// export const RUTINA = new Rutina(USUARIO_CREADOR, unNombre)
 // RUTINA.ejercicios = [EJERCICIO_1, EJERCICIO_2, EJERCICIO_3]
-RUTINA.descripcion = 'Esta es una rutina sabrosa'
-// RUTINA.agregarEjercicio(EJERCICIO_1)
-// RUTINA.agregarEjercicio(EJERCICIO_2)
+
+// RUTINA.descripcion = 'Esta es una rutina sabrosa'
 // RUTINA.agregarEjercicio(EJERCICIO_3)
+
+// export const RUTINA2 = new Rutina(USUARIO_2, "Gluteales")
+// RUTINA2.descripcion = 'La mejor rutina para el posterior'
+// RUTINA2.agregarEjercicio(EJERCICIO_1)
+// RUTINA2.agregarEjercicio(EJERCICIO_2)

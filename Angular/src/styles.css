@@ -23,13 +23,29 @@ html {
 
 .main {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     width: 100%;
     margin-bottom: 88px;
     margin-top: 124px;
     background-color: var(--color-cuaternario);
 }
+/* ---------------------------------------------------------------- */
+/* Barra busqueda */
+.barra-busqueda{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: var(--color-terciario);
+}
 
+.buscar{
+    width: 100%;
+    max-width: 1300px;
+    height: 30px;
+    margin: 15px 0;
+}
 
 /* ---------------------------------------------------------------- */
 
@@ -73,6 +89,11 @@ html {
 
 .card-barra-icono {
     font-size: 3rem;
+    padding: 5px;
+}
+
+.fa-trash-alt{
+    color: darkred;
 }
 
 .card-contenido {
@@ -94,9 +115,10 @@ html {
 
 .info-rutina {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
     align-items: center;
-    height: 120px;
+    min-height: 120px;
     width: 85%;
     padding: 10px;
     font-size: 30px;
@@ -105,6 +127,17 @@ html {
     border-color: var(--color-primario);
     border-style: solid;
 }
+
+.info-rutina-center{
+    font-size: 30px;
+}
+.info-rutina-left{
+    font-size: 35px;
+}
+.info-rutina-right{
+    gap: 10px;
+}
+
 
 
 /* ---------------------------------------------------------------- */

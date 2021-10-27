@@ -20,7 +20,8 @@ import { NavbarComponent } from 'src/componentesCompartidos/navbar/navbar.compon
 import { MisRutinasComponent } from 'src/componentesPadres/misRutinas/misRutinas.component'
 import { BusquedaRutinasComponent } from 'src/componentesPadres/busquedaRutinas/busquedaRutinas.component'
 import { CardComponent } from 'src/componentesCompartidos/card/card.component'
-import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2'
+import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
+import { BusquedaRutinaPipePipe } from './pipes/busqueda-rutina-pipe.pipe'
 
 
 
@@ -37,7 +38,8 @@ import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2'
     MinicardComponent,
     MisRutinasComponent,
     BusquedaRutinasComponent,
-    CardComponent
+    CardComponent,
+    BusquedaRutinaPipePipe
   ],
   imports: [
     BrowserModule,

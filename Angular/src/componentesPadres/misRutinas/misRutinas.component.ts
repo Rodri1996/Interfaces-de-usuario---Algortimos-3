@@ -1,4 +1,7 @@
-import { Component, HostListener } from "@angular/core";
+import { Router } from '@angular/router';
+import { RutinaService } from './../../app/services/rutinaService/rutina.service';
+import { Rutina } from 'src/domain/Rutina/rutina';
+import { Component, OnInit } from "@angular/core";
 
 
 @Component({
@@ -6,13 +9,23 @@ import { Component, HostListener } from "@angular/core";
   templateUrl: './misRutinas.component.html',
   styleUrls: ['./misRutinas.component.css']
 })
-export class MisRutinasComponent {
+export class MisRutinasComponent implements OnInit {
 
-  @HostListener('window:resize')
-  pantallaMobile(){
-    return window.innerWidth < 401 
+  rutinas:Rutina[] = []
+
+  constructor(private servicioRutinas: RutinaService, private router: Router) {}
+
+  async ngOnInit() { //localStorage.get("id")
+    await this.servicioRutinas.traerMisRutinas(1).then((resultado) => {
+      this.rutinas = resultado.map(rutina => Rutina.fromJson(rutina))
+      console.log(this.rutinas)
+    }).catch((errorCatched)=>{
+      console.log("No se encontraron rutinas")
+    })
   }
-
-  constructor() { }
-
+  
+  editarRutina(rutinaId:number){
+    console.log("Hola?")
+    this.router.navigate(['/rutina/'+rutinaId])
+  }
 }

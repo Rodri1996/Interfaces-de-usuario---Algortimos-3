@@ -36,6 +36,10 @@ export class Usuario{
 
 }
 
+// export const USUARIO_2 = new Usuario()
+// USUARIO_2.nombre = 'Maxi'
+// USUARIO_2.apellido = 'Lopez'
+
 export enum Dias{
     lunes="L",
     martes="M",

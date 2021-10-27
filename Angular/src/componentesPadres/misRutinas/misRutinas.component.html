@@ -8,10 +8,17 @@
             </div>
         </div>
         <div class="card-contenido card-contenido-rutinas">
-            <div class="info-rutina">Esto es una rutina</div>
-            <div class="info-rutina">Esto es una rutina</div>
-            <div class="info-rutina">Esto es una rutina</div>
-            <div class="info-rutina">Esto es una rutina</div>
+            <div *ngFor="let rutina of rutinas" class="info-rutina">
+                <div class="info-rutina-left">
+                    <p>{{rutina.nombreRutina}}</p>
+                    <p class="card-barra-texto2">{{rutina.duracion}} minutos</p>                    
+                </div>
+                <p class="info-rutina-center">Por {{rutina.nombreCreador}} {{rutina.apellidoCreador}}</p>
+                <div class="info-rutina-right">     
+                    <i class="fas fa-pen card-barra-icono" (click)="editarRutina(rutina.id)"></i>
+                    <i class="fas fa-trash-alt card-barra-icono"></i>
+                </div>
+            </div>
         </div>
     </div>
 </div>
