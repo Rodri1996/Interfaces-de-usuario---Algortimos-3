@@ -11,3 +11,11 @@
 .boton-mediano{
   width: 45%;
 }
+
+.table_header{
+  background-color:burlywood;
+}
+
+.table_body{
+  background-color: #d5d5ca;
+}

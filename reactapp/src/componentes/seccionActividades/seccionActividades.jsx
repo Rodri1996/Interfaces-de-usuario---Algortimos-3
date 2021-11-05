@@ -9,6 +9,7 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
+import IconButton from '@mui/material/IconButton'
 import DeleteIcon from '@mui/icons-material/Delete';
 
 function createData(nombre, gruposMusculares) {
@@ -33,13 +34,13 @@ export default class seccionActividades extends Component{
                 </Box>
                 <TableContainer component={Paper}>
                     <Table>
-                        <TableHead>
-                            <TableRow>
+                        <TableHead className="table_header">
+                            <TableRow >
                                 <TableCell
-                                fontWeight="500"
                                 >Nombre</TableCell>
-                                <TableCell align="left" fontWeight="500">Grupos Musculares</TableCell>
-                                
+                                <TableCell
+                                fontWeight="600"
+                                align="left" >Grupos Musculares</TableCell>
                             </TableRow>
                         </TableHead>
                         <TableBody>
@@ -51,10 +52,14 @@ export default class seccionActividades extends Component{
                                 <TableCell component="th" scope="row">
                                     {row.nombre}
                                 </TableCell>
-                                <Box sx={{display:"flex",alignItems:"center",justifyContent:"space-around"}}>
-                                    <TableCell align="left">{row.gruposMusculares}
+                                <Box sx={{display:"flex",alignItems:"center",justifyContent:"space-between",
+                                pr:"1"}}>
+                                    <TableCell align="center">{row.gruposMusculares}
                                     </TableCell>
-                                    <DeleteIcon></DeleteIcon>
+        
+                                    <IconButton aria-label="delete" color="error">
+                                        <DeleteIcon />
+                                    </IconButton>
                                 </Box>
                                 
                             </TableRow>
