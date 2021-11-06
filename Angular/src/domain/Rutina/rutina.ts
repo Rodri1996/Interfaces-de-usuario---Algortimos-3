@@ -7,7 +7,11 @@ import {
   EJERCICIO_3
 } from '../Ejercicios/ejercicio'
 import { GruposMusculares } from '../Grupos Musculares/gruposMusculares'
+<<<<<<< Updated upstream
 import { Usuario} from '../Usuario/usuario'
+=======
+import { Usuario } from '../Usuario/usuario'
+>>>>>>> Stashed changes
 
 
 export type RutinaJson = {
@@ -28,7 +32,11 @@ export class Rutina {
   apellidoCreador: string = ""
   criterioDeEdicion: CriterioDeEdicion = FREE
   descripcion!: string
+<<<<<<< Updated upstream
   id: number = 1 
+=======
+  id = 0
+>>>>>>> Stashed changes
   mensajesErroneos: MensajeErroneo[] = []
   
   constructor(public creador: Usuario, public nombreRutina: string, public ejercicios:Ejercicio[]=[]) {}
@@ -36,13 +44,16 @@ export class Rutina {
 
   static fromJson(rutinaJson:any): Rutina{
     const rutina = new Rutina(
-      Usuario.fromJson(rutinaJson),
+      new Usuario(),
       rutinaJson.nombreRutina,
-      rutinaJson.ejercicios
+      rutinaJson.ejercicios = [EJERCICIO_1]
     )
+<<<<<<< Updated upstream
     rutina.duracion = rutinaJson.duracion
     rutina.nombreCreador = rutinaJson.nombreCreador
     rutina.apellidoCreador = rutinaJson.apellidoCreador
+=======
+>>>>>>> Stashed changes
     rutina.descripcion = rutinaJson.descripcion
     rutina.criterioDeEdicion = rutinaJson.criterioDeEdicion
     return rutina
@@ -136,12 +147,20 @@ export class Rutina {
   }
 }
 
-const unNombre = 'Isquitibiales'
+//const unNombre = 'Isquitibiales'
 
+<<<<<<< Updated upstream
 // export const RUTINA = new Rutina(USUARIO_CREADOR, unNombre)
 // RUTINA.ejercicios = [EJERCICIO_1, EJERCICIO_2, EJERCICIO_3]
 
 // RUTINA.descripcion = 'Esta es una rutina sabrosa'
+=======
+// export const RUTINA = new Rutina()
+// RUTINA.ejercicios = [EJERCICIO_1, EJERCICIO_2, EJERCICIO_3]
+// RUTINA.descripcion = 'Esta es una rutina sabrosa'
+// RUTINA.agregarEjercicio(EJERCICIO_1)
+// RUTINA.agregarEjercicio(EJERCICIO_2)
+>>>>>>> Stashed changes
 // RUTINA.agregarEjercicio(EJERCICIO_3)
 
 // export const RUTINA2 = new Rutina(USUARIO_2, "Gluteales")

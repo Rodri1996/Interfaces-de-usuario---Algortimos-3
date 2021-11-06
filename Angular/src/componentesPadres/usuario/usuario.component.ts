@@ -29,7 +29,7 @@ export class UsuarioComponent implements OnInit{
 
   usuario=new Usuario()
   fecha=""
-  listaDeAmigos:Usuario[]=[]
+  amigos:Usuario[]=[]
   posiblesAmigos:Usuario[]=[]
   posibleAmigoSeleccionado!:Usuario
   @Input() diasDeSemana!:string
@@ -83,7 +83,7 @@ export class UsuarioComponent implements OnInit{
 
   agregarAmigo(){
     this.posiblesAmigos=this.posiblesAmigos.filter(itemAmigo => itemAmigo !== this.posibleAmigoSeleccionado)
-    this.listaDeAmigos.push(this.posibleAmigoSeleccionado)
+    this.amigos.push(this.posibleAmigoSeleccionado)
   }
 
   eliminarAmigo(amigo:Usuario){

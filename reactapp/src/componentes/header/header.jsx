@@ -8,10 +8,11 @@ import Avatar from '@mui/material/Avatar'
 import Stack from '@mui/material/Stack'
 import Logout  from '@mui/icons-material/Logout'
 
-//Agrego comentario para poder commitear
-
 const Header = () => {
-  return (
+
+  const esLogin = () => true
+  
+  return esLogin() && (
     <Box sx={{ flexGrow: 1}}>
       <AppBar position="static" style={{backgroundColor:'black'}}>
         <Toolbar>
@@ -27,10 +28,10 @@ const Header = () => {
           </Typography>
          
           <Stack spacing={2}>
-            <Avatar alt="Remy Sharp" src="../assets/images/Lionel_Messi.jpg" />
+            <Avatar src="/Lionel_Messi.jpg" />
           </Stack>
           <p>Lionel Messi</p>
-          <IconButton aria-label="logout" style={{color:'white'}}>
+          <IconButton aria-label="logout" style={{color:'white'}} href>
             <Logout />
           </IconButton>
           </Box>

@@ -140,7 +140,7 @@
                             Agregar
                         </button>
                     </div>
-                    <section *ngFor="let amigo of listaDeAmigos" class="card-amistad">
+                    <section [(ngModel)]="amigos" name="amigos" *ngFor="let amigo of amigos" class="card-amistad">
                         <div class="info-rutina minicard-informacion">
                             <img src="../assets/img/jo_jung_suk.jpg">
                             <div class="amistad">
