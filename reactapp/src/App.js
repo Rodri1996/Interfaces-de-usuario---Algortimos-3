@@ -1,7 +1,7 @@
 import './App.css'
+import Actividades from './componentes/actividades/actividades';
 import Footer from './componentes/footer/footer'
 import Header from './componentes/header/header'
-//import Actividades from './componentes/seccionActividades/seccionActividades'
 //import Login from './componentes/login/loginComponent'
 import Usuario from './componentes/Usuario/usuario'
 //import Rutina from './componentes/rutinas/rutina'
@@ -13,8 +13,10 @@ function App() {
         <Header/>
         {/* <Rutina/> */}
         
-            <Usuario/>
-        {/* <Actividades/> */}
+        {/* <Usuario/> */}
+        
+        <Actividades/>
+
         {/* <Login/>   */}
         <Footer/>
         </>
