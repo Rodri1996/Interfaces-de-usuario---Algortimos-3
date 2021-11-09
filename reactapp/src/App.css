@@ -1,21 +1,21 @@
-.App {
-  min-height: 100vh;
+.boton-mediano {
+    width: 45%;
 }
 
-.App-header {
-    min-height: 100%;
-    font-size: calc(10px + 2vmin);
+.table_header {
+    background-color: burlywood;
+}
+
+.table_body {
+    background-color: #d5d5ca;
+}
+
+.table-head {
+    background-color: #9c27b0;
+}
+
+.letra {
+    font-weight: 500;
     color: white;
-}
-
-.boton-mediano{
-  width: 45%;
-}
-
-.table_header{
-  background-color:burlywood;
-}
-
-.table_body{
-  background-color: #d5d5ca;
+    font-size: 17px;
 }
