@@ -2,6 +2,15 @@
     width: 45%;
 }
 
+.grupoMarcador{
+    margin: 5px;
+}
+
+.grupoMarcador:hover{
+    background-color: rgb(58, 58, 192);
+    color: white;
+}
+
 .table_header {
     background-color: burlywood;
 }

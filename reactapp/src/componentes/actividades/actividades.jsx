@@ -5,23 +5,18 @@ import { Typography } from "@mui/material";
 import TextField from '@mui/material/TextField'
 import Button from '@mui/material/Button';
 import SeccionActividades from '../seccionActividades/seccionActividades';
-import Fab from '@mui/material/Fab';
-import { borderColor, height } from "@mui/system";
 import {Actividad} from '../../dominio/actividad'
-
-const ButtonGM ={
-    estilos:{
-        width:"fit-content",
-        height:"35px"
-    }
-}
-
+import Stack from '@mui/material/Stack';
+import Chip from '@mui/material/Chip';
 
 export default class Actividades extends Component{
     
     
     state={
-        actividad: new Actividad()
+        actividadesTraidas:[],
+        actividad: new Actividad(),
+        grupMuscularesConocidos: ['Piernas','Hombros','Brazos','Pecho','Espalda','Glúteos','Abdomen'],
+        gruposMuscularesMarcados:[]
     }
     
     cambiarNombre=(event)=>{
@@ -41,6 +36,10 @@ export default class Actividades extends Component{
         
     }
 
+    sumarGrupoMuscular=(grupo)=>{
+        // this.gruposMuscularesMarcados.push(grupo)
+    }
+
     render(){
         return(
             <Box sx={{
@@ -57,9 +56,21 @@ export default class Actividades extends Component{
                 <TextField id="outlined-basic" label="Nombre de la actividad" variant="outlined"
                 onChange={this.cambiarNombre}
                 ref="campoNombre"/>
-                <Fab variant="extended" style={ButtonGM.estilos}>
-                    Piernas
-                </Fab>
+                
+                <Stack display="flex" 
+                flexWrap="wrap"
+                justifyContent="center"
+                alignItems="center" direction="row" spacing={1}>
+                    {this.state.grupMuscularesConocidos.map(
+                        grupo=>
+                        <Chip variant="outlined"
+                        color="primary"
+                        label={grupo}
+                        className="grupoMarcador"
+                        onClick={this.sumarGrupoMuscular(grupo)}
+                        />
+                    )}
+                </Stack>
                 <Box sx={{display:"flex",justifyContent:"space-around"}}>
                     <Button 
                     variant="outlined"
