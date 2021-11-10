@@ -31,7 +31,7 @@ const Header = () => {
             <Avatar src="/Lionel_Messi.jpg" />
           </Stack>
           <p>Lionel Messi</p>
-          <IconButton aria-label="logout" style={{color:'white'}} href>
+          <IconButton aria-label="logout" style={{color:'white'}}>
             <Logout />
           </IconButton>
           </Box>

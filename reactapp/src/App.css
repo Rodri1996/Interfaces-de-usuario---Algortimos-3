@@ -28,3 +28,7 @@
     color: white;
     font-size: 17px;
 }
+
+.defaultPageSize{
+    min-height: 523px;
+}
