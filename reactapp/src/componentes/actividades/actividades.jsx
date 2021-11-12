@@ -4,7 +4,7 @@ import Box from '@mui/material/Box'
 import { Typography } from "@mui/material";
 import TextField from '@mui/material/TextField'
 import Button from '@mui/material/Button';
-import SeccionActividades from '../seccionActividades/seccionActividades';
+import {SeccionActividades} from '../seccionActividades/seccionActividades';
 import {Actividad} from '../../dominio/actividad'
 import Stack from '@mui/material/Stack';
 import Chip from '@mui/material/Chip';
@@ -13,10 +13,11 @@ export default class Actividades extends Component{
     
     
     state={
-        actividadesTraidas:[],
+        actividades:["Gluteos"],
         actividad: new Actividad(),
-        grupMuscularesConocidos: ['Piernas','Hombros','Brazos','Pecho','Espalda','Glúteos','Abdomen'],
-        gruposMuscularesMarcados:[]
+        grupMuscularesConocidos: ['Piernas'],
+        gruposMuscularesMarcados:[],
+        inputNombre: "Nombre de la actividad"
     }
     
     cambiarNombre=(event)=>{
@@ -33,11 +34,25 @@ export default class Actividades extends Component{
     }
 
     descartarCambios = ()=>{
-        
+        console.log('Voy a descartar los cambios')
+        this.setState({
+            inputNombre:"Nombre de la actividad"
+        })
+        console.log(this.state.inputNombre)
     }
 
     sumarGrupoMuscular=(grupo)=>{
-        // this.gruposMuscularesMarcados.push(grupo)
+        console.log('Grupo musc marcado: '+grupo)
+        // const actividad = this.state.actividad
+        // actividad.gruposMuscularesMarcados.push(grupo)
+        // this.cambiarEstado(actividad)
+    }
+
+    agregarActividad=()=>{
+        //aca le tengo que decir al servicio con 
+        // un put que actualize el backend con la
+        //actividad nueva que se modeló en esta
+        //pantalla
     }
 
     render(){
@@ -53,19 +68,20 @@ export default class Actividades extends Component{
                 <Typography variant="h6">
                     Nombre
                 </Typography>
-                <TextField id="outlined-basic" label="Nombre de la actividad" variant="outlined"
-                onChange={this.cambiarNombre}
-                ref="campoNombre"/>
-                
+                <TextField id="outlined-basic" label= {this.state.inputNombre}
+                variant="outlined"
+                onChange={this.cambiarNombre}/>
+
                 <Stack display="flex" 
                 flexWrap="wrap"
                 justifyContent="center"
                 alignItems="center" direction="row" spacing={1}>
                     {this.state.grupMuscularesConocidos.map(
-                        grupo=>
+                        (grupo)=>
                         <Chip variant="outlined"
                         color="primary"
                         label={grupo}
+                        key="0"
                         className="grupoMarcador"
                         onClick={this.sumarGrupoMuscular(grupo)}
                         />
@@ -80,12 +96,12 @@ export default class Actividades extends Component{
                     Limpiar campos
                     </Button>
                     <Button 
-                    className="boton-mediano" variant="contained">
+                    className="boton-mediano" variant="contained"
+                    onClick={this.agregarActividad}>
                     Aceptar
                     </Button>
                 </Box>
-                <SeccionActividades></SeccionActividades>
-
+                <SeccionActividades actividades={this.state.actividades}></SeccionActividades>
             </Box>
         )
 
