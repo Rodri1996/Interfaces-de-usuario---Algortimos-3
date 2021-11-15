@@ -13,7 +13,7 @@ function App() {
             <Header />
 
             <div className="defaultPageSize">
-                <Login />
+                {/* <Login /> */}
 
                 {/* <Home/>  */}
 
@@ -21,7 +21,7 @@ function App() {
 
                 {/* <Usuario/> */}
 
-                {/* <Actividades/> */}
+                <Actividades/>
             </div>
             
             <Footer />
