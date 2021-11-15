@@ -11,7 +11,7 @@ import Box from '@mui/material/Box'
 import { Button, Stack } from '@mui/material'
 import { createTheme } from '@mui/material/styles'
 import { purple, grey } from '@mui/material/colors'
-import { bgcolor } from '@mui/system'
+import { usuarioService } from '../../services/usuarioService'
 
 
 const theme = createTheme({
@@ -41,8 +41,19 @@ export default class Usuario extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      usuarios: [],
+      usuariosActuales: [],
+      usuarioFinales:[]
     }
+  }
+
+  async componentDidMount(){
+    await this.traerUsuariosActuales()
+    
+  }
+
+  async traerUsuariosActuales(){
+    const usuariosActuales = await usuarioService.allInstances()
+    this.setState({usuariosActuales})
   }
 
   render() {
