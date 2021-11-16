@@ -8,16 +8,28 @@ import SeccionActividades from '../seccionActividades/seccionActividades';
 import {Actividad} from '../../dominio/actividad'
 import Stack from '@mui/material/Stack';
 import Chip from '@mui/material/Chip';
-
+import {actividadesService} from '../../servicios/actividadesService'
+import {gruposMuscularesService} from '../../services/gruposMuscularesService'
 export default class Actividades extends Component{
     
     
     state={
-        // actividades:["Gluteos"],
         actividad: new Actividad(),
         grupMuscularesConocidos: ['Piernas'],
         gruposMuscularesMarcados:[],
         inputNombre: "Nombre de la actividad"
+    }
+
+    async componentDidMount(){
+        const gruposMuscularesJson = await this.traerGruposMusculares()
+        this.setState({
+            grupMuscularesConocidos:gruposMuscularesJson
+        })
+        console.info(this.state.grupMuscularesConocidos)
+    }
+
+    async traerGruposMusculares(){
+        return await gruposMuscularesService.getGruposMusculares()
     }
     
     cambiarNombre=(event)=>{
@@ -48,11 +60,9 @@ export default class Actividades extends Component{
         // this.cambiarEstado(actividad)
     }
 
-    agregarActividad=()=>{
-        //aca le tengo que decir al servicio con 
-        // un put que actualize el backend con la
-        //actividad nueva que se modeló en esta
-        //pantalla
+    agregarActividad= async ()=>{
+        const actividad = this.state.actividad
+        await actividadesService.sumarActividad(actividad)
     }
 
     render(){
@@ -76,16 +86,18 @@ export default class Actividades extends Component{
                 flexWrap="wrap"
                 justifyContent="center"
                 alignItems="center" direction="row" spacing={1}>
-                    {this.state.grupMuscularesConocidos.map(
+                    {/* {
+                    this.state.grupMuscularesConocidos.data.map(
                         (grupo)=>
                         <Chip variant="outlined"
                         color="primary"
                         label={grupo}
                         key="0"
                         className="grupoMarcador"
-                        onClick={this.sumarGrupoMuscular(grupo)}
+                        onClick={this.sumarGrupoMuscular(grupo)
+                        }
                         />
-                    )}
+                    )} */}
                 </Stack>
                 <Box sx={{display:"flex",justifyContent:"space-around"}}>
                     <Button 

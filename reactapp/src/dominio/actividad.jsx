@@ -12,4 +12,11 @@ export class Actividad{
         )
         return actividadPosta
     }
+
+    static toJson(actividad){
+        return {
+            nombre: actividad.nombre
+            //falta agregar los grupos musculares de la actividad recibida por parametro
+        }
+    }
 }
