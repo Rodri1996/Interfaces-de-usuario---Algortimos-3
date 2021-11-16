@@ -12,11 +12,30 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 
 import {ActividadRow} from '../actividadRow/actividadRow'
-
+import { Component } from 'react';
+import {actividadesService} from '../../servicios/actividadesService'
 
   
-export const SeccionActividades=(props)=>{
+//export const SeccionActividades=(props)=>{
 
+export default class SeccionActividades extends Component{
+
+    state={
+        actividadesDisponibles:[]
+    }
+
+    async componentDidMount(){
+        await this.traerActividades()
+    }
+
+    async traerActividades(){
+        const actividades = await actividadesService.getActividades()
+        this.setState({
+            actividadesDisponibles:actividades
+        })
+    }
+
+    render(){
         return(
         <Card sx={{ minWidth: 275, p:1}}>
             <Box sx={{ display: 'flex',flexDirection: 'column',p:1}}>
@@ -41,10 +60,10 @@ export const SeccionActividades=(props)=>{
                         </TableHead>
                         <TableBody>
                             {
-                                props.actividades.map((actividad)=>
+                                this.state.actividadesDisponibles.map((actividad)=>
                                     <ActividadRow
                                         actividad={actividad}
-                                        key="0"
+                                        key={actividad.id}
                                     />
                                 )
                             }
@@ -53,5 +72,5 @@ export const SeccionActividades=(props)=>{
                 </TableContainer>
             </Box>
         </Card>
-        )
+        )}
     }

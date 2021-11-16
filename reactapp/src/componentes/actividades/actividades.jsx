@@ -4,7 +4,7 @@ import Box from '@mui/material/Box'
 import { Typography } from "@mui/material";
 import TextField from '@mui/material/TextField'
 import Button from '@mui/material/Button';
-import {SeccionActividades} from '../seccionActividades/seccionActividades';
+import SeccionActividades from '../seccionActividades/seccionActividades';
 import {Actividad} from '../../dominio/actividad'
 import Stack from '@mui/material/Stack';
 import Chip from '@mui/material/Chip';
@@ -13,7 +13,7 @@ export default class Actividades extends Component{
     
     
     state={
-        actividades:["Gluteos"],
+        // actividades:["Gluteos"],
         actividad: new Actividad(),
         grupMuscularesConocidos: ['Piernas'],
         gruposMuscularesMarcados:[],
@@ -101,7 +101,7 @@ export default class Actividades extends Component{
                     Aceptar
                     </Button>
                 </Box>
-                <SeccionActividades actividades={this.state.actividades}></SeccionActividades>
+                <SeccionActividades></SeccionActividades>
             </Box>
         )
 
