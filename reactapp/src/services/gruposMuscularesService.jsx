@@ -1,9 +1,10 @@
 import axios from "axios"
+import {REST_SERVER_URL} from '../services/constants'
 
 class GruposMuscularesService{
 
     async getGruposMusculares(){
-        const gruposJson = await axios.get("http://localhost:8080/grupos")
+        const gruposJson = await axios.get(REST_SERVER_URL+"/grupos")
         return gruposJson
     }
 }

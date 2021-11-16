@@ -8,7 +8,7 @@ import SeccionActividades from '../seccionActividades/seccionActividades';
 import {Actividad} from '../../dominio/actividad'
 import Stack from '@mui/material/Stack';
 import Chip from '@mui/material/Chip';
-import {actividadesService} from '../../servicios/actividadesService'
+import {actividadesService} from '../../services/actividadesService'
 import {gruposMuscularesService} from '../../services/gruposMuscularesService'
 export default class Actividades extends Component{
     

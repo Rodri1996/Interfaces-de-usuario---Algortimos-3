@@ -13,7 +13,7 @@ import Paper from '@mui/material/Paper';
 
 import {ActividadRow} from '../actividadRow/actividadRow'
 import { Component } from 'react';
-import {actividadesService} from '../../servicios/actividadesService'
+import {actividadesService} from '../../services/actividadesService'
 
   
 //export const SeccionActividades=(props)=>{
