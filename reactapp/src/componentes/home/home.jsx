@@ -57,6 +57,7 @@ export default class Home extends Component {
                     </CardContent>
                 </Card>
             </Box>
+            
         )
     }
 }

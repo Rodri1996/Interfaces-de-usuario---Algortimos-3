@@ -15,13 +15,13 @@ function App() {
             <div className="defaultPageSize">
                 {/* <Login /> */}
 
-                {/* <Home/>  */}
+                <Home/> 
 
                 {/* <Rutina/> */}
 
                 {/* <Usuario/> */}
 
-                <Actividades/>
+                {/* <Actividades/> */}
             </div>
             
             <Footer />

@@ -10,11 +10,11 @@ class UsuarioService {
   }
 
   async allInstances() {
-    const usuarioJson = await axios.get(`${REST_SERVER_URL}/usuario`)
-    return usuarioJson.data.map((usuarioJson) => Usuario.fromJson(usuarioJson))
+    const usuariosJson = await axios.get(`${REST_SERVER_URL}/usuarios`)
+    return usuariosJson.data.map((usuarioJson) => Usuario.fromJson(usuarioJson))
   }
 
-  async getTareaById(id) {
+  async getUsuarioById(id) {
     const usuarioJson = await axios.get(`${REST_SERVER_URL}/usuario/${id}`)
     return this.usuarioAsJson(usuarioJson.data)
   }
