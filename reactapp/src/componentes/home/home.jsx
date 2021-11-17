@@ -8,8 +8,10 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import GroupsIcon from '@mui/icons-material/Groups';
 import FitnessCenterIcon from '@mui/icons-material/FitnessCenter';
+import { withRouter } from 'react-router'
+import { PropTypes } from 'prop-types'
 
-export default class Home extends Component {
+export class Home extends Component {
     render() {
         return (
 
@@ -60,4 +62,12 @@ export default class Home extends Component {
             
         )
     }
+
+    
+
 }
+Home.propTypes = {
+    history: PropTypes.object   
+}
+
+export default withRouter(Home)

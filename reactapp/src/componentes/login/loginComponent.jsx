@@ -12,6 +12,7 @@ import FitnessCenter from '@mui/icons-material/FitnessCenter'
 import Card from '@mui/material/Card'
 import CardActions from '@mui/material/CardActions'
 import CardContent from '@mui/material/CardContent'
+import { withRouter } from 'react-router'
 
 
 const theme = createTheme({
@@ -22,10 +23,10 @@ const theme = createTheme({
   },
 })
 
-export default class Login extends Component {
-  // ingresar(){
-  // this.props.history.push('/')
-  //}
+export class LoginComponent extends Component {
+   ingresar = () => {
+   this.props.history.push('/')
+  }
 
   render() {
     return (
@@ -109,3 +110,5 @@ export default class Login extends Component {
   }
 
 }
+
+export default withRouter(LoginComponent)
