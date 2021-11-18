@@ -1,8 +1,8 @@
 import React from 'react'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
-import { Home } from './componentes/home/home'
+import  Home  from './componentes/home/home'
 import  LoginComponent  from './componentes/login/loginComponent'
-import  Usuario  from './componentes/usuario/usuario'
+import  Usuario  from './componentes/Usuario/usuario'
 import  Rutina  from './componentes/rutinas/rutina'
 import  Actividades  from './componentes/actividades/actividades'
 

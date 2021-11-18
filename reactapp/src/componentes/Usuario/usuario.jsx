@@ -67,7 +67,7 @@ export default class Usuario extends Component {
               Usuarios Actuales
             </Typography>
             <Typography variant="h6" fontWeight="bold">
-              5
+              {this.state.usuariosActuales.length}
             </Typography>
           </Box>
           <TableContainer component={Paper}>
@@ -108,7 +108,7 @@ export default class Usuario extends Component {
               Usuarios Finales
             </Typography>
             <Typography variant="h6" fontWeight="bold">
-              0
+              {this.state.usuarioFinales.length}
             </Typography>
           </Box>
           <cardActions>
