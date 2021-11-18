@@ -15,9 +15,6 @@ import {ActividadRow} from '../actividadRow/actividadRow'
 import { Component } from 'react';
 import {actividadesService} from '../../services/actividadesService'
 
-  
-//export const SeccionActividades=(props)=>{
-
 export default class SeccionActividades extends Component{
 
     state={
@@ -44,7 +41,7 @@ export default class SeccionActividades extends Component{
                         Actividades
                     </Typography>
                     <Typography variant="h6" fontWeight="bold">
-                        3
+                        {this.state.actividadesDisponibles.length}
                     </Typography>
                 </Box>
                 <TableContainer component={Paper}>

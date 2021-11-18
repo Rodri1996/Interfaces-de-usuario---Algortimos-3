@@ -17,7 +17,7 @@ export default class Actividades extends Component{
         actividad: new Actividad(),
         grupMuscularesConocidos: ['Piernas'],
         gruposMuscularesMarcados:[],
-        inputNombre: "Nombre de la actividad"
+        inputValue:""
     }
 
     async componentDidMount(){
@@ -33,12 +33,20 @@ export default class Actividades extends Component{
     }
     
     cambiarNombre=(event)=>{
+        const inputContent = event.target.value 
         const actividad = this.state.actividad
-        actividad.nombre = event.target.value
-        this.cambiarEstado(actividad)
+        actividad.nombre = inputContent
+        this.cambiarEstadoInput(inputContent)
+        this.cambiarEstadoActividad(actividad)
     }
 
-    cambiarEstado=(actividad)=>{
+    cambiarEstadoInput=(inputContent)=>{
+        this.setState({
+            inputValue:inputContent  
+        })
+    }
+
+    cambiarEstadoActividad=(actividad)=>{
         const newActividad = Object.assign(actividad)
         this.setState({
             actividad:newActividad
@@ -46,11 +54,8 @@ export default class Actividades extends Component{
     }
 
     descartarCambios = ()=>{
-        console.log('Voy a descartar los cambios')
-        this.setState({
-            inputNombre:"Nombre de la actividad"
-        })
-        console.log(this.state.inputNombre)
+        const inputVacio =""
+        this.cambiarEstadoInput(inputVacio)
     }
 
     sumarGrupoMuscular=(grupo)=>{
@@ -78,8 +83,9 @@ export default class Actividades extends Component{
                 <Typography variant="h6">
                     Nombre
                 </Typography>
-                <TextField id="outlined-basic" label= {this.state.inputNombre}
+                <TextField id="outlined-basic" label= "Nombre de la actividad"
                 variant="outlined"
+                value={this.state.inputValue}
                 onChange={this.cambiarNombre}/>
 
                 <Stack display="flex" 
