@@ -95,4 +95,4 @@ Home.propTypes = {
     history: PropTypes.object   
 }
 
-export default withRouter(Home)
+

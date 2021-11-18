@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Box from '@mui/material/Box'
 import TextField from '@mui/material/TextField'
-import { Lock, Person } from '@mui/icons-material'
+import { Lock, Login, Person } from '@mui/icons-material'
 import { Button, Stack } from '@mui/material'
 import { PropTypes } from 'prop-types'
 import { createTheme } from '@mui/material/styles'
@@ -14,7 +14,6 @@ import CardActions from '@mui/material/CardActions'
 import CardContent from '@mui/material/CardContent'
 import { withRouter } from 'react-router-dom'
 
-
 const theme = createTheme({
   palette: {
     primary: {
@@ -23,9 +22,48 @@ const theme = createTheme({
   },
 })
 
-export class LoginComponent extends Component {
-   ingresar = () => {
-   this.props.history.push('/')
+export default class LoginComponent extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      username: '',
+      password: '',
+      errorMessage: '',
+    }
+  }
+
+  ingresar = () => {
+    try{
+    this.validarLogin()
+    //this.props.history.push('/')
+    }catch(e){}
+  }
+
+  updateUsername = (event) => {
+    const username = event.target.value
+    this.setState({
+      username: username,
+    })
+  }
+
+  updatePassword = (event) => {
+    const password = event.target.value
+    this.setState({
+      password: password,
+    })
+  }
+
+  validarLogin = () => {
+    let username = this.state.username
+    let password = this.state.password
+
+    if (username==="") {
+      throw Error("El campo username es obligatorio")
+    } else if (password===""){
+      throw Error ("El campo password es obligatorio")
+    } else if (username==="" && password===""){
+      throw Error ("User y/o password son obligatorios")
+    }
   }
 
   render() {
@@ -65,6 +103,7 @@ export class LoginComponent extends Component {
                   id="input-with-sx"
                   label="Usuario"
                   variant="standard"
+                  onChange={this.updateUsername}
                 />
               </Box>
               <Box sx={{ display: 'flex', alignItems: 'flex-end' }}>
@@ -73,8 +112,8 @@ export class LoginComponent extends Component {
                   id="input-with-sx"
                   label="Contraseña"
                   variant="standard"
+                  onChange={this.updatePassword}
                 />
-
               </Box>
             </CardContent>
             <CardActions
@@ -105,10 +144,7 @@ export class LoginComponent extends Component {
 
   static get propTypes() {
     return {
-      history: PropTypes.object
+      history: PropTypes.object,
     }
   }
-
 }
-
-export default withRouter(LoginComponent)

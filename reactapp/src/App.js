@@ -6,7 +6,7 @@ import Login from './componentes/login/loginComponent'
 import Usuario from './componentes/Usuario/usuario'
 import Rutina from './componentes/rutinas/rutina'
 import Home from './componentes/home/home'
-import { RunappRoutes } from './router'
+
 
 function App() {
     return (
@@ -14,8 +14,8 @@ function App() {
             <Header />
 
             <div className="defaultPageSize">
-                <RunappRoutes/>
-                {/* <Login /> */}
+              
+                <Login />
 
                 {/* <Home/>  */}
 
