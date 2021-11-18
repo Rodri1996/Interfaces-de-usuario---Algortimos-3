@@ -28,7 +28,7 @@ export default class SeccionActividades extends Component{
         await this.traerActividades()
     }
 
-    async traerActividades(){
+    traerActividades=async()=>{
         const actividades = await actividadesService.getActividades()
         this.setState({
             actividadesDisponibles:actividades
@@ -64,6 +64,7 @@ export default class SeccionActividades extends Component{
                                     <ActividadRow
                                         actividad={actividad}
                                         key={actividad.id}
+                                        actualizarActividades={this.traerActividades}
                                     />
                                 )
                             }

@@ -7,7 +7,12 @@ import {actividadesService} from '../../services/actividadesService'
 export const ActividadRow = (props) =>{
 
     const borrarActividad= async ()=>{
-        await actividadesService.borrarActividad(props.actividad.id)
+        try{
+            await actividadesService.borrarActividad(props.actividad.id)
+        }
+        finally{    
+            await props.actualizarActividades()
+        }
     }
 
     const eliminarActividadButton = 
