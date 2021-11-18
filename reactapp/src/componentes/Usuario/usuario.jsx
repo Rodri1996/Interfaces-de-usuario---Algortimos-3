@@ -132,6 +132,7 @@ export default class Usuario extends Component {
             </Button>
           </Stack>
           </cardActions>
+          <br/>
         </Box>
      
     )
