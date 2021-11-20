@@ -19,7 +19,6 @@ class UsuarioService {
     return this.usuarioAsJson(usuarioJson.data)
   }
 
-
 }
 
 export const usuarioService = new UsuarioService()

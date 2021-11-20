@@ -6,8 +6,10 @@ export class Usuario {
     }
 
     static fromJson(usuarioJSON) {
-        const usuarioActual = Object.assign(new Usuario(),
-            usuarioJSON, {}
+        const usuarioActual = Object.assign(
+            new Usuario(),
+            usuarioJSON, 
+            {}
         )
         return usuarioActual
     }
