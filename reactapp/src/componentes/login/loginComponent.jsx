@@ -23,9 +23,24 @@ const theme = createTheme({
 })
 
 export default class Login extends Component {
-  // ingresar(){
-  // this.props.history.push('/')
-  //}
+   ingresar = () => {
+     try{
+    this.validarLogin
+    this.props.history.push('/home')
+     }catch(e){
+      console.log(e)
+     }
+  }
+
+  validarLogin = () => {
+    if(usuario == "" && contraseña==""){
+      throw Error ("Usuario y/o contraseña son obligatorios")
+    } else if(usuario==""){
+      throw Error ("El campo usuario es obligatorio")
+    }else if (contraseña=""){
+      throw Error ("El campo contraseña es obligatorio")
+    }
+  }
 
   render() {
     return (
@@ -64,6 +79,7 @@ export default class Login extends Component {
                   id="input-with-sx"
                   label="Usuario"
                   variant="standard"
+                  onChange={}
                 />
               </Box>
               <Box sx={{ display: 'flex', alignItems: 'flex-end' }}>
@@ -72,6 +88,7 @@ export default class Login extends Component {
                   id="input-with-sx"
                   label="Contraseña"
                   variant="standard"
+                  onChange={}
                 />
 
               </Box>
