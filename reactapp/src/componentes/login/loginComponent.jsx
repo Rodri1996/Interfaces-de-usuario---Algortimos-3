@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, {Component} from 'react'
 import Box from '@mui/material/Box'
 import TextField from '@mui/material/TextField'
 import { Lock, Person } from '@mui/icons-material'
@@ -12,6 +12,8 @@ import FitnessCenter from '@mui/icons-material/FitnessCenter'
 import Card from '@mui/material/Card'
 import CardActions from '@mui/material/CardActions'
 import CardContent from '@mui/material/CardContent'
+import Snackbar from '@mui/material/Snackbar';
+import { obtenerMensaje } from '../../Utils/obtenerMensaje'
 
 
 const theme = createTheme({
@@ -23,26 +25,62 @@ const theme = createTheme({
 })
 
 export default class Login extends Component {
-   ingresar = () => {
-     try{
-    this.validarLogin
-    this.props.history.push('/home')
-     }catch(e){
-      console.log(e)
-     }
+
+  constructor(props) {
+    super(props)
+    this.state = {
+      usuario: '',
+      contraseña: '',
+      errorMessage: ''
+    }
+  }
+
+  ingresarUsuario = (event) => {
+    const inputUsuario = event.target.value
+    this.cambiarEstadoUsuario(inputUsuario)
+  }
+
+  ingresarContraseña = (event) => {
+    const inputContraseña = event.target.value
+    this.cambiarEstadoContraseña(inputContraseña)
+    
+  }
+
+  cambiarEstadoUsuario = (inputUsuario) => {
+    this.setState({
+      usuario:inputUsuario,
+    })
+    console.log(this.state.usuario)
+  }
+
+  cambiarEstadoContraseña = (inputContraseña) => {
+    this.setState({
+      contraseña:inputContraseña,
+    })
+    console.log(this.state.contraseña)
+  }
+
+  ingresar = () => {
+    try{
+      this.validarLogin()
+      this.props.history.push('/home')
+    }catch(e){
+      this.setState({ errorMessage: obtenerMensaje(e) })
+    }
   }
 
   validarLogin = () => {
-    if(usuario == "" && contraseña==""){
-      throw Error ("Usuario y/o contraseña son obligatorios")
-    } else if(usuario==""){
-      throw Error ("El campo usuario es obligatorio")
-    }else if (contraseña=""){
-      throw Error ("El campo contraseña es obligatorio")
+    if (this.state.usuario === '' && this.state.contraseña === '') {
+      throw Error('Usuario y/o contraseña son obligatorios')
+    } else if (this.state.usuario === '') {
+      throw Error('El campo usuario es obligatorio')
+    } else if (this.state.contraseña === '') {
+      throw Error('El campo contraseña es obligatorio')
     }
   }
 
   render() {
+    const snackbarOpen = !!this.state.errorMessage
     return (
       <>
         <Box
@@ -79,7 +117,7 @@ export default class Login extends Component {
                   id="input-with-sx"
                   label="Usuario"
                   variant="standard"
-                  onChange={}
+                  onChange={this.ingresarUsuario}
                 />
               </Box>
               <Box sx={{ display: 'flex', alignItems: 'flex-end' }}>
@@ -88,9 +126,8 @@ export default class Login extends Component {
                   id="input-with-sx"
                   label="Contraseña"
                   variant="standard"
-                  onChange={}
+                  onChange={this.ingresarContraseña}
                 />
-
               </Box>
             </CardContent>
             <CardActions
@@ -111,6 +148,12 @@ export default class Login extends Component {
                 >
                   Ingresar
                 </Button>
+                <Snackbar
+          open={snackbarOpen}
+          message={this.state.errorMessage}
+          autoHideDuration={4}
+        />
+      
               </Stack>
             </CardActions>
           </Card>
@@ -121,8 +164,7 @@ export default class Login extends Component {
 
   static get propTypes() {
     return {
-      history: PropTypes.object
+      history: PropTypes.object,
     }
   }
-
 }
