@@ -1,16 +1,17 @@
 import React from 'react'
-import { BrowserRouter as Router, Route } from 'react-router-dom'
-import { Home } from './componentes/home/home'
-import { Login } from './componentes/login/loginComponent'
-import { Actividades } from './componentes/actividades/actividades'
-import { Rutina } from './componentes/rutinas/rutina'
+import { BrowserRouter, Route } from 'react-router-dom';
+import {Switch} from 'react-router-dom'
+import  Home  from './componentes/home/home'
+import  Login  from './componentes/login/loginComponent'
+import  Actividades  from './componentes/actividades/actividades'
+import  Rutina  from './componentes/rutinas/rutina'
+import  Usuario  from './componentes/usuario/usuario'
 
 const RunappRoutes = () => {
 
 return(
     <BrowserRouter>
-      <Header/>
-      <Switch>
+     <Switch>
         <Route
           path="/"
           exact
@@ -27,11 +28,17 @@ return(
           path="/Rutina"
           component={Rutina}
           />
-        
+          <Route
+          exact
+          path="/usuario"
+          component={Usuario}
+          />
         <Route component={Home} />
+        
       </Switch>
-      <Footer/>
   </BrowserRouter>
 )
 }
+
+export default RunappRoutes;
     
