@@ -3,6 +3,7 @@ import TableCell from '@mui/material/TableCell';
 import IconButton from '@mui/material/IconButton'
 import DeleteIcon from '@mui/icons-material/Delete';
 import {actividadesService} from '../../services/actividadesService'
+import { Typography } from '@mui/material';
 
 export const ActividadRow = (props) =>{
 
@@ -29,7 +30,7 @@ export const ActividadRow = (props) =>{
             <TableRow>
                 <TableCell>{props.actividad.nombre}</TableCell>
                 <TableCell sx={{display:"flex",justifyContent:"space-between",alignItems:"center"}}>
-                    Abdomen-Pecho
+                    {props.actividad.gruposMusculares}
                     {eliminarActividadButton}
                 </TableCell>
             </TableRow>

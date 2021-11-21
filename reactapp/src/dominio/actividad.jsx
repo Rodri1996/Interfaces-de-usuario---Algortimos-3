@@ -3,6 +3,7 @@ export class Actividad{
     constructor(){
         this.nombre=""
         this.id = 0
+        this.GruposMuscularesQueEntrena = []
     }
 
     static fromJson(actividadJson){
@@ -16,8 +17,8 @@ export class Actividad{
 
     static toJson(actividad){
         return {
-            nombre: actividad.nombre
-            //falta agregar los grupos musculares de la actividad recibida por parametro
+            nombre: actividad.nombre,
+            GruposMuscularesQueEntrena:actividad.GruposMuscularesQueEntrena
         }
     }
 }
