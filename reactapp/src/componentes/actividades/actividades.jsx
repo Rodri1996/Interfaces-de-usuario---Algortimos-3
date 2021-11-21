@@ -17,7 +17,8 @@ export default class Actividades extends Component{
         actividad: new Actividad(),
         grupMuscularesConocidos: ['Piernas'],
         gruposMuscularesMarcados:[],
-        inputValue:""
+        inputValue:"",
+        estadoListo:false
     }
 
     async componentDidMount(){
@@ -50,6 +51,14 @@ export default class Actividades extends Component{
         const newActividad = Object.assign(actividad)
         this.setState({
             actividad:newActividad
+        },
+           // this.estadoListo
+        )
+    }
+
+    estadoListo=()=>{
+        this.setState({
+            estadoListo: this.state.grupMuscularesConocidos.length > 0
         })
     }
 
@@ -88,12 +97,13 @@ export default class Actividades extends Component{
                 value={this.state.inputValue}
                 onChange={this.cambiarNombre}/>
 
-                <Stack display="flex" 
+                {this.state.estadoListo && <Stack display="flex" 
                 flexWrap="wrap"
                 justifyContent="center"
                 alignItems="center" direction="row" spacing={1}>
-                    {/* {
-                    this.state.grupMuscularesConocidos.data.map(
+                 
+                    {
+                    this.state.grupMuscularesConocidos.map(
                         (grupo)=>
                         <Chip variant="outlined"
                         color="primary"
@@ -103,8 +113,8 @@ export default class Actividades extends Component{
                         onClick={this.sumarGrupoMuscular(grupo)
                         }
                         />
-                    )} */}
-                </Stack>
+                    )}
+                </Stack>}
                 <Box sx={{display:"flex",justifyContent:"space-around"}}>
                     <Button 
                     variant="outlined"
