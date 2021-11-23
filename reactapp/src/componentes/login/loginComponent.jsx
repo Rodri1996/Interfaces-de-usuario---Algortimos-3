@@ -14,6 +14,7 @@ import CardActions from '@mui/material/CardActions'
 import CardContent from '@mui/material/CardContent'
 import Snackbar from '@mui/material/Snackbar';
 import { obtenerMensaje } from '../../Utils/obtenerMensaje'
+import { usuarioService } from '../../services/usuarioService'
 
 
 const theme = createTheme({
@@ -60,9 +61,12 @@ export default class Login extends Component {
     console.log(this.state.contraseña)
   }
 
-  ingresar = () => {
+  ingresar = async ()  => {
     try{
       this.validarLogin()
+      const username = this.state.usuario
+      const password = this.state.contraseña
+      await usuarioService.postUsuarioLogueado(username,password)
       this.props.history.push('/home')
     }catch(e){
       this.setState({ errorMessage: obtenerMensaje(e) })

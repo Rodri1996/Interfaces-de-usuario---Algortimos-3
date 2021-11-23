@@ -19,6 +19,10 @@ class UsuarioService {
     return this.usuarioAsJson(usuarioJson.data)
   }
 
+  async postUsuarioLogueado(username,password){
+    await axios.post(REST_SERVER_URL+"/login",Usuario.toJson(username,password))
+  }
+
 }
 
 export const usuarioService = new UsuarioService()

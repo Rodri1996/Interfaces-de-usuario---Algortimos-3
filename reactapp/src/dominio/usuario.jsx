@@ -3,6 +3,7 @@ export class Usuario {
         this.nombre = ''
         this.fecha = '10/10/2015'
         this.username = ''
+        this.password =""
     }
 
     static fromJson(usuarioJSON) {
@@ -12,5 +13,12 @@ export class Usuario {
             {}
         )
         return usuarioActual
+    }
+
+    static toJson(username,password){
+        return {
+            username:username,
+            password:password
+        }
     }
 }
