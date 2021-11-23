@@ -8,6 +8,9 @@ import TableContainer from "@mui/material/TableContainer"
 import Paper from "@mui/material/Paper"
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box'
+import { rutinaService } from '../../services/rutinaService'
+
+
 
   function createData(nombre, autor, descripcion) {
     return { nombre, autor, descripcion};
@@ -21,18 +24,26 @@ import Box from '@mui/material/Box'
     createData("Ritmos", "Rogelio", "divertite")
   ];
 
-
-
-
-export default class Usuario extends Component{
+export default class Rutina extends Component{
 
     constructor(props) {
         super(props)
         this.state = {
           rutinasActuales: [],
-          rutinasFinales: []
+          rutinasFinales: [],
+          rutinas: []
         }
       }
+    
+    async componentDidMount() {
+      await this.traerRutinas()
+    }
+
+    async traerRutinas() {
+      const rutinas = await rutinaService.allInstances()
+      this.setState({ rutinas })
+    }
+
 
     render(){
         return(
@@ -55,7 +66,7 @@ export default class Usuario extends Component{
                 </TableRow>
               </TableHead>
               <TableBody>
-                {rows.map((row) => (
+                {this.state.rutinas.map((row) => (
                   <TableRow key={row.nombre}>
                     <TableCell component="th" scope="row">
                       {row.nombre}
