@@ -13,6 +13,7 @@ import {gruposMuscularesService} from '../../services/gruposMuscularesService'
 import Alert from '@mui/material/Alert'
 import Snackbar from '@mui/material/Snackbar'
 import { obtenerMensaje } from '../../Utils/obtenerMensaje'
+
 export default class Actividades extends Component{
     
     
@@ -29,7 +30,9 @@ export default class Actividades extends Component{
         const gruposMuscularesJson = await this.traerGruposMusculares()
         this.setState({
             grupMuscularesConocidos:gruposMuscularesJson
-        })
+        },
+            this.estadoListo
+        )
         console.info(this.state.grupMuscularesConocidos)
     }
 
@@ -62,7 +65,7 @@ export default class Actividades extends Component{
 
     estadoListo=()=>{
         this.setState({
-            estadoListo: this.state.grupMuscularesConocidos.length > 0
+            estadoListo: true//this.state.grupMuscularesConocidos.length > 0
         })
     }
 
@@ -77,17 +80,24 @@ export default class Actividades extends Component{
 
     sumarGrupoMuscular=(grupo)=>{
         console.log('Grupo musc marcado: '+grupo)
-        // const actividad = this.state.actividad
-        // actividad.gruposMuscularesMarcados.push(grupo)
-        // this.cambiarEstado(actividad)
+        const gruposAntiguos = this.state.grupMuscularesConocidos
+        const gruposActualizados = gruposAntiguos + [grupo]
+        //this.actualizarGrupos(gruposActualizados)
+        console.log("Grupos actualizados: "+this.state.gruposMuscularesMarcados)
     }
 
-    agregarActividad=  ()=>{
+    actualizarGrupos=(gruposActualizados)=>{
+        this.setState({
+            gruposActualizados: gruposActualizados
+        })
+    }
+
+    agregarActividad= async ()=>{
         try{
             const actividad = this.state.actividad
             actividad.validar()
             this.descartarCambios()
-            // await actividadesService.sumarActividad(actividad)
+            await actividadesService.sumarActividad(actividad)
         }catch(e){
             this.setState({
                 errorMessage: obtenerMensaje(e) 
@@ -130,7 +140,7 @@ export default class Actividades extends Component{
                         <Chip variant="outlined"
                         color="primary"
                         label={grupo}
-                        key="0"
+                        key={grupo.id}
                         className="grupoMarcador"
                         onClick={this.sumarGrupoMuscular(grupo)
                         }
@@ -151,7 +161,7 @@ export default class Actividades extends Component{
                     Aceptar
                     </Button>
                 </Box>
-                
+
                 {snackbarOpen && <Stack sx={{ width: '100%' }} spacing={2}>
                     <Alert severity="error">{this.state.errorMessage}</Alert>
                 </Stack>}
