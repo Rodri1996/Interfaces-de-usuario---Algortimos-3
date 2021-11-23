@@ -10,6 +10,9 @@ import Stack from '@mui/material/Stack';
 import Chip from '@mui/material/Chip';
 import {actividadesService} from '../../services/actividadesService'
 import {gruposMuscularesService} from '../../services/gruposMuscularesService'
+import Alert from '@mui/material/Alert'
+import Snackbar from '@mui/material/Snackbar'
+import { obtenerMensaje } from '../../Utils/obtenerMensaje'
 export default class Actividades extends Component{
     
     
@@ -18,7 +21,8 @@ export default class Actividades extends Component{
         grupMuscularesConocidos: ['Piernas'],
         gruposMuscularesMarcados:[],
         inputValue:"",
-        estadoListo:false
+        estadoListo:false,
+        errorMessage: ""
     }
 
     async componentDidMount(){
@@ -63,8 +67,12 @@ export default class Actividades extends Component{
     }
 
     descartarCambios = ()=>{
-        const inputVacio =""
-        this.cambiarEstadoInput(inputVacio)
+        this.cambiarEstadoInput("")
+        const actividadVacia = new Actividad()
+        this.cambiarEstadoActividad(actividadVacia)
+        this.setState({
+            errorMessage:""
+        })
     }
 
     sumarGrupoMuscular=(grupo)=>{
@@ -74,16 +82,26 @@ export default class Actividades extends Component{
         // this.cambiarEstado(actividad)
     }
 
-    agregarActividad= async ()=>{
-        const actividad = this.state.actividad
-        await actividadesService.sumarActividad(actividad)
+    agregarActividad=  ()=>{
+        try{
+            const actividad = this.state.actividad
+            actividad.validar()
+            this.descartarCambios()
+            // await actividadesService.sumarActividad(actividad)
+        }catch(e){
+            this.setState({
+                errorMessage: obtenerMensaje(e) 
+            })
+        }
     }
+
 
     irPantallaAnterior=()=>{
         this.props.history.push('/home')
     }
 
     render(){
+        const snackbarOpen = !!this.state.errorMessage
         return(
             <Box sx={{
                 display:"flex",
@@ -133,6 +151,10 @@ export default class Actividades extends Component{
                     Aceptar
                     </Button>
                 </Box>
+                
+                {snackbarOpen && <Stack sx={{ width: '100%' }} spacing={2}>
+                    <Alert severity="error">{this.state.errorMessage}</Alert>
+                </Stack>}
                 <SeccionActividades></SeccionActividades>
                 <Button 
                     color="secondary"
