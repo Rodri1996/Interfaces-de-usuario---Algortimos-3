@@ -29,7 +29,8 @@ export default class Usuario extends Component{
     constructor(props) {
         super(props)
         this.state = {
-          usuarios: [],
+          rutinasActuales: [],
+          rutinasFinales: []
         }
       }
 
@@ -41,7 +42,7 @@ export default class Usuario extends Component{
                         Rutinas Actuales
                     </Typography>
                     <Typography variant="h6" fontWeight="bold">
-                        5
+                    {this.state.rutinasActuales.length}
                     </Typography>
                 </Box>
             <TableContainer component={Paper}>
@@ -71,7 +72,7 @@ export default class Usuario extends Component{
                         Rutinas Finales
                     </Typography>
                     <Typography variant="h6" fontWeight="bold">
-                        0
+                    {this.state.rutinasFinales.length}
                     </Typography>
                 </Box>
           </Box>

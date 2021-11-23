@@ -19,9 +19,9 @@ const theme = createTheme({
     primary: {
       main: purple[500],
     },
-    secundary: {
-        main: grey[50],
-      },
+    secundary:{
+      main: '#000000',
+    }
   },
 })
 
@@ -67,7 +67,7 @@ export default class Usuario extends Component {
               Usuarios Actuales
             </Typography>
             <Typography variant="h6" fontWeight="bold">
-              5
+            {this.state.usuariosActuales.length}
             </Typography>
           </Box>
           <TableContainer component={Paper}>
@@ -108,16 +108,18 @@ export default class Usuario extends Component {
               Usuarios Finales
             </Typography>
             <Typography variant="h6" fontWeight="bold">
-              0
+            {this.state.usuarioFinales.length}
             </Typography>
           </Box>
           <cardActions>
           <Stack sx={{display:'flex',justifyContent:'space-between'}}direction="row" spacing={2}>
             <Button
+              className="colorCancelar"
               theme={theme}
               variant="contained"
+              color="secundary"
               onClick={this.ingresar}
-              sx={{ textTransform: 'capitalize', bgColor:'secundary' }}
+              sx={{ textTransform: 'capitalize' }} style={{color:'white'}}
             >
               Cancelar
             </Button>

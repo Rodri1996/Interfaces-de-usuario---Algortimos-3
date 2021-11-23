@@ -7,8 +7,16 @@ import IconButton from '@mui/material/IconButton'
 import Avatar from '@mui/material/Avatar'
 import Stack from '@mui/material/Stack'
 import Logout  from '@mui/icons-material/Logout'
+import { PropTypes } from 'prop-types'
+import { useHistory } from 'react-router-dom'
 
 const Header = () => {
+
+  const history = useHistory();
+
+  //  const logout = () => {
+  //    history.push('/')
+  //  }
 
   const esLogin = () => true
   
@@ -39,6 +47,10 @@ const Header = () => {
       </AppBar>
     </Box>
   )
+}
+
+Header.propTypes = {
+    history: PropTypes.object, 
 }
 
 export default Header
