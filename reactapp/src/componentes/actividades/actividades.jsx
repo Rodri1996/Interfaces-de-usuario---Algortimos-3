@@ -79,6 +79,10 @@ export default class Actividades extends Component{
         await actividadesService.sumarActividad(actividad)
     }
 
+    irPantallaAnterior=()=>{
+        this.props.history.push('/home')
+    }
+
     render(){
         return(
             <Box sx={{
@@ -130,6 +134,12 @@ export default class Actividades extends Component{
                     </Button>
                 </Box>
                 <SeccionActividades></SeccionActividades>
+                <Button 
+                    color="secondary"
+                    onClick={this.irPantallaAnterior}
+                    variant="outlined">
+                    Volver
+                </Button>
             </Box>
         )
 
