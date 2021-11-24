@@ -146,7 +146,7 @@ export default class Actividades extends Component{
                 variant="outlined"
                 value={this.state.inputValue}
                 onChange={this.cambiarNombre}
-                sx={{borderColor:"primary.main",border:3}}/>
+               />
 
                 {this.state.estadoListo && <Stack display="flex" 
                 flexWrap="wrap"
@@ -171,7 +171,7 @@ export default class Actividades extends Component{
                     theme={theme}
                     variant="contained" 
                     color="terciary"
-                    style={{color:'white', textTransform: 'capitalize'}}
+                    style={{color:'white', textTransform: 'capitalize',width:"80%"}}
                     onClick={this.descartarCambios}
                     >
                     Limpiar campos
@@ -180,7 +180,7 @@ export default class Actividades extends Component{
                     theme={theme} 
                      variant="contained"
                      color="primary"
-                     style={{textTransform: 'capitalize'}}
+                     style={{textTransform: 'capitalize',width:"80%"}}
                     onClick={this.agregarActividad}>
                     Aceptar
                     </Button>
