@@ -6,36 +6,52 @@ import  Login  from './componentes/login/loginComponent'
 import  Actividades  from './componentes/actividades/actividades'
 import  Rutina  from './componentes/rutinas/rutina'
 import  Usuario  from './componentes/Usuario/usuario'
+import Header from './componentes/header/header'
+
 
 const RunappRoutes = () => {
 
 return(
     <BrowserRouter>
      <Switch>
+       <Route
+        path='/'
+        exact
+        >
+        </Route>
         <Route
-          path="/"
-          exact
-          component={Login} />
-        <Route
-          path="/home"
-          component={Home} />
-        <Route
-          exact
-          path="/actividades"
-          component={Actividades} />
-        <Route
-          exact
-          path="/Rutina"
-          component={Rutina}
-          />
+        path='*'
+        >
+        <Header/>
+        </Route>
+     </Switch>
+     <div className="defaultPageSize">
+      <Switch>
           <Route
-          exact
-          path="/usuario"
-          component={Usuario}
-          />
-        <Route component={Home} />
-        
-      </Switch>
+            path="/"
+            exact
+            component={Login} />
+          <Route
+            path="/home"
+            component={Home} />
+          <Route
+            exact
+            path="/actividades"
+            component={Actividades} />
+          <Route
+            exact
+            path="/Rutina"
+            component={Rutina}
+            />
+            <Route
+            exact
+            path="/usuario"
+            component={Usuario}
+            />
+          <Route component={Home} />
+          
+        </Switch>
+        </div>
   </BrowserRouter>
 )
 }

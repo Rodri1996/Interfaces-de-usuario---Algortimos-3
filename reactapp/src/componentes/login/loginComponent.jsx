@@ -66,7 +66,9 @@ export default class Login extends Component {
       this.validarLogin()
       const username = this.state.usuario
       const password = this.state.contraseña
-      await usuarioService.postUsuarioLogueado(username,password)
+      const usuarioLogueado = await usuarioService.postUsuarioLogueado(username,password)
+      console.log(usuarioLogueado)
+      localStorage.setItem("id",usuarioLogueado.id.toString())
       this.props.history.push('/home')
     }catch(e){
       this.setState({ errorMessage: obtenerMensaje(e) })
@@ -75,11 +77,11 @@ export default class Login extends Component {
 
   validarLogin = () => {
     if (this.state.usuario === '' && this.state.contraseña === '') {
-      throw Error('Usuario y/o contraseña son obligatorios')
+      throw Error('Front: Usuario y/o contraseña son obligatorios')
     } else if (this.state.usuario === '') {
-      throw Error('El campo usuario es obligatorio')
+      throw Error('Front: El campo usuario es obligatorio')
     } else if (this.state.contraseña === '') {
-      throw Error('El campo contraseña es obligatorio')
+      throw Error('Front: El campo contraseña es obligatorio')
     }
   }
 

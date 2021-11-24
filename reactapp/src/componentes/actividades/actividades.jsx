@@ -147,7 +147,7 @@ export default class Actividades extends Component{
                 alignItems="center" direction="row" spacing={1}>
                  
                     {
-                    this.state.grupMuscularesConocidos.map(
+                    ['brazos'].map(
                         (grupo)=>
                         <Chip variant="outlined"
                         color="primary"
