@@ -171,13 +171,16 @@ export default class Actividades extends Component{
                     theme={theme}
                     variant="contained" 
                     color="terciary"
-                    style={{color:'white'}}
+                    style={{color:'white', textTransform: 'capitalize'}}
                     onClick={this.descartarCambios}
                     >
                     Limpiar campos
                     </Button>
-                    <Button 
-                    className="boton-mediano" variant="contained"
+                    <Button
+                    theme={theme} 
+                     variant="contained"
+                     color="primary"
+                     style={{textTransform: 'capitalize'}}
                     onClick={this.agregarActividad}>
                     Aceptar
                     </Button>
