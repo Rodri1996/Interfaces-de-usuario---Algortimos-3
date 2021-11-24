@@ -22,6 +22,12 @@ const theme = createTheme({
       primary: {
         main: purple[500],
       },
+      secundary:{
+        main:'#9c27b0',
+    },
+      terciary:{
+          main:'#000000',
+      },
     },
   })
 
@@ -136,11 +142,11 @@ export default class Actividades extends Component{
                 <Typography variant="h7">
                     Nombre
                 </Typography>
-                <TextField id="outlined-basic" label= "Ingresar Actividad"
+                <TextField theme={theme} id="outlined-basic" label= "Ingresar Actividad"
                 variant="outlined"
                 value={this.state.inputValue}
                 onChange={this.cambiarNombre}
-                sx={{borderColor:"#9c27b0",border:3}}/>
+                sx={{borderColor:"primary.main",border:3}}/>
 
                 {this.state.estadoListo && <Stack display="flex" 
                 flexWrap="wrap"
@@ -160,12 +166,14 @@ export default class Actividades extends Component{
                         />
                     )}
                 </Stack>}
-                <Box sx={{display:"flex",justifyContent:"space-around"}}>
+                <Box sx={{display:"flex",justifyContent:"space-around",alignItems:"center",gap:1}}>
                     <Button 
-                    variant="outlined"
-                    className="boton-mediano" 
-                    color="secondary"
-                    onClick={this.descartarCambios}>
+                    theme={theme}
+                    variant="contained" 
+                    color="terciary"
+                    style={{color:'white'}}
+                    onClick={this.descartarCambios}
+                    >
                     Limpiar campos
                     </Button>
                     <Button 
