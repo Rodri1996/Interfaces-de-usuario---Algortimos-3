@@ -9,18 +9,21 @@ import Stack from '@mui/material/Stack'
 import Logout  from '@mui/icons-material/Logout'
 import { PropTypes } from 'prop-types'
 import { useHistory } from 'react-router-dom'
+import { WindowSharp } from '@mui/icons-material'
 
-const Header = () => {
 
-  const history = useHistory();
+const Header = (props) => {
 
-  //  const logout = () => {
-  //    history.push('/')
-  //  }
+   const logout = () => {
+    //  history.push('/')
+    window.location.href = '/'
+   }
 
-  const esLogin = () => true
+  // const esLogin = () => this.props.navigate.state.key !=='/'
+  //window.location.href !=='/'
+
   
-  return esLogin() && (
+  return(
     <Box sx={{ flexGrow: 1}}>
       <AppBar position="static" style={{backgroundColor:'black'}}>
         <Toolbar>
@@ -39,7 +42,7 @@ const Header = () => {
             <Avatar src="/Lionel_Messi.jpg" />
           </Stack>
           <p>Lionel Messi</p>
-          <IconButton aria-label="logout" style={{color:'white'}}>
+          <IconButton aria-label="logout" style={{color:'white'}} onClick={logout}>
             <Logout />
           </IconButton>
           </Box>

@@ -1,18 +1,20 @@
 import './App.css'
 import Footer from './componentes/footer/footer'
-import Header from './componentes/header/header'
 import RunappRoutes from './router'
+import { useLocation } from 'react-router'
+
 
 function App() {
+    //let ubicacion = useLocation();
+    //console.log(ubicacion)
     return (
         <>
-            <Header />
 
-            <div className="defaultPageSize">
+            {/* <div className="defaultPageSize"> */}
  
                 <RunappRoutes/>
                
-            </div>
+            {/* </div> */}
             
             <Footer />
         </>
