@@ -13,6 +13,17 @@ import {gruposMuscularesService} from '../../services/gruposMuscularesService'
 import Alert from '@mui/material/Alert'
 import Snackbar from '@mui/material/Snackbar'
 import { obtenerMensaje } from '../../Utils/obtenerMensaje'
+import Card from '@mui/material/Card';
+import { purple } from '@mui/material/colors'
+import { createTheme } from '@mui/material/styles'
+
+const theme = createTheme({
+    palette: {
+      primary: {
+        main: purple[500],
+      },
+    },
+  })
 
 export default class Actividades extends Component{
     
@@ -113,11 +124,12 @@ export default class Actividades extends Component{
     render(){
         const snackbarOpen = !!this.state.errorMessage
         return(
-            <Box sx={{
+            <Card variant="onlined" theme={theme}
+            sx={{
                 display:"flex",
                 flexDirection:"column",
                 justifyContent:"space-between"
-                ,p:2,height:"79vh"}}>
+                ,p:2,height:"75vh",border:4,borderColor:"primary.main"}}>
                 <Typography variant="h4" fontWeight="600">
                     Nueva actividad
                 </Typography>
@@ -172,7 +184,7 @@ export default class Actividades extends Component{
                     variant="outlined">
                     Volver
                 </Button>
-            </Box>
+            </Card>
         )
 
     }

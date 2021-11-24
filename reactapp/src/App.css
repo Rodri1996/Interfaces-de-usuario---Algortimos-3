@@ -1,5 +1,8 @@
-.boton-mediano {
-    width: 45%;
+.boton-limpiar,
+.boton-aceptar {
+    width: 80%;
+    height: 65%;
+    gap: 1rem;
 }
 
 .grupoMarcador {
