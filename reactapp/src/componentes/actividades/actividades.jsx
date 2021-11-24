@@ -130,16 +130,17 @@ export default class Actividades extends Component{
                 flexDirection:"column",
                 justifyContent:"space-between"
                 ,p:2,height:"75vh",border:4,borderColor:"primary.main"}}>
-                <Typography variant="h4" fontWeight="600">
+                <Typography variant="h5" fontWeight="bold">
                     Nueva actividad
                 </Typography>
-                <Typography variant="h6">
+                <Typography variant="h7">
                     Nombre
                 </Typography>
-                <TextField id="outlined-basic" label= "Nombre de la actividad"
+                <TextField id="outlined-basic" label= "Ingresar Actividad"
                 variant="outlined"
                 value={this.state.inputValue}
-                onChange={this.cambiarNombre}/>
+                onChange={this.cambiarNombre}
+                sx={{borderColor:"#9c27b0",border:3}}/>
 
                 {this.state.estadoListo && <Stack display="flex" 
                 flexWrap="wrap"
