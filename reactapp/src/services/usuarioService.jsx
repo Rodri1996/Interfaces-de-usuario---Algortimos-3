@@ -14,6 +14,11 @@ class UsuarioService {
     return usuariosJson.data.map((usuarioJson) => Usuario.fromJson(usuarioJson))
   }
 
+  async usuariosFinales(){
+    const usuariosJson = await axios.get(`${REST_SERVER_URL}/usuariosFinales`)
+    return usuariosJson.data.map((usuarioJson) => Usuario.fromJson(usuarioJson))
+  }
+
   async getUsuarioById(id) {
     const usuarioJson = await axios.get(`${REST_SERVER_URL}/usuario/${id}`)
     return this.usuarioAsJson(usuarioJson.data)

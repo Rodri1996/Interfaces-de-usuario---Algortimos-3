@@ -12,6 +12,7 @@ import { Button, Stack } from '@mui/material'
 import { createTheme } from '@mui/material/styles'
 import { purple, grey } from '@mui/material/colors'
 import { usuarioService } from '../../services/usuarioService'
+import {TablaUsuarios} from '../tabla/tablaUsuarios'
 
 
 const theme = createTheme({
@@ -24,19 +25,6 @@ const theme = createTheme({
     }
   },
 })
-
-function createData(name, date, username) {
-  return { name, date, username }
-}
-
-const rows = [
-  createData('Jose Perez', '01/11/90', 'jperez'),
-  createData('Marcos Sanchez', '01/11/90', 'msanchez'),
-  createData('Sebastian Rodriguez', '01/11/90', 'pepitogrillo'),
-  createData('Miguel Sosa', '01/11/90', 'elvisp'),
-  createData('Mariano Acosta', '01/11/90', 'gelatina'),
-]
-
 export default class Usuario extends Component {
   constructor(props) {
     super(props)
@@ -52,12 +40,17 @@ export default class Usuario extends Component {
 
   async componentDidMount(){
     await this.traerUsuariosActuales()
-    
+    await this.traerUsuariosFinales()
   }
 
   async traerUsuariosActuales(){
     const usuariosActuales = await usuarioService.allInstances()
-    this.setState({usuariosActuales})
+    this.setState({usuariosActuales:usuariosActuales})
+  }
+
+  async traerUsuariosFinales(){
+    const usuariosFinales = await usuarioService.usuariosFinales()
+    this.setState({usuarioFinales:usuariosFinales})
   }
 
   render() {
@@ -74,37 +67,7 @@ export default class Usuario extends Component {
             {this.state.usuariosActuales.length}
             </Typography>
           </Box>
-          <TableContainer component={Paper}>
-            <Table aria-label="customized table">
-              <TableHead width="100%">
-                <TableRow
-                  className="table-head"
-                  sx={{ display: 'flex', justifyContent: 'space-between' }}
-                >
-                  <TableCell className="letra" sx={{ fontWeight: 'bold' }}>
-                    Nombre
-                  </TableCell>
-                  <TableCell className="letra" sx={{ fontWeight: 'bold' }}>
-                    Fecha de Nacimiento
-                  </TableCell>
-                  <TableCell className="letra" sx={{ fontWeight: 'bold' }}>
-                    Username
-                  </TableCell>
-                </TableRow>
-              </TableHead>
-              <TableBody>
-                {this.state.usuariosActuales.map((row) => (
-                  <TableRow key={row.name}>
-                    <TableCell component="th" scope="row">
-                      {row.name}
-                    </TableCell>
-                    <TableCell>{row.fecha}</TableCell>
-                    <TableCell>{row.username}</TableCell>
-                  </TableRow>
-                ))}
-              </TableBody>
-            </Table>
-          </TableContainer>
+              <TablaUsuarios tablaUsuarios={this.state.usuariosActuales}/>
           <Box
             sx={{ display: 'flex', justifyContent: 'space-between', mb: 1.5,mt:"1rem"}}
           >
@@ -115,6 +78,7 @@ export default class Usuario extends Component {
             {this.state.usuarioFinales.length}
             </Typography>
           </Box>
+          <TablaUsuarios tablaUsuarios={this.state.usuarioFinales}/>
           <cardActions>
           <Stack sx={{display:'flex',justifyContent:'space-between', mt:"2rem"}}direction="row" spacing={2}>
             <Button
