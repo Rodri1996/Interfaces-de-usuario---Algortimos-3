@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect, useState } from 'react'
 import AppBar from '@mui/material/AppBar'
 import Box from '@mui/material/Box'
 import Toolbar from '@mui/material/Toolbar'
@@ -8,12 +8,27 @@ import Avatar from '@mui/material/Avatar'
 import Stack from '@mui/material/Stack'
 import Logout  from '@mui/icons-material/Logout'
 import { PropTypes } from 'prop-types'
+import { Usuario } from '../../dominio/usuario'
 
 const Header = (props) => {
 
    const logout = () => {
     window.location.href = '/'
    }
+
+  const [usuarioLogeado, setusuarioLogeado] = useState({})
+   
+   useEffect(()=>{
+     let usuarioJson = localStorage.getItem("usuarioLogeado")
+     if(usuarioJson != null){
+      console.info(JSON.parse(usuarioJson))
+      let usuario = Usuario.fromJson(JSON.parse(usuarioJson))
+      console.info(usuario)
+      setusuarioLogeado(usuario)  
+     }
+     
+   }
+   ,[])
 
   return(
     <Box sx={{ flexGrow: 1}}>
@@ -31,9 +46,9 @@ const Header = (props) => {
           </Typography>
          
           <Stack spacing={2}>
-            <Avatar src="/Lionel_Messi.jpg" />
+            <Avatar src={usuarioLogeado.foto} alt={usuarioLogeado.name} />
           </Stack>
-          <p>Lionel Messi</p>
+          <p>{usuarioLogeado.name}</p>
           <IconButton aria-label="logout" style={{color:'white'}} onClick={logout}>
             <Logout />
           </IconButton>

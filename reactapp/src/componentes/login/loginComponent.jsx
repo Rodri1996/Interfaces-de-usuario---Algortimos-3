@@ -67,8 +67,7 @@ export default class Login extends Component {
       const username = this.state.usuario
       const password = this.state.contraseña
       const usuarioLogueado = await usuarioService.postUsuarioLogueado(username,password)
-      console.log(usuarioLogueado)
-      localStorage.setItem("id",usuarioLogueado.id.toString())
+      localStorage.setItem("usuarioLogeado",JSON.stringify(usuarioLogueado.data))
       this.props.history.push('/home')
     }catch(e){
       this.setState({ errorMessage: obtenerMensaje(e) })

@@ -5,7 +5,7 @@ import  Home  from './componentes/home/home'
 import  Login  from './componentes/login/loginComponent'
 import  Actividades  from './componentes/actividades/actividades'
 import  Rutina  from './componentes/rutinas/rutina'
-import Usuario from './componentes/usuario/usuario.jsx'
+import Usuario from './componentes/Usuario/usuario'
 import Header from './componentes/header/header'
 
 

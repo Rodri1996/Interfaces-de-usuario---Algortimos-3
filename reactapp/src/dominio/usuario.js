@@ -24,12 +24,12 @@ export class Usuario {
         }
     }
 
-    static fromJson2(usuario){
-        const usuarioPosteado = Object.assign(
-            new Usuario(),
-            usuario,
-            { foto:usuario.foto }
-        )
-        return usuarioPosteado
-    }
+    // static fromJson2(usuario){
+    //     const usuarioPosteado = Object.assign(
+    //         new Usuario(),
+    //         usuario,
+    //         { foto:usuario.foto }
+    //     )
+    //     return usuarioPosteado
+    // }
 }
