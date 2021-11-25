@@ -1,9 +1,9 @@
 export class Usuario {
     constructor() {
         this.id = 0
-        this.nombre = ''
-        this.fecha = '10/10/2015'
-        this.username = ''
+        this.nombre = ""
+        this.fecha = new Date()
+        this.username = ""
         this.password =""
         this.foto = ""
     }
@@ -12,7 +12,7 @@ export class Usuario {
         const usuarioActual = Object.assign(
             new Usuario(),
             usuarioJSON, 
-            {}
+            {fecha: usuarioJSON.fechaDeNacimiento}
         )
         return usuarioActual
     }

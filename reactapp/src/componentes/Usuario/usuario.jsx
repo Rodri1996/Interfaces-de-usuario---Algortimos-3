@@ -89,12 +89,12 @@ export default class Usuario extends Component {
                 </TableRow>
               </TableHead>
               <TableBody>
-                {rows.map((row) => (
+                {this.state.usuariosActuales.map((row) => (
                   <TableRow key={row.name}>
                     <TableCell component="th" scope="row">
                       {row.name}
                     </TableCell>
-                    <TableCell>{row.date}</TableCell>
+                    <TableCell>{row.fecha}</TableCell>
                     <TableCell>{row.username}</TableCell>
                   </TableRow>
                 ))}
