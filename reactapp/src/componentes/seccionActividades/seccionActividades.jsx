@@ -14,6 +14,20 @@ import Paper from '@mui/material/Paper';
 import {ActividadRow} from '../actividadRow/actividadRow'
 import { Component } from 'react';
 import {actividadesService} from '../../services/actividadesService'
+import { purple } from '@mui/material/colors'
+import { createTheme } from '@mui/material/styles'
+
+const theme = createTheme({
+    palette: {
+      primary: {
+        main: purple[500],
+      },
+      
+      secundary:{
+          main:'#000000',
+      },
+    },
+  })
 
 export default class SeccionActividades extends Component{
 
@@ -34,7 +48,7 @@ export default class SeccionActividades extends Component{
 
     render(){
         return(
-        <Card sx={{ minWidth: 275, p:1}}>
+        // <Card >
             <Box sx={{ display: 'flex',flexDirection: 'column',p:1}}>
                 <Box sx={{ display: 'flex', justifyContent:"space-between",mb:1.5}}>
                     <Typography variant="h5" fontWeight="bold">
@@ -46,11 +60,11 @@ export default class SeccionActividades extends Component{
                 </Box>
                 <TableContainer component={Paper}>
                     <Table>
-                        <TableHead className="table_header">
+                        <TableHead className="color-tableHead">
                             <TableRow >
-                                <TableCell>Nombre</TableCell>
+                                <TableCell style={{color:'white',fontWeight:'bold'}}>Nombre</TableCell>
                                 <TableCell
-                                    fontWeight="600"
+                                    style={{color:'white',fontWeight:'bold'}}
                                     align="left" >Grupos Musculares
                                 </TableCell>
                             </TableRow>
@@ -69,6 +83,6 @@ export default class SeccionActividades extends Component{
                     </Table>
                 </TableContainer>
             </Box>
-        </Card>
+        // </Card>
         )}
     }

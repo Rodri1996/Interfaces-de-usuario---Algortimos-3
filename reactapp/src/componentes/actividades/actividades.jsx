@@ -11,21 +11,18 @@ import Chip from '@mui/material/Chip';
 import {actividadesService} from '../../services/actividadesService'
 import {gruposMuscularesService} from '../../services/gruposMuscularesService'
 import Alert from '@mui/material/Alert'
-import Snackbar from '@mui/material/Snackbar'
 import { obtenerMensaje } from '../../Utils/obtenerMensaje'
 import Card from '@mui/material/Card';
-import { purple } from '@mui/material/colors'
 import { createTheme } from '@mui/material/styles'
+import { purple } from '@mui/material/colors'
 
 const theme = createTheme({
     palette: {
       primary: {
         main: purple[500],
       },
+      
       secundary:{
-        main:'#9c27b0',
-    },
-      terciary:{
           main:'#000000',
       },
     },
@@ -170,17 +167,17 @@ export default class Actividades extends Component{
                     <Button 
                     theme={theme}
                     variant="contained" 
-                    color="terciary"
-                    style={{color:'white', textTransform: 'capitalize',width:"80%"}}
+                    color="secundary"
+                    style={{color:'white', textTransform: 'capitalize',width:"90%"}}
                     onClick={this.descartarCambios}
                     >
-                    Limpiar campos
+                    Limpiar
                     </Button>
                     <Button
                     theme={theme} 
                      variant="contained"
                      color="primary"
-                     style={{textTransform: 'capitalize',width:"80%"}}
+                     style={{textTransform: 'capitalize',width:"90%"}}
                     onClick={this.agregarActividad}>
                     Aceptar
                     </Button>
@@ -191,9 +188,11 @@ export default class Actividades extends Component{
                 </Stack>}
                 <SeccionActividades></SeccionActividades>
                 <Button 
-                    color="secondary"
+                    theme={theme}
+                    color="primary"
                     onClick={this.irPantallaAnterior}
-                    variant="outlined">
+                    variant="outlined"
+                    style={{borderColor:"primary.main",border:"solid"}}>
                     Volver
                 </Button>
             </Card>
