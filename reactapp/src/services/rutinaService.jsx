@@ -18,6 +18,10 @@ class RutinaService {
         const rutinasJson = await axios.get(`${REST_SERVER_URL}/rutinasFinales`)
         return rutinasJson.data.map((rutinaJson) => Rutina.fromJson(rutinaJson))
     }
+
+    async eliminarRutinasImposibles(){
+        await axios.delete(REST_SERVER_URL+"/eliminarRutinas")
+    }
 }
 
 export const rutinaService = new RutinaService()
