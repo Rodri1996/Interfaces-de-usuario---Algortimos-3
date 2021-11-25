@@ -46,6 +46,10 @@ export default class Usuario extends Component {
     }
   }
 
+  irHome(){
+    window.location.href='/home'
+  }
+
   async componentDidMount(){
     await this.traerUsuariosActuales()
     
@@ -118,8 +122,8 @@ export default class Usuario extends Component {
               theme={theme}
               variant="contained"
               color="secundary"
-              onClick={this.ingresar}
-              sx={{ textTransform: 'capitalize' }} style={{color:'white'}}
+              onClick={this.irHome}
+              sx={{ textTransform: 'capitalize', width:"90%"}} style={{color:'white'}}
             >
               Cancelar
             </Button>
@@ -128,7 +132,7 @@ export default class Usuario extends Component {
               variant="contained"
               color="primary"
               onClick={this.ingresar}
-              sx={{ textTransform: 'capitalize' }}
+              sx={{ textTransform: 'capitalize', width:"90%"}}
             >
               Aceptar
             </Button>
