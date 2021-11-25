@@ -10,10 +10,7 @@ export class Rutina {
         const rutinaActual = Object.assign(
             new Rutina(),
             rutinaJSON, 
-            {nombre:rutinaJSON.nombreRutina,
-                autor:rutinaJSON.creador,
-                id:rutinaJSON.id
-            }
+            {}
         )
         return rutinaActual
     }

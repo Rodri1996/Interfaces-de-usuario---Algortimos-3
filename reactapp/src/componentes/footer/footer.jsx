@@ -12,7 +12,7 @@ const Footer = () => {
           alignItems: 'center',
           backgroundColor: 'black',
           color: 'white',
-          position: 'absolute',
+          position: 'relative',
           width: '100%',
           bottom: 0,
         }}

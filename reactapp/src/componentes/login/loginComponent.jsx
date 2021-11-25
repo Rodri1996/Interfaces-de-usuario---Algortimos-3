@@ -132,6 +132,7 @@ export default class Login extends Component {
                   id="input-with-sx"
                   label="Contraseña"
                   variant="standard"
+                  type="password"
                   onChange={this.ingresarContraseña}
                 />
               </Box>
