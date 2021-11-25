@@ -131,8 +131,8 @@ export default class Actividades extends Component{
             sx={{
                 display:"flex",
                 flexDirection:"column",
-                justifyContent:"space-between"
-                ,p:2,height:"75vh",border:4,borderColor:"primary.main"}}>
+                justifyContent:"space-around",
+                p:2,minHeight:"70vh",border:4,borderColor:"primary.main",m:2}}>
                 <Typography variant="h5" fontWeight="bold">
                     Nueva actividad
                 </Typography>
@@ -153,8 +153,9 @@ export default class Actividades extends Component{
                     {
                     ['brazos'].map(
                         (grupo)=>
-                        <Chip variant="outlined"
+                        <Chip theme={theme} variant="outlined"
                         color="primary"
+                        style={{fontWeight:"bold",fontSize:14}}
                         label={grupo}
                         key={grupo.id}
                         className="grupoMarcador"
