@@ -9,6 +9,20 @@ import Paper from "@mui/material/Paper"
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box'
 import { rutinaService } from '../../services/rutinaService'
+import { Button, Stack } from '@mui/material'
+import { createTheme } from '@mui/material/styles'
+import { purple } from '@mui/material/colors'
+
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: purple[500],
+    },
+    secundary:{
+      main: '#000000',
+    }
+  },
+})
 
 
 
@@ -33,6 +47,10 @@ export default class Rutina extends Component{
           rutinasFinales: [],
           rutinas: []
         }
+      }
+
+      irHome(){
+        window.location.href='/home'
       }
     
     async componentDidMount() {
@@ -86,6 +104,29 @@ export default class Rutina extends Component{
                     {this.state.rutinasFinales.length}
                     </Typography>
                 </Box>
+                <cardActions>
+          <Stack sx={{display:'flex',justifyContent:'space-between'}}direction="row" spacing={2}>
+            <Button
+              className="colorCancelar"
+              theme={theme}
+              variant="contained"
+              color="secundary"
+              onClick={this.irHome}
+              sx={{ textTransform: 'capitalize', width:"90%"}} style={{color:'white'}}
+            >
+              Cancelar
+            </Button>
+            <Button
+              theme={theme}
+              variant="contained"
+              color="primary"
+              onClick={this.ingresar}
+              sx={{ textTransform: 'capitalize', width:"90%"}}
+            >
+              Aceptar
+            </Button>
+          </Stack>
+          </cardActions>
           </Box>
         )
     }
