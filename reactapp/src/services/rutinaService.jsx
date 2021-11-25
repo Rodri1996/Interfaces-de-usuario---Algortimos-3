@@ -13,6 +13,11 @@ class RutinaService {
         const rutinasJson = await axios.get(`${REST_SERVER_URL}/rutinas`)
         return rutinasJson.data.map((rutinaJson) => Rutina.fromJson(rutinaJson))
     }
+
+    async rutinasFinales(){
+        const rutinasJson = await axios.get(`${REST_SERVER_URL}/rutinasFinales`)
+        return rutinasJson.data.map((rutinaJson) => Rutina.fromJson(rutinaJson))
+    }
 }
 
 export const rutinaService = new RutinaService()

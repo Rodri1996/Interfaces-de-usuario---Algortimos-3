@@ -106,7 +106,7 @@ export default class Usuario extends Component {
             </Table>
           </TableContainer>
           <Box
-            sx={{ display: 'flex', justifyContent: 'space-between', mb: 1.5 }}
+            sx={{ display: 'flex', justifyContent: 'space-between', mb: 1.5,mt:"1rem"}}
           >
             <Typography variant="h5" fontWeight="bold">
               Usuarios Finales
@@ -116,7 +116,7 @@ export default class Usuario extends Component {
             </Typography>
           </Box>
           <cardActions>
-          <Stack sx={{display:'flex',justifyContent:'space-between'}}direction="row" spacing={2}>
+          <Stack sx={{display:'flex',justifyContent:'space-between', mt:"2rem"}}direction="row" spacing={2}>
             <Button
               className="colorCancelar"
               theme={theme}

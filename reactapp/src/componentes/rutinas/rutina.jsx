@@ -34,7 +34,11 @@ export default class Rutina extends Component {
   
   async traerRutinas() {
     const rutinasActuales = await rutinaService.allInstances()
-    this.setState({ rutinasActuales })
+    const rutinasFinales = await rutinaService.rutinasFinales()
+    this.setState({ 
+      rutinasActuales:rutinasActuales,
+      rutinasFinales:rutinasFinales
+    })
   }
   
   irHome() {
@@ -55,7 +59,7 @@ export default class Rutina extends Component {
         <TablaRutina
           tablaRutinas={this.state.rutinasActuales}
         />
-        <Box sx={{ display: 'flex', justifyContent: "space-between", mb: 1.5 }}>
+        <Box sx={{ display: 'flex', justifyContent: "space-between", mb: 1.5, mt:"1rem"}}>
           <Typography variant="h5" fontWeight="bold">
             Rutinas Finales
           </Typography>
@@ -67,7 +71,7 @@ export default class Rutina extends Component {
           tablaRutinas={this.state.rutinasFinales}
         />
         <cardActions>
-          <Stack sx={{ display: 'flex', justifyContent: 'space-between' }} direction="row" spacing={2}>
+          <Stack sx={{ display: 'flex', justifyContent: 'space-between', mt:"2rem" }} direction="row" spacing={2}>
             <Button
               className="colorCancelar"
               theme={theme}
