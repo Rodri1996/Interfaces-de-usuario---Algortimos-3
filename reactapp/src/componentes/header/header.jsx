@@ -8,21 +8,13 @@ import Avatar from '@mui/material/Avatar'
 import Stack from '@mui/material/Stack'
 import Logout  from '@mui/icons-material/Logout'
 import { PropTypes } from 'prop-types'
-import { useHistory } from 'react-router-dom'
-import { WindowSharp } from '@mui/icons-material'
-
 
 const Header = (props) => {
 
    const logout = () => {
-    //  history.push('/')
     window.location.href = '/'
    }
 
-  // const esLogin = () => this.props.navigate.state.key !=='/'
-  //window.location.href !=='/'
-
-  
   return(
     <Box sx={{ flexGrow: 1}}>
       <AppBar position="static" style={{backgroundColor:'black'}}>

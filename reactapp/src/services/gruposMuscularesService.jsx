@@ -7,7 +7,7 @@ class GruposMuscularesService{
     async getGruposMusculares(){
         const gruposJson = await axios.get(REST_SERVER_URL+"/grupos")
         console.log('Grupos: '+gruposJson.data)
-        return gruposJson.data.map((grupo)=>GruposMuscular.fromjson(grupo))
+        //return gruposJson.data.map((grupo)=>GruposMuscular.fromjson(grupo))
         //return this.gruposMuscularesFromJson(gruposJson)
         //return ["piernas","brazos","gluteos"]
     }

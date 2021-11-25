@@ -1,28 +1,13 @@
-.boton-limpiar,
-.boton-aceptar {
-    width: 80%;
-    height: 65%;
-    gap: 1rem;
-}
-
 .grupoMarcador {
     margin: 5px;
 }
 
 .grupoMarcador:hover {
-    background-color: rgb(58, 58, 192);
+    background-color: #9c27b0;
     color: white;
 }
 
 .color-tableHead {
-    background-color: #9c27b0;
-}
-
-.table_body {
-    background-color: #d5d5ca;
-}
-
-.table-head {
     background-color: #9c27b0;
 }
 
@@ -39,6 +24,6 @@
     align-items: center;
 }
 
-.colorCancelar {
-    color: white;
+.posicion-footer {
+    min-height: 587px;
 }

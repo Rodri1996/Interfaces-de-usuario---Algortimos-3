@@ -48,7 +48,7 @@ export default class SeccionActividades extends Component{
 
     render(){
         return(
-        // <Card >
+
             <Box sx={{ display: 'flex',flexDirection: 'column',p:1}}>
                 <Box sx={{ display: 'flex', justifyContent:"space-between",mb:1.5}}>
                     <Typography variant="h5" fontWeight="bold">
@@ -83,6 +83,6 @@ export default class SeccionActividades extends Component{
                     </Table>
                 </TableContainer>
             </Box>
-        // </Card>
+       
         )}
     }

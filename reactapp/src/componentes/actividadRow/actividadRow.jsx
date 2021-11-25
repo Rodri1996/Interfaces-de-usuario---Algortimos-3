@@ -29,7 +29,7 @@ export const ActividadRow = (props) =>{
     return(
             <TableRow>
                 <TableCell>{props.actividad.nombre}</TableCell>
-                <TableCell sx={{display:"flex",justifyContent:"space-between",alignItems:"center"}}>
+                <TableCell sx={{display:"flex",justifyContent:"flex-end",alignItems:"center"}}>
                     {props.actividad.gruposMusculares}
                     {eliminarActividadButton}
                 </TableCell>
