@@ -11,12 +11,13 @@ import FitnessCenterIcon from '@mui/icons-material/FitnessCenter';
 import { usuarioService } from '../../services/usuarioService'
 import { rutinaService } from '../../services/rutinaService'
 import { createTheme } from '@mui/material/styles';
+import { purple } from '@mui/material/colors'
 
 
 const purpleTheme = createTheme({
     palette: {
         primary: {
-            main: '#d500f9',
+            main: purple[500],
         },
         secondary: {
             main: '#6d1b7b',
@@ -63,7 +64,7 @@ export default class Home extends Component {
 
     render() {
         return (
-            <Box sx={{ display: 'flex', flexDirection: 'column', fustifyContent: 'center' }}>
+            <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems:'center' }}>
                 <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1, justifyContent: 'center', mt: 1, mb: 1 }}>
                     <Card sx={{ width: 170, height: 170 }}>
                         <CardContent sx={{ display: 'flex', flexDirection: 'column' }}>
@@ -111,22 +112,25 @@ export default class Home extends Component {
 
                 <Box sx={{ display: 'flex', gap: '0.5rem', ml: 1, mr: 1 }}>
                     <Button theme={purpleTheme} color="primary" onClick={this.irUsuarios} variant="contained" fontSize="1rem">
-                        <Typography fontSize="0.6rem">
+                        <Typography fontSize="0.6rem" sx={{textTransform: 'capitalize',fontSize:"0.7rem"}}>
                             Eliminar usuarios inactivos
                         </Typography>
                     </Button>
                     <Button theme={purpleTheme} color="primary" onClick={this.irRutinas} variant="contained">
-                        <Typography fontSize="0.6rem">
+                        <Typography  sx={{textTransform: 'capitalize',fontSize:"0.7rem"}}>
                             Eliminar rutinas imposibles
                         </Typography>
                     </Button>
+                </Box>
                 
-                    <Button theme={purpleTheme} color="primary" onClick={this.irActividades} variant="contained" fontSize="1rem" width="300px">
-                        <Typography fontSize="0.6rem">
+                <Button theme={purpleTheme} color="primary" onClick={this.irActividades} variant="outlined"
+                style={{borderColor:"primary.main",border:"solid"}}
+                sx={{mt:2,width:"95%"}}>
+                        <Typography fontSize="0.6rem" sx={{textTransform: 'capitalize',fontSize:"0.7rem"}}>
                             Actividades
                         </Typography>
                     </Button>
-                </Box>
+                
             </Box>
         )
     }
