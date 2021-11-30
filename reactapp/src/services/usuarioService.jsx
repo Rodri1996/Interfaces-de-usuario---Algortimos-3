@@ -29,6 +29,9 @@ class UsuarioService {
     // return Usuario.fromJson2(usuarioPosteado)
   }
 
+  async eliminarUsuariosInactivos(){
+    await axios.delete(REST_SERVER_URL+"/eliminarUsuarios")
+  }
 }
 
 export const usuarioService = new UsuarioService()

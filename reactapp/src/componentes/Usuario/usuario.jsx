@@ -40,18 +40,27 @@ export default class Usuario extends Component {
 
   async componentDidMount(){
     await this.traerUsuariosActuales()
-    await this.traerUsuariosFinales()
   }
 
   async traerUsuariosActuales(){
     const usuariosActuales = await usuarioService.allInstances()
-    this.setState({usuariosActuales:usuariosActuales})
+    this.setState({
+      usuariosActuales:usuariosActuales
+    })
   }
 
   async traerUsuariosFinales(){
     const usuariosFinales = await usuarioService.usuariosFinales()
-    this.setState({usuarioFinales:usuariosFinales})
+    this.setState({
+      usuarioFinales:usuariosFinales
+    })
   }
+
+  eliminarUsuariosInactivos=async()=>{
+    await usuarioService.eliminarUsuariosInactivos()
+    await this.traerUsuariosFinales()
+  }
+
 
   render() {
     return (
@@ -95,7 +104,7 @@ export default class Usuario extends Component {
               theme={theme}
               variant="contained"
               color="primary"
-              onClick={this.ingresar}
+              onClick={this.eliminarUsuariosInactivos}
               sx={{ textTransform: 'capitalize', width:"90%"}}
             >
               Aceptar
