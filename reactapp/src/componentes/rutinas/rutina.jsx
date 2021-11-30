@@ -29,15 +29,25 @@ export default class Rutina extends Component {
   }
 
   async componentDidMount() {
-    await this.traerRutinas()
+    await this.traerRutinasActuales()
   }
   
-  async traerRutinas() {
-    const rutinasActuales = await rutinaService.allInstances()
+  eliminarRutinasImposibles= async ()=>{
+    await rutinaService.eliminarRutinasImposibles()
+    await this.traerRutinasImposibles()
+  }
+
+  async traerRutinasImposibles(){
     const rutinasFinales = await rutinaService.rutinasFinales()
     this.setState({ 
-      rutinasActuales:rutinasActuales,
       rutinasFinales:rutinasFinales
+    })
+  }
+
+  async traerRutinasActuales() {
+    const rutinasActuales = await rutinaService.allInstances()
+    this.setState({ 
+      rutinasActuales:rutinasActuales
     })
   }
   
@@ -86,7 +96,7 @@ export default class Rutina extends Component {
               theme={theme}
               variant="contained"
               color="primary"
-              onClick={this.ingresar}
+              onClick={this.eliminarRutinasImposibles}
               sx={{ textTransform: 'capitalize', width: "90%" }}
             >
               Aceptar
