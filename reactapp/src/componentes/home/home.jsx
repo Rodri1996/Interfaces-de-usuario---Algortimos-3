@@ -31,13 +31,17 @@ export default class Home extends Component {
         super(props)
         this.state = {
             usuariosTotales: [],
-            rutinas: []
+            rutinas: [],
+            rutinasFinales:[],
+            usuariosFinales:[]
         }
     }
 
     async componentDidMount() {
         await this.traerUsuariosTotales()
+        await this.traerUsuariosFinales()
         await this.traerRutinas()
+        await this.traerRutinasFinales()
     }
 
     async traerUsuariosTotales() {
@@ -48,6 +52,16 @@ export default class Home extends Component {
     async traerRutinas() {
         const rutinas = await rutinaService.allInstances()
         this.setState({ rutinas })
+    }
+
+    async traerRutinasFinales(){
+        const rutinasFinales = await rutinaService.rutinasFinales()
+        this.setState({ rutinasFinales })
+    }
+
+    async traerUsuariosFinales(){
+        const usuariosFinales = await usuarioService.usuariosFinales()
+        this.setState({ usuariosFinales })
     }
 
     irUsuarios=()=>{
@@ -90,7 +104,7 @@ export default class Home extends Component {
                     </Card><Card sx={{ width: 170, height: 170 }}>
                         <CardContent sx={{ display: 'flex', flexDirection: 'column' }}>
                             <Typography variant="h5" component="div">
-                                0
+                                {this.state.usuariosFinales.length}
                             </Typography>
                             <GroupsIcon sx={{ fontSize: 80, alignSelf: 'flex-end' }} />
                             <Typography sx={{ mb: 1.5 }} color="text.secondary">
@@ -100,7 +114,7 @@ export default class Home extends Component {
                     </Card><Card sx={{ width: 170, height: 170 }}>
                         <CardContent sx={{ display: 'flex', flexDirection: 'column' }}>
                             <Typography variant="h5" component="div">
-                                0
+                                {this.state.rutinasFinales.length}
                             </Typography>
                             <FitnessCenterIcon sx={{ fontSize: 80, alignSelf: 'flex-end' }} />
                             <Typography sx={{ mb: 1.5 }} color="text.secondary">
