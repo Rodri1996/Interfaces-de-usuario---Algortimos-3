@@ -64,6 +64,7 @@
     },
     "devDependencies": {
         "@material-ui/core": "^4.12.3",
+        "cypress": "^9.1.0",
         "eslint-plugin-react": "^7.27.1"
     }
 }
