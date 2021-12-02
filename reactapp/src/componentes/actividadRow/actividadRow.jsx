@@ -16,6 +16,10 @@ export const ActividadRow = (props) =>{
         }
     }
 
+    const gruposMusculares = props.actividad.gruposMusculares.map((grupo)=>
+        "("+grupo+")"+"  "
+    )
+
     const eliminarActividadButton = 
         <IconButton 
             aria-label="delete" 
@@ -30,7 +34,7 @@ export const ActividadRow = (props) =>{
             <TableRow>
                 <TableCell>{props.actividad.nombre}</TableCell>
                 <TableCell sx={{display:"flex",justifyContent:"flex-end",alignItems:"center"}}>
-                    {props.actividad.gruposMusculares}
+                    {gruposMusculares}
                     {eliminarActividadButton}
                 </TableCell>
             </TableRow>

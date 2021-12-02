@@ -6,7 +6,7 @@ export class Actividad{
     constructor(){
         this.nombre=""
         this.id = 0
-        this.GruposMuscularesQueEntrena = []
+        this.gruposMusculares = []
         this.errors = []
     }
 
@@ -14,7 +14,8 @@ export class Actividad{
         const actividadPosta = Object.assign(
             new Actividad(),
             actividadJson,
-            {id:actividadJson.id}
+            {id:actividadJson.id,
+             gruposMusculares:actividadJson.gruposMuscularesQueEntrena}
         )
         return actividadPosta
     }
