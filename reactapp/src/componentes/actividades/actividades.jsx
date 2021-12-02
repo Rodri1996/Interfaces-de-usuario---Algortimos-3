@@ -33,7 +33,7 @@ export default class Actividades extends Component{
     
     state={
         actividad: new Actividad(),
-        grupMuscularesConocidos: ['Piernas'],
+        grupMuscularesConocidos: [],
         gruposMuscularesMarcados:[],
         inputValue:"",
         estadoListo:false,
@@ -41,17 +41,14 @@ export default class Actividades extends Component{
     }
 
     async componentDidMount(){
-        const gruposMuscularesJson = await this.traerGruposMusculares()
-        this.setState({
-            grupMuscularesConocidos:gruposMuscularesJson
-        },
-            this.estadoListo
-        )
-        console.info(this.state.grupMuscularesConocidos)
+        await this.setearGruposMusculares()
     }
 
-    async traerGruposMusculares(){
-        return await gruposMuscularesService.getGruposMusculares()
+    async setearGruposMusculares(){
+        let gruposMusculares = await gruposMuscularesService.getGruposMusculares()
+        this.setState({
+            grupMuscularesConocidos:gruposMusculares
+        })
     }
     
     cambiarNombre=(event)=>{
@@ -72,15 +69,8 @@ export default class Actividades extends Component{
         const newActividad = Object.assign(actividad)
         this.setState({
             actividad:newActividad
-        },
-           // this.estadoListo
+        }
         )
-    }
-
-    estadoListo=()=>{
-        this.setState({
-            estadoListo: true//this.state.grupMuscularesConocidos.length > 0
-        })
     }
 
     descartarCambios = ()=>{
@@ -93,11 +83,6 @@ export default class Actividades extends Component{
     }
 
     sumarGrupoMuscular=(grupo)=>{
-        console.log('Grupo musc marcado: '+grupo)
-        const gruposAntiguos = this.state.grupMuscularesConocidos
-        const gruposActualizados = gruposAntiguos + [grupo]
-        //this.actualizarGrupos(gruposActualizados)
-        console.log("Grupos actualizados: "+this.state.gruposMuscularesMarcados)
     }
 
     actualizarGrupos=(gruposActualizados)=>{
@@ -119,13 +104,26 @@ export default class Actividades extends Component{
         }
     }
 
-
     irPantallaAnterior=()=>{
         this.props.history.push('/home')
     }
 
     render(){
         const snackbarOpen = !!this.state.errorMessage
+        
+        const mostrarGruposMusculares=
+        this.state.grupMuscularesConocidos.map(
+            (grupo)=>
+                <Chip theme={theme} variant="outlined"
+                color="primary"
+                style={{fontWeight:"bold",fontSize:14}}
+                label={grupo.nombre}
+                key={grupo.id}
+                className="grupoMarcador"
+                onClick={this.sumarGrupoMuscular(grupo)}
+            />
+        )
+
         return(
             <Card variant="onlined" theme={theme}
             sx={{
@@ -145,25 +143,12 @@ export default class Actividades extends Component{
                 onChange={this.cambiarNombre}
                />
 
-                {this.state.estadoListo && <Stack display="flex" 
+               <Stack display="flex" 
                 flexWrap="wrap"
                 justifyContent="center"
-                alignItems="center" direction="row" spacing={1}>
-                 
-                    {
-                    ['brazos'].map(
-                        (grupo)=>
-                        <Chip theme={theme} variant="outlined"
-                        color="primary"
-                        style={{fontWeight:"bold",fontSize:14}}
-                        label={grupo}
-                        key={grupo.id}
-                        className="grupoMarcador"
-                        onClick={this.sumarGrupoMuscular(grupo)
-                        }
-                        />
-                    )}
-                </Stack>}
+                alignItems="center" direction="row" spacing={1}>            
+                    {mostrarGruposMusculares}
+                </Stack>
                 <Box sx={{display:"flex",justifyContent:"space-around",alignItems:"center",gap:1}}>
                     <Button 
                     theme={theme}
