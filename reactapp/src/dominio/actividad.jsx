@@ -31,7 +31,7 @@ export class Actividad{
         if(!this.nombre){
             throw Error('Debe asignarle un nombre a la actividad')
         }
-        else if(!this.GruposMuscularesQueEntrena.length>0){
+        else if(!this.gruposMusculares.length>0){
             throw Error('Debe marcar al menos un grupo muscular')
         }
     }

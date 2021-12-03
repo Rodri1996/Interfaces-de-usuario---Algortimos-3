@@ -30,14 +30,16 @@ const theme = createTheme({
 
 export default class Actividades extends Component{
     
-    
-    state={
-        actividad: new Actividad(),
-        grupMuscularesConocidos: [],
-        gruposMuscularesMarcados:[],
-        inputValue:"",
-        estadoListo:false,
-        errorMessage: ""
+    constructor(){
+        super()
+        this.state={
+            actividad: new Actividad(),
+            grupMuscularesConocidos: [],
+            gruposMuscularesMarcados:[],
+            inputValue:"",
+            estadoListo:false,
+            errorMessage: ""
+        }
     }
 
     async componentDidMount(){
@@ -69,7 +71,8 @@ export default class Actividades extends Component{
         const newActividad = Object.assign(actividad)
         this.setState({
             actividad:newActividad
-        }
+        },
+            console.info(this.state.actividad)
         )
     }
 
@@ -83,12 +86,10 @@ export default class Actividades extends Component{
     }
 
     sumarGrupoMuscular=(grupo)=>{
-    }
-
-    actualizarGrupos=(gruposActualizados)=>{
-        this.setState({
-            gruposActualizados: gruposActualizados
-        })
+        console.log('Grupo marcado: '+grupo)
+        const actividad = this.state.actividad
+        actividad.gruposMusculares.push(grupo)
+        this.cambiarEstadoActividad(actividad)
     }
 
     agregarActividad= async ()=>{
@@ -114,13 +115,13 @@ export default class Actividades extends Component{
         const mostrarGruposMusculares=
         this.state.grupMuscularesConocidos.map(
             (grupo)=>
-                <Chip theme={theme} variant="outlined"
+                <Chip theme={theme} variant="outlined" 
                 color="primary"
+                className="grupoMarcador"
                 style={{fontWeight:"bold",fontSize:14}}
                 label={grupo.nombre}
                 key={grupo.id}
-                className="grupoMarcador"
-                onClick={this.sumarGrupoMuscular(grupo)}
+                onClick={()=>this.sumarGrupoMuscular(grupo.nombre)}
             />
         )
 
@@ -147,7 +148,8 @@ export default class Actividades extends Component{
                 flexWrap="wrap"
                 mt="10px"
                 justifyContent="center"
-                alignItems="center" direction="row" spacing={1}>            
+                gap="5px"
+                alignItems="center" direction="row">            
                     {mostrarGruposMusculares}
                 </Stack>
                 <Box sx={{display:"flex",justifyContent:"space-around",alignItems:"center",gap:1,mt:"10px"}}>

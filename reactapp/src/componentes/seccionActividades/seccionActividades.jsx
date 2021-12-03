@@ -31,10 +31,13 @@ const theme = createTheme({
 
 export default class SeccionActividades extends Component{
 
-    state={
-        actividadesDisponibles:[]
+    constructor(){
+        super()
+        this.state={
+            actividadesDisponibles:[]
+        }
     }
-
+    
     async componentDidMount(){
         await this.traerActividades()
     }

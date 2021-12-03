@@ -4,7 +4,8 @@
 
 .grupoMarcador:hover {
     background-color: #9c27b0;
-    color: white;
+    color: black;
+    font-weight: bolder;
 }
 
 .color-tableHead,
