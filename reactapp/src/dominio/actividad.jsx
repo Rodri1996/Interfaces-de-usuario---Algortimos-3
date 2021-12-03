@@ -27,6 +27,12 @@ export class Actividad{
         }
     }
 
+    contieneGrupo(grupoMarcado){
+        if(this.gruposMusculares.some((grupo)=>grupo===grupoMarcado)){
+            throw Error('Grupo ya marcado')
+        }
+    }
+
     validar(){
         if(!this.nombre){
             throw Error('Debe asignarle un nombre a la actividad')

@@ -71,8 +71,7 @@ export default class Actividades extends Component{
         const newActividad = Object.assign(actividad)
         this.setState({
             actividad:newActividad
-        },
-            console.info(this.state.actividad)
+        }
         )
     }
 
@@ -80,16 +79,31 @@ export default class Actividades extends Component{
         this.cambiarEstadoInput("")
         const actividadVacia = new Actividad()
         this.cambiarEstadoActividad(actividadVacia)
+        this.quitarErrorMessage()
+    }
+
+    sumarGrupoMuscular=(grupo)=>{
+        const actividad = this.state.actividad
+        try {
+            actividad.contieneGrupo(grupo)
+            actividad.gruposMusculares.push(grupo)
+            this.cambiarEstadoActividad(actividad)
+            this.quitarErrorMessage()}
+        catch(e){
+            this.sumarErrorMessage(e)
+        }
+    }
+
+    quitarErrorMessage(){
         this.setState({
             errorMessage:""
         })
     }
 
-    sumarGrupoMuscular=(grupo)=>{
-        console.log('Grupo marcado: '+grupo)
-        const actividad = this.state.actividad
-        actividad.gruposMusculares.push(grupo)
-        this.cambiarEstadoActividad(actividad)
+    sumarErrorMessage(errorMessage){
+        this.setState({
+            errorMessage: obtenerMensaje(errorMessage) 
+        })
     }
 
     agregarActividad= async ()=>{
@@ -99,9 +113,7 @@ export default class Actividades extends Component{
             this.descartarCambios()
             await actividadesService.sumarActividad(actividad)
         }catch(e){
-            this.setState({
-                errorMessage: obtenerMensaje(e) 
-            })
+            this.sumarErrorMessage(e)
         }
     }
 
