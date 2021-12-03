@@ -56,7 +56,7 @@ export default class Home extends Component {
 
     async traerRutinasFinales(){
         const rutinasFinales = await rutinaService.rutinasFinales()
-        this.setState({ rutinasFinales })
+        this.setState({ rutinasFinales:rutinasFinales })
     }
 
     async traerUsuariosFinales(){

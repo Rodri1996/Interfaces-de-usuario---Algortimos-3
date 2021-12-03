@@ -23,7 +23,7 @@ export class Actividad{
     static toJson(actividad){
         return {
             nombre: actividad.nombre,
-            GruposMuscularesQueEntrena:actividad.GruposMuscularesQueEntrena
+            GruposMuscularesQueEntrena:actividad.gruposMusculares
         }
     }
 

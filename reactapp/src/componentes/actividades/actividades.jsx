@@ -23,7 +23,7 @@ const theme = createTheme({
       },
       
       secundary:{
-          main:'#000000',
+          main:'#2A2929',
       },
     },
   })
@@ -134,7 +134,7 @@ export default class Actividades extends Component{
                 <Typography variant="h5" fontWeight="bold">
                     Nueva actividad
                 </Typography>
-                <Typography variant="h7">
+                <Typography variant="h7" mt="5px" mb="10px">
                     Nombre
                 </Typography>
                 <TextField theme={theme} id="outlined-basic" label= "Ingresar Actividad"
@@ -145,11 +145,12 @@ export default class Actividades extends Component{
 
                <Stack display="flex" 
                 flexWrap="wrap"
+                mt="10px"
                 justifyContent="center"
                 alignItems="center" direction="row" spacing={1}>            
                     {mostrarGruposMusculares}
                 </Stack>
-                <Box sx={{display:"flex",justifyContent:"space-around",alignItems:"center",gap:1}}>
+                <Box sx={{display:"flex",justifyContent:"space-around",alignItems:"center",gap:1,mt:"10px"}}>
                     <Button 
                     theme={theme}
                     variant="contained" 
@@ -169,16 +170,16 @@ export default class Actividades extends Component{
                     </Button>
                 </Box>
 
-                {snackbarOpen && <Stack sx={{ width: '100%' }} spacing={2}>
-                    <Alert severity="error">{this.state.errorMessage}</Alert>
+                {snackbarOpen && <Stack sx={{ width: '100%' }} mt="3px" spacing={2}>
+                    <Alert severity="error" variant="filled">{this.state.errorMessage}</Alert>
                 </Stack>}
                 <SeccionActividades></SeccionActividades>
                 <Button 
                     theme={theme}
-                    color="primary"
-                    onClick={this.irPantallaAnterior}
-                    variant="outlined"
-                    style={{borderColor:"primary.main",border:"solid"}}>
+                    variant="contained" 
+                    color="secundary"
+                    style={{color:'white', textTransform: 'capitalize',width:"100%"}}
+                    onClick={this.irPantallaAnterior}>
                     Volver
                 </Button>
             </Card>
