@@ -125,25 +125,24 @@ export default class Home extends Component {
                 </Box>
 
                 <Box sx={{ display: 'flex', gap: '0.5rem', ml: 1, mr: 1 }}>
-                    <Button theme={purpleTheme} color="primary" onClick={this.irUsuarios} variant="contained" fontSize="1rem">
+                    <Button theme={purpleTheme} color="primary" onClick={this.irUsuarios} variant="contained" fontSize="1rem" size="large">
                         <Typography fontSize="0.6rem" sx={{textTransform: 'capitalize',fontSize:"0.7rem"}}>
                             Eliminar usuarios inactivos
                         </Typography>
                     </Button>
-                    <Button theme={purpleTheme} color="primary" onClick={this.irRutinas} variant="contained">
+                    <Button theme={purpleTheme} color="primary" onClick={this.irRutinas} variant="contained" size="large">
                         <Typography  sx={{textTransform: 'capitalize',fontSize:"0.7rem"}}>
                             Eliminar rutinas imposibles
                         </Typography>
                     </Button>
                 </Box>
                 
-                <Button theme={purpleTheme} color="primary" onClick={this.irActividades} variant="outlined"
-                style={{borderColor:"primary.main",border:"solid"}}
-                sx={{mt:2,width:"95%"}}>
+                <Button theme={purpleTheme} color="primary" onClick={this.irActividades} variant="contained" size="large"
+                sx={{mt:2,width:"100%",maxWidth:"370px"}}>
                         <Typography fontSize="0.6rem" sx={{textTransform: 'capitalize',fontSize:"0.7rem"}}>
                             Actividades
                         </Typography>
-                    </Button>
+                </Button>
                 
             </Box>
         )
