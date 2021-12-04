@@ -4,7 +4,6 @@ import Box from '@mui/material/Box'
 import { Typography } from "@mui/material";
 import TextField from '@mui/material/TextField'
 import Button from '@mui/material/Button';
-import SeccionActividades from '../seccionActividades/seccionActividades';
 import {Actividad} from '../../dominio/actividad'
 import Stack from '@mui/material/Stack';
 import Chip from '@mui/material/Chip';
@@ -14,7 +13,8 @@ import Alert from '@mui/material/Alert'
 import { obtenerMensaje } from '../../Utils/obtenerMensaje'
 import Card from '@mui/material/Card';
 import { createTheme } from '@mui/material/styles'
-import { purple } from '@mui/material/colors'
+import { purple } from '@mui/material/colors';
+import {SeccionActividades} from '../seccionActividades/seccionActividades'
 
 const theme = createTheme({
     palette: {
@@ -34,16 +34,23 @@ export default class Actividades extends Component{
         super()
         this.state={
             actividad: new Actividad(),
+            actividadesDisponibles:[],
             grupMuscularesConocidos: [],
-            gruposMuscularesMarcados:[],
             inputValue:"",
-            estadoListo:false,
             errorMessage: ""
         }
     }
 
     async componentDidMount(){
         await this.setearGruposMusculares()
+        await this.traerActividades()
+    }
+
+    traerActividades=async()=>{
+        const actividades = await actividadesService.getActividades()
+        this.setState({
+            actividadesDisponibles:actividades
+        })
     }
 
     async setearGruposMusculares(){
@@ -112,6 +119,7 @@ export default class Actividades extends Component{
             actividad.validar()
             this.descartarCambios()
             await actividadesService.sumarActividad(actividad)
+            this.traerActividades()
         }catch(e){
             this.sumarErrorMessage(e)
         }
@@ -187,7 +195,10 @@ export default class Actividades extends Component{
                 {snackbarOpen && <Stack sx={{ width: '100%' }} mt="3px" spacing={2}>
                     <Alert severity="error" variant="filled">{this.state.errorMessage}</Alert>
                 </Stack>}
-                <SeccionActividades></SeccionActividades>
+                <SeccionActividades 
+                    actividades={this.state.actividadesDisponibles}
+                    actualizarActividades={this.traerActividades}
+                />
                 <Button 
                     theme={theme}
                     variant="contained" 

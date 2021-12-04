@@ -29,27 +29,27 @@ const theme = createTheme({
     },
   })
 
-export default class SeccionActividades extends Component{
+export const SeccionActividades=(props)=>{
 
-    constructor(){
-        super()
-        this.state={
-            actividadesDisponibles:[]
-        }
-    }
+    // constructor(){
+    //     super()
+    //     this.state={
+    //         actividadesDisponibles:[]
+    //     }
+    // }
     
-    async componentDidMount(){
-        await this.traerActividades()
-    }
+    // async componentDidMount(){
+    //     await this.traerActividades()
+    // }
 
-    traerActividades=async()=>{
-        const actividades = await actividadesService.getActividades()
-        this.setState({
-            actividadesDisponibles:actividades
-        })
-    }
+    // traerActividades=async()=>{
+    //     const actividades = await actividadesService.getActividades()
+    //     this.setState({
+    //         actividadesDisponibles:actividades
+    //     })
+    // }
 
-    render(){
+    // render(){
         return(
 
             <Box sx={{ display: 'flex',flexDirection: 'column',p:1}}>
@@ -58,7 +58,7 @@ export default class SeccionActividades extends Component{
                         Actividades
                     </Typography>
                     <Typography variant="h6" fontWeight="bold">
-                        {this.state.actividadesDisponibles.length}
+                        {props.actividades.length}
                     </Typography>
                 </Box>
                 <TableContainer component={Paper}>
@@ -74,11 +74,11 @@ export default class SeccionActividades extends Component{
                         </TableHead>
                         <TableBody>
                             {
-                                this.state.actividadesDisponibles.map((actividad)=>
+                                props.actividades.map((actividad)=>
                                     <ActividadRow
                                         actividad={actividad}
                                         key={actividad.id}
-                                        actualizarActividades={this.traerActividades}
+                                        actualizarActividades={props.actualizarActividades}
                                     />
                                 )
                             }
@@ -88,4 +88,4 @@ export default class SeccionActividades extends Component{
             </Box>
        
         )}
-    }
+    // }
