@@ -34,7 +34,10 @@ export class Actividad{
     }
 
     validar(){
-        if(!this.nombre){
+        if(!this.nombre && !this.gruposMusculares.length>0){
+            throw Error('Debe asignarle un nombre y marcar al menos un grupo muscular')
+        }
+        else if(!this.nombre){
             throw Error('Debe asignarle un nombre a la actividad')
         }
         else if(!this.gruposMusculares.length>0){
